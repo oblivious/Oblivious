@@ -50,40 +50,49 @@ namespace fabianse70536.Forms
             Graphics g = tabGraphicsClass.CreateGraphics();
 
             // line
-            Pen p = new Pen(Color.Red, 5);
-            g.DrawLine(p, 10, 10, 200, 200);
+            Pen p = new Pen(Color.Red, 3);
+            g.DrawLine(p, 110, 110, 300, 300);
 
             // pie
             p.Brush = Brushes.Coral;
             g.DrawPie(p, 10, 10, 200, 200, -30, 50);
 
+            int x = 100;
+            int y = 100;
+
             Point[] a = new Point[] {
-                new Point(10,10)
-                , new Point(300,15)
-                , new Point(250,250)
-                , new Point(350,300)
-                , new Point(150,350)
+                new Point(x + 10, y + 10)
+                , new Point(x + 300, y + 15)
+                , new Point(x + 250, y + 250)
+                , new Point(x + 350, y + 300)
+                , new Point(x + 150, y + 350)
             };
 
             // polygon
-            p.DashStyle = DashStyle.DashDot;
+            p.DashPattern = new float[] { 1, 1, 2, 1, 3, 1, 4, 1 };
+            p.DashStyle = DashStyle.DashDotDot;
+            //p.DashStyle = DashStyle.DashDot;
             g.DrawPolygon(p, a);
+
+            x = 500;
+            y = 150;
 
             // polygon filled
             Point[] a2 = new Point[] {
-                new Point(200,200)
-                , new Point(300,15)
-                , new Point(250,250)
-                , new Point(350,300)
-                , new Point(250,350)
+                new Point(x + 10, y + 10)
+                , new Point(x + 300, y + 15)
+                , new Point(x + 250, y + 250)
+                , new Point(x + 350, y + 300)
+                , new Point(x + 150, y + 350)
             };
             Brush b = new SolidBrush(Color.Red);
             g.FillPolygon(b, a2);
 
 
             // gradient brush
+            //b = new LinearGradientBrush(new Point(200, 200), new Point(300, 300), Color.Magenta, Color.SlateBlue);
             b = new LinearGradientBrush(new Point(200, 200), new Point(300, 300), Color.Magenta, Color.SlateBlue);
-            g.FillRectangle(b,400, 400, 100, 100);
+            g.FillRectangle(b, 800, 200, 100, 100);
 
             // ends
             p = new Pen(Color.RoyalBlue, 15);
