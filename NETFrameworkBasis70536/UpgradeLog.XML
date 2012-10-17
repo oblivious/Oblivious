@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="fabianse70536">
+</Property><Property Name="Solution File" Value="C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\fabianse70536.sln">
+</Property><Property Name="Date" Value="17 October 2012">
+</Property><Property Name="Time" Value="16:52:08">
+</Property></Properties><Event ErrorLevel="0" Project="fabianse70536" Source="fabianse70536.csproj" Description="Project file successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\fabianse70536.csproj">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Forms\frmMain.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Forms\frmMain.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Forms\frmMain.Designer.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Forms\frmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Interface Implementations\MyIComparableImplementation.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Interface Implementations\MyIComparableImplementation.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Interface Implementations\MyIFormattableImplementation.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Interface Implementations\MyIFormattableImplementation.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="MyInstaller.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\MyInstaller.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="MyConfigurationSection.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\MyConfigurationSection.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Program.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Settings1.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Settings1.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Settings1.Designer.cs" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Settings1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="App.config" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="ClassDiagram1.cd" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Properties\Settings.settings" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Settings1.settings" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Settings1.settings">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="fullmoon.jpg" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\fullmoon.jpg">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="SimpleTextFile.txt" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\SimpleTextFile.txt">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Forms\frmMain.resx" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Forms\frmMain.resx">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="Properties\Resources.resx" Description="File successfully backed up as C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="fabianse70536.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="fabianse70536" Source="fabianse70536.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="fabianse70536" Source="fabianse70536.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
