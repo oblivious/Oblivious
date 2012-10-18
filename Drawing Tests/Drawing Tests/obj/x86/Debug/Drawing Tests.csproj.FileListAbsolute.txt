@@ -1,0 +1,8 @@
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\Drawing Tests.exe
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\Drawing Tests.pdb
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing Tests.exe
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing Tests.pdb
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing_Tests.DrawingTest.resources
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.write.1.tlog
