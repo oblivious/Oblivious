@@ -1,0 +1,10 @@
+D:\Oblivious\Contacts\Contacts\bin\Release\ContactDB.sdf
+D:\Oblivious\Contacts\Contacts\bin\Release\Contacts.exe
+D:\Oblivious\Contacts\Contacts\bin\Release\Contacts.pdb
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.Form1.resources
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.Properties.Resources.resources
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.exe
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.pdb
