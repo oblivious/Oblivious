@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\SinTest\SinTest\bin\Debug\SinTest.exe
+C:\Users\dobyrne\Oblivious\SinTest\SinTest\bin\Debug\SinTest.pdb
+C:\Users\dobyrne\Oblivious\SinTest\SinTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\SinTest\SinTest\obj\x86\Debug\SinTest.exe
+C:\Users\dobyrne\Oblivious\SinTest\SinTest\obj\x86\Debug\SinTest.pdb

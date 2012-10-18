@@ -1,0 +1,8 @@
+This is a simple text file
+used in the code to test
+input/output and encryption
+classes of the framework.
+
+This file must be present because 
+the sample code avoids checking for
+file existence to reduce complexity.
