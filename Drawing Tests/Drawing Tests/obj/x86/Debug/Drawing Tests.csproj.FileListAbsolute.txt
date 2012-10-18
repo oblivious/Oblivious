@@ -6,3 +6,4 @@ C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing Tes
 C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing_Tests.DrawingTest.resources
 C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\fullmoon.jpg

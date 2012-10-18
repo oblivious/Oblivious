@@ -20,7 +20,7 @@ namespace Drawing_Tests
         private void btnGraphicsClass_Click(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.SmoothingMode = SmoothingMode.HighQuality;//.AntiAlias;
 
             int baseColour = 0x8A2BE2;
             int penWidth = 1;
@@ -47,8 +47,8 @@ namespace Drawing_Tests
 
                 int opposite = (int)(100 * Math.Sin(angle * (Math.PI / 180)));
                 difference = 100 - opposite;
-                angle -= 12;
-                p.Width = penWidth + (difference / 40);
+                angle -= 6;
+                //p.Width = penWidth + (difference / 40);
 
                 baseColour = (int)(((long)baseColour + 0x020202) % Int32.MaxValue);
                 p.Color = Color.FromArgb(255, Color.FromArgb(baseColour));
@@ -74,14 +74,14 @@ namespace Drawing_Tests
 
                 int opposite = (int)(100 * Math.Sin(angle * (Math.PI / 180)));
                 difference = 100 - opposite;
-                angle -= 12;
-                p.Width = penWidth + (difference / 40);
+                angle -= 6;
+                //p.Width = penWidth + (difference / 40);
 
                 baseColour = (int)(((long)baseColour + 0x020202) % Int32.MaxValue);
                 p.Color = Color.FromArgb(255, Color.FromArgb(baseColour));
 
                 rect.X = xPoint + difference;
-                sizeX = yStart - (difference * 2);
+                sizeX = xStart - (difference * 2);
                 rect.Width = sizeX > 0 ? sizeX : 0;
             }
 
@@ -100,10 +100,10 @@ namespace Drawing_Tests
             g.FillPie(Brushes.CornflowerBlue, 425, 100, 200, 200, 150, 50);
 
             Brush b = new LinearGradientBrush(
-                          new Point(100, 100),
-                          new Point(300, 300),
+                          new Rectangle(0, 0, 150, 150),
                           Color.Magenta,
-                          Color.SlateBlue
+                          Color.SlateBlue,
+                          LinearGradientMode.Horizontal
                       );
 
             g.FillPie(b, 325, 175, 200, 200, -30, 50);
@@ -120,6 +120,48 @@ namespace Drawing_Tests
             p.Width = 2;
             p.Color = Color.Green;
             g.DrawPolygon(p, points);
+
+
+            //Close curve stuff (just because)
+            // Create pens.
+            Pen redPen = new Pen(Color.Red, 3);
+            Pen greenPen = new Pen(Color.Green, 3);
+
+            // Create points that define curve.
+            Point point1 = new Point(100, 75);
+            Point point2 = new Point(100, 25);
+            Point point3 = new Point(200, 5);
+            Point point4 = new Point(250, 50);
+            Point point5 = new Point(300, 100);
+            Point point6 = new Point(350, 200);
+            Point point7 = new Point(250, 250);
+            Point[] curvePoints =
+             {
+                 point1,
+                 point2,
+                 point3,
+                 point4,
+                 point5,
+                 point6,
+                 point7
+             };
+
+            // Draw lines between original points to screen.
+            g.DrawLines(redPen, curvePoints);
+
+            // Draw closed curve to screen.
+            g.DrawClosedCurve(greenPen, curvePoints, 0.2f, FillMode.Alternate);
+        }
+
+        private void btnMoreGraphicsClass_Click(object sender, EventArgs e)
+        {
+            Bitmap b = new Bitmap("fullmoon.jpg");
+            Graphics g = Graphics.FromImage(b);
+            g.DrawLine(Pens.Aquamarine, 10, 10, 200, 200);
+            g.DrawPie(Pens.Chartreuse, 50, 50, 200, 200, -30, 50);
+
+            Graphics tab = this.CreateGraphics();
+            tab.DrawImage(b, 25, 25);
         }
     }
 }
