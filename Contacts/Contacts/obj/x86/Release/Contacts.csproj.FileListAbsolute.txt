@@ -8,3 +8,8 @@ D:\Oblivious\Contacts\Contacts\obj\x86\Release\GenerateResource.read.1.tlog
 D:\Oblivious\Contacts\Contacts\obj\x86\Release\GenerateResource.write.1.tlog
 D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.exe
 D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.pdb
+D:\Oblivious\Contacts\Contacts\bin\Release\Contacts.exe.config
+D:\Oblivious\Contacts\Contacts\bin\Release\Contacts.exe.manifest
+D:\Oblivious\Contacts\Contacts\bin\Release\Contacts.application
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.exe.manifest
+D:\Oblivious\Contacts\Contacts\obj\x86\Release\Contacts.application
