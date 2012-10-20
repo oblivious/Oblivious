@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\Formatting Test\Formatting Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\Formatting Test\Formatting Test\bin\Debug\Formatting Test.exe
+C:\Users\dobyrne\Oblivious\Formatting Test\Formatting Test\bin\Debug\Formatting Test.pdb
+C:\Users\dobyrne\Oblivious\Formatting Test\Formatting Test\obj\x86\Debug\Formatting Test.exe
+C:\Users\dobyrne\Oblivious\Formatting Test\Formatting Test\obj\x86\Debug\Formatting Test.pdb
