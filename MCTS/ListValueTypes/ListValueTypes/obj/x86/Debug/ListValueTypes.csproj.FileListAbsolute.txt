@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\MCTS\ListValueTypes\ListValueTypes\bin\Debug\ListValueTypes.exe
+C:\Users\dobyrne\Oblivious\MCTS\ListValueTypes\ListValueTypes\bin\Debug\ListValueTypes.pdb
+C:\Users\dobyrne\Oblivious\MCTS\ListValueTypes\ListValueTypes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\MCTS\ListValueTypes\ListValueTypes\obj\x86\Debug\ListValueTypes.exe
+C:\Users\dobyrne\Oblivious\MCTS\ListValueTypes\ListValueTypes\obj\x86\Debug\ListValueTypes.pdb

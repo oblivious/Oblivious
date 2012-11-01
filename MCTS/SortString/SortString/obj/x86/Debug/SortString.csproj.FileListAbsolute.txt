@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\MCTS\SortString\SortString\bin\Debug\SortString.exe
+C:\Users\dobyrne\Oblivious\MCTS\SortString\SortString\bin\Debug\SortString.pdb
+C:\Users\dobyrne\Oblivious\MCTS\SortString\SortString\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\MCTS\SortString\SortString\obj\x86\Debug\SortString.exe
+C:\Users\dobyrne\Oblivious\MCTS\SortString\SortString\obj\x86\Debug\SortString.pdb

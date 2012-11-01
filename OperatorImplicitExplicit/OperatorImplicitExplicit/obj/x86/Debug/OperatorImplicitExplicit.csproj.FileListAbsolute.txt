@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\OperatorImplicitExplicit\OperatorImplicitExplicit\bin\Debug\OperatorImplicitExplicit.exe
+C:\Users\dobyrne\Oblivious\OperatorImplicitExplicit\OperatorImplicitExplicit\bin\Debug\OperatorImplicitExplicit.pdb
+C:\Users\dobyrne\Oblivious\OperatorImplicitExplicit\OperatorImplicitExplicit\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\OperatorImplicitExplicit\OperatorImplicitExplicit\obj\x86\Debug\OperatorImplicitExplicit.exe
+C:\Users\dobyrne\Oblivious\OperatorImplicitExplicit\OperatorImplicitExplicit\obj\x86\Debug\OperatorImplicitExplicit.pdb
