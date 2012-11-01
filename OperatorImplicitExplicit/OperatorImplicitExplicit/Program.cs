@@ -34,6 +34,10 @@ namespace OperatorImplicitExplicit
             short s = (short)x;
 
             Console.WriteLine(s);
+
+            MyClass g = new MyClass(2);
+
+            Console.WriteLine(g == x);
         }
     }
 
@@ -51,7 +55,23 @@ namespace OperatorImplicitExplicit
         {
             this.value = val;
         }
-        
+
+        public static bool operator ==(MyClass a, MyClass b)
+        {
+            if (a.Value == b.Value)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool operator !=(MyClass a, MyClass b)
+        {
+            if (a.Value != b.Value)
+                return true;
+            else
+                return false;
+        }
+
         public static MyClass operator +(MyClass a, MyClass b)
         {
             return new MyClass(a.Value + b.Value);
@@ -89,6 +109,23 @@ namespace OperatorImplicitExplicit
         public static explicit operator short(MyClass a)
         {
             return (short)a.Value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            MyClass myClass = obj as MyClass;
+            if (myClass == null)
+                throw new ArgumentException("object must be of type MyClass");
+
+            if (this.Value == myClass.Value)
+                return true;
+            else
+                return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Value.GetHashCode();
         }
     }
 }

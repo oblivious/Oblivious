@@ -1,0 +1,5 @@
+C:\Users\dobyrne\Oblivious\MCTS\CreateStruct\CreateStruct\bin\Debug\CreateStruct.exe
+C:\Users\dobyrne\Oblivious\MCTS\CreateStruct\CreateStruct\bin\Debug\CreateStruct.pdb
+C:\Users\dobyrne\Oblivious\MCTS\CreateStruct\CreateStruct\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\dobyrne\Oblivious\MCTS\CreateStruct\CreateStruct\obj\x86\Debug\CreateStruct.exe
+C:\Users\dobyrne\Oblivious\MCTS\CreateStruct\CreateStruct\obj\x86\Debug\CreateStruct.pdb

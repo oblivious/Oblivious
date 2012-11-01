@@ -22,10 +22,16 @@ namespace InterfacesExercise2
             string fmt;
 
             if (!String.IsNullOrEmpty(format))
-                fmt = format.Substring(0,1);
+                fmt = format.Substring(0,1).ToUpperInvariant();
             else
                 fmt = format;
 
+            byte[] bytes;
+            if (obj is sbyte)
+            {
+                string byteString = ((sbyte)obj).ToString("X2");
+                bytes = new byte[1] { Byte.Parse(byteString, System.Globalization.NumberStyles.HexNumber) };
+            }
         }
 
         private string HandleOtherFormats(string format, object obj)
