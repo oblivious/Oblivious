@@ -1,0 +1,9 @@
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Release\fullmoon.jpg
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Release\Drawing Tests.exe
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Release\Drawing Tests.pdb
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\Drawing_Tests.DrawingTest.resources
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\Drawing Tests.exe
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Release\Drawing Tests.pdb

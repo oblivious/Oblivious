@@ -9,3 +9,7 @@ D:\Oblivious\Contacts\Contacts\obj\x86\Debug\Contacts.exe
 D:\Oblivious\Contacts\Contacts\obj\x86\Debug\Contacts.pdb
 D:\Oblivious\Contacts\Contacts\bin\Debug\ContactDB.sdf
 D:\Oblivious\Contacts\Contacts\bin\Debug\Contacts.exe.config
+D:\Oblivious\Contacts\Contacts\bin\Debug\Contacts.exe.manifest
+D:\Oblivious\Contacts\Contacts\bin\Debug\Contacts.application
+D:\Oblivious\Contacts\Contacts\obj\x86\Debug\Contacts.exe.manifest
+D:\Oblivious\Contacts\Contacts\obj\x86\Debug\Contacts.application

@@ -33,7 +33,6 @@ namespace Contacts
         {
             // TODO: This line of code loads data into the 'contactDBDataSet.People' table. You can move, or remove it, as needed.
             this.peopleTableAdapter.Fill(this.contactDBDataSet.People);
-
         }
     }
 }

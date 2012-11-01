@@ -100,7 +100,7 @@
             companyLabel.Location = new System.Drawing.Point(10, 83);
             companyLabel.Name = "companyLabel";
             companyLabel.Size = new System.Drawing.Size(54, 13);
-            companyLabel.TabIndex = 6;
+            companyLabel.TabIndex = 8;
             companyLabel.Text = "Company:";
             // 
             // telephoneLabel
@@ -109,7 +109,7 @@
             telephoneLabel.Location = new System.Drawing.Point(10, 109);
             telephoneLabel.Name = "telephoneLabel";
             telephoneLabel.Size = new System.Drawing.Size(61, 13);
-            telephoneLabel.TabIndex = 8;
+            telephoneLabel.TabIndex = 10;
             telephoneLabel.Text = "Telephone:";
             // 
             // emailLabel
@@ -118,7 +118,7 @@
             emailLabel.Location = new System.Drawing.Point(10, 135);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(35, 13);
-            emailLabel.TabIndex = 10;
+            emailLabel.TabIndex = 12;
             emailLabel.Text = "Email:";
             // 
             // clientLabel
@@ -127,7 +127,7 @@
             clientLabel.Location = new System.Drawing.Point(296, 57);
             clientLabel.Name = "clientLabel";
             clientLabel.Size = new System.Drawing.Size(36, 13);
-            clientLabel.TabIndex = 12;
+            clientLabel.TabIndex = 6;
             clientLabel.Text = "Client:";
             // 
             // lastCallLabel
@@ -317,7 +317,7 @@
             this.companyTextBox.Location = new System.Drawing.Point(77, 80);
             this.companyTextBox.Name = "companyTextBox";
             this.companyTextBox.Size = new System.Drawing.Size(200, 20);
-            this.companyTextBox.TabIndex = 7;
+            this.companyTextBox.TabIndex = 9;
             // 
             // telephoneTextBox
             // 
@@ -325,7 +325,7 @@
             this.telephoneTextBox.Location = new System.Drawing.Point(77, 106);
             this.telephoneTextBox.Name = "telephoneTextBox";
             this.telephoneTextBox.Size = new System.Drawing.Size(149, 20);
-            this.telephoneTextBox.TabIndex = 9;
+            this.telephoneTextBox.TabIndex = 11;
             // 
             // emailTextBox
             // 
@@ -333,7 +333,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(77, 132);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 20);
-            this.emailTextBox.TabIndex = 11;
+            this.emailTextBox.TabIndex = 13;
             // 
             // clientCheckBox
             // 
@@ -341,7 +341,7 @@
             this.clientCheckBox.Location = new System.Drawing.Point(338, 52);
             this.clientCheckBox.Name = "clientCheckBox";
             this.clientCheckBox.Size = new System.Drawing.Size(32, 24);
-            this.clientCheckBox.TabIndex = 13;
+            this.clientCheckBox.TabIndex = 7;
             this.clientCheckBox.UseVisualStyleBackColor = true;
             // 
             // lastCallDateTimePicker
@@ -377,7 +377,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Objectville Paper Company";
+            this.Text = "6";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDBDataSet)).EndInit();
