@@ -7,6 +7,10 @@ using System.Runtime.Remoting.Messaging;
 
 namespace AsyncTest
 {
+    // The delegate must have the same signature as 
+    // the method it will call asynchronously.
+    public delegate string AsyncMethodCaller(int callDuration, out int threadId);
+
     // Calling synchronous methods asynchronously, from:
     // http://msdn.microsoft.com/en-us/library/2e08f6yc%28v=vs.100%29.aspx
     class Program
@@ -108,6 +112,15 @@ namespace AsyncTest
             Console.WriteLine("The main thread ends.");
             Console.WriteLine();
             #endregion
+
+            #region My own test
+            Console.WriteLine("Running my own test...");
+            AsyncThingy thingy = new AsyncThingy();
+            thingy.DoAsyncStuff();
+            Console.WriteLine("Main thread {0} is back.", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("The asynchronous method should write something shortly, or stuff will explode");
+            Thread.Sleep(6000);
+            #endregion
         }
     }
 
@@ -119,6 +132,7 @@ namespace AsyncTest
             threadId = Thread.CurrentThread.ManagedThreadId;
             Console.WriteLine("Test method begins. It is executing on thread {0}", threadId);
             Thread.Sleep(callDuration);
+            Console.WriteLine("Test method has finished sleeping.");
             return String.Format("My call time was {0}.", callDuration.ToString());
         }
 
@@ -143,7 +157,24 @@ namespace AsyncTest
             Console.WriteLine("Result Async State: " + (string)ar.AsyncState);
         }
     }
-    // The delegate must have the same signature as 
-    // the method it will call asynchronously.
-    public delegate string AsyncMethodCaller(int callDuration, out int threadId);
+
+    public class AsyncThingy
+    {
+        public AsyncDemo myAd = new AsyncDemo();
+        public int threadId;
+
+        AsyncMethodCaller caller;
+        IAsyncResult result;
+
+        public AsyncThingy()
+        {
+            myAd = new AsyncDemo();
+            caller = new AsyncMethodCaller(myAd.TestMethod);
+        }
+
+        public void DoAsyncStuff()
+        {
+            result = caller.BeginInvoke(5000, out threadId, null, null);
+        }
+    }
 }
