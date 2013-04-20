@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormatterBasic", "BinaryFormatterBasic\BinaryFormatterBasic.csproj", "{DBCAF98B-5784-40BB-8F81-438865152389}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBCAF98B-5784-40BB-8F81-438865152389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCAF98B-5784-40BB-8F81-438865152389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCAF98B-5784-40BB-8F81-438865152389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCAF98B-5784-40BB-8F81-438865152389}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

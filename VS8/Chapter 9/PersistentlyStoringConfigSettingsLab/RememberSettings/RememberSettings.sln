@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RememberSettings", "RememberSettings.csproj", "{E2F9B966-3EB0-42A1-BA36-387F5D98603F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupRememberSettings", "..\SetupRememberSettings\SetupRememberSettings.vdproj", "{EC9BB8CD-2F9F-4297-87D6-867BBEF8DE2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2F9B966-3EB0-42A1-BA36-387F5D98603F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F9B966-3EB0-42A1-BA36-387F5D98603F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F9B966-3EB0-42A1-BA36-387F5D98603F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F9B966-3EB0-42A1-BA36-387F5D98603F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9BB8CD-2F9F-4297-87D6-867BBEF8DE2E}.Debug|Any CPU.ActiveCfg = Debug
+		{EC9BB8CD-2F9F-4297-87D6-867BBEF8DE2E}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

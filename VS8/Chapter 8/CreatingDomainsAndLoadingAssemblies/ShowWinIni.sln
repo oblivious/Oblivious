@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowWinIni", "ShowWinIni\ShowWinIni.csproj", "{CDC1850E-A063-4819-9C99-CA4CC8A53258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDomainDemo", "AppDomainDemo\AppDomainDemo.csproj", "{A4836EC4-CA3F-4AA3-96BB-BC4FC46D27A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC1850E-A063-4819-9C99-CA4CC8A53258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC1850E-A063-4819-9C99-CA4CC8A53258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC1850E-A063-4819-9C99-CA4CC8A53258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC1850E-A063-4819-9C99-CA4CC8A53258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4836EC4-CA3F-4AA3-96BB-BC4FC46D27A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4836EC4-CA3F-4AA3-96BB-BC4FC46D27A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4836EC4-CA3F-4AA3-96BB-BC4FC46D27A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4836EC4-CA3F-4AA3-96BB-BC4FC46D27A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
