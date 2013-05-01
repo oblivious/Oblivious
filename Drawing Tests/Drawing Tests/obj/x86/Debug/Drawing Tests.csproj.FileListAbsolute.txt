@@ -9,3 +9,10 @@ C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateRes
 C:\Users\dobyrne\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\fullmoon.jpg
 D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing Tests.exe
 D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing Tests.pdb
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\fullmoon.jpg
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\Drawing Tests.exe
+D:\Oblivious\Drawing Tests\Drawing Tests\bin\Debug\Drawing Tests.pdb
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\Drawing_Tests.DrawingTest.resources
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Oblivious\Drawing Tests\Drawing Tests\obj\x86\Debug\GenerateResource.write.1.tlog

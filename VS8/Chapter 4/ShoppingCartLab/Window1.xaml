@@ -1,0 +1,17 @@
+﻿<Window x:Class="GenericList.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Shopping cart" Height="300" Width="300"
+    Loaded="Window_Loaded">
+    <Grid>
+        <Label Height="28" HorizontalAlignment="Left" Margin="29,12,0,0" Name="label1" VerticalAlignment="Top" Width="107">Name</Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="29,41,0,0" Name="label2" VerticalAlignment="Top" Width="107">Price</Label>
+        <TextBox Height="23" Margin="0,17,26,0" Name="nameTextBox" VerticalAlignment="Top" HorizontalAlignment="Right" Width="164" />
+        <TextBox Height="23" Margin="88,46,26,0" Name="priceTextBox" VerticalAlignment="Top" HorizontalAlignment="Right" Width="164" />
+        <Button Height="23" Margin="29,78,26,0" Name="addButton" VerticalAlignment="Top" Click="addButton_Click" IsDefault="True">Add</Button>
+        <ListBox Margin="16,0,13,14" Name="shoppingCartList" Height="111" VerticalAlignment="Bottom" />
+        <Button HorizontalAlignment="Left" Margin="16,115,0,124" Name="sortNameButton" Width="120" Click="sortNameButton_Click">Sort by name</Button>
+        <Button HorizontalAlignment="Right" Margin="0,115,13,124" Name="sortPriceButton" Width="120" Click="sortPriceButton_Click">Sort by price</Button>
+        <GroupBox Header="Add item" Height="109" Margin="16,0,13,0" Name="groupBox1" VerticalAlignment="Top" />
+    </Grid>
+</Window>
