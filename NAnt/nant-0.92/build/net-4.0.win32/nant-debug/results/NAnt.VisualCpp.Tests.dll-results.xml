@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.VisualCpp.Tests.dll" total="15" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-04-29" time="16:20:45">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.VisualCpp.Tests.dll" executed="True" result="Success" success="True" time="12.367" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="12.347" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="12.347" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="VisualCpp" executed="True" result="Success" success="True" time="12.347" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="12.282" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="ClTaskTest_CompileOnDemand" executed="True" result="Success" success="True" time="5.118" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.ClTaskTest_CompileOnDemand.Test_BuildAll" executed="True" result="Success" success="True" time="3.213" asserts="6" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.ClTaskTest_CompileOnDemand.Test_BuildNothingChanged" executed="True" result="Success" success="True" time="0.402" asserts="4" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.ClTaskTest_CompileOnDemand.Test_BuildSourceChanged" executed="True" result="Success" success="True" time="1.178" asserts="9" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ClTaskTest_HelloWorld" executed="True" result="Success" success="True" time="0.243" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.ClTaskTest_HelloWorld.Test_HelloWorldCompile" executed="True" result="Success" success="True" time="0.243" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LinkTaskTest_CompileOnDemand" executed="True" result="Success" success="True" time="3.579" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.LinkTaskTest_CompileOnDemand.Test_BuildAll" executed="True" result="Success" success="True" time="0.958" asserts="5" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.LinkTaskTest_CompileOnDemand.Test_BuildNothingChanged" executed="True" result="Success" success="True" time="0.557" asserts="5" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.LinkTaskTest_CompileOnDemand.Test_BuildSourceChanged" executed="True" result="Success" success="True" time="1.574" asserts="8" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.LinkTaskTest_CompileOnDemand.Test_LibDirsContainingSpaces" executed="True" result="Success" success="True" time="0.390" asserts="4" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LinkTaskTest_HelloWorld" executed="True" result="Success" success="True" time="0.512" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.LinkTaskTest_HelloWorld.Test_HelloWorld" executed="True" result="Success" success="True" time="0.512" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RcTaskTest" executed="True" result="Success" success="True" time="2.822" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.RcTaskTest.Test_Compile_DefaultOutputFile" executed="True" result="Success" success="True" time="0.373" asserts="1" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.RcTaskTest.Test_External_Files" executed="True" result="Success" success="True" time="1.403" asserts="2" />
+                          <test-case name="Tests.NAnt.VisualCpp.Tasks.RcTaskTest.Test_Output_UpToDate" executed="True" result="Success" success="True" time="1.037" asserts="1" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Util" executed="True" result="Success" success="True" time="0.008" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="ArgumentUtilsTest" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VisualCpp.Util.ArgumentUtilsTest.Test_CleanTrailingBackSlash" executed="True" result="Success" success="True" time="0.002" asserts="6" />
+                          <test-case name="Tests.NAnt.VisualCpp.Util.ArgumentUtilsTest.Test_DuplicateTrailingBackSlash" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                          <test-case name="Tests.NAnt.VisualCpp.Util.ArgumentUtilsTest.Test_FixTrailingBackSlash" executed="True" result="Success" success="True" time="0.001" asserts="6" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

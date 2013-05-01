@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Tests.dll" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-04-29" time="16:18:28">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Tests.dll" executed="True" result="Success" success="True" time="3.645" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="3.626" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="3.626" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Console" executed="True" result="Success" success="True" time="3.626" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="NAntTest" executed="True" result="Success" success="True" time="3.623" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_BuildFileOption" executed="True" result="Success" success="True" time="2.048" asserts="4" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_CreateLogger" executed="True" result="Success" success="True" time="0.066" asserts="4" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_CreateLoggerWithFile" executed="True" result="Success" success="True" time="0.008" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_DefineProperty" executed="True" result="Success" success="True" time="0.059" asserts="3" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_DuplicateArgument" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_DuplicateCollectionValue" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_FindInParentOption" executed="True" result="Success" success="True" time="0.029" asserts="2" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_GetBuildFileName" executed="True" result="Success" success="True" time="0.008" asserts="2" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_InvalidBoolValue" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_MissingNameForNameValuePair" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_MissingValueForNameValuePair" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_ShowHelp" executed="True" result="Success" success="True" time="0.016" asserts="8" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_ShowProjectHelp" executed="True" result="Success" success="True" time="0.744" asserts="8" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_ShowProjectHelpWithNamespace" executed="True" result="Success" success="True" time="0.140" asserts="8" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_ShowProjectHelpWithNamespacePrefix" executed="True" result="Success" success="True" time="0.167" asserts="8" />
+                      <test-case name="Tests.NAnt.Console.NAntTest.Test_UnknownArgument" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

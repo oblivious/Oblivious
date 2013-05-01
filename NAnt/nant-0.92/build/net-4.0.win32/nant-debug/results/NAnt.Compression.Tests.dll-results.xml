@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Compression.Tests.dll" total="14" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-04-29" time="16:20:25">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Compression.Tests.dll" executed="True" result="Success" success="True" time="3.629" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="3.598" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="3.598" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Compression" executed="True" result="Success" success="True" time="3.598" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="3.597" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="TarTaskTest" executed="True" result="Success" success="True" time="1.600" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Compression.Tasks.TarTaskTest.Test_FlattenedFile" executed="True" result="Success" success="True" time="1.532" asserts="2" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.TarTaskTest.Test_SimpleTar" executed="True" result="Success" success="True" time="0.051" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="UnZipTaskTest" executed="True" result="Success" success="True" time="0.439" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Compression.Tasks.UnZipTaskTest.ExtractDirectory" executed="True" result="Success" success="True" time="0.068" asserts="0" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.UnZipTaskTest.Test_ReleaseBuild" executed="True" result="Success" success="True" time="0.269" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ZipTaskTest" executed="True" result="Success" success="True" time="1.488" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Duplicate_Add" executed="True" result="Success" success="True" time="0.147" asserts="4" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Duplicate_Add_Default" executed="True" result="Success" success="True" time="0.086" asserts="4" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Duplicate_Fail" executed="True" result="Success" success="True" time="0.080" asserts="0" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Duplicate_Invalid" executed="True" result="Success" success="True" time="0.040" asserts="0" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Duplicate_Preserve" executed="True" result="Success" success="True" time="0.101" asserts="4" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Test_CreateEmptyZipFile" executed="True" result="Success" success="True" time="0.064" asserts="1" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Test_CreateZipAndParentDirectory" executed="True" result="Success" success="True" time="0.074" asserts="1" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Test_FlattenedFile" executed="True" result="Success" success="True" time="0.094" asserts="2" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Test_NonExistingFile" executed="True" result="Success" success="True" time="0.065" asserts="5" />
+                          <test-case name="Tests.NAnt.Compression.Tasks.ZipTaskTest.Test_SimpleZip" executed="True" result="Success" success="True" time="0.040" asserts="1" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
