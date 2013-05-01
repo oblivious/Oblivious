@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.VSNet.Tests.dll" total="6" errors="0" failures="0" not-run="3" inconclusive="0" ignored="3" skipped="0" invalid="0" date="2013-04-29" time="16:21:01">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.VSNet.Tests.dll" executed="True" result="Success" success="True" time="14.698" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="14.653" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="14.651" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="VSNet" executed="True" result="Success" success="True" time="14.650" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="14.647" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="CppSolutionTests" executed="True" result="Inconclusive" success="False" time="0.023" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.CppSolutionTests.TestWinForm" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[Does not work if path not setup correctly.]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CSharpSolutionTests" executed="True" result="Success" success="True" time="4.362" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.CSharpSolutionTests.TestSharpscheduleBuild" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[Relies on cvs, and solution fails to build during nightly build.]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.CSharpSolutionTests.TestSolutionFileDoesNotExist" executed="True" result="Success" success="True" time="1.712" asserts="0" />
+                          <test-case name="Tests.NAnt.VSNet.Tasks.CSharpSolutionTests.TestSolutionFileDoesNotExistNotExecuted" executed="True" result="Success" success="True" time="0.050" asserts="0" />
+                          <test-case name="Tests.NAnt.VSNet.Tasks.CSharpSolutionTests.TestWinForm" executed="True" result="Success" success="True" time="2.490" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VbSolutionTests" executed="True" result="Success" success="True" time="1.513" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.VbSolutionTests.TestWinForm" executed="True" result="Success" success="True" time="1.511" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VCProjectExcludeTest" executed="True" result="Success" success="True" time="5.996" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.VCProjectExcludeTest.Test_HelloWorldCompile_ExcludeFile" executed="True" result="Success" success="True" time="5.972" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VCProjectNMakeTest" executed="True" result="Success" success="True" time="0.220" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.VCProjectNMakeTest.Test_NMakeProject" executed="True" result="Success" success="True" time="0.218" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VjsSolutionTests" executed="True" result="Inconclusive" success="False" time="0.001" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.VSNet.Tasks.VjsSolutionTests.TestWinForm" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[Solution type not currently supported.]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

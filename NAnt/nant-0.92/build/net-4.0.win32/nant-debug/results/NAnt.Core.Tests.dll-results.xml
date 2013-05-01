@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Core.Tests.dll" total="476" errors="0" failures="0" not-run="4" inconclusive="0" ignored="4" skipped="0" invalid="0" date="2013-04-29" time="16:19:50">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.Core.Tests.dll" executed="True" result="Success" success="True" time="80.431" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="80.406" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="80.406" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Core" executed="True" result="Success" success="True" time="80.404" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Attributes" executed="True" result="Success" success="True" time="0.492" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="DateTimeValidatorAttributeTest" executed="True" result="Success" success="True" time="0.203" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Attributes.DateTimeValidatorAttributeTest.Test_InvalidDates" executed="True" result="Success" success="True" time="0.180" asserts="5" />
+                          <test-case name="Tests.NAnt.Core.Attributes.DateTimeValidatorAttributeTest.Test_ValidDates" executed="True" result="Success" success="True" time="0.003" asserts="5" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="StringValidatorAttributeTest" executed="True" result="Success" success="True" time="0.283" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Attributes.StringValidatorAttributeTest.Test_InvalidStrings" executed="True" result="Success" success="True" time="0.278" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Attributes.StringValidatorAttributeTest.Test_ValidStrings" executed="True" result="Success" success="True" time="0.004" asserts="6" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BuildFilesInResourcesTest" executed="True" result="Success" success="True" time="2.009" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.BuildFilesInResourcesTest.Test_FilesInResources" executed="True" result="Success" success="True" time="2.000" asserts="10" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="DirectoryScannerTest" executed="True" result="Success" success="True" time="1.005" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.CaseSensitive" executed="True" result="Success" success="True" time="0.052" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.IncludeNames_Unix" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.IncludeNames_Windows" executed="True" result="Success" success="True" time="0.034" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.IsEverythingIncludedTest" executed="True" result="Success" success="True" time="0.040" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Matching_CaseInsensitive" executed="True" result="Success" success="True" time="0.094" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Matching_CaseSensitive" executed="True" result="Success" success="True" time="0.029" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_BaseDir_CaseInSensitive" executed="True" result="Success" success="True" time="0.037" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_BaseDir_CaseSensitive" executed="True" result="Success" success="True" time="0.013" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Dont_Match_Basedir" executed="True" result="Success" success="True" time="0.031" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Dont_Match_BaseDir_2" executed="True" result="Success" success="True" time="0.018" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Excludes1" executed="True" result="Success" success="True" time="0.018" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Excludes2" executed="True" result="Success" success="True" time="0.027" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Excludes3" executed="True" result="Success" success="True" time="0.030" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_Excludes4" executed="True" result="Success" success="True" time="0.021" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_NoWildcardMatching1" executed="True" result="Success" success="True" time="0.018" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_NoWildcardMatching2" executed="True" result="Success" success="True" time="0.019" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_ParentDirectory1" executed="True" result="Success" success="True" time="0.025" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_ParentDirectory2" executed="True" result="Success" success="True" time="0.032" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_RecursiveWildcardMatching1" executed="True" result="Success" success="True" time="0.045" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_RecursiveWildcardMatching2" executed="True" result="Success" success="True" time="0.052" asserts="7" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_RecursiveWildcardMatching3" executed="True" result="Success" success="True" time="0.049" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_RecursiveWildcardMatching4" executed="True" result="Success" success="True" time="0.039" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_ShorthandExcludes" executed="True" result="Success" success="True" time="0.017" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_ShorthandIncludes" executed="True" result="Success" success="True" time="0.013" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching_BaseDirectory1" executed="True" result="Success" success="True" time="0.026" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching_BaseDirectory2" executed="True" result="Success" success="True" time="0.015" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching_BaseDirectory3" executed="True" result="Success" success="True" time="0.065" asserts="16" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching1" executed="True" result="Success" success="True" time="0.030" asserts="7" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching2" executed="True" result="Success" success="True" time="0.020" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching3" executed="True" result="Success" success="True" time="0.024" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.DirectoryScannerTest.Test_WildcardMatching4" executed="True" result="Success" success="True" time="0.022" asserts="5" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ElementTest" executed="True" result="Success" success="True" time="0.725" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Enum_Default" executed="True" result="Success" success="True" time="0.022" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Enum_TypeConverter" executed="True" result="Success" success="True" time="0.042" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Non_StronglyTyped_Element_Collection" executed="False" result="Ignored">
+                        <reason>
+                          <message><![CDATA[Re-enable this test once we modified the <nantschema> task to generate a schema for a specified set of assemblies.]]></message>
+                        </reason>
+                      </test-case>
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Null_Element_Prop_Value" executed="True" result="Success" success="True" time="0.024" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Uri_Default" executed="True" result="Success" success="True" time="0.047" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Uri_FileScheme" executed="True" result="Success" success="True" time="0.041" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Uri_HttpScheme" executed="True" result="Success" success="True" time="0.034" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Uri_InvalidUri" executed="True" result="Success" success="True" time="0.099" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ElementTest.Test_Uri_RelativeFilePath" executed="True" result="Success" success="True" time="0.018" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ExceptionTest" executed="True" result="Success" success="True" time="0.022" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.ExceptionTest.Test_AllExceptions" executed="True" result="Success" success="True" time="0.022" asserts="208" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ExpressionEvaluatorTest" executed="True" result="Success" success="True" time="2.481" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestConditional" executed="True" result="Success" success="True" time="0.084" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestConversionFunctions" executed="True" result="Success" success="True" time="0.104" asserts="21" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestCoreOperationFailures" executed="True" result="Success" success="True" time="0.037" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestCoreOperations" executed="True" result="Success" success="True" time="0.078" asserts="21" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestDateTimeFunctions" executed="True" result="Success" success="True" time="0.055" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestDirectoryFunctions" executed="True" result="Success" success="True" time="0.111" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestFileFunctions" executed="True" result="Success" success="True" time="0.038" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestLogicalOperators" executed="True" result="Success" success="True" time="0.030" asserts="12" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestMathFunctions" executed="True" result="Success" success="True" time="0.074" asserts="8" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestNAntFunctions" executed="True" result="Success" success="True" time="0.055" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestRelationalOperators" executed="True" result="Success" success="True" time="0.043" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestRelationOperators" executed="True" result="Success" success="True" time="0.058" asserts="224" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestStandaloneEvaluator" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestStandaloneEvaluatorFailure" executed="True" result="Success" success="True" time="0.037" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestStandaloneEvaluatorFailure2" executed="True" result="Success" success="True" time="0.034" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestStandaloneEvaluatorSyntaxCheckFailure" executed="True" result="Success" success="True" time="0.051" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionEvaluatorTest.TestStringFunctions" executed="True" result="Success" success="True" time="0.076" asserts="19" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ExpressionTokenizerTest" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.ExpressionTokenizerTest.Keyword" executed="True" result="Success" success="True" time="0.001" asserts="28" />
+                      <test-case name="Tests.NAnt.Core.ExpressionTokenizerTest.Keyword_ShouldNotEndWithDash" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.ExpressionTokenizerTest.Keyword_ShouldNotEndWithDot" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="FileSetTest" executed="True" result="Success" success="True" time="1.632" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Bug1776101" executed="True" result="Success" success="True" time="0.183" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.CaseSensitive" executed="True" result="Success" success="True" time="0.055" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Matching_CaseInsensitive" executed="True" result="Success" success="True" time="0.056" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Matching_CaseSensitive" executed="True" result="Success" success="True" time="0.061" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Matching_Unix" executed="True" result="Success" success="True" time="0.030" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Matching_Windows" executed="True" result="Success" success="True" time="0.043" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_AsIs" executed="True" result="Success" success="True" time="0.033" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_ExcludesFile_NotExists" executed="True" result="Success" success="True" time="0.091" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_ExcludesFile_NotExists_Conditional" executed="True" result="Success" success="True" time="0.137" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_All" executed="True" result="Success" success="True" time="0.033" asserts="7" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_All_Excludes_Some" executed="True" result="Success" success="True" time="0.043" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_File" executed="True" result="Success" success="True" time="0.078" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_List" executed="True" result="Success" success="True" time="0.093" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_Sub1" executed="True" result="Success" success="True" time="0.055" asserts="2" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_Sub2" executed="True" result="Success" success="True" time="0.030" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_Wildcards1" executed="True" result="Success" success="True" time="0.043" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_Includes_Wildcards2" executed="True" result="Success" success="True" time="0.044" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_IncludesAndAsIs" executed="True" result="Success" success="True" time="0.051" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_IncludesFile_NotExists" executed="True" result="Success" success="True" time="0.114" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_IncludesFile_NotExists_Conditional" executed="True" result="Success" success="True" time="0.088" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.FileSetTest.Test_NewestFile" executed="True" result="Success" success="True" time="0.055" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Filters" executed="True" result="Success" success="True" time="4.963" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="ExpandPropertiesTest" executed="True" result="Success" success="True" time="0.770" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.EmptyFileTest" executed="True" result="Success" success="True" time="0.104" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.ExpressionTest" executed="True" result="Success" success="True" time="0.078" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.InstantiationTest" executed="True" result="Success" success="True" time="0.067" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.MaxSafeExpressionTest" executed="True" result="Success" success="True" time="0.091" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.UnsafeAndIgnoredExpressionTest" executed="True" result="Success" success="True" time="0.077" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ExpandPropertiesTest.UnsafeButExpandedExpressionTest" executed="True" result="Success" success="True" time="0.102" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="FilterChainTest" executed="True" result="Success" success="True" time="0.757" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Filters.FilterChainTest.FilterOrderTest1a" executed="True" result="Success" success="True" time="0.055" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.FilterChainTest.FilterOrderTest1b" executed="True" result="Success" success="True" time="0.088" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.FilterChainTest.NoFilerTest" executed="True" result="Success" success="True" time="0.064" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.FilterChainTest.NoFilterEmptyFileTest" executed="True" result="Success" success="True" time="0.084" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.FilterChainTest.UnknownFilterTest" executed="True" result="Success" success="True" time="0.203" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ReplaceStringTest" executed="True" result="Success" success="True" time="1.074" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.ComplexTest" executed="True" result="Success" success="True" time="0.079" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.ComplexTestCase" executed="True" result="Success" success="True" time="0.073" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.ComplexTestNull" executed="True" result="Success" success="True" time="0.066" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.ComplexTestRepeating" executed="True" result="Success" success="True" time="0.131" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.ComplexTestSingleChar" executed="True" result="Success" success="True" time="0.139" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.EmptyFileTest" executed="True" result="Success" success="True" time="0.110" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceStringTest.InstantiationTest" executed="True" result="Success" success="True" time="0.092" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ReplaceTokensTest" executed="True" result="Success" success="True" time="1.487" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ComplexTest" executed="True" result="Success" success="True" time="0.177" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ComplexTest1" executed="True" result="Success" success="True" time="0.068" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ComplexTestCase" executed="True" result="Success" success="True" time="0.072" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.EmptyFileTest" executed="True" result="Success" success="True" time="0.110" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.EmptyTokenValue" executed="True" result="Success" success="True" time="0.048" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ExtraTokenTest" executed="True" result="Success" success="True" time="0.105" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ExtraTokenTesta" executed="True" result="Success" success="True" time="0.059" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ExtraTokenTestDiffToc" executed="True" result="Success" success="True" time="0.055" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.ExtraTokenTestDiffToca" executed="True" result="Success" success="True" time="0.061" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.ReplaceTokensTest.InstantiationTest" executed="True" result="Success" success="True" time="0.060" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TabsToSpacesTest" executed="True" result="Success" success="True" time="0.662" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.DefaultParam" executed="True" result="Success" success="True" time="0.044" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.EmptyFileBasicTest" executed="True" result="Success" success="True" time="0.049" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.Scattered" executed="True" result="Success" success="True" time="0.055" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.SpecityAllNoTabs" executed="True" result="Success" success="True" time="0.094" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.TabLengthHigh" executed="True" result="Success" success="True" time="0.032" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Filters.TabsToSpacesTest.TabLengthLow" executed="True" result="Success" success="True" time="0.055" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="FrameworkInfoTest" executed="True" result="Success" success="True" time="7.176" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.FrameworkInfoTest.Invalid_SDK" executed="False" result="Ignored">
+                        <reason>
+                          <message><![CDATA[Microsoft .NET Framework 1.0is not available.]]></message>
+                        </reason>
+                      </test-case>
+                      <test-case name="Tests.NAnt.Core.FrameworkInfoTest.Serialization_Invalid" executed="True" result="Success" success="True" time="0.606" asserts="462" />
+                      <test-case name="Tests.NAnt.Core.FrameworkInfoTest.Serialization_Valid" executed="True" result="Success" success="True" time="1.299" asserts="77" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Functions" executed="True" result="Success" success="True" time="0.659" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="EnvironmentFunctionsTest" executed="True" result="Success" success="True" time="0.039" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Functions.EnvironmentFunctionsTest.NewLine" executed="True" result="Success" success="True" time="0.038" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="FileFunctionsTest" executed="True" result="Success" success="True" time="0.409" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Functions.FileFunctionsTest.IsAssembly_AssemblyDoesNotExist" executed="True" result="Success" success="True" time="0.083" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Functions.FileFunctionsTest.IsAssembly_InvalidAssembly" executed="True" result="Success" success="True" time="0.035" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Functions.FileFunctionsTest.IsAssembly_NoAssembly" executed="True" result="Success" success="True" time="0.085" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Functions.FileFunctionsTest.IsAssembly_OK" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TargetFunctionsTest" executed="True" result="Success" success="True" time="0.040" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Functions.TargetFunctionsTest.Test_CurrentTarget" executed="True" result="Success" success="True" time="0.039" asserts="8" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="LocationTest" executed="True" result="Success" success="True" time="0.026" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.LocationTest.Test_Constructor_FileName" executed="True" result="Success" success="True" time="0.006" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.LocationTest.Test_Constructor_FileNameLineColumn" executed="True" result="Success" success="True" time="0.004" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.LocationTest.Test_Constructor_UriFileName" executed="True" result="Success" success="True" time="0.006" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.LocationTest.Test_ToString" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ProjectTest" executed="True" result="Success" success="True" time="2.072" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Remove_Readonly_Property" executed="True" result="Success" success="True" time="0.016" asserts="6" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.TargetFramework" executed="True" result="Success" success="True" time="0.024" asserts="12" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.TargetFramework_Invalid" executed="True" result="Success" success="True" time="0.079" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.TargetFramework_Null" executed="True" result="Success" success="True" time="0.021" asserts="5" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_Initialization_DOMBuildFile" executed="True" result="Success" success="True" time="0.017" asserts="26" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_Initialization_FSBuildFile" executed="True" result="Success" success="True" time="0.036" asserts="26" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnBuildFinished" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnBuildStarted" executed="True" result="Success" success="True" time="0.014" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnTargetFinished" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnTargetStarted" executed="True" result="Success" success="True" time="0.012" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnTaskFinished" executed="True" result="Success" success="True" time="0.018" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.ProjectTest.Test_OnTaskStarted" executed="True" result="Success" success="True" time="0.017" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TargetTest" executed="True" result="Success" success="True" time="1.497" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_CircularDependency" executed="True" result="Success" success="True" time="0.022" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_CommandLineTargets" executed="True" result="Success" success="True" time="0.024" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Depends" executed="True" result="Success" success="True" time="0.026" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Depends2" executed="True" result="Success" success="True" time="0.039" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Depends3" executed="True" result="Success" success="True" time="0.071" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_If" executed="True" result="Success" success="True" time="0.036" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Normal" executed="True" result="Success" success="True" time="0.030" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_UnknowDefaultTarget" executed="True" result="Success" success="True" time="0.055" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_UnknowDependentTarget" executed="True" result="Success" success="True" time="0.075" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Unless" executed="True" result="Success" success="True" time="0.027" asserts="3" />
+                      <test-case name="Tests.NAnt.Core.TargetTest.Test_Wild" executed="True" result="Success" success="True" time="0.036" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TaskContainerTest" executed="True" result="Success" success="True" time="0.655" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfFilesetDefine1" executed="True" result="Success" success="True" time="0.028" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfFilesetDefine2" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfFilesetRedefine1" executed="True" result="Success" success="True" time="0.061" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfFilesetRedefine2" executed="True" result="Success" success="True" time="0.020" asserts="4" />
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfUnknownNode1" executed="True" result="Success" success="True" time="0.117" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TaskContainerTest.Test_IfUnknownNode2" executed="True" result="Success" success="True" time="0.034" asserts="4" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="46.563" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="AttribTaskTest" executed="True" result="Success" success="True" time="0.628" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_Archive" executed="True" result="Success" success="True" time="0.032" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_Hidden" executed="True" result="Success" success="True" time="0.035" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_InvalidFilePath" executed="True" result="Success" success="True" time="0.037" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_Multiple" executed="True" result="Success" success="True" time="0.071" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_Normal" executed="True" result="Success" success="True" time="0.032" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_ReadOnly" executed="True" result="Success" success="True" time="0.022" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AttribTaskTest.Test_System" executed="True" result="Success" success="True" time="0.021" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="AvailableTest" executed="True" result="Success" success="True" time="0.991" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_ExistingDirectory" executed="True" result="Success" success="True" time="0.054" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_ExistingFile" executed="True" result="Success" success="True" time="0.065" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_InvalidDirectory" executed="True" result="Success" success="True" time="0.090" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_InvalidFile" executed="True" result="Success" success="True" time="0.066" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_InvalidResourceType" executed="True" result="Success" success="True" time="0.032" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_NotExistingDirectory" executed="True" result="Success" success="True" time="0.036" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.AvailableTest.Test_NotExistingFile" executed="True" result="Success" success="True" time="0.048" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CallTest" executed="True" result="Success" success="True" time="0.554" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.CallTest.Test_Call" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CallTest.Test_CallCircularDependencies" executed="True" result="Success" success="True" time="0.021" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CallTest.Test_CallDependencies" executed="True" result="Success" success="True" time="0.028" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CallTest.Test_Cascade" executed="True" result="Success" success="True" time="0.074" asserts="10" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ChooseTaskTest" executed="True" result="Success" success="True" time="2.219" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_ChildOrder1" executed="True" result="Success" success="True" time="0.023" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_ChildOrder2" executed="True" result="Success" success="True" time="0.019" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_ConditionalExecution1" executed="True" result="Success" success="True" time="0.076" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_ConditionalExecution2" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_ConditionalExecution3" executed="True" result="Success" success="True" time="0.045" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_EmptyOtherwiseChild" executed="True" result="Success" success="True" time="0.019" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_EmptyWhenChild" executed="True" result="Success" success="True" time="0.031" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_EmptyWhenCondition" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_FailOnError_False" executed="True" result="Success" success="True" time="0.030" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_FailOnError_True" executed="True" result="Success" success="True" time="0.069" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_Fallback" executed="True" result="Success" success="True" time="0.022" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_InvalidChild" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_InvalidExtension" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_InvalidOtherwiseParameter" executed="True" result="Success" success="True" time="0.015" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_InvalidWhenCondition" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_InvalidWhenParameter" executed="True" result="Success" success="True" time="0.022" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_MissingWhenChild1" executed="True" result="Success" success="True" time="0.023" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_MissingWhenChild2" executed="True" result="Success" success="True" time="0.082" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ChooseTaskTest.Test_MissingWhenCondition" executed="True" result="Success" success="True" time="0.045" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CopyTest" executed="True" result="Success" success="True" time="2.931" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_copy_Dir_Structure" executed="True" result="Success" success="True" time="0.164" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_Flatten" executed="True" result="Success" success="True" time="0.164" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_Flatten_UpToDate" executed="True" result="Success" success="True" time="0.151" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_InvalidDestinationFilePath" executed="True" result="Success" success="True" time="0.075" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_InvalidSourceFilePath" executed="True" result="Success" success="True" time="0.067" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_No_Overwrite" executed="True" result="Success" success="True" time="0.080" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_Overwrite" executed="True" result="Success" success="True" time="0.066" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Files_Overwrite_Readonly" executed="True" result="Success" success="True" time="0.058" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_InvalidDestinationDirectory" executed="True" result="Success" success="True" time="0.054" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Only_Directory" executed="True" result="Success" success="True" time="0.082" asserts="12" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure" executed="True" result="Success" success="True" time="0.134" asserts="12" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure_Directories" executed="True" result="Success" success="True" time="0.135" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure_Directories_ExcludeEmptyDirs" executed="True" result="Success" success="True" time="0.138" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure_ExcludeEmptyDirs" executed="True" result="Success" success="True" time="0.170" asserts="12" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure_IncludeEmptyDirs" executed="True" result="Success" success="True" time="0.140" asserts="12" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_Copy_Structure_Overwrite" executed="True" result="Success" success="True" time="0.245" asserts="25" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_File_FileSet" executed="True" result="Success" success="True" time="0.085" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_ToFile_FileSet" executed="True" result="Success" success="True" time="0.074" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.CopyTest.Test_ToFile_ToDir" executed="True" result="Success" success="True" time="0.055" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="DeleteTest" executed="True" result="Success" success="True" time="3.350" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_Delete" executed="True" result="Success" success="True" time="0.781" asserts="44" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet2" executed="True" result="Success" success="True" time="0.093" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet3" executed="True" result="Success" success="True" time="0.167" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet4" executed="True" result="Success" success="True" time="0.285" asserts="64" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet5" executed="True" result="Success" success="True" time="0.084" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet6" executed="True" result="Success" success="True" time="0.101" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_DeleteFileSet7" executed="True" result="Success" success="True" time="0.149" asserts="18" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern1" executed="True" result="Success" success="True" time="0.142" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern1_NoIncludeEmptyDirs" executed="True" result="Success" success="True" time="0.121" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern2" executed="True" result="Success" success="True" time="0.128" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern2_NoIncludeEmptyDirs" executed="True" result="Success" success="True" time="0.115" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern3" executed="True" result="Success" success="True" time="0.137" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_ExcludePattern3_NoIncludeEmptyDirs" executed="True" result="Success" success="True" time="0.123" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_NonExistingDirectory" executed="True" result="Success" success="True" time="0.099" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.DeleteTest.Test_NonExistingFile" executed="True" result="Success" success="True" time="0.110" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="EchoTest" executed="True" result="Success" success="True" time="3.682" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Encoding_Invalid" executed="True" result="Success" success="True" time="0.091" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.EncodingTest" executed="True" result="Success" success="True" time="0.006" asserts="5" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.ExistingFile_Append_Default" executed="True" result="Success" success="True" time="0.104" asserts="10" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.ExistingFile_Append_False" executed="True" result="Success" success="True" time="0.092" asserts="10" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.ExistingFile_Append_True" executed="True" result="Success" success="True" time="0.119" asserts="10" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Directory_DoesNotExist" executed="True" result="Success" success="True" time="0.043" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Level_Ignored" executed="True" result="Success" success="True" time="0.141" asserts="10" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Message_Empty" executed="True" result="Success" success="True" time="0.133" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Message_Missing" executed="True" result="Success" success="True" time="0.024" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Message_Whitespace" executed="True" result="Success" success="True" time="0.191" asserts="24" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.File_Multiline" executed="True" result="Success" success="True" time="0.073" asserts="8" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Log_Message_Missing" executed="True" result="Success" success="True" time="0.039" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Log_Message_Whitespace" executed="True" result="Success" success="True" time="0.223" asserts="14" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.NewFile" executed="True" result="Success" success="True" time="0.091" asserts="8" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoDebugProjectInfo" executed="True" result="Success" success="True" time="0.026" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoDefaultProjectInfo" executed="True" result="Success" success="True" time="0.020" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoDefaultProjectInfoMacro" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoInvalidLevel" executed="True" result="Success" success="True" time="0.020" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoMessageAndInlineContent" executed="True" result="Success" success="True" time="0.067" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoWarningProjectError" executed="True" result="Success" success="True" time="0.070" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoWarningProjectInfo" executed="True" result="Success" success="True" time="0.034" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.EchoTest.Test_EchoWarningProjectInfoMacro" executed="True" result="Success" success="True" time="0.018" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ExecTaskTest" executed="True" result="Success" success="True" time="0.292" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.ExecTaskTest.Test_ArgOption" executed="True" result="Success" success="True" time="0.199" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ExecTaskTest.Test_ReadLargeAmountFromStdout" executed="True" result="Success" success="True" time="0.091" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ExternalProgramBaseTest" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.ExternalProgramBaseTest.Managed" executed="True" result="Success" success="True" time="0.004" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ExternalProgramBaseTest.UseRuntimeEngine" executed="True" result="Success" success="True" time="0.001" asserts="10" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="FailTest" executed="True" result="Success" success="True" time="0.546" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.FailTest.Test_FailContent" executed="True" result="Success" success="True" time="0.019" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.FailTest.Test_FailContentMacro" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.FailTest.Test_FailMessage" executed="True" result="Success" success="True" time="0.036" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.FailTest.Test_FailMessageAndInlineContent" executed="True" result="Success" success="True" time="0.026" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.FailTest.Test_FailMessageMacro" executed="True" result="Success" success="True" time="0.052" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="IfTest" executed="True" result="Success" success="True" time="1.298" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_NewerFile" executed="True" result="Success" success="True" time="0.071" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_NewerFiles" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_PropExists_Negative" executed="True" result="Success" success="True" time="0.027" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_PropExists_Positive" executed="True" result="Success" success="True" time="0.023" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_PropTrue_Negative" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_PropTrue_Positive" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_Target_Negative" executed="True" result="Success" success="True" time="0.059" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IF_Target_Positive" executed="True" result="Success" success="True" time="0.045" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IFNot_NewerFile" executed="True" result="Success" success="True" time="0.100" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IFNot_NewerFilesUptodateFiles" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IfTest.Test_IFNot_NewerFilesUptodateFilesWithWildcard" executed="True" result="Success" success="True" time="0.042" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="IncludeTaskTest" executed="True" result="Success" success="True" time="0.796" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_BuildXmlns" executed="True" result="Success" success="True" time="0.079" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_IncludeDuplicateFile" executed="True" result="Success" success="True" time="0.061" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_IncludeXmlns" executed="True" result="Success" success="True" time="0.034" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_NestedTask" executed="True" result="Success" success="True" time="0.054" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_RecursiveInclude" executed="True" result="Success" success="True" time="0.031" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.IncludeTaskTest.Test_Simple" executed="True" result="Success" success="True" time="0.033" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LoadTasksTest" executed="True" result="Success" success="True" time="0.179" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.LoadTasksTest.Test_AssemblyNotExists" executed="True" result="Success" success="True" time="0.020" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoadTasksTest.Test_IncorrectArgs" executed="True" result="Success" success="True" time="0.027" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LoopTest" executed="True" result="Success" success="True" time="0.928" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Files" executed="True" result="Success" success="True" time="0.020" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Files_From_FileSet" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Folders" executed="True" result="Success" success="True" time="0.065" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Folders_From_FileSet" executed="True" result="Success" success="True" time="0.048" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Lines" executed="True" result="Success" success="True" time="0.037" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_Lines_No_Delim" executed="True" result="Success" success="True" time="0.028" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.LoopTest.Test_Loop_String_Default_Delim" executed="True" result="Success" success="True" time="0.033" asserts="5" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MailTaskTest" executed="True" result="Success" success="True" time="4.992" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.AllRecipientListsTest" executed="True" result="Success" success="True" time="0.772" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.AppendedEmailMessageFromFileTest" executed="True" result="Success" success="True" time="0.071" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.BadAngleBracketEmailNameTest" executed="True" result="Success" success="True" time="0.034" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.BadAngleBracketNameEmailTest" executed="True" result="Success" success="True" time="0.039" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.BadEmailTest" executed="True" result="Success" success="True" time="0.019" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.BadParenthesisEmailNameTest" executed="True" result="Success" success="True" time="0.049" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.BadParenthesisNameEmailTest" executed="True" result="Success" success="True" time="0.029" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.EmailAttachmentTest" executed="True" result="Success" success="True" time="0.123" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.EmailMessageFromFileTest" executed="True" result="Success" success="True" time="0.021" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyBccEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.028" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyBccEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyBccEmailAddressesTest" executed="True" result="Success" success="True" time="0.038" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyBccNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.042" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyBccNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.054" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyCcEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.058" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyCcEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.037" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyCcEmailAddressesTest" executed="True" result="Success" success="True" time="0.047" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyCcNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.021" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyCcNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.021" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyToEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.025" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyToEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.020" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyToEmailAddressesTest" executed="True" result="Success" success="True" time="0.025" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyToNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.033" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.ManyToNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.033" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.MixedEmailFormatTest" executed="True" result="Success" success="True" time="0.033" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.SimpleEmailNameWithAngleBracketsTest" executed="True" result="Success" success="True" time="0.044" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.SimpleEmailNameWithParenthesisTest" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.SimpleEmailTest" executed="True" result="Success" success="True" time="0.020" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.SimpleNameEmailWithAngleBracketsTest" executed="True" result="Success" success="True" time="0.022" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.SimpleNameEmailWithParenthesisTest" executed="True" result="Success" success="True" time="0.017" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoBccEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.021" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoBccEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.015" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoBccEmailAddressesTest" executed="True" result="Success" success="True" time="0.022" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoBccNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.020" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoBccNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.037" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoCcEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.059" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoCcEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.034" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoCcEmailAddressesTest" executed="True" result="Success" success="True" time="0.020" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoCcNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.029" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoCcNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.055" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoToEmailAddressesAndNamesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.018" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoToEmailAddressesAndNamesInParenthesisTest" executed="True" result="Success" success="True" time="0.031" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoToEmailAddressesTest" executed="True" result="Success" success="True" time="0.036" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoToNamesAndEmailAddressesInAngleBracketsTest" executed="True" result="Success" success="True" time="0.032" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MailTaskTest.TwoToNamesAndEmailAddressesInParenthesisTest" executed="True" result="Success" success="True" time="0.034" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MkDirTest" executed="True" result="Success" success="True" time="0.032" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.MkDirTest.Test_CreateDirectory" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MoveTest" executed="True" result="Success" success="True" time="3.000" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.DoNotIncludeEmptyDirMoveTest" executed="True" result="Success" success="True" time="0.175" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.FilesetDirectoryMoveTest" executed="True" result="Success" success="True" time="0.106" asserts="8" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.FilesetExcludeDirectoryMoveTest" executed="True" result="Success" success="True" time="0.101" asserts="7" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.FilesetIncludeDirectoryMoveTest" executed="True" result="Success" success="True" time="0.109" asserts="8" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.MoveSubdirectoryOnlyTest" executed="True" result="Success" success="True" time="0.106" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Destination_DoesNotExist" executed="True" result="Success" success="True" time="0.093" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Destination_Newer" executed="True" result="Success" success="True" time="0.059" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Destination_Older" executed="True" result="Success" success="True" time="0.098" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Destination_Same" executed="True" result="Success" success="True" time="0.073" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Destination_UpToDate" executed="True" result="Success" success="True" time="0.067" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.NoOverwrite_Source_DoesNotExist" executed="True" result="Success" success="True" time="0.056" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Destination_DoesNotExist" executed="True" result="Success" success="True" time="0.073" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Destination_Newer" executed="True" result="Success" success="True" time="0.081" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Destination_Older" executed="True" result="Success" success="True" time="0.059" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Destination_Same" executed="True" result="Success" success="True" time="0.085" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Destination_UpToDate" executed="True" result="Success" success="True" time="0.089" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Overwrite_Source_DoesNotExist" executed="True" result="Success" success="True" time="0.075" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.RenameDirectoryToSameNameDifferenceCasingTest" executed="True" result="Success" success="True" time="0.127" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.SelectFileMoveTest" executed="True" result="Success" success="True" time="0.086" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.SimpleFileMoveTest" executed="True" result="Success" success="True" time="0.080" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.SimpleFileToDirMoveTest" executed="True" result="Success" success="True" time="0.083" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.MoveTest.Test_Move_Files_Flatten" executed="True" result="Success" success="True" time="0.175" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="NAntTaskTest" executed="True" result="Success" success="True" time="1.054" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.NAntTaskTest.Test_MultipleTargets" executed="True" result="Success" success="True" time="0.133" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.NAntTaskTest.Test_PropertyInherit" executed="True" result="Success" success="True" time="0.224" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Tasks.NAntTaskTest.Test_Simple" executed="True" result="Success" success="True" time="0.057" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.NAntTaskTest.Test_SingleTarget" executed="True" result="Success" success="True" time="0.062" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PropertyTest" executed="True" result="Success" success="True" time="2.567" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.CurrentFramework_Invalid" executed="True" result="Success" success="True" time="0.156" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.CurrentFramework_NonExisting" executed="True" result="Success" success="True" time="0.023" asserts="5" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_ChangeStaticPropertyToDynamic" executed="True" result="Success" success="True" time="0.037" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_DynamicProperty" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_DynamicPropertyCircularReference" executed="True" result="Success" success="True" time="0.032" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_DynamicPropertyNotExisting" executed="True" result="Success" success="True" time="0.026" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_NoOverwriteProperty" executed="True" result="Success" success="True" time="0.026" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_OverwriteProperty" executed="True" result="Success" success="True" time="0.026" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_OverwriteReadOnlyProperty" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[For now, we only output a warning message when read-only properties are overwritten.]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_PropCreate" executed="True" result="Success" success="True" time="0.047" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_PropReset" executed="True" result="Success" success="True" time="0.039" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_ReadOnlyDynamicProperty" executed="True" result="Success" success="True" time="0.031" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.PropertyTest.Test_ROSet" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[For now, we only output a warning message when read-only properties are overwritten.]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RegexTest" executed="True" result="Success" success="True" time="0.246" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.RegexTest.Test_RegexMatch" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.RegexTest.Test_RegexMatchMultiple" executed="True" result="Success" success="True" time="0.031" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.RegexTest.Test_RegexNoMatch" executed="True" result="Success" success="True" time="0.031" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SetEnvTaskTest" executed="True" result="Success" success="True" time="0.916" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.SetEnvTaskTest.SetSingleEnv" executed="True" result="Success" success="True" time="0.094" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SetEnvTaskTest.Test_ExpandEnvStrings" executed="True" result="Success" success="True" time="0.054" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SetEnvTaskTest.Test_NestedPathElement" executed="True" result="Success" success="True" time="0.041" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SetEnvTaskTest.Test_SetMultipleEnvVars" executed="True" result="Success" success="True" time="0.049" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SetEnvTaskTest.Test_UsePathAttribute" executed="True" result="Success" success="True" time="0.026" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SleepTaskTest" executed="True" result="Success" success="True" time="0.285" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.SleepTaskTest.Test_NegativeDurationFails" executed="True" result="Success" success="True" time="0.033" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SleepTaskTest.Test_NegativePartialDurationFails" executed="True" result="Success" success="True" time="0.021" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SleepTaskTest.Test_NoDurationSpecified" executed="True" result="Success" success="True" time="0.023" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SleepTaskTest.Test_Normal" executed="True" result="Success" success="True" time="0.041" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="StyleTaskTest" executed="True" result="Success" success="True" time="3.585" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_DocumentFunction" executed="True" result="Success" success="True" time="1.642" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_Extension" executed="True" result="Success" success="True" time="0.190" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_Include" executed="True" result="Success" success="True" time="0.126" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_Infiles" executed="True" result="Success" success="True" time="0.224" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_NoSrcfiles" executed="True" result="Success" success="True" time="0.058" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_OutWithInfiles" executed="True" result="Success" success="True" time="0.057" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_Param" executed="True" result="Success" success="True" time="0.086" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_Simple" executed="True" result="Success" success="True" time="0.175" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_SourceFileMissing" executed="True" result="Success" success="True" time="0.174" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.Test_XslFileMissing" executed="True" result="Success" success="True" time="0.070" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.StyleTaskTest.TransformEngineTests" executed="True" result="Success" success="True" time="0.329" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SysInfoTaskTest" executed="True" result="Success" success="True" time="0.648" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.SysInfoTaskTest.Test_DuplicateTasks" executed="True" result="Success" success="True" time="0.049" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SysInfoTaskTest.Test_FailOnIllegalPropertyNames" executed="True" result="Success" success="True" time="0.050" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SysInfoTaskTest.Test_Normal" executed="True" result="Success" success="True" time="0.039" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SysInfoTaskTest.Test_PropertiesNotReadOnly" executed="True" result="Success" success="True" time="0.162" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.SysInfoTaskTest.Test_Verbose" executed="True" result="Success" success="True" time="0.025" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TouchTaskTest" executed="True" result="Success" success="True" time="4.290" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_File_DateTime" executed="True" result="Success" success="True" time="0.127" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_File_Default" executed="True" result="Success" success="True" time="2.140" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_File_Millis" executed="True" result="Success" success="True" time="0.129" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_FileSet_DateTime" executed="True" result="Success" success="True" time="0.143" asserts="48" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_FileSet_Default" executed="True" result="Success" success="True" time="1.187" asserts="60" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_FileSet_Millis" executed="True" result="Success" success="True" time="0.151" asserts="72" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TouchTaskTest.Test_Same_File_Twice" executed="True" result="Success" success="True" time="0.158" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TryCatchTaskTest" executed="True" result="Success" success="True" time="1.209" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_CatchExceptionAndFinally" executed="True" result="Success" success="True" time="0.050" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_CatchExceptionWithMessage" executed="True" result="Success" success="True" time="0.028" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_CatchExceptionWithoutMessage" executed="True" result="Success" success="True" time="0.040" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_CatchWithoutFail" executed="True" result="Success" success="True" time="0.024" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_CatchWithoutFailAndFinally" executed="True" result="Success" success="True" time="0.033" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_MessagePropertyScopeEmpty" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TryCatchTaskTest.Test_PropertyScopePreset" executed="True" result="Success" success="True" time="0.030" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TStampTaskTest" executed="True" result="Success" success="True" time="0.337" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.TStampTaskTest.Test_Custom" executed="True" result="Success" success="True" time="0.027" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TStampTaskTest.Test_Formatter" executed="True" result="Success" success="True" time="0.030" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TStampTaskTest.Test_Normal" executed="True" result="Success" success="True" time="0.024" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.TStampTaskTest.Test_NoVerbose" executed="True" result="Success" success="True" time="0.035" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="XmlPeekTest" executed="True" result="Success" success="True" time="1.591" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekEmptyFile" executed="True" result="Success" success="True" time="0.074" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekNodeIndex" executed="True" result="Success" success="True" time="0.154" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXml" executed="True" result="Success" success="True" time="0.020" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlNodeIndexOutOfRange" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlNoMatches" executed="True" result="Success" success="True" time="0.027" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlRetrieveDoubleValue" executed="True" result="Success" success="True" time="0.067" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlRetrieveInnerNodes" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlUsingXPathBooleanFunction" executed="True" result="Success" success="True" time="0.055" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlUsingXPathNodeExpression" executed="True" result="Success" success="True" time="0.065" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlUsingXPathNumericFunction" executed="True" result="Success" success="True" time="0.028" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPeekTest.Test_PeekValidXmlWithNamespace" executed="True" result="Success" success="True" time="0.023" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="XmlPokeTest" executed="True" result="Success" success="True" time="1.030" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokeEmptyFile" executed="True" result="Success" success="True" time="0.064" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokeEmptyValue" executed="True" result="Success" success="True" time="0.087" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokePreserveWhitespaceFalse" executed="True" result="Success" success="True" time="0.051" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokePreserveWhitespaceTrue" executed="True" result="Success" success="True" time="0.030" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokeValidXml" executed="True" result="Success" success="True" time="0.027" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokeValidXmlNoMatches" executed="True" result="Success" success="True" time="0.080" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Tasks.XmlPokeTest.Test_PokeValidXmlWithNamespace" executed="True" result="Success" success="True" time="0.049" asserts="2" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TaskTest" executed="True" result="Success" success="True" time="1.234" asserts="0">
+                    <results>
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_EmptyRequiredAttribute" executed="True" result="Success" success="True" time="0.022" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_FailOnError" executed="True" result="Success" success="True" time="0.033" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_If_False" executed="True" result="Success" success="True" time="0.028" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_If_True" executed="True" result="Success" success="True" time="0.017" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_MissingRequiredAttribute" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_Mixture" executed="True" result="Success" success="True" time="0.061" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_NoFailOnError" executed="True" result="Success" success="True" time="0.034" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_Simple" executed="True" result="Success" success="True" time="0.056" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_UnknownAttribute" executed="True" result="Success" success="True" time="0.032" asserts="0" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_Unless_False" executed="True" result="Success" success="True" time="0.023" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_Unless_True" executed="True" result="Success" success="True" time="0.021" asserts="1" />
+                      <test-case name="Tests.NAnt.Core.TaskTest.Test_Verbose" executed="True" result="Success" success="True" time="0.073" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Util" executed="True" result="Success" success="True" time="0.317" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="FileUtilsTest" executed="True" result="Success" success="True" time="0.017" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_CombinePaths" executed="True" result="Success" success="True" time="0.002" asserts="32" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_CombinePaths_Path1_Null" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_CombinePaths_Path2_Null" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_GetFullPath" executed="True" result="Success" success="True" time="0.003" asserts="16" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_GetFullPath_Empty" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_GetFullPath_Null" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Util.FileUtilsTest.Test_GetFullPath_Whitespace" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="StopWatchStackTest" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Util.StopWatchStackTest.ShouldPushAndPopMultipleStopWatches" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Util.StopWatchStackTest.ShouldPushAndPopSingleStopWatch" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TempDirTest" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Util.TempDirTest.Test_CreateAndDestroy" executed="True" result="Success" success="True" time="0.003" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TempFileTest" executed="True" result="Success" success="True" time="0.014" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Util.TempFileTest.Test_Create" executed="True" result="Success" success="True" time="0.005" asserts="3" />
+                          <test-case name="Tests.NAnt.Core.Util.TempFileTest.Test_Create_NullArgument" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Util.TempFileTest.Test_Create_WithContents" executed="True" result="Success" success="True" time="0.007" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="XmlLoggerTest" executed="True" result="Success" success="True" time="0.265" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.BuildStartedAndBuildFinished" executed="True" result="Success" success="True" time="0.079" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.IsJustWhiteSpace" executed="True" result="Success" success="True" time="0.011" asserts="9" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.StripFormatting" executed="True" result="Success" success="True" time="0.013" asserts="6" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.StripFormattingMultiline" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.TargetStartedAndTargetFinished" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.TaskStartedAndTaskFinished" executed="True" result="Success" success="True" time="0.007" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.Write" executed="True" result="Success" success="True" time="0.007" asserts="4" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteEmbeddedMalformedXml" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteEmbeddedMathFormulas" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteEmbeddedXml" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteLine" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteStrangeCharacters" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteTextWithEmbeddedCDATATag" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteXmlWithDeclaration" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                          <test-case name="Tests.NAnt.Core.Util.XmlLoggerTest.WriteXmlWithLeadingWhitespace" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.DotNet.Tests.dll" total="54" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-04-29" time="16:20:21">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.296" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92" machine-name="DUB061-PC" user="dobyrne" user-domain="EZETOP" />
+  <culture-info current-culture="en-IE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\dobyrne\Oblivious\NAnt\nant-0.92\build\net-4.0.win32\nant-debug\bin\NAnt.DotNet.Tests.dll" executed="True" result="Success" success="True" time="29.381" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="29.361" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="NAnt" executed="True" result="Success" success="True" time="29.361" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Core" executed="True" result="Success" success="True" time="5.568" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="5.567" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="ScriptTest" executed="True" result="Success" success="True" time="5.564" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.NamespaceImports" executed="True" result="Success" success="True" time="2.603" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.Test_2ScriptsInOneProject" executed="True" result="Success" success="True" time="0.243" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.Test_CSharp" executed="True" result="Success" success="True" time="0.179" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.Test_Functions" executed="True" result="Success" success="True" time="0.287" asserts="2" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.Test_Tasks" executed="True" result="Success" success="True" time="0.313" asserts="0" />
+                          <test-case name="Tests.NAnt.Core.Tasks.ScriptTest.Test_VB" executed="True" result="Success" success="True" time="0.531" asserts="1">
+                            <categories>
+                              <category name="NotMono" />
+                            </categories>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="DotNet" executed="True" result="Success" success="True" time="23.779" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tasks" executed="True" result="Success" success="True" time="23.726" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="AssemblyInfoTaskTest" executed="True" result="Success" success="True" time="1.082" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.AssemblyInfoTaskTest.attributeWithNoValueShouldCauseBuildExceptionWhenNoPublicDefaultConstructorExists" executed="True" result="Success" success="True" time="0.158" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.AssemblyInfoTaskTest.attributeWithNoValueShouldWorkWhenPublicDefaultConstructorExists" executed="True" result="Success" success="True" time="0.118" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.AssemblyInfoTaskTest.specifyingValueForAttrbuteWithNoConstructorTakingASingleParameterShouldCauseBuildException" executed="True" result="Success" success="True" time="0.144" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.AssemblyInfoTaskTest.Test_Normal" executed="True" result="Success" success="True" time="0.267" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CscTaskTest" executed="True" result="Success" success="True" time="3.022" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_CreateParentDirectory" executed="True" result="Success" success="True" time="0.461" asserts="1" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_DebugBuild" executed="True" result="Success" success="True" time="0.334" asserts="1" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_Define" executed="True" result="Success" success="True" time="0.313" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_CompiledResource_DynamicPrefix" executed="True" result="Success" success="True" time="0.100" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_CompiledResource_Prefix" executed="True" result="Success" success="True" time="0.048" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_CompiledResource_Prefix_With_DynamicPrefix" executed="True" result="Success" success="True" time="0.055" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_NonExistingResource" executed="True" result="Success" success="True" time="0.085" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_NonResx_DynamicPrefix" executed="True" result="Success" success="True" time="0.198" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_NonResx_Prefix" executed="True" result="Success" success="True" time="0.032" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_NonResx_Prefix_With_DynamicPrefix" executed="True" result="Success" success="True" time="0.041" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx" executed="True" result="Success" success="True" time="0.145" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_DynamicPrefix" executed="True" result="Success" success="True" time="0.143" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_Prefix" executed="True" result="Success" success="True" time="0.132" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_Prefix_DynamicPrefix" executed="True" result="Success" success="True" time="0.127" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_StandAlone_DynamicPrefix" executed="True" result="Success" success="True" time="0.110" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_StandAlone_DynamicPrefix_With_Prefix" executed="True" result="Success" success="True" time="0.077" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ManifestResourceName_Resx_StandAlone_Prefix" executed="True" result="Success" success="True" time="0.107" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest.Test_ReleaseBuild" executed="True" result="Success" success="True" time="0.306" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CscTaskTest+TestResourceLinkage" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.CscTaskTest+TestResourceLinkage.TestFindClassname" executed="True" result="Success" success="True" time="0.011" asserts="28" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LicenseTaskTest" executed="True" result="Success" success="True" time="1.305" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.LicenseTaskTest.Test_Serializable" executed="True" result="Success" success="True" time="1.305" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VbcTaskTest" executed="True" result="Success" success="True" time="10.426" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_CreateParentDirectory" executed="True" result="Success" success="True" time="0.915" asserts="1">
+                            <categories>
+                              <category name="NotMono" />
+                            </categories>
+                          </test-case>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_DebugBuild" executed="True" result="Success" success="True" time="1.150" asserts="1">
+                            <categories>
+                              <category name="NotMono" />
+                            </categories>
+                          </test-case>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_Define" executed="True" result="Success" success="True" time="0.880" asserts="0">
+                            <categories>
+                              <category name="NotMono" />
+                            </categories>
+                          </test-case>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_CompiledResource_DynamicPrefix" executed="True" result="Success" success="True" time="0.066" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_CompiledResource_Prefix" executed="True" result="Success" success="True" time="0.095" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_CompiledResource_Prefix_With_DynamicPrefix" executed="True" result="Success" success="True" time="0.071" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_NonExistingResource" executed="True" result="Success" success="True" time="0.025" asserts="0" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_NonResx_DynamicPrefix" executed="True" result="Success" success="True" time="0.073" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_NonResx_Prefix" executed="True" result="Success" success="True" time="0.065" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_NonResx_Prefix_With_DynamicPrefix" executed="True" result="Success" success="True" time="0.060" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx" executed="True" result="Success" success="True" time="0.098" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_DynamicPrefix" executed="True" result="Success" success="True" time="0.120" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_Prefix" executed="True" result="Success" success="True" time="0.096" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_Prefix_DynamicPrefix" executed="True" result="Success" success="True" time="0.104" asserts="10" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_StandAlone_DynamicPrefix" executed="True" result="Success" success="True" time="0.066" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_StandAlone_DynamicPrefix_With_Prefix" executed="True" result="Success" success="True" time="0.089" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ManifestResourceName_Resx_StandAlone_Prefix" executed="True" result="Success" success="True" time="0.078" asserts="5" />
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest.Test_ReleaseBuild" executed="True" result="Success" success="True" time="0.879" asserts="2">
+                            <categories>
+                              <category name="NotMono" />
+                            </categories>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="VbcTaskTest+TestResourceLinkage" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Tasks.VbcTaskTest+TestResourceLinkage.TestFindClassname" executed="True" result="Success" success="True" time="0.009" asserts="6" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Types" executed="True" result="Success" success="True" time="0.040" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="ResourceFileSetTest" executed="True" result="Success" success="True" time="0.040" asserts="0">
+                        <results>
+                          <test-case name="Tests.NAnt.DotNet.Types.ResourceFileSetTest.Test_ManifestResourceName_DynamicWithEmptyPrefix" executed="True" result="Success" success="True" time="0.005" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Types.ResourceFileSetTest.Test_ManifestResourceName_DynamicWithPrefix" executed="True" result="Success" success="True" time="0.011" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Types.ResourceFileSetTest.Test_ManifestResourceName_NoPrefix" executed="True" result="Success" success="True" time="0.004" asserts="4" />
+                          <test-case name="Tests.NAnt.DotNet.Types.ResourceFileSetTest.Test_ManifestResourceName_PrefixWithSpecialCharacters" executed="True" result="Success" success="True" time="0.004" asserts="6" />
+                          <test-case name="Tests.NAnt.DotNet.Types.ResourceFileSetTest.Test_ManifestResourceName_StaticPrefix" executed="True" result="Success" success="True" time="0.007" asserts="4" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
