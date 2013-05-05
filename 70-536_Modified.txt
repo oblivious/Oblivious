@@ -4497,19 +4497,19 @@ query.QueryString = "SELECT InstanceModificationEvent FROM 'Win32_DiskDrive'" +
 
 B. Use the following code: 
 EventQuery query = new EventQuery (); 
-query.QueryString = "SELECT * FROM_InstanceModificationEvent WITHIN 3600" + 
+query.QueryString = "SELECT * FROM_ InstanceModificationEvent WITHIN 3600" + 
 "WHERE TargetInstance ISA 'Win32_DiskDrive'"; 
 
 
 C. Use the following code: 
 EventQuery query = new EventQuery (); 
-query.QueryString = "SELECT * FROM'Win32_DiskDrive' WITHIN 3600" + 
+query.QueryString = "SELECT * FROM 'Win32_DiskDrive' WITHIN 3600" + 
 "WHERE TargetInstance ISA_InstanceModificationEvent"; 
 
 
 D. Use the following code: 
 EventQuery query = new EventQuery (); 
-query.QueryString = "SELECT * FROM_InstanceModificationEvent WITHIN 3600" + 
+query.QueryString = "SELECT * FROM _InstanceModificationEvent WITHIN 3600" + 
 "WHERE Instance = 'Win32_DiskDrive'"; 
 
 
@@ -4650,10 +4650,10 @@ The class is shown below:
 [Serializable] 
 public class Vehicle 
 { 
-public string VIN; 
-public string Make; 
-public string Model; 
-public string Year; 
+	public string VIN; 
+	public string Make; 
+	public string Model; 
+	public string Year; 
 } 
 
 
@@ -4805,14 +4805,17 @@ during serialization/deserialization.
 Incorrect Answers: 
 
 A: You should not apply the OnSerializedattribute to these methods because they do not accept a 
-StreamingContext as an argument.Part 2: Control the serialization of an object into XML format by 
+StreamingContext as an argument.
+Part 2: Control the serialization of an object into XML format by 
 using the System.Xml.Serialization namespace. 
 Serialize and deserialize objects into XML format by using the XmlSerializer class. 
 B: You should not apply the OnSerializedattribute to these methods because they do not accept a 
-StreamingContext as an argument.Part 2: Control the serialization of an object into XML format by 
+StreamingContext as an argument.
+Part 2: Control the serialization of an object into XML format by 
 using the System.Xml.Serialization namespace. 
 D: You should not apply the OnSerializedattribute to these methods because they do not accept a 
-StreamingContext as an argument.Part 2: Control the serialization of an object into XML format by 
+StreamingContext as an argument.
+Part 2: Control the serialization of an object into XML format by 
 using the System.Xml.Serialization namespace. 
 
 
@@ -4958,11 +4961,11 @@ The class is shown below:
 [Serializable] 
 public class Vehicle 
 { 
-public string VIN; 
-public string Make; 
-private string Model; 
-private int Year; 
-private string Owner; 
+	public string VIN; 
+	public string Make; 
+	private string Model; 
+	private int Year; 
+	private string Owner; 
 } 
 
 
@@ -5031,7 +5034,7 @@ The XML has to be utilized to create an Order object that is consumed by the new
 The following exhibit displays an example of CertKiller.com's partner company's XML data: 
 
 
-You plan to use the XmlSerializer class the deserialize the XML data into an Order object. When 
+You plan to use the XmlSerializer class to deserialize the XML data into an Order object. When 
 you learn that CertKiller.com's partner company's XML also contains Shipping object data, you 
 decide to deserialize the shipping object after the Shipping element is detected during 
 deserialization. 
@@ -5399,55 +5402,42 @@ What should you do?
 A. Use the following code: 
 public void EnumerateNetworkDrives () 
 { 
-foreach (Drive netDrive in Drive.GetDrives ()) 
-{ 
-if (netDrive.DriveType == DriveType.Network) 
-Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, 
-netDrive.TotalSize); 
-} 
-
-
+	foreach (Drive netDrive in Drive.GetDrives ()) 
+	{ 
+		if (netDrive.DriveType == DriveType.Network) 
+			Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, netDrive.TotalSize); 
+	} 
 } 
 
 
 B. Use the following code: 
-public void EnumerateNetworkDrives () 
+public void EnumerateNetworkDrives() 
 { 
-foreach (DriveInfo netDrive in DriveInfo.GetDrives ()) 
-{ 
-Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, 
-netDrive.TotalSize); 
-} 
-
-
+	foreach (DriveInfo netDrive in DriveInfo.GetDrives()) 
+	{ 
+		Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, netDrive.TotalSize); 
+	} 
 } 
 
 
 C. Use the following code: 
-public void EnumerateNetworkDrives () 
+public void EnumerateNetworkDrives() 
 { 
-foreach (DriveInfo netDrive in DriveDriveInfo.GetDrives ()) 
-{ 
-if (netDrive.DriveType = = DriveType.Network) 
-Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, 
-netDrive.TotalSize); 
-} 
-
-
+	foreach (DriveInfo netDrive in DriveInfo.GetDrives()) 
+	{ 
+		if (netDrive.DriveType == DriveType.Network) 
+			Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, netDrive.TotalSize); 
+	} 
 } 
 
 
 D. Use the following code: 
-public void EnumerateNetworkDrives () 
+public void EnumerateNetworkDrives() 
 { 
-foreach (DriveInfo netDrive in DriveInfo.GetDrives (DriveType.Network)) 
-{
-
- Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name,
-
- netDrive.VolumeLabel, netDrive.TotalSize);
-
- } 
+	foreach (DriveInfo netDrive in DriveInfo.GetDrives(DriveType.Network)) 
+	{
+		Console.WriteLine ("{0} ({1}) : {2} bytes", netDrive.Name, netDrive.VolumeLabel, netDrive.TotalSize);
+	} 
 } 
 
 
@@ -5515,67 +5505,60 @@ What should you do?
 A. Use the following code: 
 public void DisplayDriveDirectories (string drivePath) 
 { 
-if (Directory.Exists (drivePath)) 
-{ 
-foreach (String dirPath in Directory.GetDirctories (drivePath)) 
-{ 
-DirectoryInfo dir = new DirectoryInfo (drivePath); 
-int numFiles = dir.TotalFiles; 
-Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
-} 
-} 
-
-
+	if (Directory.Exists(drivePath)) 
+	{ 
+		foreach (String dirPath in Directory.GetDirectories(drivePath)) 
+		{ 
+			DirectoryInfo dir = new DirectoryInfo(drivePath); 
+			int numFiles = dir.TotalFiles; 
+			Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
+		} 
+	} 
 } 
 
 
 B. Use the following code: 
 public void DisplayDriveDirectories (string drivePath) 
 { 
-if (Directory.Exists (drivePath)) 
-{ 
-foreach (String dirPath in Directory.GetDirctories (drivePath)) 
-{ 
-DirectoryInfo dir = new DirectoryInfo (drivePath); 
-int numFiles = dir.Length; 
-Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
-} 
-} 
-
-
+	if (Directory.Exists(drivePath)) 
+	{ 
+		foreach (String dirPath in Directory.GetDirectories(drivePath)) 
+		{ 
+			DirectoryInfo dir = new DirectoryInfo(drivePath); 
+			int numFiles = dir.Length; 
+			Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
+		} 
+	}
 } 
 
 
 C. Use the following code: 
 public void DisplayDriveDirectories (string drivePath) 
 { 
-if (Directory.Exists (drivePath)) 
-{ 
-foreach (String dirPath in Directory.GetDirctories (drivePath)) 
-{ 
-DirectoryInfo dir = new DirectoryInfo (drivePath); 
-int numFiles = dir.GetFiles().Length; 
-Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
-} 
-} 
-
-
+	if (Directory.Exists(drivePath)) 
+	{ 
+		foreach (String dirPath in Directory.GetDirectories(drivePath)) 
+		{ 
+			DirectoryInfo dir = new DirectoryInfo (drivePath); 
+			int numFiles = dir.GetFiles().Length; 
+			Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles); 
+		} 
+	}
 } 
 
 
 D. Use the following code: 
 public void DisplayDriveDirectories (string drivePath) 
 { 
-if (Directory.Exists (drivePath)) 
-{ 
-foreach (String dirPath in Directory.GetDirctories (drivePath)) 
-{ 
-DirectoryInfo dir = new DirectoryInfo (drivePath); 
-int numFiles = dir.Size; 
-Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles);
-
- } 
-} 
+	if (Directory.Exists(drivePath)) 
+	{ 
+		foreach (String dirPath in Directory.GetDirctories (drivePath)) 
+		{ 
+			DirectoryInfo dir = new DirectoryInfo(drivePath); 
+			int numFiles = dir.Size; 
+			Console.WriteLine( "{0} : {1} files.", dir.Name, numFiles);
+		} 
+	} 
 } 
 
 
@@ -5649,7 +5632,6 @@ C. Use the following code:
 File hosts = new File (@"C:\Windows\system32\drivers\etc\hosts"); 
 Console.WriteLine ("ReadOnly?" + hosts.GetReadOnly); 
 Console.WriteLine ("Size?" + hosts.GetLength); 
-
 D. Use the following code: 
 FileInfo hosts = new FileInfo (@"C:\Windows\system32\drivers\etc\hosts"); 
 Console.WriteLine ("ReadOnly?" + hosts.IsReadOnly); 
@@ -5715,47 +5697,42 @@ What should you do?
 A. Use the following code: 
 public void WriteBytes (byte [] bytes) 
 { 
-FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
+	FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
 
- for (int i = 0; i < bytes.Length - 1; i++)
+	for (int i = 0; i < bytes.Length - 1; i++)
+		fs.Write(bytes [i]);
 
- fs.Write (bytes [i]);
-
- fs.Close (); 
-
-} B. Use the following code: 
+	fs.Close (); 
+}
+B. Use the following code: 
 public void WriteBytes (byte [] bytes) 
 { 
-FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
+	FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
 
- for (int i = 0; i < bytes.Length - 1; i++)
+	for (int i = 0; i < bytes.Length - 1; i++)
+		fs.WriteByte (bytes [i]);
 
- fs.WriteByte (bytes [i]);
-
- fs.Close (); 
-
+	fs.Close (); 
 } 
 
 C. Use the following code: 
 public void WriteBytes (byte [] bytes) 
 { 
-FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
+	FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
 
- fs.WriteBytes (bytes, 0, bytes.Length);
+	fs.WriteBytes(bytes, 0, bytes.Length);
 
- fs.Close (); 
-
+	fs.Close (); 
 } 
 
 D. Use the following code: 
 public void WriteBytes (byte [] bytes) 
 { 
-FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
+	FileStream fs = new FileStream ("C:\\file.txt", FileMode.Create);
 
- fs.Write (bytes, 0, bytes.Length);
+	fs.Write(bytes, 0, bytes.Length);
 
- fs.Close (); 
-
+	fs.Close (); 
 } 
 
 
@@ -5822,40 +5799,40 @@ What should you do?
 A. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
 BufferedStream bs = new BufferedStream (fs); 
-byte [ ] bytes = new byte [1023]; 
-bs.Read (bytes, 0, bytes.Length); 
+byte [] bytes = new byte [1024]; 
+bs.Read(bytes, 0, bytes.Length); 
 bs.Close (); 
 for (int i = 0; i < bytes.Length-1; i++) 
-Console.WriteLine ("{0} : {1}", I, bytes [i]); 
+	Console.WriteLine("{0} : {1}", I, bytes [i]); 
 
 
 B. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
-byte [ ] bytes = new byte [1023]; 
-fs.Read (bytes, 0, bytes.Length); 
+byte [] bytes = new byte [1024]; 
+fs.Read(bytes, 0, bytes.Length); 
 fs.Close (); 
 for (int i = 0; i < bytes.Length-1; i++) 
-Console.WriteLine ("{0} : {1}", I, bytes [i]); 
+	Console.WriteLine("{0} : {1}", I, bytes [i]); 
 
 
 C. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
 BufferedStream bs = new BufferedStream (fs); 
-byte [ ] bytes = new byte [1023]; 
-bytes = bs.ReadAllBytes (0, 1023); 
+byte [] bytes = new byte [1024]; 
+bytes = bs.ReadAllBytes(0, 1023); 
 bs.Close (); 
 for (int i = 0; i < bytes.Length-1; i++) 
-Console.WriteLine ("{0} : {1}", I, bytes [i]); 
+	Console.WriteLine("{0} : {1}", I, bytes [i]); 
 
 
 D. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
-BufferedStream bs = new BufferedStream (fs); 
-byte [ ] bytes = new byte [1023]; 
+BufferedStream bs = new BufferedStream(fs); 
+byte [] bytes = new byte[1024]; 
 bs.Read (bytes); 
-bs.Close (); 
+bs.Close(); 
 for (int i = 0; i < bytes.Length-1; i++) 
-Console.WriteLine ("{0} : {1}", I, bytes [i]); 
+	Console.WriteLine("{0} : {1}", I, bytes [i]); 
 
 
 
@@ -5907,7 +5884,8 @@ D: You should not use the code that specifies a buffered stream because the File
 already a buffered stream. Also, you should not use the code fragments that invoke the 
 ReadAllBytes method and the Read method with the incorrect arguments because no such 
 method signatures exist. 
-BufferedStream classPart 6: Manage the .NET Framework application data by using Reader and 
+BufferedStream class
+Part 6: Manage the .NET Framework application data by using Reader and 
 Writer classes. (Refer System.IO namespace) 
 
 
@@ -5930,24 +5908,25 @@ What should you do?
 
 A. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
-StreamReader sr = new StreamReader (fs); 
-string data = new sr.ReadToEnd (); 
-sr.Close (); 
-Console.WriteLine (data); 
+StreamReader sr = new StreamReader(fs); 
+string data = new sr.ReadToEnd(); 
+sr.Close();
+Console.WriteLine(data); 
 
 
 B. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
 string data = new sr.ReadToEnd (); 
 fs.Close (); 
-Console.WriteLine (data); 
+Console.WriteLine (data);
+
 C. Use the following code: 
 FileStream fs = new FileStream("C:\\file.txt", FileMode.Open); 
-StringBuilder data = new StringBuilder (); 
+StringBuilder data = new StringBuilder(); 
 string data; 
-while (sr.Peek () > -1) 
-data += sr.ReadLine (); 
-sr.Close (); 
+while(sr.Peek() > -1) 
+	data += sr.ReadLine (); 
+sr.Close(); 
 Console.WriteLine (data); 
 
 
@@ -5956,9 +5935,9 @@ FileStream fs = new FileStream("C:\\file.txt", FileMode.Open);
 StreamReader sr = new StreamReader (fs); 
 StringBuilder data = new StringBuilder (); 
 while (sr.Peek () > -1) 
-data.Append (sr.ReadLine ()); 
+	data.Append(sr.ReadLine()); 
 sr.Close (); 
-Console.WriteLine (data.ToString ()); 
+Console.WriteLine(data.ToString()); 
 
 
 
@@ -6001,15 +5980,13 @@ Incorrect Answers:
 
 B: You should not use the code that does not specify the StreamReader class because the 
 FileStream class does not contain a ReadToEnd method. 
-IsolatedStorageFileStream class 
-
 C: You should not use the code that specifies a string object when invoking the ReadLine method 
 rather than a StringBuilder object. The string object is less efficient than StringBuilder objects 
 when performing concatenation operations. 
-DeflateStream class 
 D: This code should not be used because it manually iterates through the file using the ReadLine 
 method, whereas the ReadToEnd method is more efficient. 
-BinaryReader class and BinaryWriter classPart 7: Compress or decompress stream information in 
+
+Part 7: Compress or decompress stream information in 
 a .NET Framework application (refer System.IO.Compression namespace), and improve the 
 security of application data by using isolated storage. (Refer System.IO.IsolatedStorage 
 namespace) 
@@ -6038,53 +6015,47 @@ as a byte array.
 What should you do? 
 
 A. Use the following code: 
-public byte [] DecompressFile (string file) 
+public byte[] DecompressFile(string file) 
 { 
-FileStream fs = new FileStream (file, FileMode.Open); 
-DeflateStream cs = new DeflateStream (fs, CompressionMode.Decompress, true); 
-byte [ ] data = new byte [fs.Length - 1]; 
-cs.Read (data, 0, data.Length); 
-cs.Close (); 
-return data; 
-
-
+	FileStream fs = new FileStream(file, FileMode.Open); 
+	DeflateStream cs = new DeflateStream(fs, CompressionMode.Decompress, true); 
+	byte[] data = new byte[fs.Length - 1]; 
+	cs.Read(data, 0, data.Length); 
+	cs.Close(); 
+	return data; 
 } 
 
 
 B. Use the following code: 
-public byte [] DecompressFile (string file) 
+public byte[] DecompressFile(string file)
 { 
-FileStream fs = new FileStream (file, FileMode.Open); 
-GZipStream cs = new GZipStream (fs, CompressionMode.Decompress) 
-byte [ ] data = new byte [fs.Length - 1]; 
-cs.Read (data, 0, data.Length); 
-return data; 
+	FileStream fs = new FileStream(file, FileMode.Open); 
+	GZipStream cs = new GZipStream(fs, CompressionMode.Decompress) 
+	byte[] data = new byte[fs.Length - 1]; 
+	cs.Read (data, 0, data.Length); 
+	return data; 
 } 
 
 C. Use the following code: 
-public byte [] DecompressFile (string file) 
+public byte[] DecompressFile(string file) 
 { 
-FileStream fs = new FileStream (file, FileMode.Open); 
-DeflateStream cs = new DeflateStream (fs, CompressionMode.Decompress) 
-byte [ ] data = new byte [fs.Length - 1]; 
-cs.Read (data, 0, data.Length); 
-return data; 
-
-
+	FileStream fs = new FileStream(file, FileMode.Open); 
+	DeflateStream cs = new DeflateStream(fs, CompressionMode.Decompress) 
+	byte[] data = new byte[fs.Length - 1]; 
+	cs.Read(data, 0, data.Length); 
+	return data; 
 } 
 
 
 D. Use the following code: 
-public byte [] DecompressFile (string file) 
+public byte[] DecompressFil (string file) 
 { 
-FileStream fs = new FileStream (file, FileMode.Open); 
-GZipStream cs = new GZipStream (fs, CompressionMode.Decompress, true); 
-byte [ ] data = new byte [fs.Length - 1]; 
-cs.Read (data, 0, data.Length); 
-cs.Close (); 
-return data; 
-
-
+	FileStream fs = new FileStream(file, FileMode.Open); 
+	GZipStream cs = new GZipStream(fs, CompressionMode.Decompress, true); 
+	byte [ ] data = new byte[fs.Length - 1]; 
+	cs.Read(data, 0, data.Length); 
+	cs.Close(); 
+	return data; 
 } 
 
 
@@ -6158,49 +6129,40 @@ What should you do?
 A. Use the following code: 
 public void CompressFileWrite (string file, byte[] data) 
 { 
-FileStream fs = new FileStream (file, FileMode.Create); 
-DeflateStream cs = new DeflateStream( fs, Compressionmode.Compress, true); 
-cs.Write (data, 0, data.Length); 
-cs.Close (); 
-
-
+	FileStream fs = new FileStream (file, FileMode.Create); 
+	DeflateStream cs = new DeflateStream( fs, Compressionmode.Compress, true); 
+	cs.Write (data, 0, data.Length); 
+	cs.Close (); 
 } 
 
 
 B. Use the following code: 
 public void CompressFileWrite (string file, byte[] data) 
 { 
-FileStream fs = new FileStream (file, FileMode.Create); 
-GZipStream cs = new GZipStream( fs, Compressionmode.Compress, true); 
-cs.Compress (data, 0, data.Length); 
-cs.Close (); 
-
-
+	FileStream fs = new FileStream (file, FileMode.Create); 
+	GZipStream cs = new GZipStream( fs, Compressionmode.Compress, true); 
+	cs.Compress (data, 0, data.Length); 
+	cs.Close (); 
 } 
 
 
 C. Use the following code: 
 public void CompressFileWrite (string file, byte[] data) 
 { 
-FileStream fs = new FileStream (file, FileMode.Create); 
-DeflateStream cs = new DeflateStream( fs, Compressionmode.Compress, true); 
-cs.Compress (data, 0, data.Length); 
-cs.Close (); 
-
-
+	FileStream fs = new FileStream (file, FileMode.Create); 
+	DeflateStream cs = new DeflateStream( fs, Compressionmode.Compress, true); 
+	cs.Compress (data, 0, data.Length); 
+	cs.Close (); 
 } 
 
 
 D. Use the following code: 
 public void CompressFileWrite (string file, byte[] data) 
 { 
-FileStream fs = new FileStream (file, FileMode.Create);
-
- GZipStream cs = new GZipStream( fs, Compressionmode.Compress, true);
-
- cs.Write (data, 0, data.Length);
-
- cs.Close (); 
+	FileStream fs = new FileStream (file, FileMode.Create);
+	GZipStream cs = new GZipStream( fs, Compressionmode.Compress, true);
+	cs.Write (data, 0, data.Length);
+	cs.Close (); 
 } 
 
 
@@ -6340,7 +6302,8 @@ permissions to run.
 
 You need to ensure that this assembly runs. 
 
-What should you do? A. Use the permview.exe tool to modify the assembly's granted permissions. 
+What should you do?
+A. Use the permview.exe tool to modify the assembly's granted permissions. 
 B. Use the sn.exe tool to modify the assembly's granted permissions. 
 C. Use the caspol.exe tool to modify the assembly's granted permissions. 
 D. Use the gacutil.exe tool to modify the assembly's granted permissions. 
@@ -6467,12 +6430,15 @@ What should you do?
 
 A. Add the following code to the Copy method: 
 file2.SetAccessControl (file1.GetAccessControl ()); 
+
 B. Add the following code to the Copy method: 
 FileSecurity acl = file1.GetAccessControl (); 
 acl. SetAccessRuleProtection (true, true); 
 file2.SetAccessControl (acl); 
+
 C. Add the following code to the Copy method: 
 file2.SetAccessControl (file1.GetAccessControl (), false); 
+
 D. Add the following code to the Copy method: 
 FileSecurity acl = file1.GetAccessControl (); 
 acl. SetAccessRuleProtection (true, false); 
@@ -6587,8 +6553,9 @@ Incorrect Answers:
 A: Using this option would only hash the data using the MD5 algorithm. 
 DES class and DESCryptoServiceProvider class 
 C: Using this option would not necessarily create a secure channel. 
-E: This class is used by the server application.Part 4: Encrypt, decrypt, and hash data by using the 
-System.Security.Cryptography classes. (Refer System.Security.Cryptography namespace) 
+E: This class is used by the server application.
+
+Part 4: Encrypt, decrypt, and hash data by using the System.Security.Cryptography classes. (Refer System.Security.Cryptography namespace) 
 
 
 
@@ -6615,73 +6582,67 @@ What should you do?
 A. Use the following code: 
 public byte [] EncryptData (byte [] PatientInfo, RSACryptoServiceProvider SecreCKey) 
 { 
-CryptoSream cs = new CryptoSream (SecreCKey);
+	CryptoStream cs = new CryptoStream(SecreCKey);
 
- cs.Encrypt (PatientInfo, 0, PatientInfo.Length);
+	cs.Encrypt(PatientInfo, 0, PatientInfo.Length);
 
- byte [] data = cs.ToArray ();
+	byte[] data = cs.ToArray();
 
- cs.Close ();
+	cs.Close();
 
- return data; 
-
+	return data; 
 } 
 
 
 B. Use the following code: 
 public byte [] EncryptData (byte [] PatientInfo, RSACryptoServiceProvider SecreCKey) 
 {
+	MemoryStream ms = new MemoryStream ();
 
- MemorySream ms = new MemorySream ();
+	CryptoStream cs = new CryptoStream(ms, SecreCKey.CreateEncryptor(), CryptoStreamMode.Write);
 
- CryptoSream cs = new CryptoSream (ms, SecreCKey.CreateEncryptor (), 
-CryptoSreamMode.Write);
+	cs.Write(PatientInfo, 0, PatientInfo.Length);
+	
+	cs.Close();
 
- cs.Write (PatientInfo, 0, PatientInfo.Length);
+	byte[] data = ms.ToArray ();
 
- cs.Close ();
+	ms.Close();
 
- byte [] data = ms.ToArray ();
-
- ms.Close ();
-
- return data; 
+	return data; 
 } 
 
 C. Use the following code: 
 public byte [] EncryptData (byte [] PatientInfo, DESCryptoServiceProvider SecreCKey) 
 { 
-CryptoSream cs = new CryptoSream (SecreCKey);
+	CryptoStream cs = new CryptoStream(SecreCKey);
 
- cs.Encrypt (PatientInfo, 0, PatientInfo.Length);
+	cs.Encrypt(PatientInfo, 0, PatientInfo.Length);
 
- byte [] data = cs.ToArray ();
+	byte[] data = cs.ToArray ();
 
- cs.Close ();
+	cs.Close ();
 
- return data; 
-
+	return data; 
 } 
 
 
 D. Use the following code: 
 public byte [] EncryptData (byte [] PatientInfo, DESCryptoServiceProvider SecreCKey) 
 { 
-MemorySream ms = new MemorySream ();
+	MemoryStream ms = new MemoryStream ();
 
- CryptoSream cs = new CryptoSream (ms, SecreCKey.CreateEncryptor (), 
-CryptoSreamMode.Write);
+	CryptoStream cs = new CryptoStream(ms, SecreCKey.CreateEncryptor(), CryptoStreamMode.Write);
 
- cs.Write (PatientInfo, 0, PatientInfo.Length);
+	cs.Write(PatientInfo, 0, PatientInfo.Length);
 
- cs.Close ();
+	cs.Close();
 
- byte [] data = ms.ToArray ();
+	byte[] data = ms.ToArray();
 
- ms.Close ();
+	ms.Close();
 
- return data; 
-
+	return data; 
 } 
 
 
@@ -6749,11 +6710,11 @@ What should you do?
 A. Use the following code to generate a hash value for the dataArray object: 
 hash.GenerateHash (dataArray); 
 B. Use the following code to generate a hash value for the dataArray object: 
-hash.ComputeHash (dataArray); 
+hash.ComputeHash(dataArray); 
 C. Use the following code to generate a hash value for the dataArray object: 
-hash. Hash (dataArray); 
+hash.Hash(dataArray); 
 D. Use the following code to generate a hash value for the dataArray object: 
-hash.Compute (dataArray); 
+hash.Compute(dataArray); 
 
 
 
@@ -6812,36 +6773,32 @@ technology.
 
 What code would you use to complete your task? 
 
-A. public byte [] SignAndHash (byte [] PatientInfo, RSAParameters RSAInfo) 
+A. public byte[] SignAndHash(byte[] PatientInfo, RSAParameters RSAInfo) 
 { 
-RSACryptoServiceProvider RSAProvider = new RSACryptoServiceProvider (); 
-RSAProvider.ImportParameters (RSAInfo); 
-Return RSAProvider.Encrypt (PatientInfo, true); 
-
+	RSACryptoServiceProvider RSAProvider = new RSACryptoServiceProvider(); 
+	RSAProvider.ImportParameters(RSAInfo); 
+	return RSAProvider.Encrypt(PatientInfo, true); 
 } 
 
-B. public byte [] SignAndHash (byte [] PatientInfo, DSAParameters DSAInfo) 
+B. public byte[] SignAndHash(byte[] PatientInfo, DSAParameters DSAInfo) 
 { 
-DSACryptoServiceProvider DSAProvider = new DSACryptoServiceProvider (); 
-DSAProvider.ImportParameters (DSAInfo); 
-Return DSAProvider.SignHash (PatientInfo); 
-
+	DSACryptoServiceProvider DSAProvider = new DSACryptoServiceProvider(); 
+	DSAProvider.ImportParameters(DSAInfo); 
+	return DSAProvider.SignHash(PatientInfo); 
 } 
 
-C. public byte [] SignAndHash (byte [] PatientInfo, RSAParameters RSAInfo) 
+C. public byte[] SignAndHash(byte[] PatientInfo, RSAParameters RSAInfo) 
 { 
-RSACryptoServiceProvider RSAProvider = new RSACryptoServiceProvider (); 
-RSAProvider.ImportParameters (RSAInfo); 
-Return RSAProvider.SignEncrypt (PatientInfo, true); 
-
+	RSACryptoServiceProvider RSAProvider = new RSACryptoServiceProvider(); 
+	RSAProvider.ImportParameters(RSAInfo); 
+	return RSAProvider.SignEncrypt(PatientInfo, true); 
 } 
 
-D. public byte [] SignAndHash (byte [] PatientInfo, DSAParameters DSAInfo) 
+D. public byte[] SignAndHash(byte[] PatientInfo, DSAParameters DSAInfo) 
 { 
-DSACryptoServiceProvider DSAProvider = new DSACryptoServiceProvider (); 
-DSAProvider.ImportParameters (DSAInfo); 
-Return DSAProvider.SignData (PatientInfo); 
-
+	DSACryptoServiceProvider DSAProvider = new DSACryptoServiceProvider(); 
+	DSAProvider.ImportParameters(DSAInfo); 
+	return DSAProvider.SignData(PatientInfo); 
 } 
 
 
@@ -6871,7 +6828,7 @@ Signature Algorithm (DSA) asymmetric algorithm. The DSA asymmetric algorithm is 
 used for digital signatures and data integrity, supporting 1024 bit keys. When instantiating a 
 DSACryptoServiceProvider object, a public/private key pair is generated and a default hash is 
 assigned. Thus, to use a particular private key to sign data, a public key to verify data, or a 
-particular hash, you must invoke the ImportParemeters method for the current 
+particular hash, you must invoke the ImportParameters method for the current 
 DSACryptoServiceProvider to load custom settings. The SignData method takes a byte array 
 representing the original data and returns the hashed and then signed byte array. 
 
@@ -6903,73 +6860,68 @@ application, and need to decrypt a byte array of cipher text.
 
 What code should you use to achieve this objective? 
 
-A. public byte [] DecryptData (byte [] cipherText, TripleDESCryptoServiceProvider secreCKey) 
+A.
+public byte[] DecryptData(byte[] cipherText, TripleDESCryptoServiceProvider secreCKey) 
 {
+	MemoryStream ms = new MemoryStream(cipherText);
 
- MemorySream ms = new MemorySream (cipherText);
+	CryptoStream cs = new CryptoStream(ms, SecreCKey, CryptoStreamMode.Read);
 
- CryptoSream cs = new CryptoSream (ms, SecreCKey, CryptoSreamMode.Read);
+	byte[] data = new byte[ms.Length - 1];
 
- byte [] data = new byte [ms.Length - 1];
+	cs.Read(data, 0, data.Length);
 
- cs.Read (data, 0, data.Length);
+	cs.Close();
 
- cs.Close ();
+	ms.Close();
 
- ms.Close ();
+	return data; 
+} 
+B. public byte[] DecryptData(byte[] cipherText, TripleDESCryptoServiceProvider secreCKey) 
+{
+	MemoryStream ms = new MemoryStream(cipherText);
 
- return data; 
+	CryptoStream cs = new CryptoStream(ms, secreCKey.CreateDecryptor(), CryptoStreamMode.Read);
+	
+	byte[] data = new byte[ms.Length - 1];
 
+	cs.Read(data, 0, data.Length);
+
+	cs.Close();
+
+	ms.Close();
+
+	return data; 
 } 
 
-B. public byte [] DecryptData (byte [] cipherText, TripleDESCryptoServiceProvider secreCKey) 
+C.
+public byte[] DecryptData(byte[] cipherText, TripleDESCryptoServiceProvider secreCKey) 
 {
+	MemoryStream ms = new MemoryStream(secret.Key);
 
- MemorySream ms = new MemorySream (cipherText);
+	CryptoStream cs = new CryptoStream(ms, secreCKey.CreateDecryptor(), CryptoStreamMode.Read);
 
- CryptoSream cs = new CryptoSream (ms, secreCKey.CreateDecryptor (), 
+	byte[] data = ms.Decrypt(cipherText);
 
-CryptoSreamMode.Read); byte [] data = new byte [ms.Length - 1];
+	cs.Read(data, 0, data.Length);
 
- cs.Read (data, 0, data.Length);
+	ms.Close();
 
- cs.Close ();
-
- ms.Close ();
-
- return data; 
+	return data; 
 } 
 
-C. public byte [] DecryptData (byte [] cipherText, TripleDESCryptoServiceProvider secreCKey) 
+D.
+public byte[] DecryptData(byte[] cipherText, TripleDESCryptoServiceProvider secreCKey) 
 {
+	CryptoStream cs = new CryptoStream(secreCKey);
 
- MemorySream ms = new MemorySream (secret.Key);
+	byte[] data = ms.Decrypt(cipherText);
 
- CryptoSreamMode.Read);
+	cs.Read(data, 0, data.Length);
 
- byte [] data = ms.Decrypt (cipherText);
+	ms.Close();
 
- cs.Read (data, 0, data.Length);
-
- ms.Close ();
-
- return data; 
-
-} 
-
-D. public byte [] DecryptData (byte [] cipherText, TripleDESCryptoServiceProvider secreCKey) 
-{
-
- CryptoSream cs = new CryptoSream (secreCKey);
-
- byte [] data = ms.Decrypt (cipherText);
-
- cs.Read (data, 0, data.Length);
-
- ms.Close ();
-
- return data; 
-
+	return data; 
 } 
 
 
@@ -7038,31 +6990,31 @@ third-party payment verification system. To do this, you have to hash the billin
 What code should you use to achieve this? 
 
 A. Use the following code: 
-public byte [] Hash (byte [] BillingData) 
+public byte[] Hash(byte[] BillingData) 
 { 
-DESCryptoServiceProvider hashProvider = new DESCryptoServiceProvider (); 
-return hashProvider.Hash (BillingData); 
+	DESCryptoServiceProvider hashProvider = new DESCryptoServiceProvider(); 
+	return hashProvider.Hash(BillingData); 
 } 
 
 B. Use the following code: 
-public byte [] Hash (byte [] BillingData) 
+public byte[] Hash(byte[] BillingData) 
 { 
-MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider (); 
-return hashProvider.Hash (BillingData); 
+	MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider(); 
+	return hashProvider.Hash(BillingData); 
 } 
 
 C. Use the following code: 
-public byte [] Hash (byte [] BillingData) 
+public byte[] Hash(byte[] BillingData) 
 { 
-MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider (); 
-return hashProvider.ComputeHash (BillingData); 
+	MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider(); 
+	return hashProvider.ComputeHash(BillingData); 
 } 
 
 D. Use the following code: 
-public byte [] Hash (byte [] BillingData) 
+public byte[] Hash(byte[] BillingData) 
 { 
-DESCryptoServiceProvider hashProvider = new DESCryptoServiceProvider (); 
-return hashProvider.ComputeHash (BillingData); 
+	DESCryptoServiceProvider hashProvider = new DESCryptoServiceProvider(); 
+	return hashProvider.ComputeHash(BillingData); 
 } 
 
 
@@ -7119,26 +7071,22 @@ CERTKILLER-SR07 that hosts company data.
 
 You are currently in the process of creating an application that will be used by CertKiller.com users 
 to manage the data on CERTKILLER-SR07. to ensure that CertKiller.com users have the 
-appropriate file permissions on the working directory, you define the DemanDirectorySecurity 
+appropriate file permissions on the working directory, you define the DemandDirectorySecurity 
 method as shown below. 
 
 
-public void DemanDirectorySecurity (string path) 
-{ 
-FileIOPermission filePerm = new FileIOPermission (PermissionState.None); 
-filePerm.AddPathList (FileIOPermissionAccess.AllAccess, path); 
-filePerm.Assert (); 
-} 
-
+public void DemandDirectorySecurity (string path)
+{
+	FileIOPermission filePerm = new FileIOPermission(PermissionState.None);
+	filePerm.AddPathList(FileIOPermissionAccess.AllAccess, path);
+	filePerm.Assert();
+}
 
 Subsequent to installing the new application, you find that some users do not have full access to 
 their working directories. You are informed that these CertKiller.com users only require read only 
 access. 
 
-
-You are required to override the permission assertion in the DemanDirectorySecurity method for 
-these users only. 
-
+You are required to override the permission assertion in the DemandDirectorySecurity method for these users only. 
 
 What should you do? 
 
@@ -7153,11 +7101,13 @@ B. Use the following code:
 FileIOPermission fileOVPerm = new FileIOPermission (PermissionState.None); 
 fileOVPerm.AddPathList (FileIOPermissionAccess.Read, path); 
 fileOVPerm.Permit (); 
+
 C. Use the following code: 
 FileIOPermission.Revoke (); 
 FileIOPermission fileOVPerm = new FileIOPermission (PermissionState.None); 
 fileOVPerm.AddPathList (FileIOPermissionAccess.Read, path); 
 fileOVPerm.Assert (); 
+
 D. Use the following code: 
 FileIOPermission fileOVPerm = new FileIOPermission (PermissionState.None); 
 fileOVPerm.AddPathList (FileIOPermissionAccess.Read, path); 
@@ -7218,33 +7168,32 @@ the command line to display the required information.
 What should you do? 
 
 A. Use the following code: 
-ApplicationSecurityInfo appInfo = new ApplicationSecurityInfo (appDomain.CurrentDomain); 
-Console.Writeline (appInfo.ApplicationID.Name); 
-Console.Writeline (appInfo.ApplicationID.Version); 
-Console.Writeline (appInfo.ApplicationID.Culture); 
-Console.Writeline (appInfo.DefaultRequestSet.ToXml ()); 
+ApplicationSecurityInfo appInfo = new ApplicationSecurityInfo(appDomain.CurrentDomain); 
+Console.Writeline(appInfo.ApplicationID.Name); 
+Console.Writeline(appInfo.ApplicationID.Version); 
+Console.Writeline(appInfo.ApplicationID.Culture); 
+Console.Writeline(appInfo.DefaultRequestSet.ToXml()); 
 
 B. Use the following code: 
-ApplicationSecurityInfo appInfo = ActivationContext .GetCurrentContext (); 
-Console.Writeline (appInfo.ApplicationID.Name); 
-Console.Writeline (appInfo.ApplicationID.Version); 
-Console.Writeline (appInfo.ApplicationID.Culture); 
-Console.Writeline (appInfo.DefaultRequestSet.ToXml ()); 
-C. Use the following code: 
-ApplicationSecurityInfo appInfo = new ApplicationSecurityInfo ( 
-appDomain.CurrentDomain.ActivationContext); 
-Console.Writeline (appInfo.ApplicationID.Name); 
-Console.Writeline (appInfo.ApplicationID.Version); 
-Console.Writeline (appInfo.ApplicationID.Culture); 
-Console.Writeline (appInfo.DefaultRequestSet.ToXml ()); 
+ApplicationSecurityInfo appInfo = ActivationContext.GetCurrentContext(); 
+Console.Writeline(appInfo.ApplicationID.Name); 
+Console.Writeline(appInfo.ApplicationID.Version); 
+Console.Writeline(appInfo.ApplicationID.Culture); 
+Console.Writeline(appInfo.DefaultRequestSet.ToXml()); 
 
+C. Use the following code: 
+ApplicationSecurityInfo appInfo = new ApplicationSecurityInfo(AppDomain.CurrentDomain.ActivationContext); 
+Console.Writeline(appInfo.ApplicationID.Name); 
+Console.Writeline(appInfo.ApplicationID.Version); 
+Console.Writeline(appInfo.ApplicationID.Culture); 
+Console.Writeline(appInfo.DefaultRequestSet.ToXml()); 
 
 D. Use the following code: 
-ApplicationSecurityInfo appInfo = ActivationID .GetCurrentApplication (); 
-Console.Writeline (appInfo.ApplicationID.Name); 
-Console.Writeline (appInfo.ApplicationID.Version); 
-Console.Writeline (appInfo.ApplicationID.Culture); 
-Console.Writeline (appInfo.DefaultRequestSet.ToXml ()); 
+ApplicationSecurityInfo appInfo = ActivationID.GetCurrentApplication(); 
+Console.Writeline(appInfo.ApplicationID.Name); 
+Console.Writeline(appInfo.ApplicationID.Version); 
+Console.Writeline(appInfo.ApplicationID.Culture); 
+Console.Writeline(appInfo.DefaultRequestSet.ToXml()); 
 
 
 
