@@ -2280,7 +2280,8 @@ application. The task does not need any input to start.
 
 You are required to create and start the fulfillment thread using the appropriate code. 
 
-What code should you use? A. ThreadStart work = new 
+What code should you use? 
+A. ThreadStart work = new 
 ThreadStart (Fulfill); 
 Thread thFulfill = new Thread (work); 
 
@@ -2418,6 +2419,7 @@ B: You should not use the code that instantiates a ThreadPool object because the
 class is a static class and cannot be instantiated. 
 D: You should not use either of the code fragments that instantiate the Thread objects explicitly 
 because it will require excessive synchronization code to manage effectively. 
+
 Timeout class, Timer class, TimerCallback delegate, WaitCallback delegate, WaitHandle class, 
 and WaitOrTimerCallback delegate 
 
@@ -2516,11 +2518,11 @@ QUESTION NO: 30
 You work as an application developer at CertKiller.com. You have recently created an application 
 that includes the code shown below. 
 
-public delegate stringGetFileContentsDel (); 
+public delegate string GetFileContentsDel (); 
 
 public string GetFileContents () 
 { 
-//Process file and return results 
+	//Process file and return results 
 } 
 
 You now need to invoke the GetFileContents method asynchronously. 
@@ -2532,24 +2534,22 @@ finishes processing.
 What should you do? 
 
 A. Use the following code: 
-GetFileContentsDel delAsync = new 
-GetFileContentsDel (GetFileContents); 
+GetFileContentsDel delAsync = new GetFileContentsDel (GetFileContents); 
 IAsyncResult result = delAsync.BeginInvoke (null, null); 
 while (!result.IsCompleted) 
 { 
-//Process other user instructions 
+	//Process other user instructions 
 } 
 string strFile = delAsync.EndInvoke (result); 
 
 
 B. Use the following code: 
-GetFileContentsDel delAsync = new 
-GetFileContentsDel (GetFileContents); 
+GetFileContentsDel delAsync = new GetFileContentsDel (GetFileContents); 
 string strFile = delAsync.Invoke (); 
-
 
 C. Use the following code: 
 string strFile = GetFileContents.Invoke (); 
+
 D. Use the following code: 
 GetFileContentsDel delAsync = new 
 GetFileContentsDel (GetFileContents); 
@@ -2770,7 +2770,9 @@ domain for CertKiller.com.
 A few weeks later, you are required to determine if assembly references in this application domain, 
 which is the current application domain, are being cached. 
 
-What property should you use to achieve this objective? A. AppDomain.CurrentDomain.ShadowCopyFiles 
+What property should you use to achieve this objective?
+
+A. AppDomain.CurrentDomain.ShadowCopyFiles 
 B. AppDomain.CurrentDomain.CachePath 
 C. AppDomain.CurrentDomain.ConfigurationFile 
 D. AppDomain.CurrentDomain.Evidence 
@@ -3023,8 +3025,8 @@ D: The CreateDomain method does not allow the loading of assemblies into the new
 
 
 
-QUESTION NO: 37 You work as an application developer at CertKiller.com. You have recently completed creating an 
-application that uses an application configuration file. 
+QUESTION NO: 37 You work as an application developer at CertKiller.com. You have recently completed 
+creating an application that uses an application configuration file. 
 
 This configuration file contains a section named EmployeeSection, which contains Employee 
 elements. 
@@ -3130,7 +3132,7 @@ the application configuration file is shown in the following exhibit:
 
 <!-- Begin Custom Section --> 
 <EmployeeSection type="fulltime"> 
-<Employee name="Rory Allen" /> 
+   <Employee name="Rory Allen" /> 
 </EmployeeSection> 
 <!-- End Custom Section --> 
 
@@ -3145,13 +3147,13 @@ You need to ensure that programmatic access of the EmployeeSection element is en
 
 
 What should you do? (Choose two) 
-A. Create a custom section handler class that inherits the ConfigurationSection interface. 
+A. Create a custom section handler class that inherits the ConfigurationSection class. 
 B. Add a section element to the EmployeeSection element of the application configuration file. 
 C. Create a custom section handler class that implements the IConfigurationSectionHandler 
 interface. 
 D. Add an EmployeeSection element to the configSections element of the application configuration 
 file. 
-E. Create a custom section handler class that implements the IApplicatioSettingsProvider 
+E. Create a custom section handler class that implements the IApplicationSettingsProvider 
 interface. 
 F. Add a section element to the configSections element of the application configuration file. 
 
@@ -3211,27 +3213,28 @@ application, which requires complex installation logic.
 You add the following code to your project after electing to create a custom installer for the 
 business application. 
 
-public class ApplicationInstaller : Intaller 
+public class ApplicationInstaller : Installer 
 { 
-public override void Install (IDictionary stateSaver) 
-{ 
-//Install the application 
-Base.Install (stateSaver); 
-} public override void Commit (IDictionary savedState) 
-{ 
-//Commit the application 
-Base.Commit (savedState); 
-} 
-public override void Rollback (IDictionary savedState) 
-{ 
-//Rollback the application 
-Base.Rollback (savedState); 
-} 
-public override void Uninstall (IDictionary savedState) 
-{ 
-//UnInstall the application 
-Base.Uninstall (savedState); 
-} 
+	public override void Install (IDictionary stateSaver) 
+	{ 
+		//Install the application 
+		Base.Install (stateSaver); 
+	}
+	public override void Commit (IDictionary savedState) 
+	{ 
+		//Commit the application 
+		Base.Commit (savedState); 
+	} 
+	public override void Rollback (IDictionary savedState) 
+	{ 
+		//Rollback the application 
+		Base.Rollback (savedState); 
+	} 
+	public override void Uninstall (IDictionary savedState) 
+	{ 
+		//UnInstall the application 
+		Base.Uninstall (savedState); 
+	} 
 } 
 
 What should be done NEXT? 
@@ -3287,7 +3290,8 @@ You work as an application developer at CertKiller.com. You have recently create
 an application using the .NET 1.1 CLR to all CertKiller.com users. 
 
 After a CertKiller.com administrator updates all user computers with the .NET 2.0 CLR, you run 
-preliminary tests and find that the application you created using the .NET 1.1 CLR is not compatible with the .NET 2.0 CLR. 
+preliminary tests and find that the application you created using the .NET 1.1 CLR is not compatible 
+with the .NET 2.0 CLR. 
 
 You need to ensure that the application can be run with the .NET 1.1 CLR. 
 
@@ -3295,35 +3299,31 @@ What should you do?
 
 A. Use the following element in the application configuration file: 
 <configuration> 
-<startup> 
-<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
-</startup> 
-
+	<startup> 
+		<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
+	</startup> 
 </configuration> 
 
 B. Use the following element in the application configuration file: 
 <configuration> 
-<startup> 
-<requiredRuntime version="v1.1.4322" safemode="true" /> 
-</startup> 
-
+	<startup> 
+		<requiredRuntime version="v1.1.4322" safemode="true" /> 
+	</startup>
 </configuration> 
 
 C. Use the following element in the application configuration file: 
 <configuration> 
-<startup> 
-<supportedRuntime version="v1.1.4322" /> 
-<supportedRuntime version="v1.0.3705" /> 
-</startup> 
-
+	<startup> 
+		<supportedRuntime version="v1.1.4322" /> 
+		<supportedRuntime version="v1.0.3705" /> 
+	</startup> 
 </configuration> 
 
 D. Use the following element in the application configuration file: 
 <configuration> 
-<startup> 
-<unsupportedRuntime version="v2.0.50727" /> 
-</startup> 
-
+	<startup> 
+		<unsupportedRuntime version="v2.0.50727" /> 
+	</startup> 
 </configuration> 
 
 
@@ -3362,6 +3362,7 @@ B: The requiredRuntime element should only be used by assemblies built by using 
 Framework. 
 D: There is no such element as the unsupportedRuntime element that exists in the application 
 configuration schema. 
+
 Configure the location of an assembly and which version of the assembly to use. 
 
 
@@ -3388,23 +3389,27 @@ file.
 
 What element should you add? 
 
-A. <dependentAssembly> 
-<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" /> 
-<redirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
+A.
+<dependentAssembly> 
+	<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" /> 
+	<redirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
 </dependentAssembly> 
 
-B. <dependentAssembly> 
-<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" /> 
-<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
+B.
+<dependentAssembly> 
+	<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" /> 
+	<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
 </dependentAssembly> 
 
-C. <dependentAssembly> 
-<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" 
-oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
+C.
+<dependentAssembly> 
+	<assemblyIdentity name="Library" publicKeyToken="32ab4bc45e90a1" culture="neutral" 
+	oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
 </dependentAssembly> 
 
-D. <dependentAssembly> 
-<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
+D.
+<dependentAssembly> 
+	<bindingRedirect oldVersion="1.0.0.0" newVersion="1.1.0.0" /> 
 </dependentAssembly> 
 
 
@@ -3434,11 +3439,12 @@ Explanation:
 This dependentAssembly element specifies the assembly identity information using the 
 assemblyIdentity element. The name attribute of the assemblyIdentity element indicates the 
 common name of the assembly. The publicKeyToken attribute specifies the strong-named key, 
-and the culture attribute indicates the localization type. The bindingRedirect element is a subelement of the dependentAssembly element that specifies the oldVersion and newVersion 
+and the culture attribute indicates the localization type. The bindingRedirect element is a 
+sub-element of the dependentAssembly element that specifies the oldVersion and newVersion 
 attributes. Setting the oldVersion attribute to 1.0.0.0 and the newVersion attribute to 1.1.0.0 
 means that any users referencing the 1.0.0.0 version of the Library will now be referencing the 
-
 1.1.0.0 version. 
+
 Incorrect Answers: 
 
 A: You should not use the element that specifies the redirect element because there is no such 
@@ -3476,34 +3482,28 @@ What should you do?
 
 A. Add the following element to each application's application configuration file: 
 <dependentAssembly>
-
- <assemblyIdentity name="SharedAssembly" />
-
- <codeBase version="1.0.0.0" DEVPATH ="true" /> 
-
-</ dependentAssembly > 
+	<assemblyIdentity name="SharedAssembly" />
+	<codeBase version="1.0.0.0" DEVPATH ="true" /> 
+</dependentAssembly > 
 
 B. Add the following element to the machine.config file in the development computer: 
 <dependentAssembly>
-
- <assemblyIdentity name="SharedAssembly" />
-
- <codeBase version="1.0.0.0" DEVPATH ="true" /> 
-
-</ dependentAssembly > 
+	<assemblyIdentity name="SharedAssembly" />
+	<codeBase version="1.0.0.0" DEVPATH ="true" /> 
+</dependentAssembly > 
 
 C. Add the following element to each application's application configuration file: 
 <configuration> 
-<runtime> <developmentMode developerInstallation="true" /> 
-</runtime> 
+	<runtime>
+		<developmentMode developerInstallation="true" /> 
+	</runtime> 
 </configuration> 
 
 D. Add the following element to the machine.config file in the development computer: 
 <configuration> 
-<runtime> 
-<developmentMode developerInstallation="true" /> 
-</runtime> 
-
+	<runtime> 
+		<developmentMode developerInstallation="true" /> 
+	</runtime> 
 </configuration> 
 
 
@@ -3537,7 +3537,6 @@ environmental variable will be ignored.
 Incorrect Answers: 
 
 A: Application configuration files are used for application-specific settings only 
-Write to an event log. 
 B: The codeBase element does not have a DEVPATH attribute. 
 C: Application configuration files are used for application-specific settings only 
 
@@ -3560,7 +3559,7 @@ You have started by adding the following code to create a custom event log:
 
 
 if (EventLog.SourceExists ("Application1")) 
-EventLog.DeleteEventSource ("Application1"); 
+	EventLog.DeleteEventSource ("Application1"); 
 //Create new event log 
 EventLog.CreateEventSource ("Application1", "Profile"); 
 
@@ -3571,19 +3570,23 @@ You need to write an event to the Application1 event log.
 What code must you use? 
 
 
-A. EventLog log = new EventLog (); 
+A.
+EventLog log = new EventLog (); 
 log.Source = "Application1"; 
 log.Log = "Profile"; 
 log.WriteEvent ("Writing to event log."); 
-B. EventLog log = new EventLog (); 
+B.
+EventLog log = new EventLog (); 
 log.Source = "Profile"; 
 log.Log = "Application1"; 
 log.WriteEvent ("Writing to event log."); 
-C. EventLog log = new EventLog (); 
+C.
+EventLog log = new EventLog (); 
 log.Source = "Application1"; 
 log.Log = "Profile"; 
 log.WriteEntry ("Writing to event log."); 
-D. EventLog log = new EventLog (); 
+D.
+EventLog log = new EventLog (); 
 log.Source = "Profile"; 
 log.Log = "Application1"; 
 log.WriteEntry ("Writing to event log."); 
@@ -3648,8 +3651,9 @@ QUESTION NO: 44
 
 
 You work as an application developer at CertKiller.com. The CertKiller.com network contains an 
-application server named CERTKILLER-SR07. You have been asked to profile a business application that can be accessible using the Event Log 
-API. You want to achieve this by creating a custom event log on CERTKILLER-SR07. 
+application server named CERTKILLER-SR07. You have been asked to profile a business application that 
+can be accessible using the Event Log API. You want to achieve this by creating a custom event log 
+on CERTKILLER-SR07. 
 
 What should you do? 
 
@@ -3703,24 +3707,18 @@ MachineName property represents the computer on which you want to create the eve
 this scenario, you create a new EventSourceCreationData object named sourceData and then set 
 its MachineName property to CERTKILLER-SR07 . Then, you call the CreateEventSource 
 method, passing the method sourceData . This creates an event log source on the computer 
-named CERTKILLER-SR07 . 
+named CERTKILLER-SR07.
 
 Incorrect Answers: 
 
 A: The CreateEventSource method that takes three String arguments is obsolete in the .NET 2.0 
-Framework. 
-Get a list of all running processes. 
+Framework.
 B: Both of these code fragments would create an event log on the local computer by default, but 
 the scenario states that you should explicitly specify the machine name because the computer on 
-which the code is running is unknown.Part 4: Manage system processes and monitor the 
-performance of a .NET Framework application by using the diagnostics functionality of the .NET 
-Framework 2.0. (Refer System.Diagnostics namespace) 
-
+which the code is running is unknown.
 D: Both of these code fragments would create an event log on the local computer by default, but 
 the scenario states that you should explicitly specify the machine name because the computer on 
-which the code is running is unknown.Part 4: Manage system processes and monitor the 
-performance of a .NET Framework application by using the diagnostics functionality of the .NET 
-Framework 2.0. (Refer System.Diagnostics namespace) 
+which the code is running is unknown.
 
 
 
@@ -3790,10 +3788,8 @@ Incorrect Answers:
 
 A: The GetSystemProcesses and GetAllProcesses methods do not exist in the Process class. 
 B: The GetSystemProcesses and GetAllProcesses methods do not exist in the Process class. 
-Retrieve information about the current process. 
-
 D: There is no such method as the GetProcesses method in the Thread class. 
-PerformanceCounter class, PerformanceCounterCategory, and CounterCreationData class 
+
 
 
 
@@ -3818,21 +3814,20 @@ You have to adjust the HitCounter performance counter when a hit occurs.
 What should you do? 
 
 A. Use the following code: 
-PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance', 
-"HitCounter"); 
+PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance", "HitCounter"); 
 hitCounter.ReadOnly = false; 
-hitCounter.Increment (); 
+hitCounter.Increment(); 
+
 B. Use the following code: 
-PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance', 
-"HitCounter"); 
-hitCounter.Increment (); 
+PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance", "HitCounter"); 
+hitCounter.Increment(); 
+
 C. Use the following code: 
-PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance', 
-"HitCounter"); 
+PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance", "HitCounter"); 
 hitCounter ++; 
+
 D. Use the following code: 
-PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance', 
-"HitCounter"); 
+PerformanceCounter hitCounter = new PerformanceCounter ("ApplicationPerformance", "HitCounter"); 
 hitCounter.ReadOnly = false; 
 hitCounter ++; 
 
@@ -3901,16 +3896,15 @@ PerformanceCounterCategoryType.MultiInstance, "HitNumber", "HitNumberHelp");
 
 B. Use the following code: 
 PerformanceCounterCategory.Create ("HitNumber", "HitNumberHelp", 
-PerformanceCounterCategoryType.SingleInstance, 
-"ApplicationPerformance" "ApplicationPerformanceHelp"); C. Use the following code: 
+PerformanceCounterCategoryType.SingleInstance, "ApplicationPerformance" "ApplicationPerformanceHelp");
+
+C. Use the following code: 
 PerformanceCounterCategory.Create ("HitNumber", "HitNumberHelp", 
-PerformanceCounterCategoryType.MultiInstance, 
-"ApplicationPerformance" "ApplicationPerformanceHelp"); 
+PerformanceCounterCategoryType.MultiInstance, "ApplicationPerformance" "ApplicationPerformanceHelp"); 
 
 D. Use the following code: 
 PerformanceCounterCategory.Create ("ApplicationPerformance", "ApplicationPerformanceHelp", 
-PerformanceCounterCategoryType.SingleInstance, 
-"HitNumber", "HitNumberHelp"); 
+PerformanceCounterCategoryType.SingleInstance, "HitNumber", "HitNumberHelp"); 
 
 
 
@@ -3974,20 +3968,23 @@ You need to ensure that the code you use meets these requirements.
 What should you do? 
 
 A. Use the following code: 
-Process myProcess = new Process (); 
+Process myProcess = new Process(); 
 myProcess.StartInfo = new ProcessStartInfo ("App.exe sample.txt"); 
-myProcess.Start (); 
+myProcess.Start ();
+
 B. Use the following code: 
-Process myProcess = new Process (); 
+Process myProcess = new Process(); 
 myProcess.StartInfo = new ProcessStartInfo ("App.exe"); 
 myProcess.ProcessStartArgs ("sample.txt"); 
-myProcess.Start (); 
+myProcess.Start ();
+
 C. Use the following code: 
-Process myProcess = new Process (); 
+Process myProcess = new Process(); 
 myProcess.StartInfo = new ProcessStartInfo ("App.exe"); 
-myProcess.Start ("sample.txt"); 
+myProcess.Start ("sample.txt");
+
 D. Use the following code: 
-Process myProcess = new Process (); 
+Process myProcess = new Process(); 
 myProcess.StartInfo = new ProcessStartInfo ("App.exe"); 
 myProcess.StartInfo.FileName = "sample.txt" 
 myProcess.Start (); 
@@ -4033,8 +4030,7 @@ settings.
 Incorrect Answers: 
 
 A: You should not use the code that passes a single string containing the application and input file 
-to the ProcessStartInfo constructor. 
-Debug class and Debugger class 
+to the ProcessStartInfo constructor.  
 B: You should not use the code that invokes the ProcessStartArgs method because no such 
 method exists in the Process class. 
 C: You should not use the code that invokes the Start method of the Process object specifying the 
@@ -4059,7 +4055,7 @@ The application contains the following code:
 
 public double CalculateMonthlyPayment (Single rate, double principal) 
 { 
-//Implementation code 
+	//Implementation code 
 } 
 
 You have discovered that unexpected results are being returned by the application. You would like 
@@ -4072,13 +4068,14 @@ What should you do?
 
 A. Add the following code to the beginning of the CalculateMonthlyPayment method: 
 Debug.Assert (rate > 0, "Rate Error", "Rate must be > zero"); 
+
 B. Add the following code to the beginning of the CalculateMonthlyPayment method: 
 if (rate <= 0) 
-MessageBox.Show ("Rate is" + rate, Error); 
+	MessageBox.Show ("Rate is" + rate, Error); 
 
 C. Add the following code to the beginning of the CalculateMonthlyPayment method: 
 if (rate <= 0) 
-Debug.WriteLine ("Error Rate is" + rate); 
+	Debug.WriteLine ("Error Rate is" + rate); 
 
 D. Add the following code to the beginning of the CalculateMonthlyPayment method: 
 Debug.WriteLineIf (rate <= 0, "Error Rate is" & rate); 
@@ -4124,11 +4121,12 @@ Incorrect Answers:
 
 B: In this scenario, you want the dialog box to display only for debug builds of the application. 
 Using this code, the message box would display in a release build of the application. 
+C: The output of these options will not display in a message box. 
+D: The output of these options will not display in a message box. 
+
 Trace class, CorrelationManager class, TraceListener class, TraceSource class, TraceSwitch 
 class, XmlWriterTraceListener class, DelimitedListTraceListener class, and EventlogTraceListener 
 class 
-C: The output of these options will not display in a message box. 
-D: The output of these options will not display in a message box. 
 
 
 
@@ -4146,22 +4144,42 @@ an application by using TraceSwitch objects.
 
 You start by adding the following elements to the application configuration file: 
 
+<configuration>
+  <system.diagnostics>
+    <switches>
+      <add name="mySwitch" value="1" />
+    </switches>
+  </system.diagnostics>
+</configuration>
+
 You then test the TraceSwitch settings by using the code displayed in the exhibit below: 
+
+private static TraceSwitch appSwitch = new TraceSwitch("mySwitch", "Switch in config file");
+
+public void TestTraceSwitches(int input)
+{
+    Console.WriteLine("Entering TestTraceSwitches method.";
+	Trace.WriteLineIf(input <= 0, "Input cannot be less than or equal to 0.");
+    ... bored now.
+}
 
 What represents the output that will be displayed by this test? 
 
-A. Entering TestTraceSwitsches method. 
+A. Entering TestTraceSwitches method. 
 Input: 0 
 Input cannot be less than or equal to 0. 
 Exception thrown in TestTraceSwitches method. 
 Exiting TestTraceSwitches method. 
-B. Entering TestTraceSwitsches method. 
+
+B. Entering TestTraceSwitches method. 
 Input cannot be less than or equal to 0. 
 Exception thrown in TestTraceSwitches method. 
-C. Entering TestTraceSwitsches method. 
+
+C. Entering TestTraceSwitches method. 
 Input cannot be less than or equal to 0. 
 Exception thrown in TestTraceSwitches method. 
 Exiting TestTraceSwitches method. 
+
 D. Input cannot be less than or equal to 0. 
 Exception thrown in TestTraceSwitches method. 
 
