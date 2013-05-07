@@ -7247,29 +7247,29 @@ What should you do?
 A. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
-return policy.Check (Assembly.GetCallAssembly ().Evidence); 
+	PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
+	return policy.Check(Assembly.GetCallingAssembly().Evidence); 
 } 
 
 B. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-Publisher pub = new Publisher (cert); 
-return pub.Verify (AppDomain.CurrentDomain.Evidence); 
+	Publisher pub = new Publisher (cert); 
+	return pub.Verify (AppDomain.CurrentDomain.Evidence); 
 } 
 
 C. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-Publisher pub = new Publisher (cert); 
-return pub.Check (AppDomain.CurrentDomain.Evidence); 
+	Publisher pub = new Publisher (cert); 
+	return pub.Check (AppDomain.CurrentDomain.Evidence); 
 } 
 
 D. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
-return policy.Verify (Assembly.GetCallAssembly ().Evidence); 
+	PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
+	return policy.Verify (Assembly.GetCallAssembly ().Evidence); 
 } 
 
 
