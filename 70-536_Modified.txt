@@ -7265,29 +7265,29 @@ What should you do?
 A. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
-return policy.Check (Assembly.GetCallAssembly ().Evidence); 
+	PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
+	return policy.Check (Assembly.GetCallAssembly ().Evidence); 
 } 
 
 B. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-Publisher pub = new Publisher (cert); 
-return pub.Verify (AppDomain.CurrentDomain.Evidence); 
+	Publisher pub = new Publisher (cert); 
+	return pub.Verify (AppDomain.CurrentDomain.Evidence); 
 } 
 
 C. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-Publisher pub = new Publisher (cert); 
-return pub.Check (AppDomain.CurrentDomain.Evidence); 
+	Publisher pub = new Publisher (cert); 
+	return pub.Check (AppDomain.CurrentDomain.Evidence); 
 } 
 
 D. Use the following code: 
 public bool CheckPolicy (X509Certificate cert) 
 { 
-PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
-return policy.Verify (Assembly.GetCallAssembly ().Evidence); 
+	PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
+	return policy.Verify (Assembly.GetCallAssembly ().Evidence); 
 } 
 
 
@@ -7344,27 +7344,29 @@ How would you accomplish this?
 A. Use the following code: 
 public bool CheckSite () 
 { 
-SiteMembershipCondition site = new SiteMembershipCondition (http//intranet.CertKiller.com); 
-return site.Check (AppDomain.CurrentDomain.Evidence); 
+	SiteMembershipCondition site = new SiteMembershipCondition (http//intranet.CertKiller.com); 
+	return site.Check (AppDomain.CurrentDomain.Evidence); 
 } 
 
 B. Use the following code: 
 public bool CheckSite () 
 { 
-Site site = new Site (http//intranet.CertKiller.com); 
-return site.Check (Assembly.GetCallingAssembly ().Evidence); 
+	Site site = new Site (http//intranet.CertKiller.com); 
+	return site.Check (Assembly.GetCallingAssembly ().Evidence); 
 } 
 
 C. Use the following code: 
 public bool CheckSite () 
 { 
-Site site = new Site (http//intranet.CertKiller.com); 
-return site.Check (AppDomain.CurrentDomain.Evidence); 
-} D. Use the following code: 
+	Site site = new Site (http//intranet.CertKiller.com); 
+	return site.Check (AppDomain.CurrentDomain.Evidence); 
+}
+
+D. Use the following code: 
 public bool CheckSite () 
 { 
-SiteMembershipCondition site = new SiteMembershipCondition (http//intranet.CertKiller.com); 
-return site.Check (Assembly.GetCallingAssembly ().Evidence); 
+	SiteMembershipCondition site = new SiteMembershipCondition (http//intranet.CertKiller.com); 
+	return site.Check (Assembly.GetCallingAssembly ().Evidence); 
 } 
 
 
@@ -7503,7 +7505,8 @@ the information, you utilize windows authentication and .NET role-based security
 
 The network administrator in your department informs you that he has noticed that there are 
 certain users that are not managers or administrators are able to view the employee information. 
-You immediately analyze your code, and discover an issue with domain group memberships. The network administrator asks you to trace the user account and security identifier (SID) of each 
+You immediately analyze your code, and discover an issue with domain group memberships. The 
+network administrator asks you to trace the user account and security identifier (SID) of each 
 user in the application so that he can use this information to detect users across the enterprise 
 and verify that their group memberships are correct. 
 
