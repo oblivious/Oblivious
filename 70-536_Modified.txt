@@ -7266,7 +7266,7 @@ A. Use the following code:
 public bool CheckPolicy (X509Certificate cert) 
 { 
 	PublisherMembershipCondition policy = new PublisherMembershipCondition (cert); 
-	return policy.Check (Assembly.GetCallAssembly ().Evidence); 
+	return policy.Check(Assembly.GetCallingAssembly().Evidence); 
 } 
 
 B. Use the following code: 
@@ -7505,30 +7505,33 @@ the information, you utilize windows authentication and .NET role-based security
 
 The network administrator in your department informs you that he has noticed that there are 
 certain users that are not managers or administrators are able to view the employee information. 
+
 You immediately analyze your code, and discover an issue with domain group memberships. The 
 network administrator asks you to trace the user account and security identifier (SID) of each 
 user in the application so that he can use this information to detect users across the enterprise 
 and verify that their group memberships are correct. 
 
+
 How would you do this? 
 
 A. Use the following code: 
-WindowsIdentity curID = WindowsIdentity.GetCurrent (); 
+WindowsIdentity curID = WindowsIdentity.GetCurrent(); 
 NTAccount account = new NTAccount (curID.Name); 
 SecurityIdentifier sid = (SecurityIdentifier); 
 account.Translate (typeof (SecurityIdentifier)); 
 Trace.Write ("User's SID is" + sid.Value, "User" + account.Value); 
 
-
 B. Use the following code: 
-WindowsIdentity curID = WindowsIdentity.GetCurrent (); 
+WindowsIdentity curID = WindowsIdentity.GetCurrent(); 
 NTAccount account = new NTAccount (curID.Name); 
 Trace.Write ("User's SID is" + sid.Value, "User" + account.Value); 
+
 C. Use the following code: 
-WindowsIdentity curID = WindowsIdentity.GetCurrent (); 
+WindowsIdentity curID = WindowsIdentity.GetCurrent(); 
 Trace.Write ("User's SID is" + curID.Value, "User" + sid.Name); 
+
 D. Use the following code: 
-WindowsIdentity curID = WindowsIdentity.GetCurrent (); 
+WindowsIdentity curID = WindowsIdentity.GetCurrent(); 
 SecurityIdentifier sid = new SecurityIdentifier (curID.Name); 
 Trace.Write ("User's SID is" + curID.Value, "User" + sid.Name); 
 
