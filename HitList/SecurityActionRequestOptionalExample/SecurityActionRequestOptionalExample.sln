@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityActionRequestOptionalExample", "SecurityActionRequestOptionalExample\SecurityActionRequestOptionalExample.csproj", "{028E8B03-B5F8-4BAA-A761-EC2C8E8F25AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewConsoleApp", "NewConsoleApp\NewConsoleApp.csproj", "{FD83EA85-E409-4F6B-BC0B-4796F016AD44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{028E8B03-B5F8-4BAA-A761-EC2C8E8F25AC}.Debug|x86.ActiveCfg = Debug|x86
+		{028E8B03-B5F8-4BAA-A761-EC2C8E8F25AC}.Debug|x86.Build.0 = Debug|x86
+		{028E8B03-B5F8-4BAA-A761-EC2C8E8F25AC}.Release|x86.ActiveCfg = Release|x86
+		{028E8B03-B5F8-4BAA-A761-EC2C8E8F25AC}.Release|x86.Build.0 = Release|x86
+		{FD83EA85-E409-4F6B-BC0B-4796F016AD44}.Debug|x86.ActiveCfg = Debug|x86
+		{FD83EA85-E409-4F6B-BC0B-4796F016AD44}.Debug|x86.Build.0 = Debug|x86
+		{FD83EA85-E409-4F6B-BC0B-4796F016AD44}.Release|x86.ActiveCfg = Release|x86
+		{FD83EA85-E409-4F6B-BC0B-4796F016AD44}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
