@@ -23,7 +23,7 @@ class MyClass
 
 
 	}
-
+	;
 	// This method demonstrates the use of the SecurityPermissionAttribute to deny individual security permissions. 
 	// Set the Assertion property.
 	[SecurityPermissionAttribute(SecurityAction.Deny, Assertion = true)]
