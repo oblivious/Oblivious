@@ -45,8 +45,8 @@
     <Reference Include="EDTS.DirectTopUpServices.Logger">
       <HintPath>..\..\..\..\..\Dev\TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\bin\Release\EDTS.DirectTopUpServices.Logger.dll</HintPath>
     </Reference>
-    <Reference Include="EDTS.DirectTopUpServices.OperatorGateWay.TelcelMexico">
-      <HintPath>..\..\..\..\..\Dev\TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\bin\Release\EDTS.DirectTopUpServices.OperatorGateWay.TelcelMexico.dll</HintPath>
+    <Reference Include="EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico">
+      <HintPath>..\Binary Dependencies\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico.dll</HintPath>
     </Reference>
     <Reference Include="ezeHelper">
       <HintPath>..\..\..\..\..\Dev\TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\EDTS.DirectTopUpServices.OperatorGateway.TelcelMexico\bin\Release\ezeHelper.dll</HintPath>
@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Writer.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,6 +13,8 @@ namespace TelcelMexicoTester
 		[STAThread]
 		static void Main()
 		{
+			Writer writer = new Writer();
+			Console.SetOut(writer);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
