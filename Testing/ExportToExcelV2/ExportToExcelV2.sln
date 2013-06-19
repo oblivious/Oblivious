@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportToExcelV2", "ExportToExcelV2\ExportToExcelV2.csproj", "{98BE0E6F-1A12-43E9-804D-D7B16B62D139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98BE0E6F-1A12-43E9-804D-D7B16B62D139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BE0E6F-1A12-43E9-804D-D7B16B62D139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BE0E6F-1A12-43E9-804D-D7B16B62D139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BE0E6F-1A12-43E9-804D-D7B16B62D139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

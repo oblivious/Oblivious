@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a3b3b30a-21c7-4d34-877f-8cf3ab3103f9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://tms2.epayworldwide.com:443/epayTMS.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="epayTMS.disco" MetadataType="Disco" ID="69bf7b96-c2f0-4e16-9787-7ec53d05baff" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?disco" />
+    <MetadataFile FileName="epayTMS.xsd" MetadataType="Schema" ID="c0ece044-5f68-4785-8905-c22394f0abaa" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd10" />
+    <MetadataFile FileName="epayTMS1.xsd" MetadataType="Schema" ID="4cd2e562-b13e-442f-954f-2f388cfcef58" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd9" />
+    <MetadataFile FileName="epayTMS2.xsd" MetadataType="Schema" ID="a3564bc0-cf31-4e4d-bf8d-a87a96001327" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd8" />
+    <MetadataFile FileName="epayTMS3.xsd" MetadataType="Schema" ID="3466394b-843f-4673-bbab-466abc18f302" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd7" />
+    <MetadataFile FileName="epayTMS4.xsd" MetadataType="Schema" ID="d15f7560-951f-4bba-983b-7f3fe30915aa" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd6" />
+    <MetadataFile FileName="epayTMS5.xsd" MetadataType="Schema" ID="dd58a658-85c1-4956-9aaa-9d03584a1cdd" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd5" />
+    <MetadataFile FileName="epayTMS6.xsd" MetadataType="Schema" ID="66b047cb-655e-437d-98fd-396434e20d05" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd4" />
+    <MetadataFile FileName="epayTMS7.xsd" MetadataType="Schema" ID="60e02fca-35c9-49d1-ab56-e42b132d52c6" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd3" />
+    <MetadataFile FileName="epayTMS8.xsd" MetadataType="Schema" ID="0212d511-fa1c-43dd-912d-ca39df5817ae" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd2" />
+    <MetadataFile FileName="epayTMS9.xsd" MetadataType="Schema" ID="0d702f77-e679-4813-9178-d0469b917961" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd1" />
+    <MetadataFile FileName="epayTMS10.xsd" MetadataType="Schema" ID="96ea97df-59d7-400a-ad65-cb0b3b87a196" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd0" />
+    <MetadataFile FileName="epayTMS.wsdl" MetadataType="Wsdl" ID="0528305a-7ce0-46ee-8502-b9b63bc400b8" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TransactionManagerService.wsdl" MetadataType="Wsdl" ID="6c8ada73-84d1-48f6-b7cd-9d29bfdd1b02" SourceId="1" SourceUrl="http://tms2.epayworldwide.com:82/epayTMS.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

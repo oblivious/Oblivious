@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TechTestDB" Class="TechTestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\TechTestDB.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="TechTest.Properties.Settings" SettingsPropertyName="TechTestDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Product_Price" Member="Prices" ThisKey="ID" OtherKey="ProductID" Type="Price" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceList" Member="PriceLists">
+    <Type Name="PriceList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Price_PriceList" Member="Price" ThisKey="PriceID" OtherKey="ID" Type="Price" IsForeignKey="true" />
+      <Association Name="DistributorPriceList_PriceList" Member="DistributorPriceList" ThisKey="ID" OtherKey="PriceListID" Type="DistributorPriceList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Price" Member="Prices">
+    <Type Name="Price">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Member="Price1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Currency" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Association Name="Price_PriceList" Member="PriceLists" ThisKey="ID" OtherKey="PriceID" Type="PriceList" />
+      <Association Name="Product_Price" Member="Product" ThisKey="ProductID" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DistributorPriceList" Member="DistributorPriceLists">
+    <Type Name="DistributorPriceList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceListID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DistributorPriceList_PriceList" Member="PriceLists" ThisKey="PriceListID" OtherKey="ID" Type="PriceList" />
+      <Association Name="DistributorPriceList_Distributor" Member="Distributors" ThisKey="ID" OtherKey="DistributorPriceListID" Type="Distributor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Distributor" Member="Distributors">
+    <Type Name="Distributor">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="RetailSector" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EstSince" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DistributorPriceListID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DistributorPriceList_Distributor" Member="DistributorPriceList" ThisKey="DistributorPriceListID" OtherKey="ID" Type="DistributorPriceList" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

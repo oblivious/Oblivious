@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://webservices.payspot.com/r09/v1/data/Category" elementFormDefault="qualified" targetNamespace="https://webservices.payspot.com/r09/v1/data/Category" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd4" namespace="https://webservices.payspot.com/r09/v1/data/Catalog" />
+  <xs:complexType name="ArrayOfCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element xmlns:q1="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="Catalogs" nillable="true" type="q1:ArrayOfCatalog" />
+      <xs:element minOccurs="0" name="CategoryGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Flags" type="xs:int" />
+      <xs:element minOccurs="0" name="MoreDisplayGroup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+</xs:schema>

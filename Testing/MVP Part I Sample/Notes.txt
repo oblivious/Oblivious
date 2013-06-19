@@ -1,0 +1,37 @@
+RAC
+
+=====================================
+Architecture Reference
+=====================================
+
+      View
+
+WinUI ------------|      
+                  |       
+                  |      
+WebUI ---------------> Presenter-Model <-> Service <-> BLL <-> DAL <-> Database
+                  |
+                  |
+Tester -----------|
+
+
+=====================================
+Different MVP Structure
+=====================================
+
+I. 
+
+View - Presenter - Model
+         |
+         |-------> Service  <-> BLL <-> DAL <-> Database
+         
+II.
+
+View - Presenter - Model - Service <-> BLL <-> DAL <-> Database
+
+
+III. 
+         
+View - Presenter and Model - Service <-> BLL <-> DAL <-> Database         
+
+

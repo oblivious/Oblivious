@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://epaysvc.epay.com/Contract/V1.0" elementFormDefault="qualified" targetNamespace="https://epaysvc.epay.com/Contract/V1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd3" namespace="https://webservices.payspot.com/r09/v1/data/Category" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd4" namespace="https://webservices.payspot.com/r09/v1/data/Catalog" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd7" namespace="XPower.Business.v302" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" />
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd10" namespace="https://webservices.payspot.com/r09/v1/data/AccountInformation" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="tns:Token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Token">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppProfile" nillable="true" type="tns:ApplicationProfile" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AppRoles" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="AuthenticationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Expiration" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Token" nillable="true" type="tns:Token" />
+  <xs:complexType name="ApplicationProfile">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ClerkIds" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Clerks" nillable="true" type="tns:ArrayOfClerk" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtendedProperties" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="IBOAccountId" type="xs:int" />
+      <xs:element minOccurs="0" name="IBOSalesNodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetailerAcc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerminalId" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidateClerkId" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WebPOSAgentAdminId" type="xs:int" />
+      <xs:element minOccurs="0" name="WebPOSRetailerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationProfile" nillable="true" type="tns:ApplicationProfile" />
+  <xs:complexType name="ArrayOfClerk">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Clerk" nillable="true" type="tns:Clerk" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClerk" nillable="true" type="tns:ArrayOfClerk" />
+  <xs:complexType name="Clerk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClerkId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClerkIdEncrypted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Clerk" nillable="true" type="tns:Clerk" />
+  <xs:complexType name="ArrayOfProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Property" nillable="true" type="tns:Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProperty" nillable="true" type="tns:ArrayOfProperty" />
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Property" nillable="true" type="tns:Property" />
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Renew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RenewResult" nillable="true" type="tns:Token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenewToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="tns:Token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenewTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RenewTokenResult" nillable="true" type="tns:Token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeDetail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="maxDisplayGroup" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="https://webservices.payspot.com/r09/v1/data/Category" minOccurs="0" name="GetCatalogCategoriesResult" nillable="true" type="q3:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeDetail" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="https://webservices.payspot.com/r09/v1/data/Category" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q4:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisplayGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisplayGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetDisplayGroupResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxDisplayGroup" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsResult" nillable="true" type="q6:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsPageResult" nillable="true" type="q7:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxDisplayGroup" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsByCategoryResult" nillable="true" type="q8:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsByCategoryPageResult" nillable="true" type="q9:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryAndDisplayGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxDisplayGroup" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryAndDisplayGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsByCategoryAndDisplayGroupResult" nillable="true" type="q10:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryAndDisplayGroupPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByCategoryAndDisplayGroupPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="https://webservices.payspot.com/r09/v1/data/Catalog" minOccurs="0" name="GetCatalogsByCategoryAndDisplayGroupPageResult" nillable="true" type="q11:ArrayOfCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoTransactionUP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:unsignedLong" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" name="Authorization" nillable="true" type="q12:Authorization" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="Card" nillable="true" type="q13:Card" />
+      <xs:element minOccurs="0" name="Cashier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="CustomData" nillable="true" type="q14:CustomData" />
+      <xs:element minOccurs="0" name="CustomerData" nillable="true" type="xs:string" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="Device" nillable="true" type="q15:Device" />
+      <xs:element minOccurs="0" name="HostTransactionID" nillable="true" type="xs:string" />
+      <xs:element name="LocalDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageNumber" type="xs:int" />
+      <xs:element name="Mode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POSEntry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element name="ProductID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" name="RequestType" type="q16:UPRequestTypes" />
+      <xs:element minOccurs="0" name="RetailerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceFee" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ServiceTypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShopID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubProductID" nillable="true" type="xs:string" />
+      <xs:element name="TerminalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TillID" nillable="true" type="xs:string" />
+      <xs:element name="TransactionID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="TransactionReference" nillable="true" type="q17:TXRef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:element name="DoTransactionUPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoTransactionUPResult" nillable="true" type="tns:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:unsignedLong" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="Balance" nillable="true" type="q18:BALANCE" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="Card" nillable="true" type="q19:Card" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="CustomData" nillable="true" type="q20:CustomData" />
+      <xs:element minOccurs="0" name="HostTXID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageNumber" type="xs:int" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="PinCredentials" nillable="true" type="q21:PINCredentials" />
+      <xs:element minOccurs="0" name="ProductID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" minOccurs="0" name="Receipt" nillable="true" type="q22:ResponseReceipt" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceFee" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ServiceTypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubProductID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerminalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:element name="DoTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="XPower.Business.v302" minOccurs="0" name="request" nillable="true" type="q23:TransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="XPower.Business.v302" minOccurs="0" name="DoTransactionResult" nillable="true" type="q24:TransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoProductInquiry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="track1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="track2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="currencyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includePromptData" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoProductInquiryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="XPower.Business.v302" minOccurs="0" name="DoProductInquiryResult" nillable="true" type="q25:ArrayOfProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" minOccurs="0" name="GetAccountProfileResult" nillable="true" type="q26:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" minOccurs="0" name="GetAccountCreditResult" nillable="true" type="q27:Credit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccountProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" minOccurs="0" name="accInfoToUpdate" nillable="true" type="q28:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccountProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" minOccurs="0" name="UpdateAccountProfileResult" nillable="true" type="q29:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuerySubscriberAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clerkId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuerySubscriberAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="https://webservices.payspot.com/r09/v1/data/AccountInformation" minOccurs="0" name="QuerySubscriberAccountResult" nillable="true" type="q30:AccountInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

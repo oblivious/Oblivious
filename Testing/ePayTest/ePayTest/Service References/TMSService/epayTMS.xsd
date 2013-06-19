@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://webservices.payspot.com/r09/v1/data/AccountInformation" elementFormDefault="qualified" targetNamespace="https://webservices.payspot.com/r09/v1/data/AccountInformation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AccountInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" type="xs:double" />
+      <xs:element minOccurs="0" name="Barred" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountInformation" nillable="true" type="tns:AccountInformation" />
+</xs:schema>

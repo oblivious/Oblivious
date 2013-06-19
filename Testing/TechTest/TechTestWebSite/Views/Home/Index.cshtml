@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TechTest.Distributor>
+@{
+    ViewBag.Title = "Tech Test Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<table>
+<thead><tr><td>Name</td></tr></thead>
+<tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+</tbody>
+</table>

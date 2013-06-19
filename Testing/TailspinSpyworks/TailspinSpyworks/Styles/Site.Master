@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TailspinSpyworks.SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+<form runat="server" id="MyForm">
+ <div id="outer">
+	<div id="header">
+		<div style="float: left;">
+			<h1 class="style1"><a href="#">Tailspin Spyworks</a></h1>
+			<h2>Powered by ASP.NET</h2>
+		</div>
+		<div style="float: right; vertical-align:middle;">
+		<br /><br />
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr style="vertical-align:middle;" >
+					<td align="center" style="width: 65px">
+                    <a id="A1" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
+                    <img id="Img1" src="~/Styles/Images/sign_in.gif" alt="" runat="server" /><br />
+                        <asp:LoginView ID="MenuLoginView" runat="server">
+                        <AnonymousTemplate>
+                            Sign In
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Log Out
+                        </LoggedInTemplate>
+                        </asp:LoginView>
+                    </a>
+                    </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="subheader">
+			<a id="A2" href="~/Default.aspx" runat="server" title="">Home</a>
+			<a id="A3" href="~/About.aspx" runat="server" title="">About Us</a>
+	</div>	
+	<div id="content">
+ 		<div id="rightColumn">
+		</div>
+ 		<div id="mainContent">
+			<div id="centerColumn">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+			</div>
+		</div>
+ 		<div id="leftColumn">
+        <!-- Our menu will go here -->
+		    <asp:ListView ID="ListView_ProductsMenu" runat="server" DataKeyNames="CategoryID" DataSourceID="EDS_Category_Menu">
+                <EmptyDataTemplate>No Menu Items.</EmptyDataTemplate>
+                <ItemSeparatorTemplate></ItemSeparatorTemplate>
+                <ItemTemplate>
+                    <li>
+                        <a href='<%# VirtualPathUtility.ToAbsolute("~/ProductsList.aspx?CategoryId=" +
+                                               Eval("CategoryID")) %>'><%# Eval("CategoryName") %></a>
+                    </li>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <ul id="itemPlaceholderContainer" runat="server">
+                        <li runat="server" id="itemPlaceholder"/>
+                    </ul>
+                    <div></div>
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:EntityDataSource ID="EDS_Category_Menu" runat="server" 
+                ConnectionString="name=CommerceEntities" 
+                DefaultContainerName="CommerceEntities" EnableFlattening="False" 
+                EntitySetName="Categories">
+            </asp:EntityDataSource>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer"><p>Copyright &copy; 2010 Tailspin Spyworks</p></div>
+</div>
+</form>
+</body>
+</html>

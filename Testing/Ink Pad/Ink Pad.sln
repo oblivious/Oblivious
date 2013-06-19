@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ink Pad", "Ink Pad\Ink Pad.csproj", "{F747B9D3-FA1C-4A32-9DF2-6BEFAD0484ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F747B9D3-FA1C-4A32-9DF2-6BEFAD0484ED}.Debug|x86.ActiveCfg = Debug|x86
+		{F747B9D3-FA1C-4A32-9DF2-6BEFAD0484ED}.Debug|x86.Build.0 = Debug|x86
+		{F747B9D3-FA1C-4A32-9DF2-6BEFAD0484ED}.Release|x86.ActiveCfg = Release|x86
+		{F747B9D3-FA1C-4A32-9DF2-6BEFAD0484ED}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

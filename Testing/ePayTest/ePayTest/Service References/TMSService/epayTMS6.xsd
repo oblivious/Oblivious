@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://webservices.payspot.com/r09/v1/data/Catalog" elementFormDefault="qualified" targetNamespace="https://webservices.payspot.com/r09/v1/data/Catalog" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PaySpot.Product" />
+  <xs:complexType name="ArrayOfCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Catalog" nillable="true" type="tns:Catalog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCatalog" nillable="true" type="tns:ArrayOfCatalog" />
+  <xs:complexType name="Catalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CanLookupAccount" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PaySpot.Product" minOccurs="0" name="CatalogType" type="q1:CatalogType" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryFlags" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayGroupFlags" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayGroupOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayGroupTips" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogoFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIRRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PopularProduct" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowDisplayGroup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SubProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SwipeRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Catalog" nillable="true" type="tns:Catalog" />
+</xs:schema>

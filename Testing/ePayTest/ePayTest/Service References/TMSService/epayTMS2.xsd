@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XPower.Business" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XPower.Business" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RequestType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SAL" />
+      <xs:enumeration value="ACT" />
+      <xs:enumeration value="VAL" />
+      <xs:enumeration value="RED" />
+      <xs:enumeration value="BAL" />
+      <xs:enumeration value="REF" />
+      <xs:enumeration value="VOI" />
+      <xs:enumeration value="PIR" />
+      <xs:enumeration value="HOL" />
+      <xs:enumeration value="MAX" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RequestType" nillable="true" type="tns:RequestType" />
+</xs:schema>

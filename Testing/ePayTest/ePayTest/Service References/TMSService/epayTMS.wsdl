@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://epaysvc.epay.com/Contract/V1.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://epaysvc.epay.com/Contract/V1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://epaysvc.epay.com/Contract/V1.0/Imports">
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd0" namespace="https://epaysvc.epay.com/Contract/V1.0" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd3" namespace="https://webservices.payspot.com/r09/v1/data/Category" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd4" namespace="https://webservices.payspot.com/r09/v1/data/Catalog" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PaySpot.Product" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/epay.Common.Messaging.UP" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd7" namespace="XPower.Business.v302" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/XPower.Business" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/WebPOS.Library.Data" />
+      <xsd:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd10" namespace="https://webservices.payspot.com/r09/v1/data/AccountInformation" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticationService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_Renew_InputMessage">
+    <wsdl:part name="parameters" element="tns:Renew" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_Renew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenewResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_RenewToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenewToken" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationService_RenewToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenewTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogCategories" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetDisplayGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisplayGroup" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetDisplayGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisplayGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogs" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsPage" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryPage" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryAndDisplayGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryAndDisplayGroup" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryAndDisplayGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryAndDisplayGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryAndDisplayGroupPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryAndDisplayGroupPage" />
+  </wsdl:message>
+  <wsdl:message name="CatalogService_GetCatalogsByCategoryAndDisplayGroupPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogsByCategoryAndDisplayGroupPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPService_DoTransactionUP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransactionUP" />
+  </wsdl:message>
+  <wsdl:message name="UPService_DoTransactionUP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransactionUPResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransactionService_DoTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransaction" />
+  </wsdl:message>
+  <wsdl:message name="TransactionService_DoTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransactionService_DoProductInquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoProductInquiry" />
+  </wsdl:message>
+  <wsdl:message name="TransactionService_DoProductInquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoProductInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_GetAccountProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountProfile" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_GetAccountProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_GetAccountCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCredit" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_GetAccountCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_UpdateAccountProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccountProfile" />
+  </wsdl:message>
+  <wsdl:message name="AccountService_UpdateAccountProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccountProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LookupService_QuerySubscriberAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuerySubscriberAccount" />
+  </wsdl:message>
+  <wsdl:message name="LookupService_QuerySubscriberAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuerySubscriberAccountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AuthenticationService">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/Login" message="tns:AuthenticationService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/LoginResponse" message="tns:AuthenticationService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/Logout" message="tns:AuthenticationService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/LogoutResponse" message="tns:AuthenticationService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Renew">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/Renew" message="tns:AuthenticationService_Renew_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/RenewResponse" message="tns:AuthenticationService_Renew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenewToken">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/RenewToken" message="tns:AuthenticationService_RenewToken_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AuthenticationService/RenewTokenResponse" message="tns:AuthenticationService_RenewToken_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CatalogService">
+    <wsdl:operation name="GetCatalogCategories">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogCategories" message="tns:CatalogService_GetCatalogCategories_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogCategoriesResponse" message="tns:CatalogService_GetCatalogCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCategories" message="tns:CatalogService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCategoriesResponse" message="tns:CatalogService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisplayGroup">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetDisplayGroup" message="tns:CatalogService_GetDisplayGroup_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetDisplayGroupResponse" message="tns:CatalogService_GetDisplayGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogs">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogs" message="tns:CatalogService_GetCatalogs_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsResponse" message="tns:CatalogService_GetCatalogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsPage">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsPage" message="tns:CatalogService_GetCatalogsPage_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsPageResponse" message="tns:CatalogService_GetCatalogsPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByCategory">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategory" message="tns:CatalogService_GetCatalogsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryResponse" message="tns:CatalogService_GetCatalogsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByCategoryPage">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryPage" message="tns:CatalogService_GetCatalogsByCategoryPage_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryPageResponse" message="tns:CatalogService_GetCatalogsByCategoryPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByCategoryAndDisplayGroup">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryAndDisplayGroup" message="tns:CatalogService_GetCatalogsByCategoryAndDisplayGroup_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryAndDisplayGroupResponse" message="tns:CatalogService_GetCatalogsByCategoryAndDisplayGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByCategoryAndDisplayGroupPage">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryAndDisplayGroupPage" message="tns:CatalogService_GetCatalogsByCategoryAndDisplayGroupPage_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/CatalogService/GetCatalogsByCategoryAndDisplayGroupPageResponse" message="tns:CatalogService_GetCatalogsByCategoryAndDisplayGroupPage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UPService">
+    <wsdl:operation name="DoTransactionUP">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/UPService/DoTransactionUP" message="tns:UPService_DoTransactionUP_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/UPService/DoTransactionUPResponse" message="tns:UPService_DoTransactionUP_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TransactionService">
+    <wsdl:operation name="DoTransaction">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/TransactionService/DoTransaction" message="tns:TransactionService_DoTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/TransactionService/DoTransactionResponse" message="tns:TransactionService_DoTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoProductInquiry">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/TransactionService/DoProductInquiry" message="tns:TransactionService_DoProductInquiry_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/TransactionService/DoProductInquiryResponse" message="tns:TransactionService_DoProductInquiry_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AccountService">
+    <wsdl:operation name="GetAccountProfile">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/GetAccountProfile" message="tns:AccountService_GetAccountProfile_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/GetAccountProfileResponse" message="tns:AccountService_GetAccountProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCredit">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/GetAccountCredit" message="tns:AccountService_GetAccountCredit_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/GetAccountCreditResponse" message="tns:AccountService_GetAccountCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountProfile">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/UpdateAccountProfile" message="tns:AccountService_UpdateAccountProfile_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/AccountService/UpdateAccountProfileResponse" message="tns:AccountService_UpdateAccountProfile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LookupService">
+    <wsdl:operation name="QuerySubscriberAccount">
+      <wsdl:input wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/LookupService/QuerySubscriberAccount" message="tns:LookupService_QuerySubscriberAccount_InputMessage" />
+      <wsdl:output wsaw:Action="https://epaysvc.epay.com/Contract/V1.0/LookupService/QuerySubscriberAccountResponse" message="tns:LookupService_QuerySubscriberAccount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

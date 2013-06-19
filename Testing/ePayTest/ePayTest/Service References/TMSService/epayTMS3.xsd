@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="XPower.Business.v302" elementFormDefault="qualified" targetNamespace="XPower.Business.v302" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tms2.epayworldwide.com:82/epayTMS.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/XPower.Business" />
+  <xs:complexType name="TransactionRequest">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:unsignedLong" />
+      <xs:element name="CardSwiped" type="xs:boolean" />
+      <xs:element name="CashierId" nillable="true" type="xs:string" />
+      <xs:element name="ClientReference" nillable="true" type="xs:string" />
+      <xs:element name="ExtraProductDetails" nillable="true" type="xs:string" />
+      <xs:element name="InternalId" nillable="true" type="xs:string" />
+      <xs:element name="OriginalTxnReference" nillable="true" type="xs:string" />
+      <xs:element name="ProductDetails" nillable="true" type="xs:string" />
+      <xs:element name="ProductId" nillable="true" type="xs:string" />
+      <xs:element name="Prompts" nillable="true" type="tns:ArrayOfPromptData" />
+      <xs:element name="SequenceNumber" type="xs:unsignedShort" />
+      <xs:element name="ServiceCharge" type="xs:unsignedLong" />
+      <xs:element name="ServiceTypeId" nillable="true" type="xs:string" />
+      <xs:element name="StoreInfo" nillable="true" type="tns:Store" />
+      <xs:element name="SubProductId" nillable="true" type="xs:string" />
+      <xs:element name="Timestamp" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XPower.Business" name="TransactionRequestType" type="q1:RequestType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionRequest" nillable="true" type="tns:TransactionRequest" />
+  <xs:complexType name="ArrayOfPromptData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PromptData" nillable="true" type="tns:PromptData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPromptData" nillable="true" type="tns:ArrayOfPromptData" />
+  <xs:complexType name="PromptData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PromptData" nillable="true" type="tns:PromptData" />
+  <xs:complexType name="Store">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Store" nillable="true" type="tns:Store" />
+  <xs:complexType name="TransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualAmount" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="Amount" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="Amount2" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="Balance" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="BalanceDue" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ClientReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConversionRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Currency2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomFields" nillable="true" type="tns:ArrayOfPromptData" />
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="ServiceCharge" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/XPower.Business" minOccurs="0" name="TransactionRequestType" type="q2:RequestType" />
+      <xs:element minOccurs="0" name="TxnReference" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionResponse" nillable="true" type="tns:TransactionResponse" />
+  <xs:complexType name="ArrayOfProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct" nillable="true" type="tns:ArrayOfProduct" />
+  <xs:complexType name="Product">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CardSwipeRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CustomFields" nillable="true" type="tns:ArrayOfPromptData" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Feature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ForeignValue" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="MaximumValue" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="MinimumValue" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prompts" nillable="true" type="tns:ArrayOfPrompt" />
+      <xs:element minOccurs="0" name="ServiceFee" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ServiceTypes" nillable="true" type="tns:ArrayOfServiceType" />
+      <xs:element minOccurs="0" name="SubProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="VariableValue" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Product" nillable="true" type="tns:Product" />
+  <xs:complexType name="ArrayOfPrompt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Prompt" nillable="true" type="tns:Prompt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrompt" nillable="true" type="tns:ArrayOfPrompt" />
+  <xs:complexType name="Prompt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfirmationPromptText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="Options" nillable="true" type="tns:ArrayOfOption" />
+      <xs:element minOccurs="0" name="PromptText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Prompt" nillable="true" type="tns:Prompt" />
+  <xs:complexType name="ArrayOfOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Option" nillable="true" type="tns:Option" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOption" nillable="true" type="tns:ArrayOfOption" />
+  <xs:complexType name="Option">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Option" nillable="true" type="tns:Option" />
+  <xs:complexType name="ArrayOfServiceType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceType" nillable="true" type="tns:ServiceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceType" nillable="true" type="tns:ArrayOfServiceType" />
+  <xs:complexType name="ServiceType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AfterCutoff" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PostingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PostingDays" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceFee" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="ServiceTypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceTypeText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceType" nillable="true" type="tns:ServiceType" />
+</xs:schema>
