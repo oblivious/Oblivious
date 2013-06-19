@@ -21,6 +21,15 @@ Microsoft 70-536: Practice Exam
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 1 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -36,6 +45,24 @@ A. Int32
 B. UInt16 
 C. UInt32 
 D. Int16 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,6 +100,15 @@ only unsigned positive numbers.
 Attributes 
 D: The Int16 type should not be used as you will only be allowed to store values from -32768 to 
 +32768. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,6 +204,24 @@ public string FindAttribute (string att)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -186,6 +240,15 @@ B: You should not use this code because it does not guarantee type-safery.
 D: You should not use this code because it will only accept a string argument and return a string 
 argument. 
 Generic types 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -276,6 +339,24 @@ throw new Exception ("Invalid ProductID");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -300,6 +381,15 @@ C: You should not use the codes that do not use a try...catch block because the 
 unhandled exception. 
 D: You should not use the codes that do not use a try...catch block because the application an 
 unhandled exception. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,6 +438,24 @@ D. The Type Convertor.ConvertFrom method should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -363,6 +471,15 @@ C: The method in question here specifies all nonpublic types in an assembly are 
 assemblies but can not be used to move types.
 D: The TypeConverter class provides a unified way of converting different types of values to other 
 types and can not be used to move a type. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,6 +547,24 @@ D. public class ShoppingList : Enum
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -454,6 +589,15 @@ IEnumerator interface.
 D: You should not use the code that inherits the Enum because this structure is used as a base 
 class for those classes that provide enumeration values. Inheriting the Enum structure will not 
 ensure that your collection class supports foreach iteration. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -500,6 +644,24 @@ D. The System.Collections.SortedList class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -515,6 +677,15 @@ in the scenario.
 Iterators 
 D: Although this is very similar to the SortedList class the SortedList class should be used instead 
 in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -567,6 +738,24 @@ D. Utilize the if statement
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -587,6 +776,15 @@ Current methods. The scenario states that you need to "...iterate through the Em
 minimum development effort." 
 D: These statements will not allow you to iterate through the EmployeeList collection. 
 Hashtable class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -638,6 +836,24 @@ D. Select the StringCollection collection class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -657,6 +873,15 @@ C: You should not select this collection class because you need to access transa
 using a transaction identifier, not in sequential order. 
 D: You should not select this collection class because this class is used to manage a collection of 
 string values. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -706,6 +931,24 @@ D. The StringCollection collection class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -725,6 +968,15 @@ C: You should not use this collection class because this class is used if the to
 elements to be stored in a collection is known and is less than ten elements in length. 
 D: You should not use this collection class because this class is used to manage a collection of 
 string values. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -808,6 +1060,24 @@ foundClient = (Client) cData.Values ["10111"];
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -825,6 +1095,15 @@ B: You should not use the code that assigns the foundClient variable to a generi
 the foundClient variable is declared as a Client type. 
 D: You should not use the code that iterates through the Keys collection because it is unnecessary 
 and process-intensive. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -891,6 +1170,24 @@ public int CompareTo (object obj)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,C 
 
 Explanation: 
@@ -919,6 +1216,15 @@ A: You should not use these two options because this should be implemented by th
 and EnglishUnit classes. 
 D: You should not use these two options because this should be implemented by the MetricUnit 
 and EnglishUnit classes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -965,6 +1271,24 @@ D. Use the TrimToSize method of the MyQueue object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -980,6 +1304,15 @@ Queue object.
 C: You should not use this method because it is used to remove an element at the beginning of a 
 Queue object. 
 D: You should not use this method because it is used to resize a Queue object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1007,6 +1340,24 @@ A. Queue msgCollection = new Queue ();
 B. Stack msgCollection = new Stack (); 
 C. msgCollection.Enqueue (txtMSG.Text); 
 D. msgCollection.Push (txtMSG.Text); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1057,6 +1408,15 @@ Stack objects are used to store elements on the Last In First Out (LIFO) concept
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 14 
 
 You work as an application developer at CertKiller.com. You are developing an application that 
@@ -1072,6 +1432,24 @@ A. Use the Enqueue method of the MyQueue object.
 B. Use the Contains method of the MyQueue object. 
 C. Use the Dequeue method of the MyQueue object. 
 D. Use the Peek method of the MyQueue object. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1109,6 +1487,15 @@ specified element exists for the Queue object instance or not.
 Generic Dictionary 
 C: You should not use this method of the Queue class because it is used to remove the next 
 element at the beginning of a Queue object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1186,6 +1573,24 @@ eData.Add (new KeyValuePair (e2.ID, e2));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -1209,6 +1614,15 @@ the key value should match the integer data type defined by CKey placeholder of 
 IDictionary interface. 
 D: You should not use the code that does not specify the CKey and TValue placeholders when 
 using the KeyValuePair structure because the data types must be declared explicitly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1275,6 +1689,24 @@ Console.WriteLine ("{0} key : {1} value", eData [value], value);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -1302,6 +1734,15 @@ D: You should not use the code that specifies a value when accessing items in th
 collection because you should use a key to access a value and you cannot guarantee that only 
 one key exists for a value, as there might be duplicate values in a Dictionary collection 
 Generic KeyValuePair structure 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1372,6 +1813,24 @@ vList.Add (v2.VIN, v2);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -1392,6 +1851,15 @@ C: You should not use the code fragments that specify the List or non-generic So
 collections because you must use generic collection classes to guarantee type-safety. 
 D: You should not use the code fragments that specify the List or non-generic SortedList 
 collections because you must use generic collection classes to guarantee type-safety. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1476,6 +1944,24 @@ Toyota Supra 2000 (1T2569122493456123)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -1502,6 +1988,15 @@ C: These options do not represent the output that will be produced by the code y
 Named collections 
 D: These options do not represent the output that will be produced by the code you wrote. 
 CollectionsUtil 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1550,6 +2045,24 @@ D. IEqualityComparer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -1569,6 +2082,15 @@ IConvertible interface
 D: This interface should not be implemented because it provides methods to compare two objects 
 for equality only. 
 ICloneable interface 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1693,6 +2215,24 @@ D. public void Review (Employee emp, double amount)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -1712,6 +2252,15 @@ B: You should not use these code fragments because they are syntactically incorr
 result in a compilation error if used. 
 C: You should not use these code fragments because they are syntactically incorrect and will 
 result in a compilation error if used. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1791,6 +2340,24 @@ D. public delegate void Salary (Employee Emp, double Amount);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -1812,6 +2379,15 @@ C: You should not use the code that declares an event named SalaryDelegate.
 EventHandler delegates 
 D: You should not use the code that uses the void keyword because both the IncrementSalary and 
 DecrementSalary methods return a Boolean value. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1871,6 +2447,24 @@ public class TestService : System.ServiceProcess.IService
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -1897,6 +2491,15 @@ System.ServiceProcess namespace.
 D: You should not use either of the code fragments from the WindowsService class or implement 
 the IService and IWindowsService interfaces because no such class or interfaces exist in the 
 System.ServiceProcess namespace. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1978,6 +2581,24 @@ Run (service);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -2001,6 +2622,15 @@ class member and does not take zero arguments.
 ServiceController class and ServiceControllerPermission class 
 C: You should not override the OnBoot or OnLoad method because there are no such methods in 
 the ServiceBase class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2100,6 +2730,24 @@ public static bool StartService (string serviceName)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -2118,6 +2766,15 @@ C: You should not add either of the code fragments that use the ServiceBase clas
 the base class for Windows service classes. 
 D: You should not add the code that uses the ServiceManager class because there is no such 
 class in the ServiceControllerStatus.Running namespace. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2160,6 +2817,24 @@ D. Use the ServiceController class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -2174,6 +2849,15 @@ Thread class
 B: The ServiceInstaller class is used to install a Web service application. 
 C: There is no such class in the ServiceControllerStatus.Running namespace. 
 ServiceInstaller and ServiceProcessInstaller class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2237,6 +2921,24 @@ th.Start ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -2260,6 +2962,15 @@ Priority property because this will not schedule the thread for execution before
 D: You should not use the code fragments that set the Scheduled property with the 
 ThreadSchedule enumeration because no such property or enumeration exists in the 
 System.Threading namespace. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2319,6 +3030,24 @@ thFulfill.Start ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -2336,6 +3065,15 @@ ThreadPool class
 D: You should not use the code that uses the ParameterizedThreadStart delegate and calls the 
 Start method. The ParameterizedThreadStart delegate is used to reference a method that takes a 
 generic object as an argument and, in this scenario, the fulfill method takes no arguments 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2402,6 +3140,24 @@ th3.Start ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -2422,6 +3178,15 @@ because it will require excessive synchronization code to manage effectively.
 
 Timeout class, Timer class, TimerCallback delegate, WaitCallback delegate, WaitHandle class, 
 and WaitOrTimerCallback delegate 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2481,6 +3246,24 @@ Timer tmrReport = new Timer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -2503,6 +3286,15 @@ B: This option is incorrect because the delay and the interval arguments are rev
 interval argument is incorrectly specified. It should be specified in milliseconds. 
 D: The interval argument is incorrectly specified. It should be specified in milliseconds, not 
 minutes. This code would set the interval to ten milliseconds instead of ten minutes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2577,6 +3369,24 @@ string strFile = delAsync.EndInvoke (result);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -2600,6 +3410,15 @@ C: You should not use either of the code fragments that use the Invoke method be
 a technique in asynchronous processing. 
 D: you should not use the code that does not poll the IAsyncResult object by retrieving the 
 IsCompleted property. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2638,6 +3457,24 @@ D. Use the following code:
 AppDomainSetup domainSetup = new AppDomainSetup (); 
 domainSetup.CachePath = @"C:\Program Files\ChildApp"; 
 AppDomain.CreateDomain ("ChildDomain", AppDomain.CurrentDomain.Evidence, domainSetup); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2698,6 +3535,15 @@ Retrieve setup information from an application domain.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 32 
 
 You work as an application developer at CertKiller.com. You have recently created an application 
@@ -2716,6 +3562,24 @@ C. Use the following code:
 AppDomain appInfo = Thread.GetDomain (); 
 D. Use the following code: 
 AppDomain appInfo = MainThread.GetDomain (); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2762,6 +3626,15 @@ not provide an ApplicationDomain or MainThread class.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 33 
 
 You work as an application developer at CertKiller.com. You have recently created an application 
@@ -2796,6 +3669,24 @@ D. AppDomain.CurrentDomain.Evidence
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -2808,6 +3699,15 @@ Incorrect Answers:
 B: These options are properties of the AppDomainSetup class. 
 C: These options are properties of the AppDomainSetup class. 
 D: This property is not used in caching. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2858,6 +3758,24 @@ AppDomain domain = new AppDomain ("ChildDomain", childEvidence);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -2872,6 +3790,15 @@ C: You should not use the code fragments that instantiate an AppDomain object be
 AppDomain class does not have any constructors. 
 D: You should not use the code fragments that instantiate an AppDomain object because the 
 AppDomain class does not have any constructors. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2915,6 +3842,24 @@ D. Standalone application files (.exe).
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -2931,6 +3876,15 @@ C: You cannot use the Load method to load application configuration files (.conf
 have no MSIL code to execute and cannot be loaded into an application domain. 
 D: Although .dll and .exe are common extensions for .NET assemblies, they are not required when 
 you use the Load method of the AppDomain class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2998,6 +3952,24 @@ Directory.GetFiles (@"C:\Insurance Assemblies", "*.dll"))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -3015,6 +3987,15 @@ Incorrect Answers:
 A: The LoadAssembly and LoadFrom methods do not exist in the AppDomain class. 
 C: The LoadAssembly and LoadFrom methods do not exist in the AppDomain class. 
 D: The CreateDomain method does not allow the loading of assemblies into the new domain. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3073,6 +4054,24 @@ Console.WriteLine (section.SectionInformation.GetRawXml ());
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -3099,6 +4098,15 @@ B: You should not use the code that does not specify the ConfigurationManager be
 GetSection method is an instance member. 
 C: You should not use the code that specifies the ConfigurationSettings class because this class is 
 provide only for backwards compatibility. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3176,6 +4184,24 @@ F. Add a section element to the configSections element of the application config
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,F 
 
 Explanation: 
@@ -3195,6 +4221,15 @@ Implement ISettingsProviderService interface
 E: This interface should be implemented if a custom storage solution other than application 
 configuration files is required. 
 Implement IApplicationSettingsProvider interface 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3265,6 +4300,24 @@ to true.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 Incorrect Answers: 
 
@@ -3274,6 +4327,15 @@ is applied to a class, not the entire assembly.
 Configure which runtime version a .NET Framework application should use. 
 C: You should not use this option because the installer class will be invoked without applying the 
 RunInstaller attribute with a value of true. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3346,6 +4408,24 @@ D. Use the following element in the application configuration file:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -3364,6 +4444,15 @@ D: There is no such element as the unsupportedRuntime element that exists in the
 configuration schema. 
 
 Configure the location of an assembly and which version of the assembly to use. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3432,6 +4521,24 @@ D.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -3453,6 +4560,15 @@ C: You should not use the element that specifies the assemblyIdentity element be
 required information when adding dependentAssembly elements. 
 D: You should not use the element that specifies the bindingRedirect element because there are 
 no such attributes as oldVersion and newVersion attributes for the assemblyIdentity element. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3526,6 +4642,24 @@ D. Add the following element to the machine.config file in the development compu
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -3539,6 +4673,15 @@ Incorrect Answers:
 A: Application configuration files are used for application-specific settings only 
 B: The codeBase element does not have a DEVPATH attribute. 
 C: Application configuration files are used for application-specific settings only 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3610,6 +4753,24 @@ log.WriteEntry ("Writing to event log.");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -3647,6 +4808,15 @@ event log named Application1.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 44 
 
 
@@ -3668,6 +4838,24 @@ EventLog.CreateEventSource (sourceData);
 D. Use the following code: 
 EventSourceCreationData sourceData = new EventSourceCreationData ("Application1", "Profile"); 
 EventLog.CreateEventSource (sourceData); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3729,6 +4917,15 @@ which the code is running is unknown.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 45 
 
 You work as an application developer at CertKiller.com. You are required to retrieve and display 
@@ -3772,6 +4969,24 @@ Console.WriteLine (curProcess.ProcessName);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -3789,6 +5004,15 @@ Incorrect Answers:
 A: The GetSystemProcesses and GetAllProcesses methods do not exist in the Process class. 
 B: The GetSystemProcesses and GetAllProcesses methods do not exist in the Process class. 
 D: There is no such method as the GetProcesses method in the Thread class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3850,6 +5074,24 @@ hitCounter ++;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -3868,6 +5110,15 @@ C: You should not use the code fragments that use the ++ operator to increment t
 PerformanceCounter object because this will cause a compile-time error. 
 D: You should not use the code fragments that use the ++ operator to increment the 
 PerformanceCounter object because this will cause a compile-time error. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3926,6 +5177,24 @@ PerformanceCounterCategoryType.SingleInstance, "HitNumber", "HitNumberHelp");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -3946,6 +5215,15 @@ B: This code fragment incorrectly assigns the value HitNumber to the category na
 ApplicationPerformance to the counter name. 
 C: The code fragments that specify the MultiInstance value should not be used because the 
 scenario requires you to share the same counter across multiple applications. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4008,6 +5286,24 @@ myProcess.Start ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -4035,6 +5331,15 @@ B: You should not use the code that invokes the ProcessStartArgs method because 
 method exists in the Process class. 
 C: You should not use the code that invokes the Start method of the Process object specifying the 
 input file because no such method signature exists. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4099,6 +5404,24 @@ Debug.WriteLineIf (rate <= 0, "Error Rate is" & rate);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -4127,6 +5450,15 @@ D: The output of these options will not display in a message box.
 Trace class, CorrelationManager class, TraceListener class, TraceSource class, TraceSwitch 
 class, XmlWriterTraceListener class, DelimitedListTraceListener class, and EventlogTraceListener 
 class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4202,6 +5534,24 @@ Exception thrown in TestTraceSwitches method.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -4221,6 +5571,15 @@ C: These options are all incorrect because they do not indicate the correct outp
 TraceLevel settings of the TraceSwitch object. 
 D: These options are all incorrect because they do not indicate the correct output based on the 
 TraceLevel settings of the TraceSwitch object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4279,6 +5638,24 @@ Debug.AutoFlush = true;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C Explanation: 
 
 Listeners are used to capture trace and debug messages. Both the Trace and Debug objects 
@@ -4299,6 +5676,15 @@ output stream because the Listeners collection allows only Listener object strea
 D: You should not use the code that instantiates a DefaultTraceListener object because this will 
 capture the debugging messages to the Output window in the Visual Studio .NET 2005 IDE. Also, 
 each Listeners collection will contain a DefaultTraceListener by default. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4348,6 +5734,24 @@ configuration file.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: The BooleanSwitch class is used to toggle trace messages on and off. The application 
@@ -4368,6 +5772,15 @@ C: This option requires RegistryPermission and is intended for system-wide setti
 application-specific settings. 
 Debugger attributesPart 6: Embed management information and events into a .NET Framework 
 application. (Refer System.Management namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4447,6 +5860,24 @@ Console.WriteLine ("{0} / {1}", obj ["CurrentClockSpeed"], Obj ["MaxClockSpeed"]
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -4470,6 +5901,15 @@ C: You should not use the code that specifies the ManagementObjectQuery class be
 is no such class in the .NET 2.0 class library. 
 D: You should not use the code that specifies the ManagementObjectQuery class because there 
 is no such class in the .NET 2.0 class library. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4533,6 +5973,24 @@ query.QueryString = "SELECT * FROM _InstanceModificationEvent WITHIN 3600" +
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -4554,6 +6012,15 @@ C: The FROM clause should specify the event InstanceModificationEvent and the IS
 should use the Win32_DiskDrive class. 
 Subscribe to management events by using the ManagementEventWatcher class. 
 D: Instance is not a valid field name and the equal sign (=) is not valid for class comparisons. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4613,6 +6080,24 @@ objFormatter.Serialize (obj, objStream);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -4628,6 +6113,15 @@ Incorrect Answers:
 B: If you use these options it will cause a compile-time error. 
 C: If you use these options it will cause a compile-time error. 
 D: If you use these options it will cause a compile-time error. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4709,6 +6203,24 @@ public class VehicleFormatter : IFormatter
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -4726,6 +6238,15 @@ Incorrect Answers:
 A: The Formatter class requires more development effort than necessary. 
 B: The IGenericFormatter interface does not exist. 
 C: The IFormatConverter interface does not control formatting during serialization. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4794,6 +6315,24 @@ public StreamingContext AfterSerialization ()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -4817,6 +6356,15 @@ D: You should not apply the OnSerializedattribute to these methods because they 
 StreamingContext as an argument.
 Part 2: Control the serialization of an object into XML format by 
 using the System.Xml.Serialization namespace. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4934,11 +6482,38 @@ D. <?xml version="1.0" encoding="utf-8"?>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 The Area attribute will be written to the Region tag, in answer B the Area attribute is missing. 
 
 B: Control serialization by using serialization attributes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5003,6 +6578,24 @@ D. Do nothing because, when using binary serialization, Private fields are never
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -5016,6 +6609,15 @@ A: This option would be used for deserialization.
 C: This option would require excessive developer effort. 
 D: This is incorrect because all fields marked private or otherwise are persisted when using binary 
 serialization. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5065,6 +6667,24 @@ D. UnknownAttribute
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -5083,6 +6703,15 @@ Implement XML Serialization interfaces to provide custom formatting for XML seri
 D: These options would not allow easy deserialization for the Shipping object. 
 Delegates and event handlers are provided by the System.Xml.Serialization namespacePart 3: 
 Implement custom serialization formatting by using the Serialization Formatter classes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5144,6 +6773,24 @@ HashTable loadEmails = (HashTable) readFormatter.ReadObject ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -5163,6 +6810,15 @@ method because the Deserialize method returns a generic object.
 BinaryFormatter class (Refer System.Runtime.Serialization.Formatters.Binary namespace) 
 D: You should not use the code fragments that do not instantiate the BinaryFormatter object 
 because the ReadObject and Deserialize methods do not exist in the FileStream class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5206,7 +6862,34 @@ To answer, select the methods to be used and arrange them in the correct order o
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5268,6 +6951,24 @@ stream.WriteObject (emailAddresses);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -5286,6 +6987,15 @@ C: You should not add the code fragments that do not instantiate the BinaryForma
 because the WriteObject and Serialize methods do not exist in the FileStream class. 
 D: You should not add the code fragments that do not instantiate the BinaryFormatter object 
 because the WriteObject and Serialize methods do not exist in the FileStream class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5354,6 +7064,24 @@ readFormatter.SafeDeserialize (readStream);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -5378,6 +7106,15 @@ File System classes. (Refer System.IO namespace)
 Directory class and DirectoryInfo class 
 D: You should not use the code that invokes the FastDeserialize and SafeDeserialize methods 
 because no such methods exist for the BinaryFormatter class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5460,6 +7197,24 @@ public void EnumerateNetworkDrives()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -5482,6 +7237,15 @@ D: You should not use the code fragments that do not retrieve the DriveType prop
 DriveInfo object because there is no such signature for the GetDrives method and no such method 
 as GetNetworkDrives. 
 FileSystemInfo class and FileSystemWatcher class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5581,6 +7345,24 @@ public void DisplayDriveDirectories (string drivePath)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -5600,6 +7382,15 @@ Incorrect Answers:
 A: The TotalFiles, Length, and Size properties do not exist in the DirectoryInfo class. 
 B: The TotalFiles, Length, and Size properties do not exist in the DirectoryInfo class. 
 D: The TotalFiles, Length, and Size properties do not exist in the DirectoryInfo class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5656,6 +7447,24 @@ Console.WriteLine ("Size?" + hosts.Size);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -5674,6 +7483,15 @@ fragments that specify the Size property because no such property exists.
 C: You should not use the code that instantiate a File object because the File class does not 
 contain an ISReadOnly or Length property and is a static class. Also, you should not use the code 
 fragments that specify the Size property because no such property exists. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5755,6 +7573,24 @@ public void WriteBytes (byte [] bytes)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -5777,6 +7613,15 @@ B: This code is unnecessary because the FileStream class also contains a Write m
 takes a byte array as an argument. 
 C: You should not use the code fragments that invokes the Write method or the WriteBytes 
 method with only one argument because no such signatures exists in the FileStream class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5853,6 +7698,24 @@ for (int i = 0; i < bytes.Length-1; i++)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -5887,6 +7750,15 @@ method signatures exist.
 BufferedStream class
 Part 6: Manage the .NET Framework application data by using Reader and 
 Writer classes. (Refer System.IO namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5960,6 +7832,24 @@ Console.WriteLine(data.ToString());
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -5990,6 +7880,15 @@ Part 7: Compress or decompress stream information in
 a .NET Framework application (refer System.IO.Compression namespace), and improve the 
 security of application data by using isolated storage. (Refer System.IO.IsolatedStorage 
 namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6078,6 +7977,24 @@ public byte[] DecompressFil (string file)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -6102,6 +8019,15 @@ Read method with the wrong arguments.
 D: You should not use the code fragments that specify the GZipStream class because this data 
 format includes a data corruption check during decompression. 
 GZipStream class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6185,6 +8111,24 @@ public void CompressFileWrite (string file, byte[] data)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 Incorrect Answers: 
 
@@ -6200,6 +8144,15 @@ C: You should not use the code fragments that specify the DeflateStream class be
 format does not ensure that a data corruption check occurs during decompression. You should 
 also not use the code that invokes the Compress method because no such method exists in the 
 GZipStream or the DeflateStream classes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6231,6 +8184,24 @@ Perm.Request
 E. [FileIOPermission (SecurityAction.Demand) ] 
 F. FileIOPermission perm = New FileIOPermission (PermissionState.Unrestricted); 
 Perm.Demand 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6287,6 +8258,15 @@ method exists in the CodeAccesPermission or FileIOPermission class.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 74 
 
 You work as an application developer at CertKiller.com. A fellow developer named Amy Walsh 
@@ -6327,6 +8307,24 @@ D. Use the gacutil.exe tool to modify the assembly's granted permissions.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -6341,6 +8339,15 @@ B: The sn.exe tool allows developers to create a strong-named asymmetric key pai
 named assemblies. 
 D: The gacutil.exe tool allows users to manage the contents of the global assembly and download 
 cache. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6386,6 +8393,24 @@ D. Execute the machine all -reset command.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -6402,6 +8427,15 @@ DirectorySecurity class, FileSecurity class, FileSystemSecurity class, and Regis
 C: The rollback switch does not exist for the caspol.exe tool. 
 D: This option will not set all security policies back to their default state. 
 PermissionSet class and NamedPermissionSet class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6463,6 +8497,24 @@ file2.SetAccessControl (acl);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -6489,6 +8541,15 @@ D: This code will protect the ACL from inheritance, but it does not copy the exi
 settings. 
 CommonAce class, CommonAcl class, CompoundAce class, GeneralAce class, and GeneralAcl 
 class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6540,6 +8601,24 @@ F. The TcpClient class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,D,F 
 
 Explanation: 
@@ -6556,6 +8635,15 @@ C: Using this option would not necessarily create a secure channel.
 E: This class is used by the server application.
 
 Part 4: Encrypt, decrypt, and hash data by using the System.Security.Cryptography classes. (Refer System.Security.Cryptography namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6665,6 +8753,24 @@ public byte [] EncryptData (byte [] PatientInfo, DESCryptoServiceProvider SecreC
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -6687,6 +8793,15 @@ this implements an asymmetric algorithm.
 HashAlgorithm class 
 C: You should not use the code fragments that invoke the Encrypt method because no such 
 method exists in the CryptoSream class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6735,6 +8850,24 @@ hash.Compute(dataArray);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -6750,6 +8883,15 @@ A: These options are incorrect because these methods do not exist in the HashAlg
 C: These options are incorrect because these methods do not exist in the HashAlgorithm class. 
 DSA class and DSACryptoServiceProvider class 
 D: These options are incorrect because these methods do not exist in the HashAlgorithm class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6821,6 +8963,24 @@ D. public byte[] SignAndHash(byte[] PatientInfo, DSAParameters DSAInfo)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 The DSACryptoServiceProvider class represents a managed cryptographic provider of the Digital 
@@ -6839,6 +8999,15 @@ because the method invocations are incorrect.
 B: The SignHash method is used to sign a message digest, not the original data. 
 C: You should not use the code fragments that specify the RSACryptoServiceProvider object 
 because the method invocations are incorrect. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6944,6 +9113,24 @@ public byte[] DecryptData(byte[] cipherText, TripleDESCryptoServiceProvider secr
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -6966,6 +9153,15 @@ C: You should not use the code fragments that invoke the Decrypt method because 
 method exists in the CryptoStream class. 
 D: You should not use the code fragments that invoke the Decrypt method because no such 
 method exists in the CryptoStream class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7037,6 +9233,24 @@ public byte[] Hash(byte[] BillingData)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C Explanation: 
 
 This code instantiates an MD5CryptoServiceProvider object, invokes the ComputeHash method, 
@@ -7053,6 +9267,15 @@ SecurityPermission class
 B: The Hash method does not exist in the MD5CryptoServiceProvider class. 
 PrincipalPermission class 
 D: The DESCryptoServiceProvider class is used for data confidentiality, not integrity. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7132,6 +9355,24 @@ fileOVPerm.OverrideAll ();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -7146,6 +9387,15 @@ B: The Permit, OverrideAll, and Revoke methods do not exist in the FileIOPermiss
 C: The Permit, OverrideAll, and Revoke methods do not exist in the FileIOPermission class. 
 D: The Permit, OverrideAll, and Revoke methods do not exist in the FileIOPermission class. 
 StrongNameIdentityPermission class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7214,6 +9464,24 @@ Console.Writeline(appInfo.DefaultRequestSet.ToXml());
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -7236,6 +9504,15 @@ D: You should not use the code fragments because they attempt the retrieve the
 ApplicationSecurityInfo object through non-existent methods. 
 CodeGroup class, FileCodeGroup class, FirstMatchCodeGroup class, NetCodeGroup class, and 
 UnionCodeGroup class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7308,6 +9585,24 @@ public bool CheckPolicy (X509Certificate cert)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 Incorrect Answers: 
 
@@ -7319,6 +9614,15 @@ property as an argument because this property retrieves only the evidence availa
 application domain. 
 D: You should not use this code fragment that specifies the Verify method because this method 
 does not exist in the PublisherMembershipCondition class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7389,6 +9693,24 @@ public bool CheckSite ()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -7416,6 +9738,15 @@ and modify identity information by using the System.Security.Principal classes. 
 System.Security.Principal namespace) 
 C: You should not use the code fragments that specify the AppDomain.CurrentDomain.Evidence 
 property because this retrieves the evidence available to the current application domain only. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7461,6 +9792,24 @@ D. Make use of WindowsIdentity and WindowsPrincipal objects.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -7485,6 +9834,15 @@ A: These options require more developer effort than necessary.
 C: These options require more developer effort than necessary. 
 D: The WindowsIdentity and WindowsPrincipal classes are intended for use with windows domain 
 stored accounts and groups only. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7554,6 +9912,24 @@ Trace.Write ("User's SID is" + curID.Value, "User" + sid.Name);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -7582,6 +9958,15 @@ D: You should not use the code that does not specify the NTAccount class because
 SecurityIdentifier object cannot be instantiated using an account name as an argument, and it 
 does not contain a Name property. 
 IIdentity interface and IPrincipal interface 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7652,6 +10037,24 @@ if (Thread.CurrentPrincipal.IsInRole ("Managers"))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C,D 
 
 Explanation: 
@@ -7670,6 +10073,15 @@ A: You should not use the attribute that applies the WindowsPrincipalPermission 
 no such attribute exists in the .NET Framework 2.0 class library. 
 B: You should not use the code that invokes the IsInRole method on the WindowsIdentity class 
 because no such method exists. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7720,6 +10132,24 @@ D. The Platform Invoke (DllImportAttribute) should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -7740,6 +10170,15 @@ Assembly class
 C: The tool should not be considered for usage in the scenario because the unmanaged dll file is 
 not in COM and it only processes COM type libraries. 
 Create prototypes in managed code. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7793,6 +10232,24 @@ Assembly.ReflectionOnlyLoadFrom("c:\CertKiller\assemb\CertKiller.com.dll");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: E 
 
 Explanation: 
@@ -7815,6 +10272,15 @@ Assembly attributes
 D: The other methods of the assembly class will request the common language runtime (CLR) to 
 resolve the location of the assembly based on its identity therefore these options should not be 
 used in the scenario even though you provide the full absolute path as a parameter. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7865,6 +10331,24 @@ D. The AssemblyKeyNameAttribute should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -7885,6 +10369,15 @@ D: This class should not be used in the scenario because it is used to specify t
 container that should be used. 
 Info classes 
 Attachment class, AttachmentBase class, and AttachmentCollection class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7936,6 +10429,24 @@ E. The SqlDataReader object attachment class should be used in the scenario
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -7952,6 +10463,15 @@ Attachment class cannot directly use an XmlDocument object.
 E: This method is incorrect and should not be used in the scenario because the SqlDataReader 
 Attachment class cannot directly make use of a SqlDataReader object. 
 SmtpException class and SmtpFailedReceipientException class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8002,6 +10522,24 @@ D. The LinkedResource class should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -8015,6 +10553,15 @@ B: The Attachment class should not be used in the scenario as the class only all
 images as an attachment. 
 C: The usage of this class is incorrect as it is used to store the address information for e-mail 
 messages in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8066,6 +10613,24 @@ E. The RegionInfo should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -8085,6 +10650,15 @@ information about a Unicode character.
 
 E: This class should not be used in the scenario because this class does not represent any 
 preferences of the user and does not depend upon the culture. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8133,6 +10707,24 @@ D. The CultureInfo class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -8149,6 +10741,15 @@ C: This class should not be used in the scenario because this class is used to a
 data for an already installed culture. 
 D: This class should not be used in the scenario because this class can only be used to make use 
 of cultures that have already been installed. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8195,6 +10796,24 @@ D. RegionInfo.Name should be used as an identifier for a country
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -8211,6 +10830,15 @@ generated can be used to tell whether the RegionInfo or CultureInfo objects are 
 Format date and time values based on the culture. 
 C: The usage of the GetHashCode property in the scenario is incorrect as the hash value 
 generated can be used to tell whether the RegionInfo or CultureInfo objects are the same or not. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8262,6 +10890,24 @@ D. The dateValue.Ticks expression should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -8279,6 +10925,15 @@ by the instance is based on local time.
 Format number values based on the culture. 
 D: This expression is used to super fast serialize the required information but should not be 
 considered when working with the local time. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8331,6 +10986,24 @@ D. val=Int32.Parse(num, NumberStyles.AllowParentheses Or NumberStyles.AllowLeadi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -8347,6 +11020,15 @@ B: This code should not be used in the scenario because the code is used to indi
 numeric string can have a leading sign. 
 C: The code in question should not be used in the scenario because the attributes of 
 NumberStyles are set by using the bitwise inclusive Or on the field flags. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8401,6 +11083,24 @@ segment should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -8416,6 +11116,15 @@ C: This code segment is incorrect and should not be used in the scenario because
 the culture that is installed with the operating system. 
 D: This code segment is incorrect and should not be used in the scenario because this settings 
 only used for changing the user's interface culture used by a thread. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8464,6 +11173,24 @@ D. The TryParse method should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: The TryParseExact method should be used if you require parsing a date and time string generated 
@@ -8492,6 +11219,15 @@ interface of a .NET Framework application by using the System.Drawing namespace.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 102 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -8508,6 +11244,24 @@ A. The Icon class should be used
 B. The Metafile class should be used 
 C. The Image class should be used 
 D. The Bitmap class should be used 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8560,6 +11314,15 @@ regular expressions. (Refer System.RegularExpressions namespace)
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 103 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -8581,6 +11344,24 @@ A. The tx.Matches(king)
 B. The tx.Equals(king) 
 C. The tx.Match(king) 
 D. The tx.IsMatch(king) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8630,6 +11411,15 @@ Match class and MatchCollection class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 104 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -8667,6 +11457,24 @@ D. Encode the characters in your application using the UTF16Encoding class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -8684,6 +11492,15 @@ the UTF32Encoding represents each code point as a 32-bit integer.
 D: The Encoding classes in these options should not be used in the scenario because the 
 UTF16Encoding class represents each character as a sequence of one to two 16-bit integers and 
 the UTF32Encoding represents each code point as a 32-bit integer. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8738,6 +11555,24 @@ End If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -8766,6 +11601,15 @@ is not Nothing.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 106 You work as an application developer at CertKiller.com. CertKiller.com uses the Microsoft Visual 
 Studio .NET 2005 as their application development platform. 
 
@@ -8779,6 +11623,24 @@ A. Use the Int32 data type.
 B. Use the UInt16 data type. 
 C. Use the UInt32 data type. 
 D. Use the Int16 data type. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8827,6 +11689,15 @@ Generic types
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 107 
 
 You work as an application developer at CertKiller.com. CertKiller.com uses the Microsoft Visual 
@@ -8843,6 +11714,24 @@ A. The TypeForwardedTo attribute.
 B. The TypeConvertor.ConvertTo method. 
 C. The InternalsVisibleTo attribute. 
 D. The TypeConvertor.ConvertFrom method. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8889,6 +11778,15 @@ types and can not be used to move a type.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 108 
 
 You work as an application developer at CertKiller.com. You are developing a .NET Framework 
@@ -8923,6 +11821,24 @@ D. The System.Collections.SortedList class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -8937,6 +11853,15 @@ C: Although this is very similar to the SortedList class the SortedList class sh
 in the scenario. 
 D: Although this is very similar to the SortedList class the SortedList class should be used instead 
 in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9005,6 +11930,24 @@ End SyncLock
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A Explanation: 
 
 It is important to remember that when enumerating through a collection that a thread procedure is 
@@ -9021,6 +11964,15 @@ Iterators
 D: The technique used here can also be used to maintain proper synchronization with other 
 threads that might be modifying the Stack object simultaneously. 
 Hashtable class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9072,6 +12024,24 @@ D. Select the StringCollection collection class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -9092,6 +12062,15 @@ C: You should not select this collection class because you need to access transa
 using a transaction identifier, not in sequential order. 
 D: You should not select this collection class because this class is used to manage a collection of 
 string values. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9141,6 +12120,24 @@ D. The StringCollection collection class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -9158,6 +12155,15 @@ C: You should not use this collection class because this class is used if the to
 elements to be stored in a collection is known and is less than ten elements in length. 
 D: You should not use this collection class because this class is used to manage a collection of 
 string values. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9205,6 +12211,24 @@ D. Use the TrimToSize method of the MyQueue object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -9220,6 +12244,15 @@ Queue object.
 C: You should not use this method because it is used to remove an element at the beginning of a 
 Queue object. 
 D: You should not use this method because it is used to resize a Queue object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9263,6 +12296,24 @@ D. Use the Peek method of the MyQueue object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -9280,6 +12331,15 @@ B: You should not use this method of the Queue class because it is used to verif
 specified element exists for the Queue object instance or not. 
 C: You should not use this method of the Queue class because it is used to remove the next 
 element at the beginning of a Queue object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9328,6 +12388,24 @@ D. msgCollection.Push(txtMsg.Text)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,C 
 
 Explanation: 
@@ -9348,6 +12426,15 @@ B: Using these lines of code is incorrect because they use the Stack class to cr
 Stack objects are used to store elements on the Last In First Out (LIFO) concept. 
 D: Using these lines of code is incorrect because they use the Stack class to create a collection. 
 Stack objects are used to store elements on the Last In First Out (LIFO) concept. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9426,6 +12513,24 @@ End If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -9441,6 +12546,15 @@ an additional operation to retrieve the value corresponding to the key.
 B: Better performance can be attained by using the TryGetValue method in the scenario. 
 C: The method in question about catching the ArgumentException is not correct as nothing will be 
 caught that is thrown when a key is not found. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9494,6 +12608,24 @@ D. The Test class should be modified to implement the IComparable interface.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -9511,6 +12643,15 @@ Generic Dictionary
 C: This interface is used to define methods that allow you to convert the value of the Test object to 
 an equivalent value of any other type. 
 Generic Comparer class and Generic EqualityComparer class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9579,6 +12720,24 @@ Next
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -9606,6 +12765,15 @@ queue in a multithreaded scenario but does not provide any type safety.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 118 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -9622,6 +12790,24 @@ A. A HybridDictionary should be used
 B. A HashTable should be used 
 C. The ListDictionary should be used 
 D. OrderedDictionary should be used 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9670,6 +12856,15 @@ CollectionsUtil
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 119 You work as an application developer at CertKiller.com. You are developing a collection class 
 named ClientCollection, which is to be used for storing the names of CertKiller.com's clients that 
 are situated in various geographical areas. 
@@ -9686,6 +12881,24 @@ A. IDictionary
 B. IComparable 
 C. IComparer 
 D. IEqualityComparer 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9727,6 +12940,15 @@ IConvertible interface
 D: This interface should not be implemented because it provides methods to compare two objects 
 for equality only. 
 ICloneable interface 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9815,6 +13037,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -9833,6 +13073,15 @@ already exists.
 C: The following methods should not be used because you should call the already available 
 OnReorder method to correctly raise the Reorder event without rewriting the functionality which 
 already exists. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9913,6 +13162,24 @@ D. +
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -9929,6 +13196,15 @@ C: There will be only one line of output generated because only one delegate (de
 the scenario. 
 D: There will be only one line of output generated because only one delegate (del1) is invoked in 
 the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10001,6 +13277,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -10018,6 +13312,15 @@ EventHandler delegates
 
 D: This statement about AddHandler is incorrect as you have to raise the event not add event 
 handlers. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10065,6 +13368,24 @@ class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -10080,6 +13401,15 @@ C: This method is used for defining events for a dynamically generated class and
 the class is not dynamically generated. 
 D: This method should not be used as it is not a memory efficient solution which is what is 
 required of you. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10129,6 +13459,24 @@ class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -10155,6 +13503,15 @@ state has changed.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 125 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -10169,6 +13526,24 @@ A. Use the MachineName and ServiceName properties of the ServiceController class
 B. Use the Site property of the ServiceController class. 
 C. Use the Site property of the ServiceInstaller class. 
 D. Use the ServiceName and DisplayName properties of the ServiceInstaller class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10218,6 +13593,15 @@ time of installation.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 126 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -10257,6 +13641,24 @@ F. One ServiceInstaller instance must be Instantiate and add them to the project
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -10273,6 +13675,15 @@ E: The ComponentInstaller class should not be considered for use as this class i
 class that can not be Instantiate. 
 F: You must create one ServiceProcessInstaller instance per service application and one 
 ServiceInstaller instance for each service in the application which have to be Instantiate. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10321,6 +13732,24 @@ D. Use ServceAccount.NetworkService.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -10337,6 +13766,15 @@ C: This method should not be considered as you will run the service in the secur
 highly privileged user account. 
 D: The scenario requires the service to run in the security context of a non-privileged user on the 
 local system not the network. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10382,6 +13820,24 @@ D. Use the ServiceInstaller class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -10398,6 +13854,15 @@ B: This method is the base type for all Windows services but does not allow you 
 start type for a Windows service. 
 C: This class should not be used because it has a method that affects all services in an 
 executable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10449,6 +13914,24 @@ D. The Installer Tool (InstallUtil.exe) should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -10477,6 +13960,15 @@ Enterprise Services.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 130 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -10493,6 +13985,24 @@ A. Use ThreadPool.queueUserWorkItem.
 B. Use ThreadPool.UnsafeQueueUserWorkItem. 
 C. Use Thread.Resume. 
 D. Use Thread.Start. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10540,6 +14050,15 @@ that run in the foreground that are actively managed.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 131 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -10576,6 +14095,24 @@ E. The ThreadPool.QueueUserWorkItem method should be called
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C,D 
 
 Explanation: 
@@ -10591,6 +14128,15 @@ B: The ThreadStart delegate should not be used because you first need to pass pa
 starting a thread. 
 E: The method in this option should not be used because this method is used to create system 
 managed background threads. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10640,6 +14186,24 @@ D. Dim teTimer As Timer = New Timer(statusDelegate, Nothing, 1000, Timeout.Infin
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -10659,6 +14223,15 @@ callback is never invoked and the timer is disabled.
 C: The methods in question in the options here should not be used as one option will try the 
 callback method after 32767 milliseconds and the other option has a value of infinite meaning the 
 callback is never invoked and the timer is disabled. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10760,6 +14333,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -10776,6 +14367,15 @@ C: The other methods in questions should not be used as they all have an exclusi
 mechanism which does not take into consideration that not all threads are readers or writers. 
 D: The other methods in questions should not be used as they all have an exclusive locking 
 mechanism which does not take into consideration that not all threads are readers or writers. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10834,6 +14434,24 @@ D. System.Threading.Interlocked.CompareExchange(CK1, CK2, Nothing)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -10850,6 +14468,15 @@ B: This statement should not be considered for usage as the first operand will a
 second operand. 
 C: This method should not be used in the scenario because it makes use of two atomic operations 
 comparison and exchange where as the CompareExchange method uses just one. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10897,6 +14524,24 @@ D. The SyncLock statement should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -10912,6 +14557,15 @@ C: This operation should not be used as you will not be providing atomic and non
 updates. 
 D: This option should not be used as it does not offer atomic operations and offers inferior 
 performance compared to the Interlocked class. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10956,6 +14610,24 @@ D. Use the ReaderWriterLock class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -10971,6 +14643,15 @@ C: The classes in question in these options can not be used in the scenario beca
 be used within a single process. 
 D: The classes in question in these options can not be used in the scenario because they can only 
 be used within a single process. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11067,6 +14748,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -11086,6 +14785,15 @@ D: If a class instance is access publicly the code is beyond your control and ma
 in your class which could create deadlocks.Part 3: Create a unit of isolation for common language 
 runtime in a .NET Framework application by using application domains. (Refer System 
 namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11136,6 +14844,24 @@ D. Pass an AppDomainSetup object as a parameter to the CreateDomain method.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -11150,6 +14876,15 @@ B: The method in question here can be used to create build tasks that can be ins
 own application domain but can not be used to specify setup information. 
 C: This method should not be used in the scenario as it switches into the given application domain 
 and does a callback on the given function and can not be used to specify setup information. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11177,6 +14912,24 @@ A. The AppDomainSetup.PrivateBinPathProbe property should be used.
 B. The AppDomain.BaseDirectory property should be used. 
 C. The AppDomain.DynamicDirectory property should be used. 
 D. The AppDomainSetup.PrivateBinPath property should be used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11225,6 +14978,15 @@ Configure an application domain.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 140 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -11241,6 +15003,24 @@ A. The ApplicationBase property of the AppDomainSetup class should be used.
 B. The ActivationArguments property of the AppDomainSetup class should be used. 
 C. The CachePath property of the AppDomainSetup class should be used. 
 D. The AppDomainInitializerArguments property of the AppDomainSetup class should be used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11289,6 +15069,15 @@ Retrieve setup information from an application domain.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 141 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -11305,6 +15094,24 @@ A. The Assembly.ReflectionOnlyLoadFrom method should be used.
 B. The Assembly.LoadFrom method should be used. 
 C. The Assembly.ReflectionOnlyLoad method should be used. 
 D. The Assembly.Load method should have been used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11350,6 +15157,15 @@ code and create objects.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 142 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -11385,6 +15201,24 @@ D. The GetSection method of the WebConfigurationManager class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: The configuration class in question is designed to programmatically access configuration 
@@ -11399,6 +15233,15 @@ B: This should be avoided at all costs as it is best suited for retrieving infor
 client applications. 
 C: This method is used to only retrieve specific section groups from the configuration object similar 
 to the GetSection method. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11447,6 +15290,24 @@ E. The ConfigurationSaveMode.Minimal value should be passed as a parameter
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C,E 
 
 Explanation: 
@@ -11463,6 +15324,15 @@ B: This method is used to have the SaveAs method to only the modified values to 
 configuration file that you specified in the scenario. 
 ConfigurationElement class, ConfigurationElementCollection class, and 
 ConfigurationElementProperty class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11519,6 +15389,24 @@ D. The IApplicationSettingsProvider interface must be implemented in the ConfigH
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -11537,6 +15425,15 @@ required strongly typed access.
 D: This method is only use full when it comes to Windows client applications and you are busy 
 with a Web application. 
 Implement ISettingsProviderService interface 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11608,6 +15505,24 @@ D. <configuration>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 To have your applications run under the required runtime in the scenario you should use the 
@@ -11622,6 +15537,15 @@ Framework v1.1.
 C: This method is used to indicate that the application only supports .Net Framework v1.0 and 
 should not be used in the scenario. 
 Configure where the runtime should search for an assembly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11678,6 +15602,24 @@ D. The application configuration file should be modified to add the following se
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 Since the KingAssembly assembly is not strongly named the configuration will have to be made at 
@@ -11690,6 +15632,15 @@ not have a unique identity and should not be used.
 B: The modification of the machine configuration file is incorrect as the assembly in question does 
 not have a unique identity and should not be used. 
 C: The path here is incorrect since you only need point to the Test20 path in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11780,6 +15731,24 @@ F. The following code should be added to the machine configuration file:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C,F 
 
 Explanation: 
@@ -11800,6 +15769,15 @@ that are already deployed.
 E: The usage of the <codeBase> and <probing> elements are incorrect as the one is useful for 
 specifying the search path for private assemblies and the other will affect settings of applications 
 that are already deployed. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11852,6 +15830,24 @@ D. Use the AssemblyInstaller class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -11867,6 +15863,15 @@ B: This method is used to install components such as event logs and performance 
 should not be used in the scenario. 
 C: This class should not be used because by itself the class can not help install the installers in an 
 assembly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11951,6 +15956,24 @@ url="tcp://localhost:1234/KingType.rem"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -11970,6 +15993,15 @@ access.Part 3: Manage an event log by using the System.Diagnostics namespace.
 D: The usage of the <client> element is incorrect as this will be used to configure a program that 
 will consume the remote object and in the scenario you must expose an object for remote 
 access.Part 3: Manage an event log by using the System.Diagnostics namespace. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12023,6 +16055,24 @@ End If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: The code that is used in the answer is the proper code that should be used to create entries into 
@@ -12039,6 +16089,15 @@ event and does not help in creating an event source.
 D: The other methods that are used are not correct because the security log is read-only and 
 furthermore the LogNameSourceName method returns the name of an event log for the given 
 event and does not help in creating an event source. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12092,6 +16151,24 @@ meEventLog.WriteEntry(String.Join(", ", messageStrings), EventLogEntryType.Error
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -12108,6 +16185,15 @@ write to the error log of the Windows event log and should not be considered to 
 Read from an event log. 
 C: The other methods in question are not correct as you would be auditing and you are required to 
 write to the error log of the Windows event log and should not be considered to use. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12169,6 +16255,24 @@ D. The applicationLog EnableRaisingEvents property must be set to False
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -12188,6 +16292,15 @@ Get a list of all modules that are loaded by a process.
 D: This step is almost what you require but the property of the EnableRaisingEvents should be set 
 to True. 
 PerformanceCounter class, PerformanceCounterCategory, and CounterCreationData class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12233,6 +16346,24 @@ D. Use the IncrementBy method.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -12246,6 +16377,15 @@ A: This is the code used to return the value of the counter and should not be us
 B: The method is used if you want to have the value decreased and in the scenario an increase is 
 needed. 
 C: This method is used to only increase the value of the counter by one and should not be used. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12292,6 +16432,24 @@ D. Dim psi As ProcessStartInfo = New ProcessStartInfo("KingTimeManagement.xls")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -12307,6 +16465,15 @@ B: This method should not be used as the file name Excel KingTime Management.xls
 treated as the file name in the scenario. 
 C: This option should not be considered for use as Excel would be the file name and 
 KingTimeManagement would be a command line argument 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12353,6 +16520,24 @@ D. Use the CloseMainWindows method.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -12378,6 +16563,15 @@ require closing the application forcefully.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 156 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -12389,10 +16583,10 @@ configuration settings.
 
 
 <system.diagnostics> 
-<switches> 
-<add name="BolleanSwitch" value="1"/> 
-<add name="TraceLevelSwitch" value="1"/> 
-</switches> 
+	<switches> 
+		<add name="BooleanSwitch" value="1"/> 
+		<add name="TraceLevelSwitch" value="1"/> 
+	</switches> 
 </system.diagnostics> 
 
 
@@ -12434,6 +16628,24 @@ E. The TraceLevelSwitch switch objects trace level is set to TraceLevel.Error.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D,E 
 
 Explanation: 
@@ -12453,6 +16665,15 @@ class, XmlWriterTraceListener class, DelimitedListTraceListener class, and Event
 class 
 C: The usage of the TraceSwitch class is used to provide different levels of tracing switches which 
 are defined by the enumeration as Off 0, Error 1, Warning 2, Info 3 and Verbose 4. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12509,6 +16730,24 @@ King Message 2
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -12528,6 +16767,15 @@ C: The other mentioned methods are all incorrect because if you run the applicat
 mode both the Tracer and Debug statements will be executed. 
 Debugger attributesPart 6: Embed management information and events into a .NET Framework 
 application. (Refer System.Management namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12597,6 +16845,24 @@ Next
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -12616,6 +16882,15 @@ ManagementQuery class
 C: The usage of the Win32_LogicalDisk management object is incorrect as this will not return the 
 drive letter and furthermore the usage of the NumberOfBlocks property should not be used 
 because it will return the block size of each disk rather than the free space. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12664,6 +16939,24 @@ Win32_NetworkAdapter")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -12678,6 +16971,15 @@ C: This should not be used as it is an unimplemented method which returns nothin
 Subscribe to management events by using the ManagementEventWatcher class. 
 D: This method is used to return the machine address for a network adapter which is a unique 48bit 
 id assigned to the network card by the manufacturer. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12730,6 +17032,24 @@ D. meWatcher.Start()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C,D 
 
 Explanation: 
@@ -12743,6 +17063,15 @@ Incorrect Answers:
 A: This is the correct method used to have the monitor stop monitoring events. 
 B: The usage of the method is used for waiting for when the events occur and leads to 
 synchronous processing. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12799,6 +17128,24 @@ D. The <Serializable> attribute should be added to the Encyclopedia class and th
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -12816,6 +17163,15 @@ SerializationEntry structure and SerializationInfo class
 D: If you configured the application this way the program would return a runtime error, meaning 
 this should not be used. 
 ObjectManager class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12908,6 +17264,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -12932,6 +17306,15 @@ D: The other events should not be considered for use in the scenario because the
 UnknownAttribute event is raised when such an event is encountered. Further more the 
 UnreferencedObject should not be used as this event is raised when types are encountered that 
 are not being used. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13020,6 +17403,24 @@ D. UnknownAttribute
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -13034,6 +17435,15 @@ Incorrect Answers:
 A: These options would not allow easy deserialization for the Shipping object. 
 C: These options would not allow easy deserialization for the Shipping object. 
 D: These options would not allow easy deserialization for the Shipping object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13164,6 +17574,24 @@ D. <Library>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 The proper and best way for you to achieve your scenario objective would be to use the code 
@@ -13180,6 +17608,15 @@ BinaryFormatter class (Refer System.Runtime.Serialization.Formatters.Binary name
 C: The other mentioned methods should not be considered for use as they will most likely change 
 the name of the array element to which it is applied. 
 Implement XML Serialization interfaces to provide custom formatting for XML serialization. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13227,6 +17664,24 @@ D. The FilterLevel property must be set to TypeFilterLevel.Low
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -13244,6 +17699,15 @@ the types are laid out in the deseriliazation stream.
 
 C: This setting should no be used as you will be deserializing all types and this offers no protection 
 against deserialization attacks in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13290,6 +17754,24 @@ D. The SoapFormatter class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -13311,6 +17793,15 @@ Directory class and DirectoryInfo class
 D: The SoapFormatter class could be used as it will allow you to serialize public and non-public 
 data but the result of the stream will be a verbose and will consume more network resources.Part 
 4: Access files and folders by using the File System classes. (Refer System.IO namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13364,6 +17855,24 @@ D. An IOException will be thrown by the code.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -13378,6 +17887,15 @@ target directory then this would be correct.
 B: The Directory will only be renamed if the target does not exist in the scenario the targets exists. 
 C: This will only be thrown if in the event the target directory is an empty string. 
 DriveInfo class and DriveType enumeration 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13424,6 +17942,24 @@ E. Use the DriveFormat and AvailableFreeSpace properties of the DriveInfo class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -13444,6 +17980,15 @@ ROM or fixed drive etc.
 FileSystemInfo class and FileSystemWatcher class 
 E: The AvailableFreeSpace property should not be used as the user disk quota would be taken 
 into account. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13495,6 +18040,24 @@ CKWatcher.Filter = c:\CK_Docs1\*.res"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -13512,6 +18075,15 @@ is the only time this method would be use full.
 E: This method should not ever be considered for use in the scenario because the filter property is 
 used to specify the file pattern only the path should not be included there. 
 Path class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13558,6 +18130,24 @@ D. Use the StringReader class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: The purpose and function of the FileStream class is to allow the user to be able to view the 
@@ -13570,6 +18160,15 @@ not be considered for use in the scenario.
 C: This method is use full if you want to read character data in a particular encoding, but is not 
 useful for reading any other data. 
 D: This class is used for reading text from a string and is not use full for reading any other data. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13629,6 +18228,24 @@ D. fStream.Seek(0, SeekOrigin.Begin)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D Explanation: 
 
 Because after every write operation is completed you need to reposition the stream so that you 
@@ -13657,6 +18274,15 @@ MemoryStream class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 172 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -13664,10 +18290,10 @@ You work as the application developer at CertKiller.com. CertKiller.com uses Vis
 
 You are developing a .NET Framework 2.0 banking Windows Forms application and are busy 
 working on a function that retrieves the images of cancelled checks and displays them on the 
-from. You currently have access to a method that reads the images from Microsoft SQL server as 
+form. You currently have access to a method that reads the images from Microsoft SQL server as 
 a series of bytes. You are required to select a class that allows you to transfer the image from SQL 
 Server to the Windows Forms application whilst your solution reduces the need of a temporary 
-buffers and files 
+buffer and files 
 
 What should you do? 
 
@@ -13675,6 +18301,24 @@ A. Use the MemoryStream class.
 B. Use the NetworkStream class. 
 C. Use the FileStream class. 
 D. Use the BufferedStream class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13711,6 +18355,15 @@ D: The streaming class in question in this option is incorrect because both requ
 temporary files or buffers. 
 BufferedStream classPart 6: Manage the .NET Framework application data by using Reader and 
 Writer classes. (Refer System.IO namespace) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13770,6 +18423,24 @@ D. :string:abc
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -13798,6 +18469,15 @@ StreamReader class and StreamWriter class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 174 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -13814,6 +18494,24 @@ A. Use the TextWriter class.
 B. Use the StreamWriter class. 
 C. Use the StringWriter class. 
 D. Use the BinaryWriter class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13870,6 +18568,15 @@ System.IO.IsolatedStorage namespace)
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 175 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -13887,6 +18594,24 @@ A. The IsolatedStorageFile.GetUserStoreForDomain method should be used
 B. The IsolatedStorageFile.GetMachineStoreForDomain method should be used 
 C. The IsolatedStorageFile.GetMachineStoreForAssembly method should be used 
 D. The IsolatedStorageFile.GetUserStoreForAssembly method should be used 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13925,6 +18650,15 @@ IsolatedStorageFileStream class
 C: The settings in question should not be used because the methods are machine-scoped rather 
 than user scoped. 
 DeflateStream class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13989,6 +18723,24 @@ D. envPerm.Assert()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -14008,6 +18760,15 @@ explicitly cause the Permission P to be denied and you are required to ensure pe
 applied to the code. 
 Modify the Code Access security policy at the computer, user, and enterprise policy level by using 
 the Code Access Security Policy tool (Caspol.exe). 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14059,6 +18820,24 @@ D. Use the gacutil.exe tool to modify the assembly's granted permissions.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -14071,6 +18850,15 @@ B: The sn.exe tool allows developers to create a strong-named asymmetric key pai
 named assemblies. 
 D: The gacutil.exe tool allows users to manage the contents of the global assembly and download 
 cache. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14116,6 +18904,24 @@ D. Run the machine all -reset command.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -14130,6 +18936,15 @@ Incorrect Answers:
 A: The rollback switch does not exist for the caspol.exe tool. 
 C: The rollback switch does not exist for the caspol.exe tool. 
 D: This option will not set all security policies back to their default state. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14180,6 +18995,24 @@ D. Run the caspol -customall "c:\CertKiller\config\CertKillerSecurity.config" -l
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -14197,6 +19030,15 @@ B: The option in question in this answer should not be used in the scenario beca
 used to specify only the code groups of the specified user policy. 
 C: The usage of the -resolvegroup option in the scenario is incorrect because the -resolvegroup 
 option is used to show the code groups that the specified user belongs to. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14225,6 +19067,24 @@ C. Run the caspol -enterprise -addfulltrust BasePerm.exe command.
 D. Run the caspol -enterprise -addfulltrust CKPerm.exe command. 
 E. Run the caspol -machine -addfulltrust BasePerm.exe command. 
 F. Run the caspol -machine -addfulltrust CKPerm.exe command. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14277,6 +19137,15 @@ wise the user-level policy will be used.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 181 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -14293,6 +19162,24 @@ What should you do? A. Run the caspol -user -addgroup -site www.CertKiller.com F
 B. Run the caspol -user -addgroup -zone Internet command. 
 C. Run the caspol -user -addgroup -url www.CertKiller.com FullTrust command. 
 D. Run the caspol -user -addgroup -pub -cert test.cer FullTrust command. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14344,6 +19231,15 @@ class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 182 
 
 You work as an application developer at CertKiller.com. CertKiller.com has been contracted by a 
@@ -14385,6 +19281,24 @@ F. The TcpClient class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,D,F 
 
 Explanation: 
@@ -14402,6 +19316,15 @@ DSA class and DSACryptoServiceProvider class
 E: This class is used by the server application.Part 4: Encrypt, decrypt, and hash data by using the 
 System.Security.Cryptography classes. (Refer System.Security.Cryptography namespace) 
 TripleDES and TripleDESCryptoServiceProvider class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14454,6 +19377,24 @@ D. The SHA1Managed class should be used in the scenario
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -14473,6 +19414,15 @@ establish the identity of the data file's publisher.
 D: The classes in these two options should not be used in the scenario because the classes both 
 implement a hash algorithm that can be used to detect tampering but they can not be used to 
 establish the identity of the data file's publisher. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14531,6 +19481,24 @@ rNum.NextBytes(salt)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -14546,6 +19514,15 @@ C: The Date and time should not ever be considered as an instance because that w
 predictable number. 
 D: The class should never be considered for use because the Random class generates pseudo 
 random numbers that may be repeatable or predictable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14600,6 +19577,24 @@ D. Use ProtectedData.Protect(testplain, Nothing, DataProtectionScope.CurrentUser
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -14618,6 +19613,15 @@ computer to be able to unprotect the data.
 C: The methods in the option should not be used in the scenario because this method is used to 
 store the protected data in the original copy of the byte array and the original array should remain 
 unaffected. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14671,6 +19675,24 @@ D. The HMACSHA1 class should be used to encode the data prior to transmission
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -14692,6 +19714,15 @@ key of length 16 or 24 bytes whilst producing a hash sequence of 8 bytes.Part 5:
 permissions for resources by using the System.Security.Permission classes. (Refer 
 System.Security.Permission namespace) 
 FileIOPermission class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14745,6 +19776,24 @@ E. The following attribute should be applied at the assembly level:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: E 
 
 Explanation: 
@@ -14763,6 +19812,15 @@ C: The security in the scenario is required at the application level and this at
 applied at the class level in the scenario. 
 D: This option should not be used as this will specify that the application be refused the required 
 permissions to perform the required operations. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14795,6 +19853,24 @@ C. <FileIOPermissionAttribute(SecurityAction.Demand, All:="C:\")>
 D. <FileIOPermissionAttribute(SecurityAction.RequestMinimum, All:"C:\")> 
 E. <FileIOPermissionAttribute(SecurityAction.Deny, All:="C:\CertKiller\cfg.dat")> 
 F. <FileIOPermissionAttribute (SecurityAction.PermitOnly, All:="C:\")> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14848,6 +19924,15 @@ StrongNameIdentityPermission class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 189 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -14871,6 +19956,24 @@ C. SecurityAction.InheritanceDemand should be passed as a parameter to the attri
 D. The SecurityAction.Demand should be passed as a parameter to the attribute 
 E. The GacIdentityPermission should be applied to the DoWork method 
 F. The KeyContainerPermission should be applied to the DoWork method 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14922,6 +20025,15 @@ UrlIdentityPermission class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 190 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -14940,6 +20052,24 @@ What should you do? A. The SiteIdentityPermission class should be used in the sc
 B. The PublisherIdentityPermission class should be used in the scenario. 
 C. The ZoneIdentityPermission class should be used in the scenario. 
 D. The UrlIdentityPermission class should be used in the scenario. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14979,6 +20109,15 @@ D: This class should not be considered for use as it is used to configure access
 Uniform Resource Locator (URL). 
 CodeGroup class, FileCodeGroup class, FirstMatchCodeGroup class, NetCodeGroup class, and 
 UnionCodeGroup class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15034,6 +20173,24 @@ policy level.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -15049,6 +20206,15 @@ C: This should not be done as you would enable the end users the capability of c
 altering security settings that will restrict the applications execution. 
 D: The Exclusive attribute should not be considered in the scenario for usage as the runtime will 
 never grant permissions associated with the code group marked with the Exclusive attribute. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15096,6 +20262,24 @@ D. Make use of WindowsIdentity and WindowsPrincipal objects.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -15119,6 +20303,15 @@ C: These options require more developer effort than necessary.
 NTAccount class and SecurityIdentifier class 
 D: The WindowsIdentity and WindowsPrincipal classes are intended for use with windows domain 
 stored accounts and groups only. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15174,6 +20367,24 @@ myName = ntAcc.Value
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -15190,6 +20401,15 @@ B: In the scenario you are required to get the file owner instead of the primary
 owner belong and there for you should not use the two GetGroup method code segments. 
 C: The Value of the security identifier class provides a long string containing the security identifier 
 corresponding to the windows account. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15263,6 +20483,24 @@ D. The following ComVisible attribute should be added to each method of the Shap
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -15279,6 +20517,15 @@ C: The class and public members are already visible to COM applications so your 
 lays with instantiating the class. 
 D: The lines of code that are used in the scenario will not make any difference to the situation at 
 hand currently in the scenario and should not be used. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15339,6 +20586,24 @@ D. The Native Image Generator tool (ngen.exe) should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -15356,6 +20621,15 @@ B: This tool does exactly the opposite of the exporter tool and should also not 
 usage in the scenario. 
 D: The tool is used to generate a native image for managed code and reduces load times for the 
 application but does not convert assemblies for use in COM applications. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15404,6 +20678,24 @@ D. The Platform Invoke (DllImportAttribute) should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -15422,6 +20714,15 @@ Create a class to hold DLL functions.
 C: The tool should not be considered for usage in the scenario because the unmanaged dll file is 
 not in COM and it only processes COM type libraries. 
 Create prototypes in managed code. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15476,6 +20777,24 @@ E. The CharSet property must be set to CharSet.Auto.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D,E 
 
 Explanation: 
@@ -15497,6 +20816,15 @@ Assembly class
 C: The methods used in the options could be used but require that the code be changed 
 significantly and you should not consider using the options in the scenario as they are bound to 
 fail. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15549,6 +20877,24 @@ Assembly.ReflectionOnlyLoadFrom("c:\CertKiller\assemb\CertKiller.com.dll")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: E 
 
 Explanation: 
@@ -15581,6 +20927,15 @@ used in the scenario even though you provide the full absolute path as a paramet
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 199 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
 2005 as its application development platform. You use a Windwos XP Professional client 
 computer named CERTKILLER-WS554 as your development computer. 
@@ -15599,6 +20954,24 @@ A. The AssemblyKeyFileAttribute class should be used.
 B. The AssemblyDelaySignAttribute class should be used. 
 C. The AssemblyConfigurationAttribute class should be used. 
 D. The AssemblyKeyNameAttribute should be used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15649,6 +21022,15 @@ Attachment class, AttachmentBase class, and AttachmentCollection class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 200 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -15688,6 +21070,24 @@ E. The SqlDataReader object attachment class should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -15704,6 +21104,15 @@ Attachment class cannot directly use an XmlDocument object.
 E: This method is incorrect and should not be used in the scenario because the SqlDataReader 
 Attachment class cannot directly make use of a SqlDataReader object. 
 SmtpException class and SmtpFailedReceipientException class 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15769,6 +21178,24 @@ D. The ex.InnerExceptions(i).StatusCode expression should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -15786,6 +21213,15 @@ about the error and does not provide you specific information of the error retur
 server 
 C: This expression should not be used in the scenario because it is used to have the e-mail 
 address that had the problems returned and gives no information about the SMTP error. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15836,6 +21272,24 @@ D. The LinkedResource class should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -15851,6 +21305,15 @@ B: The Attachment class should not be used in the scenario as the class only all
 images as an attachment. 
 C: The usage of this class is incorrect as it is used to store the address information for e-mail 
 messages in the scenario. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15900,6 +21363,24 @@ E. The RegionInfo should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -15918,6 +21399,15 @@ D: This class should not be used in the scenario because this class is used to o
 information about a Unicode character. 
 E: This class should not be used in the scenario because this class does not represent any 
 preferences of the user and does not depend upon the culture. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -15964,6 +21454,24 @@ D. The CultureInfo class should be used
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -15980,6 +21488,15 @@ C: This class should not be used in the scenario because this class is used to a
 data for an already installed culture. 
 D: This class should not be used in the scenario because this class can only be used to make use 
 of cultures that have already been installed. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16028,6 +21545,24 @@ D. RegionInfo.Name should be used as an identifier for a country.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -16042,6 +21577,15 @@ generated can be used to tell whether the RegionInfo or CultureInfo objects are 
 Format date and time values based on the culture. 
 C: The usage of the GetHashCode property in the scenario is incorrect as the hash value 
 generated can be used to tell whether the RegionInfo or CultureInfo objects are the same or not. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16095,6 +21639,24 @@ D. The dateValue.Ticks expression should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -16112,6 +21674,15 @@ by the instance is based on local time.
 Format number values based on the culture. 
 D: This expression is used to super fast serialize the required information but should not be 
 considered when working with the local time. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16165,6 +21736,24 @@ D. val=Int32.Parse(num, NumberStyles.AllowParentheses Or NumberStyles.AllowLeadi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -16181,6 +21770,15 @@ B: This code should not be used in the scenario because the code is used to indi
 numeric string can have a leading sign. 
 C: The code in question should not be used in the scenario because the attributes of 
 NumberStyles are set by using the bitwise inclusive Or on the field flags. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16236,6 +21834,24 @@ segment should be used.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -16251,6 +21867,15 @@ C: This code segment is incorrect and should not be used in the scenario because
 the culture that is installed with the operating system. 
 D: This code segment is incorrect and should not be used in the scenario because this settings 
 only used for changing the user's interface culture used by a thread. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16279,6 +21904,24 @@ A. The ParseExact method should be used.
 B. The Parse method should be used. 
 C. The TryPassExact method should be used. 
 D. The TryParse method should be used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16329,6 +21972,15 @@ interface of a .NET Framework application by using the System.Drawing namespace.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 210 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -16344,6 +21996,24 @@ A. The Icon class should be used.
 B. The Metafile class should be used. 
 C. The Image class should be used. 
 D. The Bitmap class should be used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16396,6 +22066,15 @@ regular expressions. (Refer System.RegularExpressions namespace)
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 211 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -16415,6 +22094,24 @@ A. Use the code segment: tx.Matches(king)
 B. Use the code segment: tx.Equals(king) 
 C. Use the code segment: tx.Match(king) 
 D. Use the code segment: tx.IsMatch(king) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16463,6 +22160,15 @@ Match class and MatchCollection class
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 212 
 
 You work as the application developer at CertKiller.com. CertKiller.com uses Visual Studio.NET 
@@ -16479,6 +22185,24 @@ What should you do? A. Encode the characters in your application using the UTF8E
 B. Encode the characters in your application using the UTF7Encoding class. 
 C. Encode the characters in your application using the UTF32Encoding class. 
 D. Encode the characters in your application using the UTF16Encoding class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16526,6 +22250,15 @@ the UTF32Encoding represents each code point as a 32-bit integer.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 213 
 
 You work as the application developer at CertKiller.com. To get information on a specific method 
@@ -16558,6 +22291,24 @@ D. Call the IsFamily property.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -16568,6 +22319,15 @@ descendant classes.
 IsAssembly determines accessibility from within the assembly. 
 
 IsVirtual indicates whether the method is virtual. IsStatic indicates whether the method is static. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16620,6 +22380,24 @@ methods on other objects to release the managed resources.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,D,F 
 
 Explanation: 
@@ -16646,6 +22424,15 @@ question states resources should be released explicitly.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 215 
 
 You work as the application developer at CertKiller.com. You are developing a debug build of an 
@@ -16658,6 +22445,24 @@ A. Data property
 B. Message property 
 C. StackTrace property 
 D. Source property 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16702,6 +22507,15 @@ Source represents the name of the application or object that caused the error.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 216 
 
 You work as the application developer at CertKiller.com. You need to modify the code of an 
@@ -16715,6 +22529,24 @@ B. Define thread B to run at a higher priority.
 C. Implement the WaitCallback delegate to synchronize the threads. 
 D. Call the Sleep method of thread A. 
 E. Call the SpinLock method of thread A. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16758,6 +22590,15 @@ synchronise the threads, they will run in the background in parallel
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 217 DRAG DROP 
 
 You work as the application developer at CertKiller.com. You have been instructed to create an 
@@ -16788,7 +22629,34 @@ computer.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16833,6 +22701,24 @@ D. Use the StrongNameIdentityPermission
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -16844,6 +22730,15 @@ GACIdentityPermission can be used to test whether a file is in the global assemb
 PublisherIdentityPermission can be used to verify the identity of a publisher. 
 
 DataPublisherPermission is used to control the ability to access encrypted data and memory. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16897,6 +22792,24 @@ E. Use the Stopped event of the ManagementEventWatcher to configure a listener f
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -16924,6 +22837,15 @@ no longer interested in receiving notification of events.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 220 
 
 You work as the application developer at CertKiller.com. You must specify a class which is 
@@ -16936,6 +22858,24 @@ A. Select the OrderedDictionary class.
 B. Select the HybridDictionary class. 
 C. Select the ListDictionary class. 
 D. Select the Hashtable class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16981,6 +22921,15 @@ data structure do not compensate for the benefits.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 221 
 
 You work as the application developer at CertKiller.com. You are working on an application and 
@@ -17012,6 +22961,24 @@ D. Import a type library as an assembly. Create instances of COM object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -17022,6 +22989,15 @@ maintenance e.g dll name or version changes.
 
 The question explicitly says the unmanaged code should be called with platform invoke services. 
 Importing\exporting a type library is relevant for interoperation with COM. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17068,6 +23044,24 @@ D. Choose System.IntPtr
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -17080,6 +23074,15 @@ System.String is intended for storing immutable strings.
 
 System.IntPtr is a pointer to a memory address and it's size is determined by the runtime platform. 
 It is primarily used for interoperation. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17125,6 +23128,24 @@ D. Configure the Process.GetCurrentProcess().BasePriority property to be High.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -17139,6 +23160,15 @@ however spawn a new thread - which is what is required here to enable concurrenc
 ProcessorAffinity gets or sets the processors that this thread can be scheduled to run on. 
 
 Process.BasePriority gets the base priority of the process. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17227,7 +23257,34 @@ newVersion="1.1.4322.0"/>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17295,6 +23352,24 @@ language="en-US" version="*.*.*.*" />
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A,B 
 
 Explanation: 
@@ -17306,6 +23381,15 @@ The SupportedRuntime element specifies which .net runtime versions the assembly 
 
 The DependentAssembly element is used to encapsulate the binding policy and assembly location 
 for each assembly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17355,6 +23439,24 @@ F. Create an OnDeserialization method that calls CertKillerMethod.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,F 
 
 Explanation: 
@@ -17382,6 +23484,15 @@ of the object.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 227 
 
 You work as the application developer at CertKiller.com. You have created a new service 
@@ -17398,6 +23509,24 @@ B. Before deploying CertKillerApp33, specify the Account, Username, and Password
 the ServiceProcessInstaller class. 
 C. Install the service by using the CONFIG option of the net.exe command-line tool. 
 D. Install the service by using the installutil.exe command-line tool. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17454,6 +23583,15 @@ account credentials. They have to be specified in the ServiceProcessInstaller cl
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 228 DRAG DROP 
 
 You work as the application developer at CertKiller.com. You are working on an application named 
@@ -17479,7 +23617,34 @@ CertKillerApp05. CertKillerApp05 is configured to create a new file on the local
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17531,6 +23696,24 @@ Flags = SecurityPermissionFlag::UnmanagedCode)]
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -17544,6 +23727,15 @@ Assert will ignore the permissions of callers and allow them indiscriminately.
 
 Deny will explicitly deny access if the caller has the specified permission. This is the reverse of 
 what is required. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17583,7 +23775,34 @@ ActualTests.com
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17628,6 +23847,24 @@ D. Your method has to be the only iterator in the class.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -17639,6 +23876,15 @@ IComparable is used to enable comparisons for a user type.
 
 Explicitly containing a collection within the method will have no impact on the methods return type 
 which is what the ForEach statement will operate on. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17710,6 +23956,24 @@ private int copies;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -17722,6 +23986,15 @@ form of an instance variable.
 A & C do not derive from EventArgs hence cannot fit into the event handling model. 
 
 D does not expose the copies instance variable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17806,6 +24079,24 @@ PersistToDB(entry);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -17818,6 +24109,15 @@ A will PersistToDb irrespective of the type of log entry. The question explicitl
 B features an incorrect test for warnings and errors. 
 
 D&B do not ensure that only MySource entries are persisted. Instead they overwrite the source. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17898,6 +24198,24 @@ client.Send(msgBytes);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -17911,6 +24229,15 @@ B creates a MailMessage but then does not do anything with it.
 
 D tries to do something with sockets, this is unnecessary because there is a SMTP server 
 available. The question implies delivering the mail via SMTP. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17981,6 +24308,24 @@ newThread.Start(myValues);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -17992,6 +24337,15 @@ ParameterizedThreadStart delegate.
 A& B attempt to supply a parameter to the ThreadStart delegate. This is not possible. 
 
 C Does not run in a new thread and hence may leave the UI unresponsive. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18052,6 +24406,24 @@ get {return this.coverPageInfo;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -18061,6 +24433,15 @@ the event.
 
 B fax is not a delegate type. 
 C&D do not declare events. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18126,7 +24507,34 @@ uint type);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18195,6 +24603,24 @@ outStream.WriteByte((byte)b);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -18207,6 +24633,15 @@ A does not compress and write the document, instead it is compressing and writin
 array 
 
 B & D are reading and writing to the same document. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18268,6 +24703,24 @@ formatter.Serialize(stream, department);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -18278,6 +24731,15 @@ A&C attempt to serialize components of the object rather the object itself.
 
 B attempts to serialize to an array, however the array will not be big enough to store the serialized 
 object because it is not sized on the entire object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18342,6 +24804,24 @@ internal string GetAddress() { return addressString;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -18354,6 +24834,15 @@ A uses a constructor with Parameters.
 B uses static members that are not supported in COM 
 
 D the method GetAddress() must be public to be accessible by COM. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18397,6 +24886,24 @@ D. Use set.Deny();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -18409,6 +24916,15 @@ permissions explicitly stated and nothing else.
 Assert will ignore the permissions of callers and allow them indiscriminately. 
 
 Deny will explicitly deny access if the caller has the specified permission. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18461,6 +24977,24 @@ byte[] hash = sha.Hash;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: Initialise SHA1 object and call the ComputeHash method supplying the hashdata as a parameter 
@@ -18471,6 +25005,15 @@ TransferEndBlock.
 
 B&C GetHashCode is the method inherited from the Object class. It will not perform a hash on the 
 incoming hashdata. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18523,6 +25066,24 @@ algo.TransformBlock(hashdata, 0, message.Length, message, 0);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -18535,6 +25096,15 @@ B GetHashCode() will call the method inherited from object, it will not hash the
 C The parameter of the Create method should specify the type of hashing algorithm to use not the 
 message to be hashed. D TransferBlock is more appropriate for hashing part of a message. Also it should be called with 
 TransferEndBlock. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18599,6 +25169,24 @@ myAssemblyBuilder.Save("c:\\CertKillerAssembly.dll");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -18609,6 +25197,15 @@ Finally call the Save method on the AssemblyBuilder to write the assembly to dis
 C does not provide a name the assembly 
 
 D attempts to define a physical file location, this is not compatible with AssemblyBuilder.Save 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18674,6 +25271,24 @@ WindowsIdentity.Impersonate(token);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: Because the application storing the credentials, the GenericIdentity & GenericPrincipal classes 
@@ -18686,6 +25301,15 @@ implementation of IIdentity.
 
 D the WindowsIdentity.Impersonate() is used for running code in the context of another user. 
 Impersonation is not what is required. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18742,6 +25366,24 @@ return numberToPrint.ToString("()", culture);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -18750,6 +25392,15 @@ Use CurrencyNegativePattern property set to 1 to display negative currency value
 sign. A will give a minus sign for negative numbers but not for negative currencies. 
 
 C & D The culture has not been to display a minus sign for currency. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18797,6 +25448,24 @@ myComponent = new System.ComponentModel.Component();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -18809,6 +25478,15 @@ disabled.
 B the Process class is used to represent an existing process running on a computer. 
 
 D The ComponentModel.Component class is used for sharing components between applications. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18860,6 +25538,24 @@ Assembly asm = domain.GetData("CertKillerAss25.dll");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -18872,6 +25568,15 @@ C it is not possible to use AppDomain.Load to load an assembly from file.
 
 D AppDomain.GetData gets information stored in the AppDomain for the specified assembly. It 
 cannot load an assembly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18927,6 +25632,24 @@ string result = isoStream.ToString();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -18938,6 +25661,15 @@ A & C do not get the IsolatedStorageFile for the machine context.
 
 D returns a string representation of the IsolatedStorageFileStream object not a String of the files 
 contents as the question requests. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18993,6 +25725,24 @@ currRate = GetCurrentRate();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -19005,6 +25755,15 @@ object during deserialization.
 
 C the OnDeserializing attribute is useful for default values. OnDeserializing attribute works with a 
 method that contains a StreamContext parameter and not a SerializationInfo parameter. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19051,6 +25810,24 @@ D. badqueue.Dequeue();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -19063,6 +25840,15 @@ roundabout.
 B attempts to re-queue items that are already in the queue 
 
 D will de-queue only one item that is at the front of the queue. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19116,6 +25902,24 @@ store.CreateDirectory("UserInfo");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -19124,6 +25928,15 @@ The user store for the assembly is the correct store that is required. It is ret
 IsolatedStorageFile.GetUserStoreForAssembly(). 
 
 B,C & D return Isolated Storage File stores of incorrect scope 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19176,6 +25989,24 @@ AppDomain.CurrentDomain.Evidence
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -19189,6 +26020,15 @@ B Adds assembly evidence, the question asks for host evidence because it is conc
 where the assembly was loaded from.# 
 
 D does not create an Evidence object with Intranet zone evidence. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19241,6 +26081,24 @@ D. permission.PermitOnly();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -19250,6 +26108,15 @@ CodeAccessPermission.ReverAssert() should be used to undo a previous Assert call
 B is used to revert a previous deny call. 
 
 C & D are used to reduce the CAS permissions, they do not undo a previous Assert call. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19311,6 +26178,24 @@ F. Add this line of code between line 04 and line 05:crtl.ExecuteCommand(0);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,E 
 
 Explanation: 
@@ -19326,6 +26211,15 @@ No such property as SiteName
 Continue cannot re-start a stopped service only a paused one. 
 
 ExecuteCommand is used to fire a custom command on the service. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19378,6 +26272,24 @@ result = reader.ReadLine();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B Explanation: 
 
 Create a StreamReader based on the file and call the ReadToEnd() method to quickly read the 
@@ -19387,6 +26299,15 @@ A & D does not read the entire file.
 
 C calling ToString() on the reader will give a string representation of the stream and will not read 
 from the stream. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19445,6 +26366,24 @@ isAuthorized = currentUser.IsInRole(Environment.MachineName);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -19457,6 +26396,15 @@ C uses GenericPrincipal. WindowsPrincipal should be used for windows accounts. T
 invalid cast from WindowsPrincipal to GenericPrincipal. 
 
 D does not specify the group correctly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19523,6 +26471,24 @@ Collection5.Add(svc["DisplayName"]);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -19533,6 +26499,15 @@ returned collection and add the display name to Collection5.
 B The constructor is invoked incorrectly. 
 
 C & D the query is incorrect. The searcher does not restrict to paused services. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19590,6 +26565,24 @@ bytesTransferred = byteArray.Length;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -19599,6 +26592,15 @@ parameters. B & D The question indicates that data should be read from the strea
 
 C it is unnecessary to attempt to read byte by byte, the Read() method provides a very efficient 
 way of reading into a byte array. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19650,6 +26652,24 @@ if (regionInfo.Name == "CA") {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -19660,6 +26680,15 @@ A & B CultureInfo is used to control formatting, sorting & comparing of culture 
 currencies, calendar dates etc. 
 
 D Does not initialise the RegionInfo object correctly i.e to Canada . 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19716,7 +26745,34 @@ certificate, false, SslProtocols.Tls, true);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19774,6 +26830,24 @@ CertKillerMe2 (reader.ReadLine());
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -19785,6 +26859,15 @@ A ReadToEnd() will read the entire stream.
 B Read() will not read the line but only the next character. 
 
 C will not read from the message but will just give a string representation of the reader. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19858,6 +26941,24 @@ cryptoStream.Write(message, 0, message.Length);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -19870,6 +26971,15 @@ A Uses a blocksize set to size of the entire message
 B creates a decryptor instead of an encryptor. 
 
 C does not initialize the encryptor with the key and iv correctly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19939,7 +27049,34 @@ noTrustStatement);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19988,6 +27125,24 @@ bufStream.Write(dataToSend, 0, 8192);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -19998,6 +27153,15 @@ be created with the cache size of 8192 bytes.
 A & B do not employ caching. 
 
 D does not correctly initialise the BufferedStream to have a cache size of 8192 bytes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20076,6 +27240,24 @@ g.DrawRectangle(rectangleBrush, rectangle);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -20087,6 +27269,15 @@ A DrawRectangle() will draw the outline of a rectangle without filling it.
 C draws an unfilled Polygon.. 
 
 D Uses a SolidBrush and will not achieve the desired gradient fill 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20143,7 +27334,34 @@ return false;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20227,7 +27445,34 @@ message = new StreamReader(cryptoStream).ReadToEnd();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20272,6 +27517,24 @@ D. BitArray answers = new BitArray(-1);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -20280,6 +27543,15 @@ C & D BitVector32 is more efficient than a BitArray when 32 or less binary flags
 Primarily because it is a value type. 
 
 Note: we are not sure why B is preferred to A. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20342,6 +27614,24 @@ al.Add(proc.ProcessName);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -20352,6 +27642,15 @@ returned collection of processes adding the process name to the arraylist.
 A & C use GetProcessByName() and return processes on the current computer only. 
 
 B adds the entire process to the arraylist rather than just the process name. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20411,6 +27710,24 @@ data.ForEach(delegate(int num)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A Explanation: 
 
 create a BinaryFormatter and a MemoryStream and simply use the formatter to serialize the data 
@@ -20420,6 +27737,15 @@ B Collections support serialization, hence it is not required to try to serializ
 independently. 
 
 C The MemoryStream is created to be non resizeable and it is not the correct size. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20486,6 +27812,24 @@ outStream.WriteByte((byte)b);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -20509,6 +27853,15 @@ any number of bytes in one go.
 
 
 
+
+
+
+
+
+
+
+
+
 QUESTION NO: 273 
 
 You work as the application developer at CertKiller.com. You are working on code segment that 
@@ -20519,15 +27872,28 @@ int rc = MessageBox(hWnd, text, caption, type);
 
 You must choose a method prototype. Choose the code segment that provides for this. 
 
-A. [DllImport("user32")]public static extern int MessageBox(int hWnd, String text, 
-String caption, uint type); 
-B. [DllImport("user32")]public static extern int MessageBoxA(int hWnd, String text, 
-String caption, uint type); 
-C. [DllImport("user32")]public static extern int Win32API_User32_MessageBox( 
-int hWnd, String text, String caption, uint type); 
-D. [DllImport(@"C:\WINDOWS\system32\user32.dll")]public static extern int MessageBox(int 
-hWnd, String text, 
-String caption, uint type); 
+A. [DllImport("user32")]public static extern int MessageBox(int hWnd, String text, String caption, uint type); 
+B. [DllImport("user32")]public static extern int MessageBoxA(int hWnd, String text, String caption, uint type); 
+C. [DllImport("user32")]public static extern int Win32API_User32_MessageBox(int hWnd, String text, String caption, uint type); 
+D. [DllImport(@"C:\WINDOWS\system32\user32.dll")]public static extern int MessageBox(int hWnd, String text, String caption, uint type); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20559,6 +27925,15 @@ B creates a prototype for the MessageBoxA function not MessageBox .
 D it is not necessary to specify the physical path because user32.dll will be in the path 
 environment variable. Also it will not work with versions of windows (some may use 
 c:\winnt\system32) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20605,6 +27980,24 @@ D. foreach (CultureInfo culture in CultureInfo.GetCultures(CultureTypes.Replacem
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -20616,6 +28009,15 @@ B The CultureInfo object created is not associated with any cultures.
 C will yield only neutral cultures, they will not be specific to a country\region. 
 
 D Replacement cultures are user-defined custom cultures. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20670,6 +28072,24 @@ D. string dateString = DateTime.Today.Month.ToString("es-MX");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -20682,6 +28102,15 @@ B does not use the CultureInfo object to convert the date to a string.
 C does not use the Mexican Spanish culture. 
 
 D the DateTime.ToString() method cannot take a string code representation of the culture. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20740,6 +28169,24 @@ Debug.WriteLine(fName);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -20750,6 +28197,15 @@ the application.
 A an Assert will stop execution of the application in debug mode if the condition is not met. 
 
 C & D could be used but they execute in the release configurations 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20803,6 +28259,24 @@ PrincipalPolicy.UnauthenticatedPrincipal);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: Setting the PrincipalPolicy for the AppDomain to UnauthenticatedPrincipal will default the Principal 
@@ -20815,6 +28289,15 @@ B SetThreadPrincipal() does not set the default policy for all new threads. Also
 is used instead of UnauthenticatedPrincipal. 
 
 C SetAppDomainPolicy is used to set the security policy level for the domain. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20859,6 +28342,24 @@ D. public delegate bool PowerDeviceOn(DateTime autoPowerOff);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -20868,6 +28369,15 @@ A & B the delegates do not accept an argument of type DateTime
 D The question does not explicitly mention a return type. Also with multicasting only the return 
 value of the last method called as part of a multicast chain is returned. Hence return values do not 
 tend to be very useful as far as multicasting is concerned. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20924,7 +28434,34 @@ D. Specify the interface for the User class and then add this attribute with the
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20969,6 +28506,24 @@ D. public delegate bool PowerDeviceOn(DateTime);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -20976,6 +28531,15 @@ Explanation:
 A & C does not return a type Bool 
 
 B does not accept a parameter of type DateTime 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21018,6 +28582,24 @@ D. Use: Queue undoBuffer = new Queue();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -21028,6 +28610,15 @@ Generics you can force a strongly typed collection that takes strings only.
 B is not strongly typed for strings, it will take any type of object. 
 
 C & D Queue is a First in First out collection, it is not appropriate in this instance. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21128,6 +28719,24 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -21139,6 +28748,15 @@ and D.
 
 During XML Serialization by default the user type variables are mapped to XML elements. In the 
 case of answer C, the type itself has been mapped instead of the instance variable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21205,6 +28823,24 @@ int i = (int)m.Invoke(this, new object[] { 1 });
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -21216,6 +28852,15 @@ A & D the Invoke method requires the object that the method will fire upon if it
 method. myClass should have been passed. 
 
 C the getMethod() does not require the classname . 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21323,6 +28968,24 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -21330,6 +28993,15 @@ Explanation:
 A & C show title member in the XML. Title is a private member hence will not be serialized to XML. 
 
 D Shows multiple Invitees. There is only one object of type Invitees in the class definition. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21381,6 +29053,24 @@ File.SetAccessControl("CertKillerdata.xml", security);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -21392,6 +29082,15 @@ amended FileSecurity to the file.
 B does not preserve the existing access rules. It overwrites them. C does not apply the amended FileSecurity object back to the file. 
 
 D FileSecurity.SetAuditRuleProtection() is used for controlling audit rules not access rules. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21446,6 +29145,24 @@ return sync_ CertKilleral;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -21453,6 +29170,15 @@ Explanation:
 A & C the lock will be released when the method returns. 
 
 B Does not lock the arraylist but attempts to lock its type. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21527,6 +29253,24 @@ ar.Add(mod.FileName);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C Explanation: 
 
 Process.GetProcessesByName() should be used to return all the processes that match a process 
@@ -21537,6 +29281,15 @@ A & B GetProcesses() accepts a computer name for retrieving the processes on a r
 computer. GetProcessesByName() should be used to return processes by their name. 
 
 D the path of the process is not part of the process name. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21582,7 +29335,34 @@ Dim dict As MyDictionary = CType(t, MyDictionary)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21644,7 +29424,34 @@ Public Class UserImplements IUser
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21696,7 +29503,34 @@ End While
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21745,6 +29579,24 @@ New CultureInfo("zh-HK").NumberFormatReturn NumberToPrint.ToString("()", objCult
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -21755,6 +29607,15 @@ sign.
 A will give a minus sign for negative numbers but not for negative currencies. 
 
 C & D The culture has not been to display a minus sign for currency. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21802,6 +29663,24 @@ Dim hash() As Byte = objSHA.Hash
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -21814,6 +29693,15 @@ TransferEndBlock.
 
 B&C GetHashCode is the method inherited from the Object class. It will not perform a hash on the 
 incoming message. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21880,6 +29768,24 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -21889,6 +29795,15 @@ the event.
 
 B fax is not a delegate type. 
 C&D do not declare events. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21935,6 +29850,24 @@ System.ComponentModel.Component()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: Create a new ApplicationDomain using the AppDomain.CreateDomain() method. 
@@ -21945,6 +29878,15 @@ disabled.
 B the Process class is used to represent an existing process running on a computer. 
 
 D The ComponentModel.Component class is used for sharing components between applications. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21990,6 +29932,24 @@ D. Deny()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22002,6 +29962,15 @@ permissions explicitly stated and nothing else.
 Assert will ignore the permissions of callers and allow them indiscriminately. 
 
 Deny will explicitly deny access if the caller has the specified permission. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22079,6 +30048,24 @@ Private copies As IntegerEnd Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -22091,6 +30078,15 @@ form of an instance variable.
 A & C do not derive from EventArgs hence cannot fit into the event handling model. 
 
 D does not expose the copies instance variable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22144,6 +30140,24 @@ Dim asm As [Assembly] = domain.GetData("CertKillerAss25.dll")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22154,6 +30168,15 @@ B the Load method requires an AssemblyName object as a parameter.
 
 C it is not possible to use AppDomain.Load to load an assembly from file. D AppDomain.GetData gets information stored in the AppDomain for the specified assembly. It 
 cannot load an assembly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22202,6 +30225,24 @@ Dim reader As New StreamReader("Data.txt")result = reader.ReadLine()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -22213,6 +30254,15 @@ A & D does not read the entire file.
 
 C calling ToString() on the reader will give a string representation of the stream and will not read 
 from the stream. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22274,6 +30324,24 @@ Next
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22284,6 +30352,15 @@ returned collection and add the display name to Collection5.
 B The constructor is invoked incorrectly. 
 
 C & D the query is incorrect. The searcher does not restrict to paused services. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22332,6 +30409,24 @@ End Whilereader.Close()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -22343,6 +30438,15 @@ A ReadToEnd() will read the entire stream.
 B Read() will not read the line but only the next character. 
 
 C will not read from the message but will just give a string representation of the reader. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22404,6 +30508,24 @@ objUser.IsInRole(Environment.MachineName)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -22418,6 +30540,15 @@ C uses GenericPrincipal. WindowsPrincipal should be used for windows accounts. T
 invalid cast from WindowsPrincipal to GenericPrincipal. 
 
 D does not specify the group correctly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22468,6 +30599,24 @@ Dim hash() As ByteobjAlgo.TransformBlock(message, 0, message.Length, hash, 0)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22482,6 +30631,15 @@ message to be hashed.
 
 D TransferBlock is more appropriate for hashing part of a message. Also it should be called with 
 TransferEndBlock. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22538,6 +30696,24 @@ DateTime.Today.Month.ToString("es-MX")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22550,6 +30726,15 @@ B does not use the CultureInfo object to convert the date to a string.
 C does not use the Mexican Spanish culture. 
 
 D the DateTime.ToString() method cannot take a string code representation of the culture. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22601,6 +30786,24 @@ PrincipalPolicy.UnauthenticatedPrincipal)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -22615,6 +30818,15 @@ B SetThreadPrincipal() does not set the default policy for all new threads. Also
 is used instead of UnauthenticatedPrincipal. 
 
 C SetAppDomainPolicy is used to set the security policy level for the domain. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22659,6 +30871,24 @@ D. badqueue.Dequeue()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -22671,6 +30901,15 @@ roundabout.
 B attempts to re-queue items that are already in the queue 
 
 D will de-queue only one item that is at the front of the queue. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22722,6 +30961,24 @@ D. objPermission.PermitOnly()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22731,6 +30988,15 @@ CodeAccessPermission.ReverAssert() should be used to undo a previous Assert call
 B is used to revert a previous deny call. 
 
 C & D are used to reduce the CAS permissions, they do not undo a previous Assert call. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22791,6 +31057,24 @@ Dim myStream As New MemoryStream()formatter.Serialize(myStream, dept)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -22801,6 +31085,15 @@ A&C attempt to serialize components of the object rather the object itself.
 
 B attempts to serialize to an array, however the array will not be big enough to store the serialized 
 object because it is not sized on the entire object. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22854,6 +31147,24 @@ ByVal Caption As String, ByVal t As UInt32) As IntegerEnd Function
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A Explanation: 
 
 Mark the prototype with the Dllimport attribute specifying the library\dll that the function resides in. 
@@ -22862,6 +31173,15 @@ B creates a prototype for the MessageBoxA function not MessageBox .
 C it is not necessary to specify the physical path because user32.dll will be in the path 
 environment variable. Also it will not work with versions of windows (some may use 
 c:\winnt\system32) 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22913,6 +31233,24 @@ File.SetAccessControl("CertKillerData.xml", objSecurity)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -22926,6 +31264,15 @@ B does not preserve the existing access rules. It overwrites them.
 C does not apply the amended FileSecurity object back to the file. 
 
 D FileSecurity.SetAuditRuleProtection() is used for controlling audit rules not access rules. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22981,6 +31328,24 @@ End If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -22991,6 +31356,15 @@ the application.
 A an Assert will stop execution of the application in debug mode if the condition is not met. 
 
 C & D could be used but they execute in the release configurations 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23039,6 +31413,24 @@ D. Dim objRegion As New RegionInfo("")If objRegion.Name = "CA" Then
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -23049,6 +31441,15 @@ A & B CultureInfo is used to control formatting, sorting & comparing of culture 
 currencies, calendar dates etc. 
 
 D Does not initialise the RegionInfo object correctly i.e to Canada . 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23116,6 +31517,24 @@ Enc.GetBytes(Message.ToString)Client.Send(Bytes)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -23129,6 +31548,15 @@ B creates a MailMessage but then does not do anything with it.
 
 D tries to do something with sockets, this is unnecessary because there is a SMTP server 
 available. The question implies delivering the mail via SMTP. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23183,7 +31611,34 @@ DateTime.Today.Month.ToString("es-MX")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23239,6 +31694,24 @@ Dim result As String = objStream.ToString
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -23250,6 +31723,15 @@ A & C do not get the IsolatedStorageFile for the machine context.
 
 D returns a string representation of the IsolatedStorageFileStream object not a String of the files 
 contents as the question requests. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23327,7 +31809,34 @@ Dim message As Stringmessage = New StreamReader(cryptoStream).ReadToEnd
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23383,6 +31892,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -23393,6 +31920,15 @@ object during deserialization.
 
 C the OnDeserializing attribute is useful for default values. OnDeserializing attribute works with a 
 method that contains a StreamContext parameter and not a SerializationInfo parameter. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23444,6 +31980,24 @@ IsolatedStorageFile.GetUserStoreForApplicationobjStore.CreateDirectory("UserInfo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -23452,6 +32006,15 @@ The user store for the assembly is the correct store that is required. It is ret
 IsolatedStorageFile.GetUserStoreForAssembly(). 
 
 B,C & D return Isolated Storage File stores of incorrect scope 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23500,7 +32063,34 @@ Return FalseEnd If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23572,6 +32162,24 @@ cryptoStream.Write(message, 0, message.Length)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -23584,6 +32192,15 @@ A Uses a blocksize set to size of the entire message
 B creates a decryptor instead of an encryptor. 
 
 C does not initialise the encryptor with the key and iv correctly. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23643,6 +32260,24 @@ F. Add this of code between line 04 and line 05: crtl.ExecuteCommand(0)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B,E 
 
 Explanation: 
@@ -23658,6 +32293,15 @@ No such property as SiteName
 Continue cannot re-start a stopped service only a paused one. 
 
 ExecuteCommand is used to fire a custom command on the service. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23730,6 +32374,24 @@ End Sub
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -23741,6 +32403,15 @@ ParameterizedThreadStart delegate.
 A& B attempt to supply a parameter to the ThreadStart delegate. This is not possible. 
 
 C Does not run in a new thread and hence may leave the UI unresponsive. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23791,7 +32462,34 @@ Return FalseEnd If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23854,6 +32552,24 @@ Next
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
@@ -23864,6 +32580,15 @@ returned collection of processes adding the process name to the arraylist.
 A & C use GetProcessByName() and return processes on the current computer only. 
 
 B adds the entire process to the arraylist rather than just the process name. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23920,11 +32645,38 @@ Return sync_ CertKilleral
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
 
 Explanation: 
 
 A & C the lock will be released when the method returns. B Does not lock the arraylist but attempts to lock its type. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23976,6 +32728,24 @@ As Boolean
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -23985,6 +32755,15 @@ A & B the delegates do not accept an argument of type DateTime
 D The question does not explicitly mention a return type. Also with multicasting only the return 
 value of the last method called as part of a multicast chain is returned. Hence return values do not 
 tend to be very useful as far as multicasting is concerned. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24042,7 +32821,34 @@ SslProtocols.Tls, True)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24118,6 +32924,24 @@ End If
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -24130,6 +32954,15 @@ A & B GetProcesses() accepts a computer name for retrieving the processes on a r
 computer. GetProcessesByName() should be used to return processes by their name. 
 
 D the path of the process is not part of the process name. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24176,6 +33009,24 @@ bufStream.Write(dataToSend, 0, 8192)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -24186,6 +33037,15 @@ be created with the cache size of 8192 bytes.
 A & B do not employ caching. 
 
 D does not correctly initialise the BufferedStream to have a cache size of 8192 bytes. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24230,6 +33090,24 @@ D. Dim undoBuffer As New Queue()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -24240,6 +33118,15 @@ Generics you can force a strongly typed collection that takes strings only.
 B is not strongly typed for strings, it will take any type of object. 
 
 C & D Queue is a First in First out collection, it is not appropriate in this instance. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24289,6 +33176,24 @@ AppDomain.CurrentDomain.Evidence)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -24302,6 +33207,15 @@ B Adds assembly evidence, the question asks for host evidence because it is conc
 where the assembly was loaded from.# 
 
 D does not create an Evidence object with Intranet zone evidence. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24366,6 +33280,24 @@ WindowsIdentity.Impersonate(objToken)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -24380,6 +33312,15 @@ implementation of IIdentity.
 
 D the WindowsIdentity.Impersonate() is used for running code in the context of another user. 
 Impersonation is not what is required. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24443,7 +33384,34 @@ As BooleanEnd Function
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24494,6 +33462,24 @@ AssemblyBuilderAccess.Save)objBuilder.Save("c:\MyAssembly.dll")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -24506,6 +33492,15 @@ A Creates an assembly that does not have the privilege to save to disk.
 C does not provide a name the assembly 
 
 D attempts to define a physical file location, this is not compatible with AssemblyBuilder.Save 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24609,7 +33604,34 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24708,6 +33730,24 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -24719,6 +33759,15 @@ and D.
 
 During XML Serialization by default the user type variables are mapped to XML elements. In the 
 case of answer C, the type itself has been mapped instead of the instance variable. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24778,6 +33827,24 @@ Return outStream.ToArray
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C Explanation: 
 
 The document is compressed and written to a new MemoryStream using the Deflate class. Finally 
@@ -24788,6 +33855,15 @@ A does not compress and write the document, instead it is compressing and writin
 array 
 
 B & D are reading and writing to the same document. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24880,7 +33956,34 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24937,7 +34040,34 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24993,7 +34123,34 @@ D. Throw New CustomException("Argument is out of bounds")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: D 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25061,7 +34218,34 @@ D. Shift the loop code from the OnStart method into the Method1 method.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25129,7 +34313,34 @@ fullTrustStatement)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25196,6 +34407,24 @@ Dim g As Graphics = myForm.CreateGraphicsg.DrawRectangle(objPen, objRect)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -25205,6 +34434,15 @@ Create a LineGradientBrush and supply to the FillRectangle() method of the graph
 A DrawRectangle() will draw the outline of a rectangle without filling it. 
 
 C draws an unfilled Polygon.. D Uses a SolidBrush and will not achieve the desired gradient fill 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25259,6 +34497,24 @@ D. CertKillerstream5.Write(byteArray, 0, 100)bytesTransferred = byteArray.Length
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -25270,6 +34526,15 @@ B & D The question indicates that data should be read from the stream not writte
 
 C it is unnecessary to attempt to read byte by byte, the Read() method provides a very efficient 
 way of reading into a byte array. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25314,6 +34579,24 @@ D. Dim answers As New BitArray(-1)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -25322,6 +34605,15 @@ C & D BitVector32 is more efficient than a BitArray when 32 or less binary flags
 Primarily because it is a value type. 
 
 Note: we are not sure why B is preferred to A. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25398,6 +34690,24 @@ Next
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -25411,6 +34721,15 @@ and errors should be persisted.
 B features an incorrect test for warnings and errors. 
 
 D&B do not ensure that only MySource entries are persisted. Instead they overwrite the source. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25463,7 +34782,34 @@ End WhileReturn outStream.ToArray
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25539,6 +34885,24 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
 
 Explanation: 
@@ -25551,6 +34915,15 @@ A uses a constructor with Parameters.
 B uses static members that are not supported in COM 
 
 D the method GetAddress() must be public to be accessible by COM. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25599,6 +34972,24 @@ _CultureInfo.GetCultures(CultureTypes.ReplacementCultures)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: A 
 
 Explanation: 
@@ -25610,6 +35001,15 @@ B The CultureInfo object created is not associated with any cultures.
 C will yield only neutral cultures, they will not be specific to a country\region. 
 
 D Replacement cultures are user-defined custom cultures. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25693,7 +35093,34 @@ End Class
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: C 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25801,6 +35228,24 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -25808,6 +35253,15 @@ Explanation:
 A & C show title member in the XML. Title is a private member hence will not be serialized to XML. 
 
 D Shows multiple Invitees. There is only one object of type Invitees in the class definition. 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25875,6 +35329,24 @@ DirectCast(objInfo.Invoke(Me, objParams), Integer)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer: B 
 
 Explanation: 
@@ -25886,6 +35358,15 @@ A & D the Invoke method requires the object that the method will fire upon if it
 method. myClass should have been passed. 
 
 C the getMethod() does not require the classname . 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25941,6 +35422,24 @@ D. Add this code segment between lines 05 and 06 of the code segment:
 And 
 Add this code segment between lines 10 and 11 of the code segment: 
 <XmlElement(Type:=GetType(Manager))> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
