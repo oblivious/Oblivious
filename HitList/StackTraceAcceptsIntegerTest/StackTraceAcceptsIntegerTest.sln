@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackTraceAcceptsIntegerTest", "StackTraceAcceptsIntegerTest\StackTraceAcceptsIntegerTest.csproj", "{3147ACEA-A4CE-4003-934F-9FAD63887336}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3147ACEA-A4CE-4003-934F-9FAD63887336}.Debug|x86.ActiveCfg = Debug|x86
+		{3147ACEA-A4CE-4003-934F-9FAD63887336}.Debug|x86.Build.0 = Debug|x86
+		{3147ACEA-A4CE-4003-934F-9FAD63887336}.Release|x86.ActiveCfg = Release|x86
+		{3147ACEA-A4CE-4003-934F-9FAD63887336}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "How to Encrypt Xml Elements with Symmetric Keys", "How to Encrypt Xml Elements with Symmetric Keys\How to Encrypt Xml Elements with Symmetric Keys.csproj", "{A589B61F-9B1C-4AF1-BD9E-8A31BD9B45EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A589B61F-9B1C-4AF1-BD9E-8A31BD9B45EC}.Debug|x86.ActiveCfg = Debug|x86
+		{A589B61F-9B1C-4AF1-BD9E-8A31BD9B45EC}.Debug|x86.Build.0 = Debug|x86
+		{A589B61F-9B1C-4AF1-BD9E-8A31BD9B45EC}.Release|x86.ActiveCfg = Release|x86
+		{A589B61F-9B1C-4AF1-BD9E-8A31BD9B45EC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
