@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9A08C4DA-2CAB-4385-8023-5EE0457073AD}</ProjectGuid>
+    <ProjectGuid>{D0CDE9DF-1D74-4A52-ACA5-536199F36074}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EventLogExamples</RootNamespace>
-    <AssemblyName>EventLogExamples</AssemblyName>
+    <RootNamespace>GetValueOrDefaultTest</RootNamespace>
+    <AssemblyName>GetValueOrDefaultTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateEventSourceSample1.cs" />
-    <Compile Include="EventLogClassTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

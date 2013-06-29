@@ -7,6 +7,7 @@ namespace _70536_Exam_Questions
     {
         static void Main(string[] args)
         {
+            ConfigureConsoleWindow();
             Console.Write("Enter question number: ");
             var input = Console.ReadLine();
 
@@ -41,10 +42,18 @@ namespace _70536_Exam_Questions
             {
                 methodInfo.Invoke(null, null);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Exception thrown while attempting to execute the \"Run()\" method on class Q" + input + ".");
+                Console.WriteLine("Exception thrown while attempting to execute the \"Run()\" method on class Q" + input + ". Exception: " + e.ToString());
             }
+        }
+
+        static void ConfigureConsoleWindow()
+        {
+            Console.WindowWidth = 150;
+            Console.WindowHeight = 36;
+            Console.BufferWidth = 150;
+            Console.BufferHeight = 1000;
         }
     }
 }
