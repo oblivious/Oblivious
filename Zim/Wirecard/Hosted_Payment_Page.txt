@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-07-10T16:26:37+01:00
+
+====== Hosted Payment Page ======
+Created Wednesday 10 July 2013
+
+Utilizes the same message format as decribed in Rest API but with additional security enhancements. Custom Wirecard payment interface?
+
+Messages have the following attributes:
+* **Payment request message as previously described.**
+* **Digitally signed with XML signature.**
+* **Base64 encoded.**
+

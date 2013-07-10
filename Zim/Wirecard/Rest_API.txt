@@ -1,0 +1,125 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-07-10T10:45:27+01:00
+
+====== Rest API ======
+Created Wednesday 10 July 2013
+
+**Formats**
+Request format can be XML or NVP
+Response format can be XML, JSON or NVP
+//Change the format extension to a request or set the HTTP Accept header to set the format//
+
+**GET - **To retrieve data
+**POST** - Submit data
+//HTTP Response Codes are meaningful//
+
+* Everything should be UTF-8 and URL encoded.
+* Basic Authentication.
+
+=== CardSecurity - Tokenization ===
+All card numbers can be tokenized, even if they fail. These can be used for tokenized transactions.
+
+=== Create a Payment ===
+Attempt to create a transaction... POST
+
+== Elements ==
+Mandatory:
+* **merchant-account-id** - Merchant account unique identifier.
+* **merchant-account-id/@ref** - URL referring to Merchant account for browser use. //Response Only.//
+* **transaction-id** - Unique identifier assigned for every Transaction. //Response Only.//
+* **request-id** - ezetop ID. //Request.//
+* **transaction-type** - //Authorization, Capture, Credit, Purchase, Refund, Void Authorization, Void Capture, Void Credit, Void Purchase.//
+* **transaction-state **- Current status of transaction. //In-Progress, Success, Failed.//
+* **completion-time-stamp **- Self explanatory.
+	* **statuses/status/@code** - Response code.
+			**status/@description**
+			**status/@severity**
+* **requested-amount**
+* **requested-amount/@currency**
+	* **card/account-number** - Card number or token
+	* **card/expiration-month**
+	* **card/expiration/year**
+	* **card/card-security-code**
+	* **card-token/token-id**
+	* **card-token/masked-account-number**
+* **bank-account/iban**
+* **bank-account/bic**
+* **@self** - Reference URL to the payment for browser use.
+There are many, many other optional fields, these are pretty much all the mandatory ones.
+
+=== Custom fields ===
+You can store and retrieve key value pairs with each transaction, if you really, really want. Will display in the reporting tool.
+
+=== Instant Payment Notifications ===
+Built in payment notifications. HTTPS SMTP
+
+=== Query by Transaction ID ===
+POST or GET?
+* **merchant-account-id**
+* **transaction-id**
+
+=== Query by Request ID ===
+POST or GET?
+* **merchant-account-id**
+* **request-id**
+
+=== Tokenize Credit Card ===
+* **card/account-number**
+Other fields are also required, specifying to credit card details: name; address; card number; expiration details; etc.
+
+=== Detokenize Credit Card ===
+* **card-token/token-id**
+Inverse of tokenize credit card.
+
+=== Card Token Additional Data ===
+Provide additional fields alongside the card token. Expiration month, year ; card security code; first and last names.
+
+===== 3-D Secure =====
+Visa and Mastercard
+
+=== Merchant Plug-In or 3rd Party MPI ===
+Interface between merchant and Visa or Mastercard
+
+{{./pasted_image.png}}
+
+=== 3D Secure Process Flow ===
+{{./pasted_image001.png}}
+
+=== Check Enrollment ===
+Check if a card is enrolled in the 3D Secure program.
+
+=== 3D Secure Specific Response Fields ===
+* **three-d/pareq**
+* **three-d/acs-url**
+
+=== ACS HTTPS Redirect ===
+Access Control Server interaction must be vai SSL-encrypted POST. There is no direct interaction with Wirecard during this.
+
+== Elements ==
+* **PAReq **- string - 16000 chars max - Payment Authentication Request
+* **TermURL** - string - 100 chars max - Defines the web addressof the merchant site to which the issuer returns the Payment Authentication Response (**PARes**)message
+* **MD **- string - 256 chars max
+
+If the customer is not enrolled in 3D secure skip the redirect.
+The POST message includes the web address of the ACS and the inputs above as 'hidden'.
+
+=== ACS Redirect to TERM-URL ===
+The cardholders browser is redirected to the address specified in TermURL with the encrypted details of the response.
+
+=== Check Payer Response ===
+**PARes** is a digitally signed XML document which has to be forwarded to the payment gateway for validation using the Check Payer Response.
+* **three-d/pares**
+
+=== Payment Request with PARes ===
+When we've used 3D Secure and have the PARes value.
+* **parent-transaction-id**
+* **three-d/pares**
+
+=== Payment Request with 3rd Party MPI ===
+When the merchant uses an external MPI in conjunction with Wirecard's payment gateway to the acquiring network.
+* **three-d/eci**
+* **three-d/xid**
+* **three-d/cardholder-authentication-value**
+
+

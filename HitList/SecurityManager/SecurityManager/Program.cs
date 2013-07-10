@@ -14,7 +14,7 @@ class SecurityManagerSample
 {
     static void Main()
     {
-        // Gets a value indicating whether code must have execution rights in order to execute. 
+        // Gets a value indicating whether code must have execution rights in order to execute.
         if(!SecurityManager.CheckExecutionRights)
             Console.WriteLine("Execution rights are not required to run the assemblies.");
         // Gets a value indicating whether code access security is enabled. 
