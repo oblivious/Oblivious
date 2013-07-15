@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Configuration.Install;
+using System.ComponentModel;
 
 namespace fabianse70536
 {
+    //[RunInstaller(true)]
     class MyInstaller : Installer 
     {
         public MyInstaller() : base()

@@ -1,6 +1,9 @@
-C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe.config
+D:\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe.config
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.exe
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.pdb
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\fullmoon.jpg
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\SimpleTextFile.txt
+C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe.config
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.pdb
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\ResolveAssemblyReference.cache
@@ -10,6 +13,3 @@ C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.read.1.tlog
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.write.1.tlog
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.exe
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.pdb
-D:\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe.config
-D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.exe
-D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.pdb

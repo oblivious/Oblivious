@@ -353,13 +353,16 @@ namespace fabianse70536.Forms
 
         private void myCallback(object o)
         {
-            Console.WriteLine("run in custom ExecutionContex. State Object: "+ (string)o);
+            ExecutionContext ec = ExecutionContext.Capture();
+            Console.WriteLine("In callback \"myCallback\" with execution context hashcode {0}", ec.GetHashCode());
+            Console.WriteLine("Run in custom ExecutionContext. State Object: "+ (string)o);
         }
 
         private void btnContextCallback_Click(object sender, EventArgs e)
         {
             // get current context
             ExecutionContext ec = ExecutionContext.Capture();
+            Console.WriteLine("In main method with execution context hashcode {0}", ec.GetHashCode());
             // prepare to execute a callback with an specified context
             ExecutionContext.Run(ec, new ContextCallback(myCallback), "state object!");
         }
@@ -429,9 +432,11 @@ namespace fabianse70536.Forms
             MessageBox.Show("Counter result = " + countForInterlocked);
         }
 
-        private void simpleIncrementWithMonitor()
+        private void simpleIncrementWithMonitor(object o)
         {
+            int i = (int)o;
             Monitor.Enter(this);
+            Console.WriteLine("Thread #{0} entering simpleIncrementWithMonitor", i);
             try
             {
                 Random r = new Random();
@@ -443,6 +448,7 @@ namespace fabianse70536.Forms
             }
             finally
             {
+                Console.WriteLine("Thread #{0} exiting simpleIncrementWithMonitor", i);
                 Monitor.Exit(this);
             }
         }
@@ -450,16 +456,17 @@ namespace fabianse70536.Forms
 
         private void btnMonitorClass_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Start: {0}", DateTime.Now);
             // reinit the counter
             countForInterlocked = 0;
 
             Thread[] threads = new Thread[10];
             // call increment method which uses Monitor
-            ThreadStart ts1 = new ThreadStart(simpleIncrementWithMonitor);
+            var ts1 = new ParameterizedThreadStart(simpleIncrementWithMonitor);
             for (int t = 0; t < 10; t++)
             {
                 threads[t] = new Thread(ts1);
-                threads[t].Start();
+                threads[t].Start(t);
             }
 
             // wait for each thread to finish
@@ -467,6 +474,7 @@ namespace fabianse70536.Forms
             {
                 threads[t].Join();
             }
+            Console.WriteLine("Stop: {0}", DateTime.Now);
 
             MessageBox.Show("Counter result = " + countForInterlocked);
 
@@ -528,15 +536,20 @@ namespace fabianse70536.Forms
         private void btnMutex_Click(object sender, EventArgs e)
         {
             // Method 1
+            Console.WriteLine("Creating Mutex: Mutex m = new Mutex();");
             Mutex m = new Mutex();
             if (m.WaitOne(400, false))
             {
                 try
                 {
+                    Console.WriteLine("The OS gods have seen fit to bestow upon this humble .Net application access to the Mutex " + 
+                        "that we just created, all hail the OS gods!");
                     Console.WriteLine("This line of code runs threadsafe due to Mutex class.");
                 }
                 finally
                 {
+                    Console.WriteLine("We release this mutex back to the ether from whence it came so that it might bestow its " +
+                        "light upon us again in the future. Farewell, gentle mutex, you served us well!");
                     m.ReleaseMutex();
                 }
             }
@@ -546,17 +559,22 @@ namespace fabianse70536.Forms
             }
 
             // Method 2 - using a named Mutex
+            Console.WriteLine("Declaring a reference to a Mutex: Mutex m2 = null;");
             Mutex m2 = null;
             try
             {
+                Console.WriteLine("Trying m2 = Mutex.OpenExisting(\"NamedMutex\")");
                 m2 = Mutex.OpenExisting("NamedMutex");
+                Console.WriteLine("Successfully opened named mutex \"NamedMutex\"");
             }
             catch (WaitHandleCannotBeOpenedException)
             {
+                Console.WriteLine("Failed to open named mutex \"NamedMutex\"");
                 // Mutex doesn't previously exists
             }
             if (m2 == null)
             {
+                Console.WriteLine("Creating named mutex \"NamedMutex\" as it did not previously exist");
                 m2 = new Mutex(false, "NamedMutex");
             }
 
@@ -564,10 +582,14 @@ namespace fabianse70536.Forms
             {
                 try
                 {
+                    Console.WriteLine("The OS gods have seen fit to bestow upon this humble .Net application access to the named " + 
+                        "Mutex \"NamedMutex\", all hail the OS gods!");
                     Console.WriteLine("This line of code runs threadsafe due to Mutex class / named.");
                 }
                 finally
                 {
+                    Console.WriteLine("We release this mutex back to the ether from whence it came so that it might bestow its " +
+                        "light upon us again in the future. Farewell, gentle mutex, you served us well!");
                     m2.ReleaseMutex();
                 }
             }
@@ -725,7 +747,26 @@ namespace fabianse70536.Forms
 
         private void myMethod(object o)
         {
-            Console.WriteLine("myMethod fired! ManagedThreadId = " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("myMethod fired!\nRunning on thread with id = \"{0}\" and value received \"{1}\"",
+                Thread.CurrentThread.ManagedThreadId, (string)o);
+        }
+
+        private void RunOtherThreadToSyncWith(object state)
+        {
+            int id = Thread.CurrentThread.ManagedThreadId;
+
+            Console.WriteLine("In the other thread, id: {0}", id);
+
+            SynchronizationContext sc = (SynchronizationContext)state;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(100);
+
+                Console.WriteLine("\"Post\" to myMethod by other thread of \"line {0}\"", i);
+                sc.Post(myMethod, String.Format("line {0} from thread {1}", i, id));
+            }
+
         }
 
         private void btnSynchronizationContext_Click(object sender, EventArgs e)
@@ -733,61 +774,83 @@ namespace fabianse70536.Forms
             // fork or not depending on context. 
             SynchronizationContext sc = SynchronizationContext.Current;
 
+            int id = Thread.CurrentThread.ManagedThreadId;
+
+            Console.WriteLine("\nIn the main thread, id: {0}", id);
+
+            Thread thread = new Thread(RunOtherThreadToSyncWith);
+            thread.Start(sc);
+
+            Thread.Sleep(200);
+
             // Send
-            Console.WriteLine("Before  sc.Send line. ManagedThreadId = " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Before  sc.Send line. ManagedThreadId = " + id);
             sc.Send(myMethod, "some state");
-            Console.WriteLine("After  sc.Send line. ManagedThreadId = " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("After  sc.Send line. ManagedThreadId = " + id);
 
             // Post
-            Console.WriteLine("Before  sc.Post line. ManagedThreadId = " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Before  sc.Post line. ManagedThreadId = " + id);
             sc.Post(myMethod, "some state");
-            Console.WriteLine("After  sc.Post line. ManagedThreadId = " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("After  sc.Post line. ManagedThreadId = " + id);
 
         }
 
 
         private void myTimerCallbackMethod(object myState)
         {
-            Console.WriteLine("myTimerCallbackMethod fired! "); 
+            Console.WriteLine("myTimerCallbackMethod fired! myState={0}", ((MyState)myState).Time); 
         }
 
         private void btnTimerCallbackClass_Click(object sender, EventArgs e)
         {
-            DateTime myState = DateTime.Now;
+            MyState myState = new MyState
+            {
+                Time = DateTime.Now
+            };
             Console.WriteLine("Create timer.");
             System.Threading.Timer t =
                 new System.Threading.Timer(new TimerCallback(myTimerCallbackMethod), myState, 500, 500);
 
-            Thread.Sleep(1500);
+            for (int i = 0; i < 10; i++)
+            {
+                myState.Time = DateTime.Now;
+                Thread.Sleep(500);
+            }
             t.Dispose();
             Console.WriteLine("Timer disposed.");
         }
 
+        private class MyState
+        {
+            public DateTime Time { get; set; }
+        }
+
         private void showAppDomainProperties(AppDomain ad)
         {
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "AppDomain.CurrentDomain";
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "-----------------------";
-            txtAppDomain.Text += "FriendlyName = " +ad.FriendlyName;
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "Id = " + ad.Id;
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "ShadowCopyFiles = " + ad.ShadowCopyFiles;
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "RelativeSearchPath = " + ad.RelativeSearchPath;
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += "BaseDirectory = " + ad.BaseDirectory;
-            txtAppDomain.Text += Environment.NewLine;
+            StringBuilder sbAppDomainText = new StringBuilder(txtAppDomain.Text);
+
+            sbAppDomainText.AppendLine("AppDomain.CurrentDomain");
+            sbAppDomainText.AppendLine("-----------------------");
+            sbAppDomainText.AppendLine("FriendlyName = " +ad.FriendlyName);
+            sbAppDomainText.AppendLine("Id = " + ad.Id);
+            sbAppDomainText.AppendLine("ShadowCopyFiles = " + ad.ShadowCopyFiles);
+            sbAppDomainText.AppendLine("RelativeSearchPath = " + ad.RelativeSearchPath);
+            sbAppDomainText.AppendLine("BaseDirectory = " + ad.BaseDirectory);
+            sbAppDomainText.AppendLine();
+
+            txtAppDomain.Text = sbAppDomainText.ToString();
         }
 
         private void btnAppDomainClass_Click(object sender, EventArgs e)
         {
-            txtAppDomain.Text = "";
+            StringBuilder sbAppDomainText;
             showAppDomainProperties(AppDomain.CurrentDomain);
 
-            txtAppDomain.Text += Environment.NewLine;
-            txtAppDomain.Text += Environment.NewLine;
+            sbAppDomainText = new StringBuilder(txtAppDomain.Text);
+
+            sbAppDomainText.Append("\r\n");
+
+            txtAppDomain.Text = sbAppDomainText.ToString();
 
             AppDomain ad = AppDomain.CreateDomain("myAppDomain");
             showAppDomainProperties(ad);
@@ -807,7 +870,7 @@ namespace fabianse70536.Forms
             object[] hostEvidence = { new Zone(SecurityZone.MyComputer) };
             Evidence localEvidence = new Evidence(hostEvidence, null);
             // load assembly - enter a valid path of a valid assembly you want to execute
-            ad.ExecuteAssembly(@"c:\temp\fabianse70536.exe", localEvidence);
+            ad.ExecuteAssembly(@"c:\temp\70536\fabianse70536.exe", localEvidence);
 
             // unload
             AppDomain.Unload(ad);
@@ -821,7 +884,7 @@ namespace fabianse70536.Forms
             // THIS WILL FAIL DUE TO LACK OF EXECUTE PERMISSION FOR Internet Zone!!!
             try
             {
-                ad2.ExecuteAssembly(@"c:\temp\fabianse70536.exe");
+                ad2.ExecuteAssembly(@"c:\temp\70536\fabianse70536.exe");
             }
             catch (SecurityException es)
             {
@@ -838,7 +901,7 @@ namespace fabianse70536.Forms
         {
             AppDomainSetup appDomainSetup = new AppDomainSetup();
             // ensure that folder exists in your filesystem
-            appDomainSetup.ApplicationBase = @"c:\temp";
+            appDomainSetup.ApplicationBase = @"c:\temp\70536";
             appDomainSetup.DisallowBindingRedirects = false;
             appDomainSetup.DisallowCodeDownload = true;
             appDomainSetup.DisallowPublisherPolicy = true;
@@ -846,7 +909,7 @@ namespace fabianse70536.Forms
             appDomainSetup.ConfigurationFile = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
 
             AppDomain ad = AppDomain.CreateDomain("myAppDomain", null, appDomainSetup);
-            ad.ExecuteAssembly(@"c:\temp\fabianse70536.exe");
+            ad.ExecuteAssembly(@"c:\temp\70536\fabianse70536.exe");
             AppDomain.Unload(ad);
 
 
@@ -977,7 +1040,13 @@ namespace fabianse70536.Forms
             // read
             MyConfigurationSection mc = (MyConfigurationSection)c.Sections["MySection"];
             MessageBox.Show("Name = " + mc.Name );
-            
+
+
+            ConfigurationSectionGroupCollection groupCollection = c.SectionGroups;
+            foreach(ConfigurationSectionGroup sg in groupCollection)
+            {
+                Console.WriteLine("SectionGroup.Name={0}, SectionGroup.SectionGroupName={1}", sg.Name, sg.SectionGroupName);
+            }
         }
 
         private void btnEventLogClass_Click(object sender, EventArgs e)
@@ -1095,7 +1164,7 @@ namespace fabianse70536.Forms
             t = t + 1;
             // after you fail, try thinking what will happend if you uncomment next line
             // so you can fail a second time, but in a brand new fashion
-            // Debugger.Break();
+            Debugger.Break();
 
             // see remaining attributes
         }
@@ -1104,8 +1173,8 @@ namespace fabianse70536.Forms
         {
             TraceSource ts = new TraceSource("MyTraceSource");
             // What happens if we uncomment this lines
-            //ts.Switch.ShouldTrace(TraceEventType.Information);
-            //ts.Switch.Level = SourceLevels.Information;
+            ts.Switch.ShouldTrace(TraceEventType.Information);
+            ts.Switch.Level = SourceLevels.Information;
             ts.TraceInformation("TraceInformation output");
         }
 
@@ -1113,6 +1182,7 @@ namespace fabianse70536.Forms
         {
             Trace.Listeners.Clear();
             TextWriterTraceListener tw = new TextWriterTraceListener("TextWriterTraceListener.log");
+            Trace.Listeners.Add(tw);
             Trace.AutoFlush = true;
             Trace.WriteLine("testing TextWriterTraceListener.");
         }
@@ -1200,27 +1270,45 @@ namespace fabianse70536.Forms
             }
         }
 
+        ManagementEventWatcher watcher;
+
         private void btnManagementEventWatcherClass_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("ManagementEventWatcher on thread " + Thread.CurrentThread.ManagedThreadId);
             // Create event query to be notified within 1 second of 
             // a change in a service
             WqlEventQuery query =
                 new WqlEventQuery("__InstanceCreationEvent",
                 new TimeSpan(0, 0, 1), "TargetInstance isa \"Win32_Process\"");
 
-            ManagementEventWatcher watcher = new ManagementEventWatcher();
+            watcher = new ManagementEventWatcher();
             watcher.Query = query;
             watcher.Options.Timeout = new TimeSpan(0, 0, 25);
+            watcher.EventArrived += watcher_EventArrived;
 
-            MessageBox.Show("Close these and open a notepad to trigger an event.");
-            ManagementBaseObject mbo = watcher.WaitForNextEvent();
+            MessageBox.Show("Close these and open a notepad to trigger an event." + 
+                "\n This thread will now sleep for 25 seconds before stopping listening for events.");
+            //ManagementBaseObject mbo = watcher.WaitForNextEvent();
+            watcher.Start();
 
+            ThreadPool.QueueUserWorkItem(stopTheWatcher);
+        }
+
+        private void stopTheWatcher(object context)
+        {
+            Console.WriteLine("stopTheWatcher on thread " + Thread.CurrentThread.ManagedThreadId);
+            Thread.Sleep(25000);
+            watcher.Stop();
+        }
+
+        private void watcher_EventArrived(object sender, EventArrivedEventArgs e)
+        {
+            Console.WriteLine("watcher_EventArrived on thread " + Thread.CurrentThread.ManagedThreadId);
+            ManagementBaseObject mbo = e.NewEvent;
             txtInstrumentation.Text += Environment.NewLine + "--- --- --- --- --- --- --- --- --- --- ";
-            txtInstrumentation.Text += Environment.NewLine 
+            txtInstrumentation.Text += Environment.NewLine
                  + "Name = " + ((ManagementBaseObject)mbo["TargetInstance"])["Name"]
                  + " ; ExecutablePath = " + ((ManagementBaseObject)mbo["TargetInstance"])["ExecutablePath"];
-
-            watcher.Stop();
         }
 
         [FileIOPermission(SecurityAction.Demand , Write=@"c:\windows\system")]
@@ -2900,6 +2988,5 @@ namespace fabianse70536.Forms
         {
             //TODO: implement ISerializable
         }
-
     }
 }

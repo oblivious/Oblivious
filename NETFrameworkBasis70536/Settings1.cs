@@ -1,4 +1,5 @@
-﻿namespace fabianse70536 {
+﻿using System.Windows.Forms;
+namespace fabianse70536 {
     
     
     // This class allows you to handle specific events on the settings class:
@@ -11,17 +12,19 @@
         public Settings1() {
             // // To add event handlers for saving and changing settings, uncomment the lines below:
             //
-            // this.SettingChanging += this.SettingChangingEventHandler;
+            this.SettingChanging += this.SettingChangingEventHandler;
             //
-            // this.SettingsSaving += this.SettingsSavingEventHandler;
+            this.SettingsSaving += this.SettingsSavingEventHandler;
             //
         }
         
         private void SettingChangingEventHandler(object sender, System.Configuration.SettingChangingEventArgs e) {
+            MessageBox.Show("Settings1 has changed");
             // Add code to handle the SettingChangingEvent event here.
         }
         
         private void SettingsSavingEventHandler(object sender, System.ComponentModel.CancelEventArgs e) {
+            MessageBox.Show("Settings1 has been saved");
             // Add code to handle the SettingsSaving event here.
         }
     }
