@@ -157,24 +157,29 @@ namespace fabianse70536.Forms
 
         private void btnFontClass_Click(object sender, EventArgs e)
         {
-            Bitmap bm = new Bitmap(500, 500);
+            Bitmap bm = new Bitmap(600, 200);
             Graphics g = Graphics.FromImage(bm);
+            g.CompositingMode = CompositingMode.SourceOver;
+            g.CompositingQuality = CompositingQuality.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.SmoothingMode = SmoothingMode.HighQuality;
+
             pictureBoxImage1.BackgroundImage = bm;
 
             // simple way to create a font
-            Font f = new Font("Times New Roman", 14, FontStyle.Italic);
+            Font f = new Font("Times New Roman", 24, FontStyle.Italic);
 
-            g.DrawString("create font with new", f, Brushes.Blue, 200, 10);
+            g.DrawString("create font with new", f, Brushes.Blue, 200, 10, StringFormat.GenericTypographic);
 
             // creating font from string
             FontConverter converter = new FontConverter();
-            Font f2 = (Font)converter.ConvertFromString("Arial; 14pt");
+            Font f2 = (Font)converter.ConvertFromString("Arial, 24pt");
 
             g.DrawString("create font from string", f2, Brushes.Red, 200, 60);
 
             // create from font family
             FontFamily ff = new FontFamily("Arial");
-            Font f3 = new Font(ff, 14);
+            Font f3 = new Font(ff, 24);
 
             g.DrawString("create font from font family", f3, Brushes.Green, 200, 110);
 
@@ -1918,7 +1923,7 @@ namespace fabianse70536.Forms
         private void btnCultureAndRegionInfoBuilderClass_Click(object sender, EventArgs e)
         {
             // what did we have to do to avoid the not defined/ArgumentException message?
-            CultureAndRegionInfoBuilder b = new CultureAndRegionInfoBuilder("en-US-C#", CultureAndRegionModifiers.None);
+            CultureAndRegionInfoBuilder b = new CultureAndRegionInfoBuilder("en-CS", CultureAndRegionModifiers.None);
             b.RegionNativeName = "sqr(C++)";
             //TODO: expand example
         }
@@ -1929,7 +1934,7 @@ namespace fabianse70536.Forms
 
             Stopwatch w = new Stopwatch();
             w.Start();
-            for (Int16 t = 0; t < 10000; t++)
+            for (UInt16 t = 0; t < 65000; t++)
             {
                 string s = "";
                 s += " ";
@@ -1939,7 +1944,7 @@ namespace fabianse70536.Forms
 
             w.Reset();
             w.Start();
-            for (Int32 t = 0; t < 10000; t++)
+            for (UInt32 t = 0; t < 65000; t++)
             {
                 string s = "";
                 s += " ";
@@ -1949,7 +1954,7 @@ namespace fabianse70536.Forms
 
             w.Reset();
             w.Start();
-            for (Int64 t = 0; t < 10000; t++)
+            for (UInt64 t = 0; t < 65000; t++)
             {
                 string s = "";
                 s += " ";

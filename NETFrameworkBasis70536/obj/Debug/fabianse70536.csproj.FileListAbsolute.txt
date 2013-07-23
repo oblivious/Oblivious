@@ -13,3 +13,12 @@ C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.read.1.tlog
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.write.1.tlog
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.exe
 C:\Users\dobyrne\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.pdb
+D:\Oblivious\NETFrameworkBasis70536\bin\Debug\fullmoon.jpg
+D:\Oblivious\NETFrameworkBasis70536\bin\Debug\SimpleTextFile.txt
+D:\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.exe
+D:\Oblivious\NETFrameworkBasis70536\bin\Debug\fabianse70536.pdb
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\ResolveAssemblyReference.cache
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.Forms.frmFabianseMain.resources
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\fabianse70536.Properties.Resources.resources
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.read.1.tlog
+D:\Oblivious\NETFrameworkBasis70536\obj\Debug\ResGen.write.1.tlog
