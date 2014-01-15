@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteTemplate.master" AutoEventWireup="true" CodeFile="SecondaryTemplate.master.cs" Inherits="SecondaryTemplate" %>
+
+<asp:Content ID="headContent" ContentPlaceHolderID="head" Runat="Server">
+	<asp:ContentPlaceHolder runat="server" ID="head" />
+</asp:Content>
+<asp:Content ID="mainContent" ContentPlaceHolderID="mainContentPlaceholder" Runat="Server">
+	<fieldset>
+		<legend>This is a nested master page with content</legend>
+		<asp:ContentPlaceHolder runat="server" ID="mainContentPlaceHolder"></asp:ContentPlaceHolder>
+	</fieldset>
+</asp:Content>
+

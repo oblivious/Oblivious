@@ -1,0 +1,209 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-04T11:57:03+00:00
+
+====== OAuth Notes ======
+Created Wednesday 04 December 2013
+
+Check authentication on each request. Bypass the login screen if authenticated.
+
+
+
+
+
+
+
+
+**********************OLD******************************
+
+1. Get a consumer key and consumer secret (done).
+2. Get a request token. Callback parameter must be the string oob or a url that points bavck to the domain that you registered with Yahoo when you obtained the consumer key in step 1. A successful response will contain a request token, a request token_secret and, in Yahoo's case, an xoauth_request_auth_url (which needs to be cut and pasted into a browser).
+3. Authenticate the user and get the user authorization for your application. After you login you will receive a short string called an "oauth verifier". If you used 'oob' as the callback in step 2, then a web page with the oauth verifier will be shown to the user. Copy this value down and insert it in the script in step 4. If you are writing a web application, your callbck url will be invoked with oauth_verifier as one of the parameters (couldn't find this in my fiddler sessions).
+4. Requires consumer key and secret, request token and secret, oauth_verifier. Outputs access_token, access_token_secret, session_handle, also xoauth_yahoo_guid (a unique identifier for the yahoo user).
+5. If an access token has expired it can be refreshed. Inputs: access token, access token secret and session handle. Outputs: new access token and access token secret.
+
+**On Session State**
+Forget session state, it just complicates things. Detect the cookie and if they have it, display the form automatically. Display the login button always... and if there are issues...
+
+Find out if there's a way of confirming with Yahoo that a user is logged in.
+
+//Generate the signature yourself to see if you can figure out where it's going wrong?//
+
+**Samples WebForms Fiddler**
+No worker process traffic was captured, which is why there were only a few requests.
+
+**OpenIdRelyingParty (local)**
+1. Simple GET of the initial page...
+2. POST to http://localhost:9404 Referer: http://localhost:9404/. Cookie includes session ID, various others including ezetopYahooVerify (which seems to be sent to all localhost requests on my machine lately). Presumably this is the login button being hit.
+3. (GET) w3wp calls out to yahoo.com with a user agent of "DotNetOpenAuth/3.4.0.10015". They respond with a 301 redirect to http://www.yahoo.com/.
+4. (GET) http://www.yahoo.com/ provides an X-RDS-Location header with a value of http://open.login.yahooapis.com/openid20/www.yahoo.com/xrds (nested responses).
+5. (GET) w3wp calls the location header and receives an XML response containing a number of XRD Service types and a uri https://open.login.yahooapis.com/openid/op/auth.
+6. (POST) to the auth uri, User-Agent DotNetOpenAuth/3.4, the following key value pairs:
+	a. openid.assoc_type=HMAC-SHA256
+	b. openid.session_type=no-encryption
+	c. openid.mode=associate
+	d. openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+7. The response contains the following:
+	a. ns:http://specs.openid.net/auth/2.0
+	b. assoc_handle:jXAE87kK9jXdh05D9XXCQkg_v9eMT2sUNFg37ik_QjE__sBHaU8A3fisM90jW4weFjYWtkJ9Rk0Qampv_8Ez9miWIbXWBS5jSnThhDugoeyFuQR.bWMgT16WWYDfDSWv5fQo9g--
+	c. session_type:no-encryption
+	d. assoc_type:HMAC-SHA256
+	e. expires_in:14400
+	f. mac_key:Q5ZcZyqTGX+YhnQ9xFbpdt+IqExlFndclaoUnieNh+U=
+
+This all occurs when RelyingParty.CreateRequest is called... fetches the request token (assoc_handle I guess) and uses it in the request to Yahoo
+
+9. Still https (GET) with a long URL, this is from the browser and is the start of the redirect to yahoo
+	a. https://open.login.yahooapis.com/openid/op/auth
+		?openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select
+		&openid.identity=http://specs.openid.net/auth/2.0/identifier_select
+		&openid.assoc_handle=jXAE87kK9jXdh05D9XXCQkg_v9eMT2sUNFg37ik_QjE__sBHaU8A3fisM90jW4weFjYWtkJ9Rk0Qampv_8Ez9miWIbXWBS5jSnThhDugoeyFuQR.bWMgT16WWYDfDSWv5fQo9g--
+		&openid.return_to=http://localhost:9404/default.aspx?dnoa.userSuppliedIdentifier=yahoo.com
+		&openid.realm=http://localhost:9404/default.aspx
+		&openid.mode=checkid_setup
+		&openid.ns=http://specs.openid.net/auth/2.0
+		&openid.ns.alias3=http://specs.openid.net/extensions/oauth/1.0
+		&openid.alias3.consumer=dj0yJmk9NHNIa29YZGFqUWF1JmQ9WVdrOVRrMVBhbHAzTlRBbWNHbzlNelF3TURVMk5UWXkmcz1jb25zdW1lcnNlY3JldCZ4PTQ0
+		&openid.alias3.scope=
+		&openid.ns.alias4=http://openid.net/srv/ax/1.0
+		&openid.alias4.required=alias1,alias2,alias3
+		&openid.alias4.mode=fetch_request
+		&openid.alias4.type.alias1=http://axschema.org/contact/email
+		&openid.alias4.count.alias1=1
+		&openid.alias4.type.alias2=http://axschema.org/namePerson
+		&openid.alias4.count.alias2=1
+		&openid.alias4.type.alias3=http://axschema.org/pref/language
+		&openid.alias4.count.alias3=1
+10. Yahoo respond with a Location header with a url: 
+		https://open.login.yahoo.com/openid/op/start?z=grGJ9olVvzGMGJrEjRXaUISxau1L55Tt.j9.a0Q2N_AWt_84MDV0Lcsi1_CB3FKtRVw7D2xO6aq9tOL1ZIG9FVk8j
+		IyHviH9unBMsEzYhRfUtciaH6Z7BRuSri9tsWBZq3d2bkp4FbDI.SxXpMZ5qEFlurdu_kX3yCa8dDHLCllrpTEnEwo7IwGEdQjInJakRLSR2WRAeFBWKkEoXLX5KV3qL
+		vB2rFiGEWiuvAmCi5iNgC2MEKmqqwlkikF5Pq.vlYqqltEuOP_JN3qUJIrRN8ZBZudBY8f5EzAAwuL.dQub5oW7XWbeQHAA.OTDF5DW8AEjYH26ShlallD1WzjvuQ
+		8nrGSaC7S9atxIBfMsfaaZAcax_.qo4BICQ86_CxPNMHj0QKpMNNJHT8Pufj3qaxSAMyDQuk0JmhNhfNWSdLDRhC33V2dbqso37Rt2porpSImx8Aq._0UopMC8sV
+		dBMyb7tf3QWR16.KjnpfWkkWQAHFupw.pfNOWybN7X1iLIZQhVgZF5ECbRprDUgclKPF629eXYksbWYYLkvjA6G5t4xpARV2qGXKvvwpZTznUbE73alZ2WoUZX
+		8BB70TFzw6Hqkf3BSjvQXguuKDU_6DZfgnVM7N1IyFim4lv.kyJyaU1yeOkkK.rLqEcZuVrhgYjQYHjhCfu_prkOGIjNLpx82GnUbK8CgQ--
+11. https GET to the above url with a Cookie returns the yahoo login page:
+		B=dhuusf18sgiet
+			&b=4
+			&d=Hd9r9mVpYF7PIxKA8uvTVVOHz1I-
+			&s=80
+			&i=rzYDePGZkjNK5pz7UBhZ;
+		V=
+			v=0.50
+			&cc=0
+			&m=0;
+		ucs=
+			bnas=0;
+		AO=
+			o=0;
+		F=
+			a=qLxZKRcMvSpkQwgoI9kKgLtqC6MxHMFZqWRb.G0M0bQSi4IXNrIplxEocFocPaXKQAM_Q3HG50BevohvPgpDWyVfkJomEZsS9SPPif3zKy8d
+			&b=cxYZ;
+		U=
+			mt=.DVw7J2MhYinxjXrMMqPFNdC.r56Pz6c2yxjg41d
+			&ux=xTHnSB
+			&un=9geiq2diu7up0;
+		MSC=
+			t=1384279591X;
+		YLS=
+			v=1
+			&p=1
+			&n=0;
+		Y=
+			v=1
+			&n=7svtqjjek1vfh
+			&l=4p4f0oc4dji/o
+			&p=m2gvvid012000000
+			&iz=
+			&r=qp
+			&lg=en-IE
+			&intl=ie;
+		HP=0;
+		ypcdb=4213db87cb62d186a87a58ebdaa701bc;
+		PH=
+			l=en-IE
+			&fn=BUEtrx582jsmxOTM
+			&i=ie;
+		__uvt=;
+		uvts=CSq2Xd1aMcI4vHx;
+		T=
+			z=LALnSBLUyrSBOC3bEG5ErhTNjA1TwY2NjJOMTAxTjY0MjM0T0
+			&a=QAE&sk=DAAkXV2uqGtBnk&ks=EAA6.kEG7MZe.DxAJUBA.pLWg--~E
+			&d=c2wBTVRjeU9BRXhNVFU1TmpjMk9URXpOVFF6T0RrM05EZy0BYQFRQUUBZwFDRllWUEU0UkQ2VERGR0RaQU9TV0VEMjJDSQFzY2lkAWRnRFo0dGdXSXBhXy5mdXYuRXVyb3BYR0ZpMC0BYWMBQURTTEFiM1oBdGlwAVFsYWp5QQFzYwF3bAF6egFMQUxuU0JBN0U-;
+		SSL=
+			v=1
+			&s=Z9GilJtJ93smsUSYilKmbKbYVVareN6nQhebOcoLXsa4guJFOfikZgBFLfrU3tOC8iFmohzG0gFSVm0abdudzA--
+			&kv=0
+12. POST to the same url (minus the query string) with what looks like the same cookie and a content of:
+	id_used=https%3A%2F%2Fme.yahoo.com%2Fezepayments
+	&agree=Agree
+	&z=NxMpbNtUvzEu66ZFQXblw9PlYWpXmyTN3jquHy9fWubZ57AGHM16d_sEJTFXd.OCNu61LZW_tQ1xuT7Z.ZKzfCoUFVd8pxd9_w7YSWmrriB0.QOhUQJpTCrmf9P6AJiTG1q7T9RmRqne0GAm_uTvAAkVcwphVPJwyxYSws7NCKlrx61JuoOrChET5vBId70nzYzS3BX3i7qPFrdctYrV6VX9I2LNQl7vD36NB.R8dcqnzSGhEvHge_Yu24_WRBy_av8xCn.nQ6HGq8YmNqNROoV2.l.P5qKXtOttFt__WjSZSJylgGQDGOI3Ou56eeSEzXH9Msq4aCyNFYByDmRbtKlsXeCuX79jDZU6uNOb88vGbR5QFkVL_8lZQsE8OV5xIOQM1DfT74omSiVCef4u1ylUGKEH1Mn_5BLuMl7z8oiWtexG7FPJLkErmWxoK8UjQNUMxAFEc8GDvVCn1UCaua5JU_3ZufqVjeKYS6GUlTBC8QMiWUMUhPxrzwjjpMn7t3j.lgrZfPgrhZJ.dOSemiI81yju.sb930bf..LZKshNL_Q2Wijg27sWA.g1oVAcuJBrQiWZKiF36TeSCy17s6B94Ny5MO.iZGs8rd_Y_KLQ8zvMtV.XgmzezCcVteLwVdrfHIkdWjfsOmBWsUj9htj2RSfnKyGFZZ62gtZc0d1uciKac8NSeL3Fb7RmPKHR6SRtOAO1kmhSf6uoIQt_ZwxLup_jIH3kNx_elCT__M.nfSWF
+	&crumb=ykMLQmc5H7V
+	&.scrumb=
+	&.intl=ie
+13. This causes a response containing the redirect address of:
+	http://localhost:9404/default.aspx?dnoa.userSuppliedIdentifier=yahoo.com
+	&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+	&openid.mode=id_res
+	&openid.return_to=http%3A%2F%2Flocalhost%3A9404%2Fdefault.aspx%3Fdnoa.userSuppliedIdentifier%3Dyahoo.com
+	&openid.claimed_id=https%3A%2F%2Fme.yahoo.com%2Fezepayments%23d387b
+	&openid.identity=https%3A%2F%2Fme.yahoo.com%2Fezepayments
+	&openid.assoc_handle=jXAE87kK9jXdh05D9XXCQkg_v9eMT2sUNFg37ik_QjE__sBHaU8A3fisM90jW4weFjYWtkJ9Rk0Qampv_8Ez9miWIbXWBS5jSnThhDugoeyFuQR.bWMgT16WWYDfDSWv5fQo9g--
+	&openid.realm=http%3A%2F%2Flocalhost%3A9404%2Fdefault.aspx
+	&openid.ns.oauth=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Foauth%2F1.0
+	&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0
+	&openid.ax.mode=fetch_response
+	&openid.ax.count.alias1=1
+	&openid.ax.count.alias2=1
+	&openid.ax.count.alias3=1
+	&domain_unverified=1
+	&openid.ax.value.email=ezepayments%40yahoo.ie
+	&openid.ax.value.fullname=Eze%20Payments
+	&openid.ax.value.language=en-IE
+	&openid.response_nonce=2013-12-03T15%3A05%3A53ZX2atuUyeIa3e8oZnV06tScpw8MN5VcjVyQ--
+	&openid.signed=assoc_handle%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Cax.value.email%2Cax.type.email%2Cax.value.fullname%2Cax.type.fullname%2Cax.value.language%2Cax.type.language%2Cns.ax%2Cax.mode%2Cpape.auth_level.nist%2Cns.oauth%2Coauth.request_token
+	&openid.op_endpoint=https%3A%2F%2Fopen.login.yahooapis.com%2Fopenid%2Fop%2Fauth
+	&openid.ax.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail
+	&openid.ax.type.fullname=http%3A%2F%2Faxschema.org%2FnamePerson
+	&openid.ax.type.language=http%3A%2F%2Faxschema.org%2Fpref%2Flanguage
+	&openid.pape.auth_level.nist=0
+	&openid.oauth.request_token=hxgmj8Zu3AZCi8kyDW5k2G4656qq9EOdWlY6wGq1Ag29Z9LAcvyhe62vG4A9iiePFZMaZx1QAI5FVjyqD.m2e_9wxraeYzs3RC1uV5iVa8f7o8RwP2lT7kJRIOyjG0DvYljIUmqMK2Pvw1U7URsljDmeDs3xdw2HKbyab25SejD2wPYbz63ipLlMJLaiBT.YsXbnw035ruWsQS0SyPCGlD5UfjY-
+	&openid.sig=qUqPFxN4O3gzyY4ccwxNFNWevvr%2F78IEYQ0%2FYdXmLyE%3D
+14. Which is promptly redirected to.
+	After this redirect, when the code calls ProcessUserAuthorization, the application will send a request with the details to yahoo asking them to be verified.
+
+15. But not before the  application w3wp has redirected to the identity page listed in openid.identity above, found the X-XRDS-Location header listed in the reponse https://open.login.yahooapis.com/openid20/user_profile/xrds and followed it, retrieving the same list of Services and Uri as in step 5...
+16. Before calling Get on https://api.login.yahoo.com/oauth/v2/get_token which is odd because I don't know where that came from (it's hard coded in the application). Anyways, it passes:
+	Authorization: OAuth oauth_token="hxgmj8Zu3AZCi8kyDW5k2G4656qq9EOdWlY6wGq1Ag29Z9LAcvyhe62vG4A9iiePFZMaZx1QAI5FVjyqD.m2e_9wxraeYzs3RC1uV5iVa8f7o8RwP2lT7kJRIOyjG0DvYljIUmqMK2Pvw1U7URsljDmeDs3xdw2HKbyab25SejD2wPYbz63ipLlMJLaiBT.YsXbnw035ruWsQS0SyPCGlD5UfjY-",
+	oauth_consumer_key="dj0yJmk9NHNIa29YZGFqUWF1JmQ9WVdrOVRrMVBhbHAzTlRBbWNHbzlNelF3TURVMk5UWXkmcz1jb25zdW1lcnNlY3JldCZ4PTQ0",
+	oauth_nonce="C0MUSsIV",
+	oauth_signature_method="HMAC-SHA1",
+	oauth_signature="1SO8LPuYj0g13pSL530bJ%2FwbpJI%3D",
+	oauth_version="1.0",
+	oauth_timestamp="1386083154"
+17. And receives the following (this is actually the first we've seen of the token):
+	oauth_token=A%3DQ49iu9nLklykZd95JBrs.AQPd_XW_JobEdwrUPFbpmWyRDd4rIEWiAM82x2Yyo51DUAtTdojSa5saz3ejAONx3MzT0rzSWfDDCtgWu_jXOwrC8lreI9pJsZYpDoYeiYmpZantPyH7FUn44tY4qwSdFlWS8_kFDq8ZqUQK2GBMkbMGz_BT.3YTXT0b.MUvyaPP05aYJAS1g0dBOgaE9VAXy5xYiIoN_Q6.6IaRQzBGrkYxqVM1Ie.wXI5eG0MFprhM7ZcyIzfULBDgAx8AseVn3R_NVMDddaNNhFNUj6_1s6mrU0.krExhunEssc6vlY688lC9aXa8mB9oVBbWq7_8Ss1MLydAxmofdj56JN2e7HkWfJs2MALT7pcbiKOT1AiyZhDIDCBdCV9FqtpIOkjB_Q__uD2xF3_VnzsA7TN8kzyMcC.3W2RLxtd.1tsOT_y_4HwZ5FfDstsbjNvFhzszi7_Xl0pCgMC5z15.M83CwmV.PKh.GAnL89Y9PidsnIC425HQnwDadImC58j6yUfAisTelgqlPPwaTPwq3pAHYVheFAHkIHEcc11gaSw0m8l9.sPPaDhXyIZcICDi400AtJjJ7ERgiJM2M6LBe1DWtZATAz0qLT5l0L2RP2wseBg_qxruj7kH_4aZxiZ6TWs3W5TGAnc0JBn4BbDjfKnjXM9D_CPZYLCgUB3kRsWszaB7hmhSJ9qDQSMwmKZlde0aQe69lpdkmroNZ8y5sSeT38.MHAJKDnSZ7EW5yZSXIPkhqeeG6PpKWQDBU4YxUotgbNpzu073ZNe7lPaUwVC9RrUfw--&oauth_token_secret=e7f2ca2b452b5d26b980d4f82a4cab6f7178c828
+	&oauth_expires_in=3600
+	&oauth_session_handle=AJQ2v1CjYi52IFdxUjUIYh3qeAyf3Mph578HnBgKQBZQVVOulbA-
+	&oauth_authorization_expires_in=761400493
+	&xoauth_yahoo_guid=CFYVPE4RD6TDFGDZAOSWED22CI 
+18. There's a post from the application page (the query call) which isn't very interesting.
+19. The yahoo api query is much more interesting... I hope...
+	http://query.yahooapis.com/v1/yql?
+	q=select %2A from social.profile where guid in %28select guid from yahoo.identity where yid %3d %22mike%40yahoo.com%22%29
+	&oauth_token=A%3DQ49iu9nLklykZd95JBrs.AQPd_XW_JobEdwrUPFbpmWyRDd4rIEWiAM82x2Yyo51DUAtTdojSa5saz3ejAONx3MzT0rzSWfDDCtgWu_jXOwrC8lreI9pJsZYpDoYeiYmpZantPyH7FUn44tY4qwSdFlWS8_kFDq8ZqUQK2GBMkbMGz_BT.3YTXT0b.MUvyaPP05aYJAS1g0dBOgaE9VAXy5xYiIoN_Q6.6IaRQzBGrkYxqVM1Ie.wXI5eG0MFprhM7ZcyIzfULBDgAx8AseVn3R_NVMDddaNNhFNUj6_1s6mrU0.krExhunEssc6vlY688lC9aXa8mB9oVBbWq7_8Ss1MLydAxmofdj56JN2e7HkWfJs2MALT7pcbiKOT1AiyZhDIDCBdCV9FqtpIOkjB_Q__uD2xF3_VnzsA7TN8kzyMcC.3W2RLxtd.1tsOT_y_4HwZ5FfDstsbjNvFhzszi7_Xl0pCgMC5z15.M83CwmV.PKh.GAnL89Y9PidsnIC425HQnwDadImC58j6yUfAisTelgqlPPwaTPwq3pAHYVheFAHkIHEcc11gaSw0m8l9.sPPaDhXyIZcICDi400AtJjJ7ERgiJM2M6LBe1DWtZATAz0qLT5l0L2RP2wseBg_qxruj7kH_4aZxiZ6TWs3W5TGAnc0JBn4BbDjfKnjXM9D_CPZYLCgUB3kRsWszaB7hmhSJ9qDQSMwmKZlde0aQe69lpdkmroNZ8y5sSeT38.MHAJKDnSZ7EW5yZSXIPkhqeeG6PpKWQDBU4YxUotgbNpzu073ZNe7lPaUwVC9RrUfw--
+	&oauth_consumer_key=dj0yJmk9NHNIa29YZGFqUWF1JmQ9WVdrOVRrMVBhbHAzTlRBbWNHbzlNelF3TURVMk5UWXkmcz1jb25zdW1lcnNlY3JldCZ4PTQ0
+	&oauth_nonce=S6GzMYOK
+	&oauth_signature_method=HMAC-SHA1
+	&oauth_signature=8LvtDayanOuKyLMB8%2F1be4OYpMU%3D
+	&oauth_version=1.0
+	&oauth_timestamp=1386083160
+
+//Nonce values mentioned throughout this sequence://
+openid.response_nonce=2013-12-03T15%3A05%3A53ZX2atuUyeIa3e8oZnV06tScpw8MN5VcjVyQ--
+oauth_nonce="C0MUSsIV"
+• oauth_nonce=S6GzMYOK
+
+Relevant Urls:
+http://stackoverflow.com/questions/6091268/dotnetopenauth-message-signature-was-incorrect
+http://stackoverflow.com/questions/2505565/dotnetopenauth-message-signature-was-incorrect
+

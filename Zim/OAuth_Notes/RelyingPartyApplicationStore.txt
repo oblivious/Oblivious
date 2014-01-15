@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-04T18:22:17+00:00
+
+====== RelyingPartyApplicationStore ======
+Created Wednesday 04 December 2013
+
+Tried seeing what an unimplemented RelyingPartyApplicationStore would look like:
+
+1. Second overload of GetAssociation called with parameters: Uri: "https://open.login.yahooapis.com/openid/op/auth" and some security requirements (hash settings, mostly defaults).
+
+Waste of time, looks pretty complex, probably a large amount of data. Couldn't store it all in a cookie.

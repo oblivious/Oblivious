@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="MasterPagesTest.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mucking About</title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <!-- Header -->
+    <div style="float:left;width:50%;text-align:left;font-size:16pt;font-weight:bold">
+        TimeTracker
+    </div>
+    <div style="float:right;width:47%;text-align:right;">
+        <asp:Label runat="server" ID="DateLabel"/>
+    </div>
+    <br />
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    </form>
+    <!-- Footer -->
+    <br/>
+    &copy; 2013
+</body>
+</html>

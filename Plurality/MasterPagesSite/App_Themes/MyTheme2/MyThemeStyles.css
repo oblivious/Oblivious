@@ -1,0 +1,16 @@
+﻿.foo
+{
+	font-family: "Trebuchet";
+	background: #dddfff; /* Old browsers */
+	background: -moz-linear-gradient(top, #dddfff 0%, #a7b0e5 51%, #3544cc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddfff), color-stop(51%,#a7b0e5), color-stop(100%,#3544cc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #dddfff 0%,#a7b0e5 51%,#3544cc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #dddfff 0%,#a7b0e5 51%,#3544cc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #dddfff 0%,#a7b0e5 51%,#3544cc 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #dddfff 0%,#a7b0e5 51%,#3544cc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddfff', endColorstr='#3544cc',GradientType=0 ); /* IE6-9 */
+}
+.bar
+{
+	background-color: red;	
+}

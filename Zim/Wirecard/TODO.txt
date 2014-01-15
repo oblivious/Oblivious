@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-07-23T15:47:45+01:00
+
+====== TODO ======
+Created Tuesday 23 July 2013
+
+~~Add wirecard registry to IOC~~
+
+Things to ask Matteo:
+* How to determine if FradBridge is enabled on staging.
+* Concorde setup

@@ -1,0 +1,62 @@
+﻿body
+{
+	text-align: center;
+	min-width: 760px;
+	background-color: #D4D4D4;
+}
+#wrapper
+{
+	width: 85%;
+	margin: 0 auto;
+	text-align: left;
+	background: #fff 23% 0;
+}
+#wrapper2
+{
+	background: 78% 0;
+}
+#header
+{
+	display: block;
+	width: 100%;
+	background-color: #999999;
+	font-family: "Consolas";
+	padding-left: 10px;
+}
+#mainNav
+{
+	width: 23%;
+	float: left;
+	background: #ddd;
+	height: 100%;
+	min-height: 400px;
+	padding-left: 10px;
+}
+#content
+{
+	width: 75%;
+	float: right;
+	padding-top: 20px
+}
+#mainContent
+{
+	width: 80%;
+	margin: 0;
+	float: left;
+	min-height: 300px;
+}
+#footer
+{
+	clear: both;
+	height: 50px;
+	text-align: center;
+	font-family: "Consolas";
+	background-color: #bbb
+}
+*
+{
+	margin: 0;
+	padding: 0;	
+	font-family: "Consolas";
+}
+

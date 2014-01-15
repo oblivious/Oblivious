@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-13T14:06:33+00:00
+
+====== Reversals Service ======
+Created Friday 13 December 2013
+
+The WCF service exists as a public API which allows reversals by transaction ID. The Reverse method tries to retrieve the transaction from the Transactions table and if available, adds it to the list of transactions held by the WCFService to be reversed.
+
+The rest of the reversals service consists of a window service, timer on a loop.

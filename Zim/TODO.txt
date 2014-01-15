@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-08-29T13:15:35+01:00
+
+====== TODO ======
+Created Thursday 29 August 2013
+
+* Find out if Claro DR has a limit on their reversals.
+* Organize release of Movistar Nicaragua Reversal gateway.

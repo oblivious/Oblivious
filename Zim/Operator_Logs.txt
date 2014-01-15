@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-03T12:41:30+00:00
+
+====== Operator Logs ======
+Created Friday 03 January 2014
+
+**Recommended Format for Operator Logs**
+
+Final Log Entry:
+
+Transaction:
+Required:
+
+* Operator Response: 
+* Operator Response Description: 
+Optional: 
+* Operator Receipt Number: 
+
+Ezetop:
+Transaction ID:
+Phone Number: 
+Amount: 
+
+Technical:
+• Endpoint: 
+• Transaction Duration: (ms)

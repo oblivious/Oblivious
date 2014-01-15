@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-07-22T10:54:58+01:00
+
+====== Telcel Service ======
+Created Monday 22 July 2013
+
+What needs to be done still:
+
+~~Remove EdtsListener and IEdtsListener~~
+~~Rename Edts2RelayListener and IEdts2RelayListener to EdtsListener and IEdtsListener.~~
+
+~~Write tests for EdtsListener.~~
+~~Ensure that EdtsListener is not blocking.~~
+
+~~Refactor all code into a single project (excepting unit tests);~~
+~~Refactor unit tests to match refactored project.~~
+
+~~Provide descriptions for all classes and methods.~~
+
+~~Ensure that every appropriate class is added to the service registry.~~
+
+~~Add logs specifically for echo requests and responses.~~
+~~Add additional logs for transactions in various states. Successful, Timed out.~~
+~~Use the default log to track everything, then turn it off...~~
+
+Verify that the folders / permissions will work as expected.
+
+What is the default timeout?
+
+~~Does asyncResult need to be threadsafe? Will it be overwritten?~~

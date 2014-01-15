@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-19T11:18:03+00:00
+
+====== Gateways Parameters ======
+Created Thursday 19 December 2013
+
+**A slightly deeper analysis of the usage of different parameters in Operator Gateways**
+
+TrackID: Used only for logging purposes, where it is ultimately discarded.
+TransactionID:	Used in BTL Belize validate. Cellcom Guinea validate. Digicel Validate, Roshan Afghanistan validate,
+			 Used in Vodafone India Balance Request
+
+
+TODO:
+Check the SMSLogger usages for instances of SMSGateWayQueueID

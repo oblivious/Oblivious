@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-03T10:52:21+00:00
+
+====== Certificates ======
+Created Friday 03 January 2014
+
+Objective: Integrating Certificates into gateways.
+
+**Disabling Chain Trust**
+Should only be performed temporarily. Set //CertificateValidationMode// to //PeerTrust// or //PeerOrChainTrust. //The property can be set on the following classes:
+* System.ServiceModel.Security.X509CertificateAuthentication.CertificateValidationMode
+* System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode
+* System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode
+* System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode
+
+**Custom Authentication**
+The user to Custom value, you must also set the //CustomCertificateValidatorType// attribute to an assembly and type used to validate the certificate. To create a custom validator, you must inherit from the abstract //X509CertificateValidator// class.
+When creating a custom authenticator, the most important method to override is the Validate method. Example: http://msdn.microsoft.com/en-us/library/vstudio/aa354512(v=vs.100).aspx
+
+**Using an Embedded Certificate**
+http://stackoverflow.com/a/8914737
+var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("MyFile.pfx");
+var bytes = new byte[stream.Length];
+stream.Read(bytes, 0, bytes.Length);
+var cert = new X509Certificate2(bytes, "certPassword");
+

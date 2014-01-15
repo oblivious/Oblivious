@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteTemplate.master.cs"
+	Inherits="SiteTemplate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Default Title</title>
+	<asp:ContentPlaceHolder ID="head" runat="server" />
+	<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div id="wrapper">
+		<div id="wrapper2">
+			<div id="header">
+				<h1>Header for my site</h1>
+				<br />
+				<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+				</asp:SiteMapPath>
+				<asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" 
+					DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" 
+					Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" 
+					Orientation="Horizontal" StaticSubMenuIndent="10px">
+					<DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+					<DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+					<DynamicMenuStyle BackColor="#FFFBD6" />
+					<DynamicSelectedStyle BackColor="#FFCC66" />
+					<StaticHoverStyle BackColor="#990000" ForeColor="White" />
+					<StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+					<StaticSelectedStyle BackColor="#FFCC66" />
+				</asp:Menu>
+				<asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+			</div>
+			<div id="mainNav">
+				<asp:Panel runat="server" ID="_navPanel">
+					<h2>Left pane</h2>
+					<asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+					</asp:TreeView>
+					<asp:HyperLink ID="homeHyperLink" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink><br />
+					<asp:HyperLink ID="page1HyperLink" NavigateUrl="~/Page1.aspx" runat="server">Page 1</asp:HyperLink><br />
+					<asp:HyperLink ID="page2HyperLink" NavigateUrl="~/Page2.aspx" runat="server">Page 2</asp:HyperLink><br />
+					<asp:HyperLink ID="page3HyperLink" NavigateUrl="~/Page3.aspx" runat="server">Page 3</asp:HyperLink><br />
+				</asp:Panel>
+			</div>
+			<div id="content">
+				<div id="mainContent">
+					<asp:ContentPlaceHolder ID="mainContentPlaceholder" runat="server">
+					</asp:ContentPlaceHolder>
+				</div>
+			</div>
+			<div id="footer">
+				<p>
+					Copyright &copy; My Company Inc.</p>
+			</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
