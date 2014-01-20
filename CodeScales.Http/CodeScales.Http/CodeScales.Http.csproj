@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC262E96-6275-4798-8181-D9001FB50541}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeScales.Http</RootNamespace>
+    <AssemblyName>CodeScales.Http</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\Bouncy Castle\crypto\api\bin\release\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\NameValuePair.cs" />
+    <Compile Include="Cookies\HttpCookie.cs" />
+    <Compile Include="Cookies\HttpCookieCollection.cs" />
+    <Compile Include="Cookies\HttpCookieStore.cs" />
+    <Compile Include="Entity\BasicHttpEntity.cs" />
+    <Compile Include="Entity\EntityUtils.cs" />
+    <Compile Include="Entity\HttpEntity.cs" />
+    <Compile Include="Entity\HttpEntityEnclosingRequest.cs" />
+    <Compile Include="HttpClient.cs" />
+    <Compile Include="Entity\AbstractHttpEntity.cs" />
+    <Compile Include="Entity\Mime\Body.cs" />
+    <Compile Include="Entity\Mime\FileBody.cs" />
+    <Compile Include="Entity\Mime\InputStreamBody.cs" />
+    <Compile Include="Entity\Mime\StringBody.cs" />
+    <Compile Include="Entity\MultipartEntity.cs" />
+    <Compile Include="Entity\UrlEncodedFormEntity.cs" />
+    <Compile Include="HttpBehavior.cs" />
+    <Compile Include="Methods\HttpMessageBase.cs" />
+    <Compile Include="Methods\HttpPost.cs" />
+    <Compile Include="Methods\HttpResponse.cs" />
+    <Compile Include="Methods\HttpGet.cs" />
+    <Compile Include="Methods\HttpRequest.cs" />
+    <Compile Include="Network\Connection.cs" />
+    <Compile Include="Network\HttpConnection.cs" />
+    <Compile Include="Network\HttpConnectionFactory.cs" />
+    <Compile Include="Network\HttpProtocol.cs" />
+    <Compile Include="Network\HttpNetworkException.cs" />
+    <Compile Include="Network\HttpsConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\HTTP.cs" />
+    <Compile Include="Tls\ClientServerAuthenticator.cs" />
+    <Compile Include="Tls\CustomTlsClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
