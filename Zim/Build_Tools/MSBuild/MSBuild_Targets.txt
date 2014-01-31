@@ -1,0 +1,227 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-30T11:41:56+00:00
+
+====== MSBuild Targets ======
+Created Thursday 30 January 2014
+
+http://msdn.microsoft.com/en-us/library/ms171462%28v=vs.90%29.aspx
+
+==== Declaring Targets in the Project File ====
+Targets are delcared in the project file with the **Target** element. //We've seen the following before://
+	'''
+	<Target Name="Compile">
+	'''
+		'''
+		<Csc Sources="@(Compile)"/>
+		'''
+	'''
+	</Target>
+	'''
+
+Targets can use the **Condition** attribute. If the specified condition evaluates to false, the target will not run, and the MSBuild engine will not run the targets specified in the **DependsOnTargets** attribute. For more information on conditions, see [[MSBuild Conditions]].
+
+==== Dependency Analysis ====
+Allows skipping targets that are already up to date. You can specify the targets that must run before a specific target by using the **DependsOnTargets** attribute. When a target is run, the MSBuild engine will automatically run any targets listed in this attribute first.
+
+=== How to Build Incrementally ===
+When you build a large project, it's important that previously built components that are still up-to-date are not rebuilt. If all targets are built every time, each build will take a long time to complete. To enabled incremental builds, the build engine can compare the timestamps of the input files with the timestamps of the output files an determine whether to skip, build, or partially rebuild a target. However, there must be a one-to-one mapping between inputs and outputs. You can use transforms to enable targets to identify this direct mapping.
+
+== Specifying Inputs and Outputs ==
+A target can be built incrementatlly if the inputs and outputs are specified in the project file.
+
+Use the **Inputs** and **Outputs** attributes of the **Target** element. For example:
+'''
+<Target Name="Build" Inputs="@(CSFile)" Outputs="hello.exe">
+	<Csc Sources="@(CSFile)" OutputAssembly="hello.exe"/>
+</Target>
+'''
+
+	
+	MSBuild can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target. In the example, if any file in the //@(CSFile)// item collection is newer than the hello.exe file, MSBuild will run the target; otherwise it will be skipped.
+	When inputs and outputs are specified in a target, either each output can map to only one input or there can be no direct mapping between the outputs an dinputs. In the previous //Csc Task//, for example, the output, hello.exe, cannot be mapped to any single input - it depends on all of them.
+	A target in which there is no direct mapping between th einputs and outputs will always build more often that a target in which each output can map to only one input because MSBuild cannot determine which outputs need to be rebuilt if some of the inputs have changed.
+	Tasks in which you can identify a direct mapping between the outputs and inputs, such as the //LC Task (License Compiler)//, are most suitable for incremental builds, unlike tasks such as **Csc** and **Vbc**, which produce one output assembly from a number of inputs.
+
+
+=== Example ===
+	The following example uses a project that builds Help files for a hypothetical Help system. The project works by converting source .txt files into intermediate .content files.
+		* **GenerateContentFiles**: Converts .txt files into .content files.
+		* **BuildHelp**: Combines .content files and Xml metadata into files to build the final .help file.
+	The project uses transforms to create a one-to-one mapping between inputs and outputs in the **GenerateContentFiles** task. Also, the **Output **element is set to automatically use the outputs from the **GenerateContentFiles** task as the inputs for the **BuildHelp **task.
+	
+	This project file contains both the //Convert// and //Build //targets. The **GenerateContentFiles** and **BuildHelp** tasks are placed in the //Convert// and //Build// targets respectively so that each target can be built incrementally. By using the **Output **element, the outputs of the **GenerateContentFiles** task are placed in the //ContentFile// item list, where they can be used as inputs for the **BuildHelp** task. Using the **Output** element in this way automatically provides the outputs from one task as the inputs for another task so that you do not have to list the individual items or item lists manually in each task.
+	Although the **GenerateContentFiles **target can build incrementally, all outputs from that target always are required as inputs for the **BuildHelp** target. MSBuild automatically provides all the outputs from one target as inputs for another target when you use the **Output** element. 
+	
+	'''
+	<Project DefaultTargets="Build"
+	    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+	
+	    <ItemGroup>
+	        <TXTFile Include="*.txt"/>
+	        <XMLFile Include="\metadata\*.xml"/>
+	    </ItemGroup>
+	
+	    <Target Name = "Convert"
+		    Inputs="@(TXTFile)"
+		    Outputs="@(TXTFile->'%(Filename).content')">
+	        <GenerateContentFiles Sources="@(TXTFile)">
+	            <Output TaskParameter="OutputContentFiles"
+			    ItemName = "ContentFiles"/>
+	        </GenerateContentFiles>
+	    </Target>
+	
+	    <Target Name = "Build" DependsOnTargets = "Convert"
+		    Inputs="@(ContentFiles);@(XMLFiles)"
+		    Outputs="$(MSBuildProjectName).help">
+	        <BuildHelp ContentFiles = "@(ContentFiles)"
+			   MetadataFiles = "@(XMLFile)"
+			   OutputFileName = "$(MSBuildProjectName).help"/>
+	    </Target>
+	'''
+'''
+     </Project>
+'''
+	
+
+	//This is an awful, awful example. The inputs and processes are hypothetical. A concrete example would have been much better instead of this wishy washy crap.//
+
+**As a result I went to find a better example:**
+
+== Output Element ==
+	//Stores task output values in items and properties//
+	'''
+	<Output TaskParameter="Parameter"
+	    PropertyName="PropertyName" 
+	    Condition = "'String A' == 'String B'" />
+	'''
+
+	//Attributes//
+	**TaskParameter - **Required attribute. The name of the task's output parameter. So in the 'hypothetical' example above this is //OutputContentFiles.//
+	**PropertyName **//or //**ItemName**
+	The property or item that receives the task's output parameter value. Your project can then reference the property with the //$(PropertyName)// or //$(ItemName)// //syntax//. This property/item name can either be a new property/item name or a name that is already defined in the project.
+	**Condition**
+	Optional. See [[MSBuild Conditions]].
+	
+	//Parent Elements//
+	**Task** - Creates and executes an instance of an MSBuild task.
+
+
+== Example ==
+	The following code example shows the //Csc// task being executed inside of a **Target** element. The items and properties passed to the task parameters are declared outside of the scope of this example. The value from the output parameter //OutputAssembly// is stored in the //FinalAssemblyName// item, and the value from the output parameter //BuildSucceeded //is stored in the //BuildWorked// property. For more information, see //MSBuild Tasks//.
+	
+	'''
+	<Target Name="Compile" DependsOnTargets="Resources">
+		<Csc Sources="@(CSFile)"
+		     TargetType="library"
+		     Resources="@(CompiledResources)"
+	             EmitDebugInformation="$(includeDebugInformation)"
+	             References="@(Reference)"
+	             DebugType="$(debuggingType)"
+	             OutputAssembly="$(builtdir)\$(MSBuildProjectName).dll" >
+	        <Output TaskParameter="OutputAssembly"
+	                ItemName="FinalAssemblyName" />
+	        <Output TaskParameter="BuildSucceeded"
+	                PropertyName="BuildWorked" />
+	    </Csc>
+	</Target>
+	'''
+
+
+=== Dependency Analysis (cont.) ===
+A target will never run twice during a single build. Once run, a target is assumed to have completed its work and will not be run again, even if a subsequent target in the build depends on it. //Which is what I would expect.//
+
+=== Best Practices ===
+Breaking up the project file this way allows for sections of the file to be changed without affecting others. For example, one way of building a project with resources is to place the **GenerateResource** and **Csc** tasks in the same target, for example:
+
+	'''
+	<Target Name="Build">
+	    <GenerateResource
+	        Sources="alpha.resx; beta.txt"
+	        <Output
+	            TaskParameter="OutputResources"
+	            ItemName="Resources"/>
+	    </GenerateResource>
+	    <Csc
+	        Sources="hello.cs"
+	        Resources="@(Resources)"
+	        OutputAssembly="hello.exe"/>
+	</Target>
+	'''
+
+Using this approach, the project builds as required, but the target is becoming large and inflexible. If you later wanted to add other tasks to run between **GenerateResource** and **Csc**, putting them all in one target would make the project file very difficult to read. In addition, authoring such large targets with so many tasks makes it difficult to perform good incremental builds - builds in which only those targets that have not been built before or targets that are out of date are rebuilt. Large targets also prevent you from running targets to perform specific tasks. In the example above, there is no way to generate resources without compiling.
+A better way of authoring a project file is to use multiple targets and explicitly express dependencies between them. This approach also gives you the ability to run any of the targets separately and perform a smaller set of tasks rather than running a long list of tasks in one target every time you build. In this example, each task is in a separate target and the **DependOnTargets** attribute specifies that the //Resources// target must run before the **Build** target can run.
+
+	'''
+	<Target Name="Resources">
+	    <GenerateResource
+	        Sources="alpha.resx; beta.txt"
+	        <Output
+	            TaskParameter="OutputResources"
+	            ItemName="Resources"/>
+	    </GenerateResource>
+	</Target>
+	
+	<Target Name="Build" DependsOnTargets="Resources">
+	    <Csc
+	        Sources="hello.cs"
+	        Resources="@(Resources)"
+	        OutputAssembly="hello.exe"/>
+	</Target>
+	'''
+
+
+=== How to: Specify Which Target to Build First ===
+A project file can contain one or more **Target** elements that define how the project is built. Each project file contains a set of targets that the build engine builds sequentially, unless the project file contains a **DefaultTargets** attribute, an **InitialTargets **attribute, or a target is specified at the command line using the **/target** switch.
+
+== Using the InitialTargets Attribute ==
+The **InitialTargets** attribute of the **Project** element specifies a target that will run first, even if targets are specified on the command line or in the **DefaultTargets** attribute.
+	''<Project InitialTargets="Clean">''
+or for more than one parameter:
+	''<Project InitialTargets="Clean;Compile">''
+
+
+== Using the DefaultTargets Attribute ==
+The **DefaultTargets **attribute of the **Project** element specifies which target or targets are built if a target is not specified explicitly on the command line. If targets are specified in both the **InitialTargets** and **DefaultTargets** attributes and no target is specified on the command line, MSBuild runs the targets specified in the **InitialTargets** attribute followed by the targets specified in the **DefaultTargets** attribute.
+
+== From the Command Line ==
+	''msbuild file.proj /target:Clean''
+or
+	''msbuild <file name>.proj /t:Clean;Compile''
+
+
+=== Importing Common Targets ===
+The **Import** element is used to insert one project file into another project file. The project file that is being imported must be a valid MSBuild project file and contain well-formed XML. The **Project** attribute specifies the path to the imported project file.
+	
+	''<Import Project="MyCommon.targets"/>''
+
+
+== Order of Evaluation ==
+When MSBuild reaches an **Import** element, the imported project is effectively inserted into the importing project at the location of the **Import** element. Therefore, the location of the **Import** element can affect the values of properties and items. It is important to understand the properties and items that are set by the imported project, and the properties and items that the imported project uses.
+When the project builds, all properties are evaluated first, followed by items. For example, the following XML defines the imported project file MyCommon.targets
+	'''
+	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	    <PropertyGroup>
+	        <Name>MyCommon</Name>
+	    </PropertyGroup>
+	
+	    <Target Name="Go">
+	        <Message Text="Name="$(Name)""/>
+	    </Target>
+	</Project>
+	'''
+
+The following XML defines MyApp.proj, which imports MyCommon.targets:
+	'''
+	<Project
+	    DefaultTargets="Go"
+	    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	    <PropertyGroup>
+	        <Name>MyApp</Name>
+	    </PropertyGroup>
+	    <Import Project="MyCommon.targets"/>
+	</Project>
+	'''
+When the project builds, the following message is displayed:
+	//Name="MyCommon"//
+Because the project is imported after the property //Name// has been defined in MyApp.proj, the definition of //Name// in MyCommon.targets overrides the definition in MyApp.proj.

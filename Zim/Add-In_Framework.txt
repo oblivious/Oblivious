@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-27T13:39:28+00:00
+
+====== Add-In Framework ======
+Created Monday 27 January 2014
+
+**namespaces:**
+* System.AddIn;
+* System.AddIn.Hosting;
+* System.AddIn.Pipeline;
+* System.AddIn.Contract;
+
+**Add-In Pipeline**
+{{~/AppData/Local/Temp/xl364bi6.bmp}}
+Zim allows you to drag and drop images... excellent.
+
+__Add-Ins are versioned and isolated__. Each segment of the pipeline is a separate assembly. They don't have to be in the same application domain. Multiple Add-Ins can be loaded int othe same application domain which allows them to share resources and security contexts.
+
+There's support to allow adapters to be provided for Add-Ins and Hosts with differing compatibility and versioning.
+
+Discovery and Activation: '... token from a collection that represents the add-ins found from an information store'. Search for the type that defines the host's view of the add-in. The 'information store consists of two cache files: __the pipeline store and the add-in store__'.
+
+'The add-in model supports several levels of isolation between an add-in an dits host or between add-ins'.
+* Same application domain as the host: bad idea.
+* Multiple add-ins loaded into the same application domain, different from the application domain used by the host.
+* Add-ins are each loaded into their own application domain.
+* Multiple add-ins are loaded into a single application domain in an external process.
+* Add-ins are each loaded into their own application domain in a separate process (most isolated scenario).
+
+**Lifetime Management**
+Add-ins span application domains and process boundaries - garbage collection is not sufficient. __The add-in model uses a lifetime management mechanism that uses tokens and reference counting__.
+
+**Distinguishing Between Add-ins and Hosts**
+The host activates the add-in.

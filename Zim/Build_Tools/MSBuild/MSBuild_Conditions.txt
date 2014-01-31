@@ -1,0 +1,95 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-30T11:46:51+00:00
+
+====== MSBuild Conditions ======
+Created Thursday 30 January 2014
+
+http://msdn.microsoft.com/en-us/library/7szfhaft%28v=vs.90%29.aspx
+
+===== Base Conditions =====
+**Equality:**
+	'''
+	'stringA' == 'stringB'
+	e.g. Condition="'$(CONFIG)'=='DEBUG'"
+	'''
+
+Single quotes are not required for simple alphanumeric strings or boolean values. However, single quotes are required for empty values.
+
+**Non-Equality**
+	//Exactly what you would expect, identical to above except '!=' is used.//
+
+**Less Than, Greater Than, LTE, GTE**
+	''<, >, <=, >=''
+Operands must evaluate to decimal or hexadecimal. In XML, '<', '>' need to be escaped with &lt; and &gt;
+
+**Existence**
+	'''
+	Exists('string')
+	e.g. Condition="!Exists('$(builtdir)')"
+	'''
+
+
+**HasTrailingSlash**
+	'''
+	HasTrailingSlash('stringA')
+	e.g. Condition="!HasTrailingSlash('$(OutputPath)')"
+	'''
+
+**Not**
+	''!''
+**And**
+	''And''
+//I guess && is out due to & being an escape character//
+**Or**
+	''Or''
+//The pipe character might be available but this is more consistent.//
+**Grouping**
+	''( )''
+Yup, just parentheses.
+
+Not bothered to roll an additional page for the following: http://msdn.microsoft.com/en-us/library/ms164307%28v=vs.90%29.aspx
+
+===== MSBuild Conditional Constructs =====
+Either/Or processing using //Choose, When //and //Otherwise.//
+__This is a switch statement__
+The **Choose ** element contains a series of **When **elements with **Condition** attributes that are tested in order from top to bottom until one evaluates to **true. **If more than one **When** element evaluates to **true**, only the first one is used. An **Otherwise** element, if present, will be evaluated if no condition on a **When** element evaluates to true.
+**Choose **elements can be used as child elements of **Project, When** and **Otherwise** elements. **When** and **Otherwise** elements can have **ItemGroup, PropertyGroup, **or **Choose **child elements.
+
+Bleaarrgggghh:
+'''
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>ConsoleApplication1</RootNamespace>
+        <AssemblyName>ConsoleApplication1</AssemblyName>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <Choose>
+        <When Condition=" '$(Configuration)'=='Debug' ">
+            <PropertyGroup>
+                <DebugSymbols>true</DebugSymbols>
+                <DebugType>full</DebugType>
+                <Optimize>false</Optimize>
+                <OutputPath>.\bin\Debug\</OutputPath>
+                <DefineConstants>DEBUG;TRACE</DefineConstants>
+            </PropertyGroup>
+            <ItemGroup>
+                <Compile Include="UnitTesting\*.cs" />
+                <Reference Include="NUnit.dll" />
+            </ItemGroup>
+        </When>
+        <When Condition=" '$(Configuration)'=='retail' ">
+            <PropertyGroup>
+                <DebugSymbols>false</DebugSymbols>
+                <Optimize>true</Optimize>
+                <OutputPath>.\bin\Release\</OutputPath>
+                <DefineConstants>TRACE</DefineConstants>
+            </PropertyGroup>
+        </When>
+    </Choose>
+    <!-- Rest of Project -->
+</Project>
+'''
+

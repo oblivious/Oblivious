@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-29T16:48:28+00:00
+
+====== Nant ======
+Created Wednesday 29 January 2014
+
+To specify a version of .Net when using NAnt use this parameter: **-t:net-3.5**
+Trying to set the requisite property in the **-D:** properties parameter resulted in an error saying that the property already existed.
+This was part of trying to configure Jenkins to build a project using NAnt, but the NAnt plugin for that project seems a little limited. I had to add the -t:net-3.5 to the "targets" part of the form to set the framework version.
+

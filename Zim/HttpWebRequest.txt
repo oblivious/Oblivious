@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-22T16:53:21+00:00
+
+====== HttpWebRequest ======
+Created Wednesday 22 January 2014
+
+**Otherwise known as 'HttpWebRequest is a strange fish indeed'**
+
+WriteHeaders is a method that is called asynchronously?
+
+WriteHeadersCallback(WebExceptionStatus errorStatus, ConnectStream stream, bool async)// looks like what I want... This is line 3072//
+{
+	if (errorStatus == WebExceptionStatus.Success)
+	{
+		bool completed = EndWriteHeaders(async);
+		if (!completed)
+			errorStatus = WebExceptionStatus.Pending
+		else
+			if (stream.BytesLeftToWrite == 0)
+				stream.CallDone();
+	}
+}

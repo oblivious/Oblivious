@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-29T12:15:37+00:00
+
+====== Jenkins ======
+Created Wednesday 29 January 2014
+
+**Focussed on the following 2 jobs:**
+* Building / Testing software projects continuously. //Sounds like our bread and butter.//
+* Monitoring executions of externally run jobs. //Nice, but don't need this. Nagios?//
+
+**Creating a parameterized build job**
+Parameterized Build is a plugin. In the configuration for the build select the "This build is parameterized" checkbox and add a parameter. The parameter name for the gateways is a choice parameter named **Configuration** and the choices for that parameter are **Debug** or **Release**.
+"Once you have added a parameter, you need to configure your build scripts to use it. Choosing the parameter name well is important here, as this is also the name of the variable that Jenkins will pass through as an environment variable when it runs the build job."
+{{./pasted_image.png}}
+In Ant or Maven you can use env to access current environment variables:
+
+	<target name="printversion">
+		<property environment="env" [[/>]]
+		<echo message="${env.VERSION}/>
+	</target>
+
+For the gateways, the "Configuration" variable is passed to MSBuild as a command line argument: C:\Jenkins\JenkinsTool\ci_type_01.msbuild.xml /nologo /t:CompileAndPackage /p:Configuration=**${Configuration}**
+
+There are many other types of parameters available for Jenkins including boolean, choice, file, password, run, etc.

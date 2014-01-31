@@ -1,0 +1,83 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-30T10:47:22+00:00
+
+====== MSBuild ======
+Created Thursday 30 January 2014
+
+Copied from: http://msdn.microsoft.com/en-us/library/ms171452%28v=vs.90%29.aspx
+
+"MSBuild is the new build platform for Microsoft and Visual Studio".
+
+=== Items ===
+"Items represent inputs into the build system and are grouped into item collections based on their user-defined collection names. Item collections can be used as parameters for tasks, which use the individual items contained in the collection to perform the steps of the build process."
+"Items are declared in the project file by creating an element with the name of the item collection __as a child of an ItemGroup element__. For example, the following code creates an item collection named //Compile//, which includes two files."
+	'''
+	<ItemGroup>
+	'''
+		'''
+		<Compile Include="file1.cs"/>
+		<Compile Include="file2.cs"/>
+		'''
+	'''
+	</ItemGroup>
+	'''
+
+Item collections are referenced throughout the project file with the syntax **@(ItemCollectionName)**. For example the above item collection is referenced using "**@(Compile)**".
+
+=== Properties ===
+Properties represent key/value pairs that can be used to configure builds. Items and properties differ in the following ways:
+* Items are stored in collections, while properties contain a single scalar value.
+* Items cannot be removed from item collections, while properties can have their values changed after they are defined.
+* Items can contain metadata and can use the //%(ItemMetadata)// notation, while properties cannot.
+Properties are declared by creationg an element with the name of the property as a child of a **PropertyGroup** element. For example, the following code creates a proerty named //BuildDir// with a valud of //Build//.
+	'''
+	<PropertyGroup>
+	'''
+		'''
+		<BuildDir>Build</BuildDir>
+		'''
+	'''
+	</PropertyGroup>
+	'''
+
+You reference properties throughout the project file with the syntax //$(PropertyName)//. For example, you reference the property in the example above with $(BuildDir).
+
+=== Tasks ===
+Tasks are reusable units of executable code used by MSBuild projects to perform build operations. For example, a task might compile input files or run an external tool. Tasks can be shared and reused in different projects.
+The execution logic of a task is written in managed code and mapped to MSBuild with the //UsingTask// element. You can __write your own task__ by authoring a managed type that implements the //ITask// interface.
+MSBuild ships with tasks such as **Copy**, **MakeDir**, **Csc**, etc.
+You execute a task in an MSBuild project file by creating an element with the name of the task as a child of a **Target** element. Tasks usually accept parameters, which are passed as attributes of the element. MSBuild item collections and properties can be used as parameters. The following code calls **MakeDir** and passes it the value of the //BuildDir// property declared in the previous example.
+	'''
+	<Target Name="MakeBuildDirectory">
+	'''
+		'''
+		<MakeDir Directories="$(BuildDir)"/>
+		'''
+	'''
+	</Target>
+	'''
+
+
+=== Targets ===
+Targets group tasks together in a particular order and expose sections of the project file as entry points into the build process... //buh?// Targets allow you to break up the build process into a series of logical steps that can be reorganised as required.
+Targets are declared in the project file with the **Target** element. For example, the following code creates a target named //Compile//, which then calls the **Csc** task with the item collection declared in the previous example.
+	'''
+	<Target Name="Compile">
+	'''
+		'''
+		<Csc Sources="@(Compile)"/>
+		'''
+	'''
+	</Target>
+	'''
+
+In more advanced scenarios targets can describe relationships between each other and__ perform dependency analysis__, which allows whole sections of the build process to be skipped if that target is up-to-date. //derp//
+
+=== Building with MSBuild ===
+Nothing to see here:
+	''MSBuild.exe MyProj.proj /property:Configuration=Debug''
+
+
+=== Advanced ===
+MSBuild can be used for more advanced operations during builds, such as logging errors, warnings, and messages to the fconsole or other loggers, performing dependency analysis on targets, and batching tasks and targets on item metadata.
