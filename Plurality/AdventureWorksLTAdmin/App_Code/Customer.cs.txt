@@ -1,0 +1,9 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AdventureWorksLT2008R2_DataModel
+{
+    [ScaffoldTable(true)]
+    public partial class Customer
+    {
+    }
+}

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Add Task";
+}
+
+<h2>Add Task</h2>
+@using (Html.BeginForm())
+{
+    <input type="text" name="taskinput" />
+    <input type="submit" name="buttonaction" value="Add..." />
+}
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <h3>Added Task: @ViewBag.Message</h3>
+}

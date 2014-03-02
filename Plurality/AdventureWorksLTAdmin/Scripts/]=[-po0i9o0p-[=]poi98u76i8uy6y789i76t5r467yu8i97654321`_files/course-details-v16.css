@@ -1,0 +1,256 @@
+
+/*** course-individualb PAGE ****************************/
+
+#content .course-individualb .overview
+{
+    background: #fff;
+    height: auto !important;
+    height: 100px;
+    min-height: 110px;
+    padding: 0px 0px 0px 120px;
+    margin: 10px 0px 10px 0px;
+}
+
+#content .course-individualb .overview img.categoryImage
+{
+    float: left;
+    margin-top: 5px;
+    margin-left: -122px;
+}
+
+#content .course-individualb h1
+{
+    margin: 15px 0px 0px 10px;
+}
+#content .course-individualb p
+{
+    margin: 0px 0px 0px 10px;
+}
+
+#content .course-individualb .overview .social
+{
+    float: left;
+    padding: 20px 0px 10px 10px;
+}
+#content .course-individualb .title .left
+{
+    width: 600px;
+    float: left;
+}
+
+#content .course-individualb .title .right
+{
+    float: left;
+    width: 215px;
+    color: #808080;
+    padding-top: 25px;
+    padding-left: 25px;
+    font-size: 13px;
+}
+#content .course-individualb .title .black
+{
+    color: #333;
+}
+
+#content .course-individualb .main
+{
+    position: relative;
+    background: #fff url(../../img/sh/secondary-bg-v1.gif) top repeat-x;
+    width: 860px;
+    height: auto !important;
+    height: 250px;
+    min-height: 250px;
+    clear: both;
+    padding: 0px 50px 0px 50px;
+}
+
+#content .course-individualb .main .buttons
+{
+    float: left;
+    height: 26px;
+    margin-bottom: 30px;
+    width: 700px;
+}
+
+#content .course-individualb .main #bookmarkNotifier
+{
+    float: right;
+    width: 200px;
+    padding-top: 10px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#content .course-individualb .main div#bookmarkNotifier.success
+{
+    background-color: yellow;
+    color: black;
+    height: 40px;
+}
+
+#content .course-individualb .main div#bookmarkNotifier.failure
+{
+    background-color: red;
+    color: white;
+    height: 90px;
+}
+
+#content .course-individualb .main .buttons a
+{
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+#content .course-individualb .main .buttons .buttonLink
+{
+    width: 104px;
+    height: 26px;
+}
+
+
+#content .course-individualb .main .buttons ul
+{
+    list-style: none;
+}
+
+
+#content .course-individualb .main .buttons ul li
+{
+    list-style: none;
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    width: 104px;
+    height: 26px;
+    text-align: center;
+    line-height: 25px;
+    margin: 0px 4px;
+}
+#content .course-individualb .main .buttons ul .green
+{
+    background: #55821e url(../../img/cs/course-individualb-button-green-v1.png) center left no-repeat;
+}
+#content .course-individualb .main .buttons ul .orange
+{
+    background: #e76e34 url(../../img/cs/course-individualb-button-orange-v1.png) center left no-repeat;
+}
+
+#content .course-individualb .main td
+{
+    text-align: left;
+    line-height: 30px;
+    padding: 0px;
+    margin: 0px;
+    display: table-cell;
+}
+#content .course-individualb .main .test
+{
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    padding: 0px 10px 0px 30px;
+}
+#content .course-individualb .main table
+{
+    width: 860px;
+    padding-left: 10px;
+    font-size: 12px;
+    display: table;
+}
+#content .course-individualb .main table tr
+{
+    border-bottom: #ccc 1px solid;
+    border-top: #ccc 1px solid;
+    display: table-row;
+}
+#content .course-individualb .main table td
+{
+    padding: 0px 25px;
+}
+#content .course-individualb .main table .check
+{
+    text-align: center;
+}
+#content .course-individualb .main table .duration
+{
+    text-align: center;
+    width: 75px;
+}
+#content .course-individualb .main table .nolines
+{
+    border: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    height: 25px;
+}
+
+#content .course-individualb .main .title
+{
+    font-weight: 800;
+    padding-left: 30px;
+    font-size: 14px;
+}
+#content .course-individualb .main .circle
+{
+    padding-left: 15px;
+    margin: 0px 10px;
+    color: #333;
+    font-weight: 400;
+}
+
+#content .course-individualb .main .circle.plus
+{
+    background: url(../../img/cs/course-individualb-circle-v1.png) left center no-repeat;
+}
+
+#content .course-individualb .main .circle.minus
+{
+    background: url(../../img/cs/course-individualb-circleminus-v1.png) left center no-repeat;
+}
+
+#content .course-individualb .launch-button-area
+{
+    margin-top: 10px;
+}
+
+#content .course-individualb #launchAssessment
+{
+    margin-top: 10px;
+}
+
+#content .course-individualb p.trialLimit
+{
+    margin-bottom: 10px;
+    color: #A00;
+}
+
+#content .course-individualb .main .highlighted 
+{
+     background-color: #FFFF99;
+}
+
+#content .course-individualb .main td.highlightedClipTitle 
+{
+    padding-right: 10px;
+    background-color: #FFFF99;
+}
+
+#content .course-individualb .main div.playButton 
+{
+    width: 500px;
+    height: 19px;
+    float: left;
+    padding-right: 2px;
+}
+
+#content .course-individualb .main .separator
+{
+    color: #CCC;
+}

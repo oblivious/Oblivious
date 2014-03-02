@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TestWebApplication.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Test Webpage</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <h3>This part of the body is contained in the master page.</h3>
+    <div>
+        <asp:ContentPlaceHolder ID="BodyContentPlaceHolder" runat="server"/>
+    </div>
+    </form>
+</body>
+</html>

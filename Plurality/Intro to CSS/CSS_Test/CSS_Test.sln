@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSS_Test", "CSS_Test\CSS_Test.csproj", "{4C333D4E-8AF7-4216-B309-CBD757CAA92E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C333D4E-8AF7-4216-B309-CBD757CAA92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C333D4E-8AF7-4216-B309-CBD757CAA92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C333D4E-8AF7-4216-B309-CBD757CAA92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C333D4E-8AF7-4216-B309-CBD757CAA92E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
