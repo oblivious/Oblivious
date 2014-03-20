@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-04T14:39:10+00:00
+
+====== EDTS Admin Services ======
+Created Tuesday 04 March 2014
+
+==== DistributorService ====
+* public IEnumerable<AddedOperator> **ListAllAvailableOperators**(string authenticationId)
+* public AvailableOperator **FetchOperatorDetails**(string authenticationId, int operatorId)
+* public DistributorDetails **FetchDistributorDetails**(string authenticationId)
+* public DistributorDetails **FetchNocDistributorDetails**()
+* public string **FetchDistributorIdentifier**(int distributorId)
+* public VirtualAccount **FetchVirtualAccount**(int distributorId)
+* public IEnumerable<VirtualAccountRecord> **FetchVirtualAccountHistory**(int distributorId, int startRowIndex, int maximumRows, out int totalRowCount)
+	//This one looks a bit more useful as it appears to use paging...//
+* public void **UpdateVirtualAccount**(int distributorId, int reason, decimal amount)
+* public IEnumerable<AddedOperator> **ListAllDenominatedOperators**(string authenticationId)
+* public IEnumerable<AddedOperator> **ListAllFreeRangeOperators**(string authenticationId)
+* public IEnumerable<AvailableOperator> **ListAllOperatorsByCountry**(string authenticationId, string countryIso)
+* public IEnumerable<AvailableOperator> **FetchOperatorsByCountry**(string authenticationId, string countryIso)
+* public IEnumerable<DistributorDetails> **GetDistributorsByOperatorId**(int operatorId)
+* public void **UpdateDistributorCommissionSettings**(int distributorId, string period, string periodCycle, string commissionType, string commissionTerms)
+* public IEnumerable<AvailableOperator> **FetchEzeOperatorsInCountriesWithSupportedPortability**(string authenticationId)
+* public IEnumerable<AvailableOperator> **FetchEzeOperatorsInCountriesWithoutSupportedPortability**(string authenticationId)
+
+==== OperatorService ====
+* public void **Suspend**(int operatorId, string reason)
+* public void **Unsuspend**(int operatorId, string reason)
+* public IEnumerable<ManagedOperator> **ListAllManagedOperators**()
+* public IEnumerable<ManagedOperator> **ListOperatorsWithCodes**(string operatorCode, string countryCode)
+* public ManagedOperator **FetchOperator**(int operatorId)
+* public SuspendedAuditEntry **FetchAuditEntryIfSuspended**(int operatorId)
+* public string **FetchOperatorCurrencyIso**(int operatorId)
+* public OperatorTopUpCountryDto **FetchTopUpCountryDetails**(int operatorId, string countryIso)
+* public void **UpdateTopUpCountryDetails**(OperatorTopUpCountryDto topUpCountry)
+* public void **CreateFakedForexDenomination**(OperatorTopUpCountryDto topUpCountry, decimal value)
+* public void **UpdateFakedForexDenomination**(OperatorTopUpCountryDto topUpCountry, decimal value, decimal oldValue)
+* public void **DeleteFakedForexDenomination**(OperatorTopUpCountryDto topUpCountry, decimal oldValue)
+* public int **GetDistributorCountUsingOperator**(int operatorId, int countryId)
+* public IEnumerable<OperatorLabelDto> **GetAllOperatorLabels**()
+* public IEnumerable<OperatorRegionDto> **GetAllOperatorRegions**()
+* public IEnumerable<OperatorGroupDto> **GetAllOperatorGroups**()
+* public void **UpdateOperator**(ManagedOperator managedOperator)
+* public int **CreateOperator**(ManagedOperator managedOperator)
+* public void **ReplaceTopUpCountry**(int operatorId, int currentCountryId, int newCountryId)
+* public void **DeleteOperator**(int operatorId)
+* public bool **IsOperatorRelatedWithAnyTopUpCountry**(int operatorId)
+* public bool **IsOperatorUsedByAnyDistributor**(int operatorId)
+* public bool **IsOperatorUsedByAnyProfile**(int operatorId)
+* public string **GetOperatorNameById**(int operatorId)
+* public IEnumerable<OperatorBalance> **GetAllOperatorBalances**()
+* public void **RefreshAllBalances**(IEnumerable<ManagedOperator> operators)
+* public OperatorLabel **GetLabelById**(int labelId)
+* public int **AddNewLabel**(OperatorLabel labelToAdd)
+* public void **UpdateLabel**(OperatorLabel labelToUpdate)
+* public int **DeleteLabel**(OperatorLabel labelToDelete)

@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-03T10:15:47+00:00
+
+====== Bloom Filters ======
+Created Monday 03 February 2014
+
+I'd like to assume that a phone number would occupy approximately 16 bytes as a string and that we'd need to store several million of the things.
+
+http://www.eecs.harvard.edu/~kirsch/pubs/bbbf/rsa.pdf
+* Counting Bloom Filters allow deletion as well as insertion (use an array of integers initialized to zero to represent the bit array, a delete decrements the value in all of the positions that correspond to the bits set when hashing a value).
+* Compressed Bloom Filters allow space savings when being transmitted.
+* Retouched Bloom Filters trade off false positives and false negatives.
+* Bloomier filters keep function values associated with set elements (thereby offering more than set membership).
+* and so on, and so on...
+
+From the references:
+* Pagh, R. Pagh, and S. S. Rao, An optimal Bloom filter replacement, Proc 16th ACM-SIAM SODA, 2005, pp. 823–829.
+* http://www.itu.dk/people/pagh/papers/bloom.pdf

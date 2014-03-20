@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.cruisecontrolnet.org/projects/ccnet/wiki/Server_Application_Config_File by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Sep 2013 07:36:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>CruiseControl.NET - Server Application Config File - CruiseControl.NET</title>
+<meta name="description" content="ChiliProject" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="lppizRP5BY2snLg9SPsQMwHpmX1YZgA1JpRnRNpo4J8="/>
+<link rel='shortcut icon' href='http://www.cruisecontrolnet.org/favicon.ico?1360787056' />
+<link href="../../../stylesheets/reseta77a.css?1360787056" media="all" rel="stylesheet" type="text/css" />
+<link href="../../../stylesheets/smoothness/jquery-uia77a.css?1360787056" media="all" rel="stylesheet" type="text/css" />
+<link href="../../../stylesheets/applicationa77a.css?1360787056" media="all" rel="stylesheet" type="text/css" />
+<link href="../../../stylesheets/printa77a.css?1360787056" media="print" rel="stylesheet" type="text/css" />
+
+<!--[if lte IE 6]><link href="/stylesheets/ie6.css?1360787056" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lte IE 7]><link href="/stylesheets/ie7.css?1360787056" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gte IE 8]><![endif]-->
+
+<script src="../../../javascripts/jquery.mina77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/jquery-ui.mina77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/jquery.menu_expanda77a.js?1360787056" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery.noConflict();
+//]]>
+</script>
+<script src="../../../javascripts/modernizr.mina77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/prototypea77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/effectsa77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/dragdropa77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/controlsa77a.js?1360787056" type="text/javascript"></script>
+<script src="../../../javascripts/applicationa77a.js?1360787056" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var datepickerSettings = {showOn: 'both', buttonImage: '/images/calendar.png?1360787056', buttonImageOnly: true, showButtonPanel: true, dateFormat: 'yy-mm-dd' }
+//]]>
+</script>
+<link href="../../../stylesheets/jstoolbara77a.css?1360787056" media="screen" rel="stylesheet" type="text/css" />
+
+
+<link href="../../../plugin_assets/redmine_ads/stylesheets/redmine_adsb58c.css?1361628765" media="screen" rel="stylesheet" type="text/css" />
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scma77a.css?1360787056" media="screen" rel="stylesheet" type="text/css" />
+  <link href="http://www.cruisecontrolnet.org/projects/ccnet/activity.atom?show_wiki_edits=1" rel="alternate" title="ATOM" type="application/atom+xml" />
+<script src="../../../javascripts/jstoolbar/jstoolbara77a.js?1360787056" type="text/javascript"></script><script src="../../../javascripts/jstoolbar/textilea77a.js?1360787056" type="text/javascript"></script><script src="../../../javascripts/jstoolbar/lang/jstoolbar-ena77a.js?1360787056" type="text/javascript"></script><link href="../../../stylesheets/jstoolbara77a.css?1360787056" media="screen" rel="stylesheet" type="text/css" /></head>
+<body class="project-1 controller-wiki action-show">
+<div id="wrapper">
+  <div id="top-menu">
+    <div id="header">
+      <div id="logo"><a href="http://www.cruisecontrolnet.org/">CruiseControl.NET</a></div>
+      <div id="top-menu-items">
+      
+      <div id="search">
+                <label class="hidden-for-sighted" for="q">Search</label>
+        <form action="http://www.cruisecontrolnet.org/search/index/ccnet" method="get">
+          <input name="wiki_pages" type="hidden" value="1" />
+          <input accesskey="f" class="search_field" id="q" name="q" placeholder="search ..." size="20" type="text" />
+        </form>
+
+      </div>
+      
+
+      <ul id="account-nav">
+        
+        
+            <li><a href="http://www.cruisecontrolnet.org/" class="home">Home</a></li>
+        
+        <li class="drop-down">
+          <a href="http://www.cruisecontrolnet.org/projects" class="projects">Projects</a>
+          <ul style="display:none;">
+            <li><a href="http://www.cruisecontrolnet.org/projects" class="projects separator">All Projects</a></li>
+            
+            
+          </ul>
+        </li>
+        
+        <li><a href="https://www.chiliproject.org/help/v3" class="help">?</a></li>
+        
+          
+            
+            <li>
+              <a href="http://www.cruisecontrolnet.org/account/register">Register</a>
+            </li>
+            
+            <li id="login-menu" class="drop-down last-child">
+              <a href="http://www.cruisecontrolnet.org/login" class="login">Sign in</a>
+              <div id="nav-login" style="display:none;">
+                <div id="nav-login-content">
+  <form action="http://www.cruisecontrolnet.org/login" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="lppizRP5BY2snLg9SPsQMwHpmX1YZgA1JpRnRNpo4J8=" /></div>
+    <input name="back_url" type="hidden" value="http%3A%2F%2Fwww.cruisecontrolnet.org%2Fprojects%2Fccnet%2Fwiki%2FServer_Application_Config_File" />
+    <table>
+      <tr>
+        <td><label for="username-pulldown">Login</label></td>
+        <td><label for="password-pulldown">Password</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input id="username-pulldown" name="username" tabindex="1" type="text" /></td>
+        <td><input id="password-pulldown" name="password" tabindex="1" type="password" /></td>
+        <td><input type="submit" name="login" value="Login" tabindex="1"/></td>
+      </tr>
+    </table>
+    <div id = "optional_login_fields" style = "top = 10px; white-space:nowrap">
+      
+        <input id="openid_url" name="openid_url" placeholder="OpenID URL" tabindex="1" type="text" />
+      
+
+      
+        <label for="autologin"><input id="autologin" name="autologin" tabindex="1" type="checkbox" value="1" /> Stay logged in</label>
+      
+
+      
+        <a href="http://www.cruisecontrolnet.org/account/lost_password" tabindex="1">Lost password</a>
+      
+
+      
+        |
+         <a href="http://www.cruisecontrolnet.org/account/register" tabindex="1">Register</a>
+      
+    </div>
+  </form>
+</div>
+
+              </div>
+            </li>
+          
+      </ul>
+    </div>
+    </div>
+    <div id="breadcrumb">
+      CruiseControl.NET
+    </div>
+  </div>
+
+  
+  
+  
+  
+  <div id="main" class="">
+    
+      <div id="side-container">
+        <div id="main-menu">
+          <ul><li><a href="http://www.cruisecontrolnet.org/projects/ccnet" class="overview">Overview</a></li>
+<li><a href="http://www.cruisecontrolnet.org/projects/ccnet/activity" class="activity">Activity</a></li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/roadmap" class="roadmap">Roadmap</a>
+<ul class="menu-children unattached"><li><a href="../versions/11.html" class="version-11">1.8.5</a></li><li><a href="../versions/5.html" class="version-5">1.9</a></li></ul>
+</li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/issues" class="issues">Issues</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/issues/new" accesskey="7" class="new-issue">New issue</a></li><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/issues?set_filter=1" class="all-open-issues">View all open issues</a></li><li><a href="http://www.cruisecontrolnet.org/queries/new?project_id=ccnet" class="new-query">New saved query</a></li><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/issues/report" class="issue-summary">Issue summary</a></li></ul>
+</li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/time_entries" class="time-entries">Time entries</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/time_entries/new" class="new-time-entry">New time entry</a></li><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/time_entries/report" class="time-entry-report">Time entry report</a></li></ul>
+</li>
+<li><a href="http://www.cruisecontrolnet.org/projects/ccnet/issues/gantt" class="gantt">Gantt</a></li>
+<li><a href="http://www.cruisecontrolnet.org/projects/ccnet/issues/calendar" class="calendar">Calendar</a></li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/news" class="news">News</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/news/new" class="new-news">Add news</a></li></ul>
+</li>
+<li>
+<a href="../documents.html" class="documents">Documents</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/login?back_url=http%3A%2F%2Fwww.cruisecontrolnet.org%2Fprojects%2Fccnet%2Fdocuments%2Fnew" class="new-document">New document</a></li></ul>
+</li>
+<li>
+<a href="../wiki.html" class="wiki selected">Wiki</a>
+<ul class="menu-children"><li><a href="index.html" class="wiki-by-title">Index by title</a></li><li><a href="date_index.html" class="wiki-by-date">Index by date</a></li></ul>
+</li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/boards" class="boards">Forums</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/boards/new" class="new-board">New forum</a></li></ul>
+<ul class="menu-children unattached"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/boards/1" class="board-1">General Discussion</a></li><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/boards/2" class="board-2">Help</a></li><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/boards/3" class="board-3">Coding</a></li></ul>
+</li>
+<li>
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/files" class="files">Files</a>
+<ul class="menu-children"><li><a href="http://www.cruisecontrolnet.org/projects/ccnet/files/new" class="new-file">New file</a></li></ul>
+</li>
+<li><a href="http://www.cruisecontrolnet.org/projects/ccnet/repository" class="repository">Repository</a></li></ul>
+          
+        </div>
+
+      
+        <!-- Sidebar -->
+        <div id="sidebar">
+          
+  
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+  
+
+
+          <div class="redmine_ads"><script type="text/javascript">
+window.google_analytics_uacct = "UA-371146-15";
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8921736128672887";
+/* www.cruisecontrolnet.org */
+google_ad_slot = "1762967545";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="../../../pagead/show_ads.js">
+</script></div>
+        </div>
+      
+      </div>
+
+      <script type="text/javascript">
+//<![CDATA[
+jQuery.menu_expand({ menuItem: '.wiki' });
+//]]>
+</script>
+    
+    <div class="" id="content">
+      
+      <div class="contextual">
+
+
+
+
+
+
+
+
+
+<a href="http://www.cruisecontrolnet.org/projects/ccnet/wiki/Server_Application_Config_File/history" class="icon icon-history">History</a>
+</div>
+
+<p class="breadcrumb"><a href="Wiki.html">Wiki</a> &#187; <a href="Configuration.html">Configuration</a> &#187; </p>
+
+
+
+<div class="wiki">
+  <a name="Server-Application-Config-File"></a>
+<h1 >Server Application Config File<a href="#Server-Application-Config-File" class="wiki-anchor">&para;</a></h1>
+
+
+Various aspects of the CruiseControl.NET Server are configured in the application configuration file. The name of this file depends on how you are running the server:
+	<ul>
+	<li>If you are running the Console Application, the application config file is called <strong>ccnet.exe.config</strong>.</li>
+		<li>If you are running the Windows Service Application, the application config file is called <strong>ccservice.exe.config</strong></li>
+	</ul>
+
+
+	<p><strong>For most installations the default settings in this file will be appropriate</strong>.</p>
+
+
+	<p>This file is a standard .NET application config file. Parts of it that are specific to CruiseControl.NET are as follows:</p>
+
+
+	<a name="XSL-File-configuration"></a>
+<h4 >XSL File configuration<a href="#XSL-File-configuration" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>The  section defines what xsl files are included for transforming the build file for reporting behaviour within the server. If you want to include extra xsl files (for example if you have your own build behaviours), then add them here.</p>
+
+
+	<a name="Remoting-Configuration"></a>
+<h4 >Remoting Configuration<a href="#Remoting-Configuration" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>The CruiseControl.NET Server can open a remoting server port so that other applications in the CCNet suite can communicate with it ([CCTray], [Web Dashboard]). By default CCNet listens on port 21234, but this can be changed under the  section.</p>
+
+
+	<p>(i) <strong>You'll need to change this value if you want to run multiple CruiseControl.NET servers on 1 machine</strong></p>
+
+
+	<a name="Logging-Configuration"></a>
+<h4 >Logging Configuration<a href="#Logging-Configuration" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Logging of the Server activities (not the build logs themselves) is implemented using .NET Tracing, and this is configurable in the  section of the application config file. In this section you can change log level (the  section), and where log data is sent to (the  section).</p>
+
+
+	<p>If you are using a  in the  section, then you can configure the server log file name there. This same file name should be set as the value for the  key in the  section. This value is used when remote applications request to see the server log file. The number of lines returned from the end of the server log file to the remote application is specified by the  value.</p>
+
+
+	<p><em>warning</em><br />Note that with some log levels certain potentially sensitive details may be logged, including source control passwords. Make sure you check your log file and set the log level appropriately.</p>
+
+
+	<a name="Service-Specific-Settings"></a>
+<h4 >Service Specific Settings<a href="#Service-Specific-Settings" class="wiki-anchor">&para;</a></h4>
+
+
+If you are running the console application, you have the option of passing in various arguments on the command line. If however you are using the Service application you can't do this, but there are extra options you can set in the  section of the config file, as follows:
+	<table>
+		<tr>
+			<td> <strong>Key</strong> </td>
+			<td> <strong>Equivalent startup parameter in [The Server Console Application]</strong> </td>
+		</tr>
+		<tr>
+			<td> ccnet.config </td>
+			<td> config </td>
+		</tr>
+		<tr>
+			<td> remoting </td>
+			<td> remoting </td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="General-Configuration-Settings"></a>
+<h4 >General Configuration Settings<a href="#General-Configuration-Settings" class="wiki-anchor">&para;</a></h4>
+
+
+The table below describes general configuration settings that are in the <strong>appSettings</strong> section of the application configuration file.
+	<table>
+		<tr>
+			<td> <strong>Key</strong> </td>
+			<td> <strong>Description</strong> </td>
+			<td> <strong>Default Value</strong> </td>
+		</tr>
+		<tr>
+			<td> WatchConfigFile </td>
+			<td> Turns on/off monitoring of the <strong>ccnet.config</strong> file for changes.  By default, the CCNet server will monitor this file and will automatically restart the server and reload the updated configuration settings.  Setting this value to false will disable this feature. </td>
+			<td> True </td>
+		</tr>
+		<tr>
+			<td> PluginLocation </td>
+			<td> An optional location to search for plugins. The server applications will always look in the application folder for any plugin definitions. This settings allows an extra folder to be specified for plugins. </td>
+			<td> <em>None</em> </td>
+		</tr>
+		<tr>
+			<td> DataDrive </td>
+			<td> The main data drive used by CruiseControl.NET. This is used for checking the amount of free disk space. </td>
+			<td> C: </td>
+		</tr>
+		<tr>
+			<td> ShadowCopy </td>
+			<td> Whether shadow copying should be enabled or not. Shadow-copying is required for hot-swapping, but does have a performance hit (i.e. when the files are copied.) Additionally some older OSs do not allow this option. </td>
+			<td> On </td>
+		</tr>
+		<tr>
+			<td> cacheTime </td>
+			<td> The amount of time (in seconds) a build log will be cached for before it is expired. The minimum allowed value is 10 seconds. </td>
+			<td> 5 minutes </td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <div style="clear:both;">&nbsp;</div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="bgl"><div class="bgr">
+        Powered by <a href="https://www.chiliproject.org/">ChiliProject</a>
+      </div></div>
+  </div>
+
+  <div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+  <div id="dialog-window" style="display:none;"></div>
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-371146-15']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+<!-- Mirrored from www.cruisecontrolnet.org/projects/ccnet/wiki/Server_Application_Config_File by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 01 Sep 2013 07:36:50 GMT -->
+</html>

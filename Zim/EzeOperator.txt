@@ -1,0 +1,203 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-07T15:22:51+00:00
+
+====== EzeOperator ======
+Created Friday 07 February 2014
+
+==== Research on HLR Lookup Providers Etc. ====
+
+A decent short tutorial on what HLR lookups are: http://www.numberportabilitylookup.com/hlr_lookup
+The website https://www.numberportabilitylookup.com provides a service that claims almost worldwide coverage. Speed? Economy setting.
+
+=== GSMA Pathfinder ===
+This appears to be some sort of HLR alternative with supposedly global scope. Haven't been able to track down a service provider yet though. The company Neustar (neustar.biz) has been mooted as a provider but they provide so many different services it's difficult to locate the one we need.
+
+==== Code Investigation ====
+
+=== Properties ===
+**IRequestValidator **//RequestValidator //(RequestValidator)**, IDistributorManager **//DistributorManager //(DistributorManager)**, IDistributorValidator **//DistributorValidator// (DistributorValidator)**, IPhoneNumberValidator **//PhoneNumberValidator //(PhoneNumberValidator)**, IOperatorLookupTimer **//OperatorLookupTimer //(OperatorLookuptimer)**, IFeeManager **//FeeManager //(FeeManager)**, IOperatorAmountValidator **//AmountValidator //(OperatorAmountValidator)**, IOperatorLookup **//OperatorLookupController //(OperatorLookupController)**, ISupportedCountryManager **//SupportedCountryManager //(SupportedCountryManager)
+
+=== ValidatePhoneAccount (EzeOperator) ===
+* Create a response object (status code Success)
+* Validate the initial request (are the relevant fields populated)
+* Translate the request into an EDTS business entities object
+* Authenticate the request against the distributor (retrieving the distributor ID)
+* Retrieve the details of the distributor from the database
+* Calculate the operator lookup timeout (distributor timeout - operator validate timeout)
+* Now we get to the meat of things:
+	* OperatorLookupTimer.GetOperatorByPhoneNumber(OperatorLookupController, Phone Number, Timeout, out TimeTaken, out Lookup Completed)... //line 186, EzeOperator.cs//
+	* oh, so that's how it works.
+* If the operator lookup completed successfully, subtract the time taken from the distributor timeout.
+* Else fail with an operator lookup timeout error code.
+* If no number to operator mapping is found, return a response with code PhoneNumberFormatIsInvalid
+* If a mapping is found but it states CountryNotSupported or OperatorNotSupported, return an appropriate error message.
+* Retrieve the OperatorCode for the OperatorGroupISO. //line 224 calls line 803 which searches DistributorTopUpCountry for the appropriate operator and operator code.//
+* If the operator code isn't found, return InternalServerError
+* If we've gotten this far, load the operator code and country code into the response. //line 236//
+* If the validate status is something other than success, return that response...
+* Get the DistributorTopUpCountry for the specified country code and operator code. If not found, return code OperatorTopUpNotSetUp.
+
+* Validate the phone number with the operator (PhoneNumberValidator.Validate). //line 255//
+	//So basically after all that we're running it though the gateway anyway, whether or not validation is implemented.//
+* If the validate is not successful
+	* If the response is SubscriberNotValid & PortabilityIsSupported & the current lookup type is the StoredNumberTable, then assume that the stored number has been ported to another operator and return a code of PhoneNumberPorted.
+	* Else return the status of the validate.
+* The validate was successful.
+* Add the phone number operator mapping to the cache.
+* Get the OperatorTopUpCountry matching the operator code. If it's not found, return code OperatorTopUpNotSetUp.
+* Finally, validate the amount and return the response.
+
+=== IOperatorLookup ===
+* **PhoneNumberOperatorMapping **GetOperatorByPhoneNumber(//string //phoneNumber) //POCO, string MappingPhoneNumber, CountryCode, CountryName, OperatorCode, OperatorName, OperatorGroupISO, SupportsPortability, MobileCountryCode, MobileNetworkCode.//
+* **OperatorLookupType** GetLookupType(); //StoredNumberTable, OperatorLookupTable, HLRLookup//
+* **HLRLookupType? **GetHlrLookupType(); //(enum, primary / secondary)//
+
+=== OperatorLookupTimer: IOperatorLookupTimer ===
+//Performs an operator lookup for a given phone number. The lookup is executed asynchronously. If it does not complete within the given timeout period, the method returns null.//
+This class is an async wrapper around an //IOperatorLookup// request with a timeout.
+
+=== OperatorLookupController: IOperatorLookup, IPortedNumberHandler ===
+**IPortedNumberHandler** has a single method //ProcessPortedNumber// taking a phone number. This asynchronously calls a method that removes the number if stored, sends an email alert, uses the HLR lookup provider to query the number and stores the result.
+The **OperatorLookupController** can be switched from StoredPhoneNumberLookup, to OperatorTableLookup, to HLRLookupController.
+
+== Properties ==
+* IPhoneNumberAudit //PhoneNumberAudit// - Used to create audit entries. SPROC ''[usp_PhoneNumberAuditCreate]''. Includes: //PhoneNumber, LookupType, HLRLookupType, CountryCode, CountryName, OperatorGroupISO, SupportsPortability, MobileCountryCode, MobileNetworkCode, Comments...//
+* IOperatorLookupAlerter //OperatorLookupAlerter// - Creates the critical alert messages sent out via email.
+* IOperatorLookupFactory //Factory// - Returns an instance of the factory.
+* OperatorLookupType //LookupType// - public auto-property.
+
+== Methods ==
+* bool //IsUsingOperatorLookupTable// - LookupType == OperatorLookupType.OperatorLookupTable.
+* bool //CanUseAlternativeLookupProvider// - Not already on HLR lookup yet.
+* OperatorLookupType //GetLookupType// - return LookupType.
+* HLRLookupType? //GetHlrLookupType// - If an operator lookup instance is present, call that (which may return null if it's not a HLR lookup), else null.
+* OperatorLookupType //GetAlternativeLookupProvider// - returns the next lookup type in the list.
+* void //ProcessPortedNumber// - Perform an async HLR lookup on this number. See **IPortedNumberHandler** above.
+* PhoneNumberAuditEntry //GetPhoneNumberAuditEntry// - Converts a PhoneNumberOperatorMapping into a PhoneNumberAuditEntry.
+* PhoneNumberAuditEntry //GetEmptyPhoneNumberAuditEntry// - Creates an empty PhoneNumberOperatorMapping from a phone number.
+* **PhoneNumberOperatorMapping** //GetOperatorByPhoneNumber// - 
+	* Uses the factory to create a lookup instance for the current LookupType.
+	* Calls //GetOperatorByPhoneNumber// on the instance.
+	* If no mapping is found, an empty audit entry is created. 
+		* If currently using an OperatorLookupTable and OperatorLookupTable alerts are enabled, send a critical alert.
+		* If unable to use an alternative provider, return null.
+		* If able to use an alternative provider, switch to the next provider and call //GetOperatorByPhoneNumber// on it.
+	* If a mapping is found, create an audit entry using the retrieved mapping.
+		* If the number is portable and the current lookup is the OperatorLookupTable, then proceed to do a HLR lookup on the number.
+
+=== OperatorLookupFactory: IOperatorLookupFactory ===
+Creates instances of operator lookups (//IOperatorLookup//). Options are **StoredNumberTable**, **OperatorLookupTable**, **HLRLookup**.
+	**StoredPhoneNumberLookup: IOperatorLookup, IPhoneNumberRepository**
+	This is used in EDTSManagerAdapter. Successfully topped up phone numbers are stored. SubscriberNotValids are removed.
+	Added numbers are updated in the database and added to the cache.
+	//PhoneNumberOperatorMappingAction// is used for all calls.
+		**SPROCS used in Edts.DataAccess.PhoneNumberOperatorMappingFactory**
+		* ''dbo.edts_PhoneNumberCountryGetList ''(PhoneNumberCountryList)
+		* ''dbo.edts_PhoneNumberOperatorMappingGetList ''(GetPhoneNumberOperatorMappingGetList)
+		* ''dbo.edts_PhoneNumberOperatorMappingByNumber ''(GetPhoneNumberOperatorMappingByPhoneNumber)
+		* ''dbo.edts_PhoneNumberOperatorMappingUpdate ''(UpdatePhoneNumberOperatorMapping)
+		* ''dbo.edts_PhoneNumberOperatorMappingRemove ''(RemovePhoneNumberOperatorMapping)
+	**OperatorTableLookup: IOperatorLookup**
+	Uses //OperatorLookupDal// for all requests.
+	Goes straight to the database. ''SPROC name is [dbo].[usp_CountryOperatorGetByPhoneNumber]''. Returns a PhoneNumberOperatorMapping.
+	//Not really sure what the difference is here but I guess it will become apparent with further investigation.//
+	**HLRLookupController: IOperatorLookup**
+	Fields: HLRLookupFactory, OperatorLookupTimer, OperatorLookupAlerter, **factory exposed via public property Factory**.
+	The HLRLookupType is settable on the controller and can be used to select between primary and secondary HLR lookup providers.
+	If the HLR lookup fails a CriticalAlert is generated.
+	If the primary lookup fails, the lookup type is immediately set to secondary and called from within the first request.
+	HLRLookupTimeout = //20 seconds each for both primary and secondary.//
+		The **HLRLookupFactory** creates either a **RoutoMessagingProvider** or a **NumberPortabilityLookupProvider** depending on whether the HLRLookupType is Primary or Secondary.
+
+
+=== NumberPortabilityLookupProvider (Secondary) ===
+Basic WebRequest GET functionality. Parses the response and calls GetOperatorFromMobileCode which retrieves the **PhoneNumberOperatorMapping** via new **OperatorMobileCodeDal().GetOperatorByMobileCode**.
+	**GetOperatorByMobileCode** uses the SPROC ''[dbo].[usp_CountryOperatorGetByMobileCode]'' **PhoneNumberOperatorMapping** : CountryCode, CountryName, OperatorGroupISO, SupportsPortability, MobileCountryCode, MobileNetworkCode.
+
+
+=== RoutoMessagingProvider (Primary) ===
+Sends a WebRequest GET. Response is JSON serialised. Otherwise the same as the secondary lookup.
+
+=== PhoneNumberOperatorMappingAction ===
+	* **PhoneNumberCountryList** - Retrieves a list of **PrefixCountryMapping** from the cache or the DB. (MappingPhoneNumberPrefix, CountryCode & CountryName).
+	* **PhoneNumberOperatorMappingByNumber -** Returns a **PhoneNumberOperatorMapping** for a given phone number.
+	* **AddNumberToCache** - Adds a **PhoneNumberOperatorMapping** to the cache.
+	* **PhoneNumberOperatorMappingGetList** - Returns a list of all **PhoneNumberOperatorMappings** (not used).
+	* **UpdatePhoneNumberOperatorMapping -** Updates a **PhoneNumberOperatorMapping** and adds to the cache.
+	* **RemovePhoneNumberOperatorMapping** - Remove a **PhoneNumberOperatorMapping** by phone number.
+
+==== SPROCS ====
+''[dbo].[usp_PhoneNumberAuditCreate]''
+Inserts a row into ''etPhoneNumberAudit'' with a try / catch. Columns: PhoneNumber, LookupType, HLRLookupType, CountryCode, CountryName, OperatorGroupISO, SupportsPortability, MobileCountryCode, MobileNetworkCode, Comments, DateCreated.
+
+''[dbo].[edts_PhoneNumberCountryGetList]''
+CountryCode, CountryName, CountryID, PhonePrefix (selected from ''etCountry'' joined on ''etPhoneNumber'' by CountryID).
+
+''[dbo].[edts_PhoneNumberOperatorMappingGetList]''
+SELECT PhoneNumber, OperatorCode, CountryCode, CountryName FROM ''edts_PhoneNumberOperatorMapping''.
+
+''[dbo].[edts_PhoneNumberOperatorMappingByNumber]''
+SELECT PhoneNumber, CountryCode, CountryName, OperatorGroupISO, SupportsPortability FROM ''edts_PhoneNumberOperatorMapping'' join ''etCountry''.
+
+''[dbo].[edts_PhoneNumberOperatorMappingUpdate]''
+Inserts or updates a mapping on ''edts_PhoneNumberOperatorMapping''
+
+''[dbo].[edts_PhoneNumberOperatorMappingRemove]''
+DELETE FROM ''edts_PhoneNumberOperatorMapping'' WHERE PhoneNumber = @phoneNumber
+
+''[dbo].[usp_CountryOperatorGetByPhoneNumber]''
+Selects distinct entries from ''etOperator_MobileCode'', join ''etCountry'' on CountryISO where they are eligible for operator lookup and place in a temporary result set ''tblSupportedCountryOperator''. Table ''etOperatorLookup'' is inner joined on table ''etOperatorLookup_MobileCode'' on OperatorLookupID and left joined on the temporary table where MCC and MNC match. WHERE ''etOperatorLookup.Expire'' (hasn't expired), and ''etOperatorLookup.MatchingPattern'' progressively matches any of the first few digits of the phone number in descending order of length. ORDER BY CountryISO and longest matching pattern.
+The columns returned are:
+* CountryISO (if the current row is null then this is fetched using the mobile country code).
+* CountryName
+* MobileCountryCode
+* OperatorGroupISO
+* MobileNetworkCode
+* SupportsPortability (if the current row is null then this is fetched using the mobile country code).
+
+''[dbo].[usp_CountryOperatorGetByMobileCode]''
+Parameters MCC & MNC. Returns a result consisting of CountryISO, CountryName, OperatorGroupISO, SupportsPortability.
+Creates a union all of the rows from two separate queries. The first is from ''etOperator_MobileCode'' joined on ''etCountry'' by CountryISO where MNC & MCC match and the mobile code is eligible for operator lookup. The second is on the same tables but only where the MCC matches; the OperatorGroupISO is set to null. The union all is stored in a temporary table and only the top row is selected. //Presumably if no matching row is returned for both MNC and MCC you at least get back details that indicates if the country supports portability//.
+
+=== Tables to Investigate ===
+''etPhoneNumberAudit''
+No idea... probably a bazillion.
+PhoneNumberAuditID, PhoneNumber, LookupType, HLRLookupType, CountryCode, CountryName, OperatorGroupISO, SupportsPortability, MobileCountryCode, MobileNetworkCode, Comments, DateCreated
+Used in OperatorLookupController. A single audit entry is created after every lookup (stored phone number, operator mapping or HLR).
+
+''edts_PhoneNumberOperatorMapping''
+Nearly 12 million rows.
+PhoneNumberOperatorMappingID, PhoneNumber, OperatorCode, CountryCode, CountryName, DateModified, OperatorGroupISO.
+Used in the stored number lookup (joined on ''etCountry'').
+
+''etOperatorLookup''
+118043 rows...
+Columns: OperatorLookupID, CountryISO, CountryName, OperatorName, CountryCode, NationalDestinationCode, SubscriberNumberPrefix, MatchingPattern, Created, Updated, Expire, Source.
+This is the hot tomale... a table representing the sum total of the contents of the BS Milano import (maybe).
+
+''etOperator_MobileCode''
+Columns: OperatorMobileCodeID, CountryISO, OperatorGroupISO, MobileCountryCode, MobileNetworkCode, EligibleForOperatorLookup, Created, Updated.
+192 rows in production. 66 distinct MobileCountryCodes. 69 distinct CountryISO. 57 distinct OperatorGroupISO. EligibleForOperatorLookup is set to true for all rows.
+
+''etOperatorLookup_MobileCode''
+292072 rows...
+Columns: OperatorLookupMobileCodeID, OperatorLookupID, MobileCountryCode, MobileNetworkCode, Created, Updated.
+Samples:
+''OperatorLookup	Operator	Mobile		Mobile		Created			Updated''
+''MobileCodeID	LookupID	CountryCode	NetworkCode''
+''288403		114374		714		4		2011-08-23 16:34:28.523	NULL''
+''288404		114375		714		2		2011-08-23 16:34:28.523	NULL''
+''288405		114376		714		2		2011-08-23 16:34:28.523	NULL''
+''288406		114377		714		2		2011-08-23 16:34:28.523	NULL''
+''288407		114378		714		2		2011-08-23 16:34:28.523	NULL''
+''288408		114379		714		2		2011-08-23 16:34:28.523	NULL''
+''288409		114380		714		2		2011-08-23 16:34:28.523	NULL''
+''288410		114381		744		3		2011-08-23 16:34:28.523	NULL''
+''288411		114382		744		1		2011-08-23 16:34:28.523	NULL''
+''288412		114383		356		110		2011-08-23 16:34:28.523	NULL''
+
+=== When is a Number to Operator Mapping Updated? ===
+* After a successful topup in EDTSManager (normal topup flow).
+* After a successful topup in EzeOperator (ezeoperator topup flow).
+* After performing an async HLR lookup when processing a ported number.

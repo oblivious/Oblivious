@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-03T14:08:02+00:00
+
+====== Team Foundation Server ======
+Created Monday 03 February 2014
+
+== tf workspace ==
+Lets you create, delete, view or modify properties and mappings associated with a workspace.
+
+**tf workspace -delete Jenkins-Ezetop.Codescales.Https-MASTER;ezetop\build -noprompt -server:http://msw2k8srcctrl:8080/tfs **********
+//Jenkins-Ezetop.Codescales.Https-MASTER;ezetop\build breaks down as <workspacename>[;workspaceowner]//
+
+**tf workspace -new Jenkins-Ezetop.Codescales.Https-MASTER;ezetop\build -noprompt -server:httpsL//msw2k8srcctrl:8080/tfs **********
+
+== tf workfold ==
+Creates, modifies, or displays information about the mappings between your workspace folders and the folders on the server for Team Foundation version control.
+
+**tf workfold -map $/Integrations/Trunk/Tools/EmbeddedCerts/Ezetop.Codescales.Https . -workspace:Jenkins-Ezetop.Codescales.Https-MASTER -server:http://msw2k8srcctrl:8080/tfs **********
+//Maps the server workspace to the newly created one.//
+
+== tf get ==
+Gets (downloads) either the latest version or a specified version of one or more files or folders from Team Foundation Server to the workspace.
+
+**tf get . -recursive -version:D2014-02-03T13:54:06Z -noprompt **********
+//Get the latest version of the source.//
+
+== tf checkout ==
+''tf checkout [/lock:(none|checkin|checkout)] [/recursive] [/encoding:encoding] itemspec [/login: username,[password]]''
+
+== tf workspaces ==
+Displays information about workspaces in the system and updates cached information about a user name or computer name change on the server that is running Visual Studio Team Foundation Server.
+**tf workspaces -format:brief -server:http://msw2k8srcctrl:8080/tfs**

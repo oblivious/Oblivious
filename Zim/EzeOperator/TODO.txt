@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-03T17:10:01+00:00
+
+====== TODO ======
+Created Monday 03 March 2014
+
+* Verify countries that support mobile number portability.
+Features:

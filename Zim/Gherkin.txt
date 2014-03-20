@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-12T13:22:31+00:00
+
+====== Gherkin ======
+Created Wednesday 12 February 2014
+

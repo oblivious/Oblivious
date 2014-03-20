@@ -1,0 +1,121 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-03T10:15:13+00:00
+
+====== EDTS System Tests ======
+Created Monday 03 March 2014
+
+=== TopUpPhoneAccountTests ===
+* UsingDenominatedEzeOperatorForAnyDenominatedOperatorAndValidNumberWillReturnSuccess - //Buh? What about operators that are not supported by ezeOperator?//
+* UsingEzeOperatorEdtsWillTranslateOperatorErrorsToEdtsErrors - //I don't know...//
+* UsingEzeOperatorInDistributorWithLessThanThirtySecondsTimeoutWillReturnInvalidOperatorLookupTimeoutValue
+* UsingEzeOperatorSupportedOperatorAndInvalidAmountWillReturnAmountOutOfRangePlusAvailableAmounts
+* UsingEzeOperatorSupportedOperatorAndInvalidNumberWillReturnOperatorLookupTimeout
+* UsingEzeOperatorSupportedOperatorInCountryWithMultipleOperatorsAndInvalidNumberWillReturnOperatorLookupTimeout
+* UsingFreeRangeEzeOperatorSupportedOperatorAndValidNumberWillReturnSuccess
+* UsingInvalidAuthenticationCasesForEzeOperator
+
+**UsingDenominatedEzeOperatorForAnyDenominatedOperatorAndValidNumberWillReturnSuccess**
+
+== var context = new EdtsTestContext() ==
+Wrapper around an EDTSManagerClient. Implements interface //IEdtsTestContext// which has the following method: **IAvailableRequestsChain ForRequestingDistributor(DistributorFixture client);**
+
+== .ForRequestingDistributor(DistributorFixture.ValidDistributorEzetopDotCom) ==
+Takes a **DistributorFixture** object. The class mostly contains static fields that return instances of the type with specific configurations. The class is otherwise just a container for a handful of properties including:
+* **AuthenticationToken** AuthenticationToken
+* **int** DistributorId
+* **OperatorAmountFixture[]** ValidOperatorAmounts
+* **VirtualAccountDetails** virtualAccountDetails
+* **string **Name
+
+Returns an **AvailableRequestsChain** object which implements //IAvailableRequestChain//:
+* **IPrepareGetTargetAmountChain** PrepareGetTargetTopUpAmountRequest();
+* **IPrepareGetBalanceChain** PrepareGetTargetProductListRequest();
+* **IPrepareGetProductListChain** PrepareGetProductListRequest();
+* **IPrepareValidatePhoneAccountChain** PrepareValidatePhoneAccountRequest();
+* **IPrepareSmsChain** PrepareSmsRequest();
+* **IPrepareTopUpPhoneAccountChain** PrepareTopUpPhoneAccountChain();
+* **IPrepareIsCountrySupportedByEzeOperatorChain** PrepareIsCountrySupportedByEzeOperatorChain();
+* **IPrepareGetTopUpTransactionStatusChain** PrepareGetTopUpTransactionStatusChain();
+
+== .PrepareTopUpPhoneAccountChain() ==
+Called on the //IAvailableRequestChain// previously returned.
+Uses a **PrepareTopUpPhoneAccountChain** which takes a DistributorFixture and the EDTSManagerClient. This class also wraps an AutoFixture, customized with EdtsAutoFixtureCustomizations...
+Creates an anonymous **TopUpPhoneAccountRequest** with the AuthenticationToken of the distributor.
+
+== .AgainstEzeOperator(operatorType) ==
+Operator types used are **EzeOperatorSupportedDenominated** and **EzeOperatorNotSupportedDenominated**.
+The method sets Operator Code and Country Code to 'EO' 
+A new **PrepareTopUpPhoneAccountRequestChain** is created, passing the EDTS client along with the distributor fixture and operator information.
+
+== .WithPhoneNumber(PhoneNumberFixture.PhoneNumberType.ValidForSelectedOperator) ==
+The **PrepareTopUpPhoneAccountRequestChain** wraps the client, operator amount fixture, distributor fixture and request. It allows the configuring of the request.
+
+== .WithAmount(AmountFixture.AmountType.Valid) ==
+
+== .UseThisRequest() ==
+Returns an object of type **ReadyTopUpPhoneAccountRequestChain**. This type can then be configured...
+
+== .WillReturnEzeOperatorResponse(ResponseStatusFixture.Success, true); ==
+Returns an object of **ReadyEzeOperatorTopUpPhoneAccountChain**.
+
+
+== FixtureHelper.MakePhoneNumberValidForOperator(context.PhoneNumber, context.Operator); ==
+Adds a specific phone number to the Mock Operator service, registering it for an appropriate response.
+
+Once all of that has been done... the request is sent and the response validated and a number of asserts are made against it.
+
+==== Specflow Features ====
+
+=== InvalidAmountsForATopup.feature ===
+
+== Given I have a valid distributor such as '<distributor>' ==
+Part of **CommonSteps.cs**
+* Retrieves the AuthenticationToken using the DistributorFixture class. 
+* Retrieves the distributor details using the distributor service.
+* Asserts that the result is not null, have a valid ID and the authentication IDs are identical.
+//The method doesn't return anything, it simply asserts that the distributor is a valid distributor. It does set the AuthenticationToken on the topup context.//
+
+== Given this distributor has a <?> operator ==
+Part of **CommonSteps.cs**
+* Uses the OperatorFixture class.
+* Takes an //OperatorType// as a parameter which can be "Available"; "AvailableDenominated"; "AvailableFreeRange"; "NotAvailable"; "NonExistentInvalidCountry"; "NonExistentValidCountry"... many more
+* The current switch statement takes only AvailableDenominated, AvailableFreeRange and Available and diverts from common steps to test specific steps...
+Part of **InvalidAmountsForATopupSteps.cs**
+* The specific implementation in this case uses the operator type to retrieve all available denominated or free range operators for the distributor specified by the topupcontext authentication ID.
+* A single operator is selected and some basic validation is performed (idiot check).
+* The operator is added to the topup context.
+
+== When a user provides a valid phone number ==
+Part of **CommonSteps.cs**
+* Generates a random phone number that is valid for the provided operator using the phone number input mask.
+* Assigns it to the topup context
+
+== When the following amount:  ==
+Part of **InvalidAmountsForATopupSteps.cs**
+* Uses an NCalc Expression to generate an amount which is then assigned to the topup context....
+
+=== Things that we can do currently: ===
+* Validate a distributor
+* Check that a distributor has a particular type of operator
+* Generate a phone number (valid or invalid)
+* Generate an amount
+* Perform a topup
+* Validate the status message
+* Validate the status code
+* **Fetch the first operator for a specific country by country name** - //needs to be more specific//
+* Set a specific country code on the request
+* **Fetch an 'ezeOperator'** - //needs to be more specific//
+
+=== Things that I need to be able to do to test ezeOperator: ===
+* **Configure the mock HLR for a given number**
+* **Perform a validate request... (will require a validate context class)**
+* **Against a specific operator for a given distributor?**
+* With a specific amount.
+* Validate the status message
+* Validate the status code
+* **Make a phone number invalid for a given operator. -**// How?//
+	* **Tell the mock operator to return subscriber not valid for the number.**
+	* Send a topup request with that number.
+* **Configure the Mock Operator Service for a given number**
+

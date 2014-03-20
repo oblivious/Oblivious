@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-21T11:24:05+00:00
+
+====== Matching Patterns ======
+Created Friday 21 February 2014
+
+For Argentina, the NDC1 of '9', NDC1T of 'I' are probably not important, just as the IDD isn't important.
+Successful topped up numbers are all 54 + 10 digits (the only ones possible).
+
+**Create the parser, build the matching patterns. Compile a list of subscriber numbers per country and match the numbers using the matching patterns to see if they will work. Compare the net name to see if it matches (is contained by) the operator name.**
+
+Jamaica has 128 distinct MCC/MNC & SN groups.
+There are only 3 distinct MCC/MNC pairs however.
+MCC is always 338, MNC can be 020, 110 (LIME) or 50 (Digicel).
+
+52 unique rows in source 2.

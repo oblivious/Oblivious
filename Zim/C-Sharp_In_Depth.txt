@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-05T11:37:02+00:00
+
+====== C-Sharp In Depth ======
+Created Wednesday 05 February 2014
+
+=== IQueryable ===
+''IQueryable'' represents a query that will yield a sequence of results when yoou execute it. The details of the query in LINQ terms are held in an expression tree, as returned by the ''Expression'' property of the ''IQueryable''. Executing a query is performed by beginning to iterate through an ''IQueryable'' (in other words, calling the ''GetEnumerator'' method and then ''MoveNext'' on the result) or by a call to the ''Execute'' method on an ''IQueryProvider'', passing in an expression tree.
+
+=== IQueryProvider ===
+Allows more to be done with a query that just execute it. Queries can be built upon to create larger queries. To build up a query, we need to use the ''CreateQuery'' method on the relevant ''IQueryProvider''. Given any ''IQueryable'' query, you can create a new query by performing the following steps:
+1. Ask the exiting query for its query expression tree (using the ''Expression'' property).
+2. Build a new expression tree that contains the original expression and the extra functionality you want (a filter, projection, or ordering, for instance).
+3. Ask the existing query for its query provider (using the ''Provider'' property).
+4. Call ''CreateQuery'' on the provider, passing in the new expression tree.
+
+The rest of the section proved to be pretty dry reading and covers the very basics of how query providers work.
+
+Notable information so far: Linq to Objects uses delegates - the lambda expressions used are converted into delegates. This works fine in code, the compiler does all the work. Linq to SQL uses expression trees. The lambda expressions used are passed through to the query provider (Linq to Objects uses IEnumerable which uses delegates) where they are converted into expression trees which can be broken down and converted into the required SQL script.
+
+=== LINQ to XML ===

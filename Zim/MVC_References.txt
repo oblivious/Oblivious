@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-06T15:43:31+00:00
+
+====== MVC References ======
+Created Thursday 06 March 2014
+
+Current Web Application project...
+
+projref://Common.Logging
+**assemblyref://System.Xml.Linq**
+projref://Common.Web.Monitoring
+assemblyref://log4net
+**assemblyref://Microsoft.CSharp**
+**assemblyref://System**
+**assemblyref://System.Configuration**
+**assemblyref://System.Core**
+**assemblyref://System.Data**
+**assemblyref://System.Data.DataSetExtensions**
+**assemblyref://System.Drawing**
+**assemblyref://System.EnterpriseServices**
+assemblyref://System.Runtime.Serialization
+assemblyref://System.ServiceModel
+**assemblyref://System.Web**
+**assemblyref://System.Web.ApplicationServices**
+**assemblyref://System.Web.DynamicData**
+**assemblyref://System.Web.Entity**
+**assemblyref://System.Web.Extensions**
+**assemblyref://System.Web.Services**
+**assemblyref://System.Xml**
+
+Reference MVC4 Project
+
+**assemblyref://Microsoft.CSharp**
+**assemblyref://System.Xml**
+assemblyref://Microsoft.Web.Infrastructure -added
+assemblyref://Newtonsoft.Json
+**assemblyref://System**
+assemblyref://System.ComponentModel.DataAnnotations
+**assemblyref://System.Configuration**
+**assemblyref://System.Core**
+**assemblyref://System.Data**
+**assemblyref://System.Data.DataSetExtensions**
+**assemblyref://System.Drawing**
+**assemblyref://System.EnterpriseServices**
+assemblyref://System.Net.Http
+assemblyref://System.Net.Http.Formatting
+assemblyref://System.Net.Http.WebRequest
+**assemblyref://System.Web**
+assemblyref://System.Web.Abstractions
+**assemblyref://System.Web.ApplicationServices**
+**assemblyref://System.Web.DynamicData**
+**assemblyref://System.Web.Entity**
+**assemblyref://System.Web.Extensions**
+assemblyref://System.Web.Helpers
+assemblyref://System.Web.Http
+assemblyref://System.Web.Http.WebHost
+assemblyref://System.Web.Mvc
+assemblyref://System.Web.Razor
+assemblyref://System.Web.Routing
+**assemblyref://System.Web.Services**
+assemblyref://System.Web.WebPages
+assemblyref://System.Web.WebPages.Deployment
+assemblyref://System.Web.WebPages.Razor
+**assemblyref://System.Xml.Linq**

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-04T11:47:04+00:00
+
+====== PsTools ======
+Created Tuesday 04 February 2014
+
+PsTools: a set of tools from sysinternals.
+
+psexec: allows remote execution of applications on other servers.
+
+''psexec \\10.21.121.223 cmd''
+Runs cmd.exe on the remote system as though it were running locally. Took me a minute to notice the first time I ran it.
+
+''psexec \\10.21.121.223 C:\Windows\System32\inetsrv\appcmd recycle apppool Edts''
+Recycle an application pool on a remote server.

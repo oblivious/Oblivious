@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-20T15:15:07+00:00
+
+====== Data Import ======
+Created Thursday 20 February 2014
+
+http://wiki.ezetop.com/display/DEV/ezeOperator+UCXX+TS01 states that "The system shall prevent two imports from running at the same time accidentially. An auxiliary table shall be created in the database to record past and active import processes. This gives us a neat audit trail and prevents concurrent imports."
+
+So, what's the auxiliary table?
+
+=== Data Quality ===
+* The separator for lists of MCCs/MNCs is not consistent. Sometimes a comma is used, sometimes a dot, sometimes a hyphen.
+* Do NOT import records in etOperatorLookup if no valid MNC/MCC code exists. Otherwise, there will be ambiguous matches for phone numbers. **If MCC or MNC is blank, don't import the row.**
+
+
+* There is no specification of data types, lengths etc of columns in the source data. This is a potential risk and imports may fail due to unexpected data.
+* Ambigious IDD: "Uruguay (Eastern Republic of)"|"URY"|"UY"|"00, 01XX"
+* Write invalid rows to an error file, do not abort import.
+* Allow IT Ops to abort or proceed import if errors occurred.
+* Some country operator prefixes have an “X” at the end. What does this “X” mean in comparison the country operator prefixes that do not have an “X” at the end?
+        Examples: 9891X, 9725X, 3706XX, 5959XX, 947X, 2499X, 2126X, 5989X, 3897X... more
+* MNC/MCC mismatch with Wikipedia. The following MCC/MNC pairs are listed on Wikipedia for our operators. We cannot find those MCC/MNC pairs in the database provided by BS Milano.
+* The separator for lists of MCCs/MNCs is not consistent. Sometimes a comma is used, sometimes a dot, sometimes a hyphen.
+* Do NOT import records in etOperatorLookup if no valid MNC/MCC code exists. Otherwise, there will be ambigious matches for phone numbers.
+* An MCC of 0 is a valid MCC!
+* Trim trailing X from SN2. The X is used as a placeholder only.
+
+=== EDTS Database ===
+* Add a new table "etOperatorLookup_UpdateHistory" to record a history of updates and currently active updates. **Obviously never happened...**
+
+===== NNPC Field Description =====
+NDC1 - NDC Prefix. The number one must dial before the National Destination Code (**NDC**), if needed.
+NDC1T - Type of NDC Prefix. This column specifies the use of the number in the NDC1 column. Possible values are:
+	''- N ='' required when dialling in the current country.
+	''- I =''** required when calling the current country from abroad.**
+	''- B =''** required in national and international dialing.**
+	''- F ='' required when dialing from a fixed phone of the current country.
+NDC2 - **National Destination Code**. A number prefix which identifies a geographic area or a service.
+SN1 - SN Prefix. The number one must dial before the Subscriber Number (SN), if needed.
+SN1T - Type of SN Prefix.
+	''- N ='' required when dialling in the current country.
+	''- I ='' **required when calling the current country from abroad.**
+	''- B ='' **required in national and international dialing**
+	''- F ='' required when dialing from a fixed phone of the current country.
+SN2 - **Subscriber Number**. This column reports the starting ciphers of the Subscriber Number, when they are needed to distinguish different areas prefixed by the same NDC or when no NDC is used.
+SNL - **Subscriber Number Length**. How many ciphers make up the Subscriber Number of the current country. Includes the starting ciphers reported in the SN2 column.
+
+Start Date = Start validity date of the international **CC-NDC-SN** sequence
+End Date = End validity date of the international **CC-NDC-SN** sequence
+
+**MCC -**
+	* Usually one value.
+	* Sometimes a comma separated list.
+	* Sometimes a range separated by '-'.
+	* Can be a combination of comma separated list and range.
+	* Can be '000' (but only where MNC is blank, so irrelevant)
+	* Can be '---' (but only where MNC is blank, so irrelevant)
+**MNC** -
+	* Always a comma separated list.
+	* Can contain letters (X).
+	* Optional (frequently blank).
+	* Can be 0
+
+NET NAME - Seems to be only for mobile and more specific than the "OperatorName". Might be that that was the import used previously.
+
+NET NOTES - Can contain a comment beginning "MCC+MNC = " followed by a list of MCCMNC pairs (no separator between numbers), separated by commas, ending with a full stop and potentially containing 'X' (this has only been seen on certain US operators so the pattern may not be consistent across all rows).

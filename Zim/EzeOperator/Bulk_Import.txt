@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-05T16:28:27+00:00
+
+====== Bulk Import ======
+Created Wednesday 05 March 2014
+
+**bcp PhoneToPhone.Dbo.ezCountryPhoneNumberPrefix in .\Data\ezCountryPhoneNumberPrefix.dat -c -T**
+
+**PhoneToPhone.Dbo.ezCountryPhoneNumberPrefix** - Database, schema and table name.
+**in \Data\ezCountryPhoneNumberPrefix.dat** - Full path to file in .dat format.
+**-c** - Performs the operation using a character data type. Char as storage type, without prefixes. **\t** (tab) as the field separator and **\r\n** (newline) as the row terminator.
+**-T** - Trusted connection using integrated security.
+
+=== Temporary Table Creation ===
+'''
+USE [EzetopCore]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[etOperatorLookupImport](
+'''
+''	[CountryName] [varchar](100) NOT NULL,''
+''	[CountryISO] [varchar](2) NOT NULL,''
+''	[OperatorName] [varchar](100) NOT NULL,''
+''	[CountryCode] [varchar](5) NOT NULL,''
+''	[NationalDestinationCode] [varchar](5) NULL,''
+''	[SubscriberNumberPrefix] [varchar](15) NULL,''
+''	[MatchingPattern] [bigint] NULL,''
+''	[MobileCountryCode] [int] NOT NULL,''
+''	[MobileNetworkCode] [int] NOT NULL,''
+'')''
+
+''GO''
+
+''SET ANSI_PADDING OFF''
+''GO''
+
+
+

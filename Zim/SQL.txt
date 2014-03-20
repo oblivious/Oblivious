@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-17T14:47:40+00:00
+
+====== SQL ======
+Created Monday 17 February 2014
+
+=== WITH ===
+Creates a temporary named result set, known as a common table expression (CTE). Derived from a simple query and defined within the execution scope of a single SELECT, INSERT, UPDATE, or DELETE statement.
+**Ex.**
+'''
+------------------------------------------------------------------------
+USE AdventureWorks2012;
+GO
+-- Define the CTE expression name and column list.
+WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)
+AS
+-- Define the CTE query.
+(
+'''
+	'''
+	SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear
+	FROM Sales.SalesOrderHeader
+	WHERE SalesPersonID IS NOT NULL
+	)
+	-- Define the outer query referencing the CTE name.
+	SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear
+	FROM Sales_CTE
+	GROUP BY SalesYear, SalesPersonID
+	ORDER BY SalesPersonID, SalesYear;
+	GO
+	------------------------------------------------------------------------
+	'''
+
