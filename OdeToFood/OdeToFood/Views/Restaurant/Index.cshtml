@@ -17,9 +17,12 @@
         <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Country)
-        </th>
+		<th>
+			@Html.DisplayNameFor(model => model.Country)
+		</th>
+		<th>
+			Rating
+		</th>
         <th></th>
     </tr>
 
@@ -31,9 +34,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Country)
-        </td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Country)
+		</td>
+		<td>
+			@Html.
+			@(item.Reviews.Any()  ? item.Reviews.Average(review => review.Rating).ToString("0.0") : "0.0")
+		</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Reviews", "Index", "Reviews", new { id=item.Id }, null) |
