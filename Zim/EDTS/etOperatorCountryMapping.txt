@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-05-09T09:21:42+01:00
+
+====== etOperatorCountryMapping ======
+Created Friday 09 May 2014
+
+This table appears in a number of stored procedures, we need to know where and why and how much it's used. The behaviour has become inconsistent with the most recent release.
+http://jira.ezetop.com/browse/EDTSEDTS-1252
+
+//I'm starting to think this table is used so that many to many relationships can exists between operators and countries. //There are no real constraints on the table, the primary key is a separate identity column. //This kind of makes sense given that the original concept was to have multiple countries per operator.//
+
+The database EzetopCore was searched using the SQL Search tool, first searching for usages of the term "etOperatorCountryMapping". Those results were collated and investigated. From those results a second set of searches were performed looking for calls to stored procedures or derived views. In each case where an association with the original table was found the EDTS solution was searched for references to tables, stored procedures or views.
+
+Just wondering if there's any flaw in the methodology that can be spotted.
+
+Stored procedures:
+* **dbo.etOperatorTopUpCountryCreate** - inserts a row into etOperatorCountryMapping (after first determining that the country is unique). //Used by old EDTS DAL.//
+* **dbo.usp_EdtsAdminAmlOperatorSelect** - there's an inner join on this table on etOperator by OperatorId, but no values from this table are returned. //Not called in the solution, DELETE?//
+* **dbo.usp_EdtsAdminAmlRuleSelect** - again, an inner join on this table but no columns selected. Is this trying to enforce some kind of filtering? Like removing nulls for instance?
+* **dbo.etOperatorTopUpCountryDeleteAll** - deletes any row matching the provided OperatorId. //Not called in the solution, DELETE?//
+* **dbo.etOperatorTopUpCountryDelete** - deletes any row matching the provided OperatorId and CountryId. //Used by old EDTS DAL.//
+* **monitor.fraud_transactions** - fucking abortion? Please revisit only in the event that this sproc is used for anything. //Only referenced in Migrations.//
+
+Views:
+* **dbo.WS_OperatorCountryMappingUncompleted **- selects a lot of operator and country details as well as etOperatorCountryMapping.OperatorCountryMappingID. Tries to find operators where the CountryID specified in etOperatorCountryMapping does not match up to an existing operator and then tries to suggest an alternative CountryID/Name/ISO based on the //OperatorName// containing a given country name. Odd.
+* **dbo.WS_CoreSaleChannelV2** - Massive join on etDistributor, etDistributorTopUpCountry, etOperatorCountryMapping, etCountry, etOperator, etCountry (again), etCountry (yet again). I hope it's not used.
+* **dbo.WS_REP_EmidaConciliationReports** - Selects successful Emida transactions? Uses view dbo.WS_TranCore. Uses etOperatorCountryMapping to map from etOperator to etCountry...
+* **dbo.WS_OperatorCountryMapping** - Selects OperatorID, OperatorName, OperatorCode from etOperator only where there's a valid mapping to a country via etOperatorCountryMapping.
+
+So, now that we know that, how deep does the rabbit hole go?
+**dbo.WS_OperatorCountryMapping**
+Appears to be used by:
+* **sp_REP_COMSalesReportOnly_testrg** - not bothered to find out why... lets keep going...
+* **sp_REP_EDTSSalesReport2063**
+* **sp_REP_EDTSSalesReport2063_RG**
+* **sp_REP_COM_DIGISalesReportOnly**
+* **sp_REP_COMSalesReportOnly**
+* **sp_REP_EDTSSalesReport2063_test**
+* **sp_REP_EDTSSalesReport2063_test2**
+* **sp_REP_EDTSSalesReport2063_test3**
+* **WS_REP_EDTSEzetopInternalSalesChannelReport** - seriously... WTF!?!?!?!?@:"*&%!*$^%"!!!
+
+**dbo.WS_CoreSaleChannelV2** - spins off into the unknown:
+* **WS_CoreSaleChannelShort**
+* **sp_REP_EDTSGulfDailySales_V2**
+* **sp_REP_EDTSGulfDailySales_V2_test2**
+* **sp_REP_EDTSGulfDailySales_V2_old2**
+* **sp_REP_EDTSGulfDailySales_V2_test3**
+* **sp_REP_EDTSGulfDailySales_V2_test4**

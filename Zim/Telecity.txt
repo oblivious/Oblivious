@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-09-05T11:19:18+01:00
+
+====== Telecity ======
+
+**EzeReporting**
+[*] Send email to Bill asking about the IP current used by EzeReporting to access the report server.
+[ ] Find out what the addresses / names are for the Telecity servers we're deploying to.
+[*] Confirm DNS entries exist by pinging them in the environment and seeing what IPs they map to.
+[*] Request DNS entry to be created on Telecity production if required.
+[ ] The url www.ezereporting.com maps to the web application. This will need to be remapped.

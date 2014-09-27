@@ -1,0 +1,117 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-05-15T14:47:41+01:00
+
+====== Distributor Type Region and Category ======
+Created Thursday 15 May 2014
+
+Both:
+* ods.distributor
+* dbo.WS_REP_EDTSEzetopInternalSalesChannelReport
+
+Region Views:
+* dbo.vw_DistAndProfilePricing
+* dbo.WS_DistributorTransaction
+
+Type Views:
+* dbo.WS_Distributor
+* dbo.WS_DistributorCheckTypeDealer
+* dbo.WS_REP_EDTSDistributorSalesChannelReport
+* dbo.WS_REP_EDTSEzetopInternalSalesChannelReport
+* dbo.REPPARA_DisrtibutorSystem
+	* sp_REP_EDTSSummaryReport
+* dbo.WS_TOPDistributor
+	* dbo.WS_CoreSaleChannel (the view contains type details, but this view doesn't make use of them)
+	* dbo.WS_CoreSaleCHannelFull (the view contains type details, but this view doesn't make use of them)
+	* dbo.WS_CoreSaleChannelShort_old (the view contains type details, but this view doesn't make use of them)
+* dbo.WS_TOPDistributor_1
+* dbo.WS_TOPDistributorExportDWH
+* dbo.WS_TOPDistributorFull
+
+Type Sprocs:
+* dbo.EDTSREP_DistriutorBalanceInternal
+* dbo.jb_alert_OperatorSalesSpike
+* dbo.sp_EDTSREP_DistriutorBalanceInternal
+* dbo.sp_EDTSREP_DistriutorBalanceInternal_test
+* dbo.sp_REP_EDTSSummaryReport
+
+Region Sprocs:
+Type information is used in these also. There are cross-references between these sprocs.
+* dbo.sp_REP_COM_DIGISalesReportOnly
+* dbo.sp_REP_COMSalesReportOnly
+* dbo.sp_REP_COMSalesReport_testrg
+* dbo.sp_REP_EDTSSalesReport2063
+* dbo.sp_REP_EDTSSalesReport2063_RG
+* dbo.sp_REP_EDTSSalesReport2063_test
+* dbo.sp_REP_EDTSSalesReport2063_test2
+* dbo.sp_REP_EDTSSalesReport2063_test3
+
+
+Columns:
+* ~~RegionCode~~
+* ~~RegionName~~
+* ~~GroupIDX1~~
+* ~~DistributorTypeISO~~
+	* dbo.WS_REP_DistributorInGulfRegion
+* ~~DistributorTypeName~~
+* ~~DistributorTypeNumber~~
+* ~~DistributorUserSystemNumber~~
+* ~~DistributorUserSystemName~~
+* ~~DistributorUserSystemGroupNumber~~
+* ~~DistributorUserSystemGroupName~~
+* ~~DistributorTypeCaptionName~~
+
+When searching for DistributorTypeISO, found:
+WS_EXT_CORE_TOPDistributor?
+
+dbo.sp_DWH_LoadDistributorOperatorByCoreSetup
+
+dbo.WS_REP_DistributorInGulfRegion
+
+**Final List (ish):**
+
+~~ods.distributor~~
+~~dbo.WS_REP_EDTSEzetopInternalSalesChannelReport~~
+- dbo.vw_DistAndProfilePricing - Used by EDTS solution (ultimately by the Pricing controller in EDTS.Admin.Web) (uses RegionName from the etDistributorRegion table)
+~~dbo.WS_DistributorTransaction~~
+~~dbo.WS_Distributor~~
+~~dbo.WS_DistributorCheckTypeDealer~~
+~~dbo.WS_REP_EDTSDistributorSalesChannelReport~~
+~~dbo.WS_REP_EDTSEzetopInternalSalesChannelReport~~
+~~dbo.REPPARA_DisrtibutorSystem~~
+~~dbo.sp_REP_EDTSSummaryReport~~
+~~dbo.WS_TOPDistributor~~
+~~dbo.WS_CoreSaleChannel~~
+~~dbo.WS_CoreSaleCHannelFull~~
+~~dbo.WS_CoreSaleChannelShort_old~~
+~~dbo.WS_TOPDistributor_1~~
+~~dbo.WS_TOPDistributorExportDWH~~
+~~dbo.WS_TOPDistributorFull~~
+~~dbo.EDTSREP_DistriutorBalanceInternal~~
+~~dbo.jb_alert_OperatorSalesSpike~~
+~~dbo.sp_EDTSREP_DistriutorBalanceInternal~~
+~~dbo.sp_EDTSREP_DistriutorBalanceInternal_test~~
+~~dbo.sp_REP_COM_DIGISalesReportOnly~~
+~~dbo.sp_REP_COMSalesReportOnly~~
+~~dbo.sp_REP_COMSalesReport_testrg~~
+~~dbo.sp_REP_EDTSSAlesReport2063~~
+~~dbo.sp_REP_EDTSSAlesReport2063_RG~~
+~~dbo.sp_REP_EDTSSAlesReport2063_test~~
+~~dbo.sp_REP_EDTSSAlesReport2063_test2~~
+~~dbo.sp_REP_EDTSSAlesReport2063_test3~~
+~~dbo.WS_REP_DistributorInGulfRegion~~
+~~dbo.WS_EXT_CORE_TOPDistributor~~
+~~dbo.sp_DWH_LoadDistributorOperatorByCoreSetup~~
+
+~~dbo.sp_REP_EDTSGulfDailySales~~
+~~dbo.sp_REP_EDTSGulfDailySales_test~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_old2~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_test~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_test_old~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_test2~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_test3~~
+~~dbo.sp_REP_EDTSGulfDailySales_V2_test4~~
+~~dbo.sp_REP_EDTSInternalTransactionReportByParams~~
+~~dbo.WS_REP_OpeDisCodeReport~~
+
