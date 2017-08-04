@@ -1,0 +1,9 @@
+.todos
+ {
+     &__item {
+        background-color:grey;
+        &--complete {
+            background-color:green;
+        }    
+    }
+ }
