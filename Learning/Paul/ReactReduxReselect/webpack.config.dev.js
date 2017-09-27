@@ -8,7 +8,7 @@ module.exports = merge(base, {
         contentBase: './dist', // Relative directory for base of server
         hot: true, // Live-reload
         inline: true,
-        port: 3000, // Port Number
+        port: 3001, // Port Number
         host: 'localhost', // Change to '0.0.0.0' for external facing server,
         historyApiFallback: {
             index: 'index.html'
@@ -17,7 +17,7 @@ module.exports = merge(base, {
     devtool: 'eval',
     entry: [
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:3000',
+        'webpack-dev-server/client?http://localhost:3001',
         'webpack/hot/only-dev-server',
         './src/index.js'
     ],

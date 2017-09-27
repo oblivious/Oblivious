@@ -15,17 +15,20 @@ class Todos extends Component {
     componentDidMount() {
         const { onMount } = this.props;
         console.log(this.props.todos)
-        
+
         onMount();
-    }   
+    }
 
     render() {
          let todos = this.props.todos.map(todo => (<TodoItem key={todo.id} {...todo} />))
 
         return (
-            <ul className="todos">
-                {todos}
-            </ul>);
+            <div>
+              <ul className="todos">
+                  {todos}
+              </ul>
+              <span>Completed todos: {this.props.completedTodosCount}/{this.props.todosCount}</span>
+            </div>);
     }
 }
 

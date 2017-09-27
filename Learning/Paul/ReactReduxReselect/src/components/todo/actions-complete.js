@@ -2,7 +2,8 @@ import jsontodos from './todos.json';
 export const GET_TODOS = 'GET_TODOS';
 export const ADD_TODO = 'ADD_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
-export const COMPLETE_TODO = 'DELETE_TODO';
+export const COMPLETE_TODO = 'COMPLETE_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
 
 export function getTodos(todos) {
     return {
@@ -30,6 +31,13 @@ export function completeTodo(id) {
         type: COMPLETE_TODO,
         id
     }
+}
+
+export function toggleTodo(id) {
+  return {
+    type: TOGGLE_TODO,
+    id
+  }
 }
 
 export function fetchGetTodos() {

@@ -4,6 +4,9 @@
         background-color:grey;
         &--complete {
             background-color:green;
-        }    
+            span {
+              color: white;
+            }
+        }
     }
  }
